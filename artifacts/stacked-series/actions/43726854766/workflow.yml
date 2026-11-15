@@ -1,0 +1,120 @@
+name: Stacked series official browser benchmark
+on:
+  push:
+    branches: [kirill/benchmark-stacked-series]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+jobs:
+  build:
+    name: Build benchmark site (${{ matrix.role }})
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/benchmark-stacked-series'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - role: head
+            ref: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+            port: 4601
+          - role: base
+            ref: fd652e876a2b059924848a2177c82e67d6752327
+            port: 4602
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ matrix.ref }}
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Record exact source identity
+        env:
+          EXPECTED: ${{ matrix.ref }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED"
+          git diff --exit-code HEAD -- packages/ag-charts-community/src/chart/data
+          printf 'Source: %s\n' "$EXPECTED" >> "$GITHUB_STEP_SUMMARY"
+      - name: Official benchmark site build through Nx
+        env:
+          PUBLIC_SITE_URL: http://localhost:${{ matrix.port }}
+          PUBLIC_HTTPS_SERVER: 'false'
+        run: yarn nx build:benchmarks ag-charts-website
+      - name: Package benchmark site
+        run: |
+          cd dist/packages/ag-charts-website
+          keep=()
+          for d in vanilla/benchmarks dev example-runner _astro; do
+            [[ -d "$d" ]] && keep+=("$d")
+          done
+          test -d vanilla/benchmarks
+          tar -czf "$RUNNER_TEMP/site-${{ matrix.role }}.tar.gz" "${keep[@]}"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-site-${{ matrix.role }}
+          path: ${{ runner.temp }}/site-${{ matrix.role }}.tar.gz
+          retention-days: 1
+  benchmark:
+    name: Official stacked-bar benchmark on one runner
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/benchmark-stacked-series'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Install Chromium
+        run: yarn playwright install --with-deps chromium
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          pattern: stacked-site-*
+          path: ${{ runner.temp }}/sites
+          merge-multiple: true
+      - name: Unpack source-built sites
+        run: |
+          mkdir -p "$RUNNER_TEMP/site-head" "$RUNNER_TEMP/site-base"
+          tar -xzf "$RUNNER_TEMP/sites/site-head.tar.gz" -C "$RUNNER_TEMP/site-head"
+          tar -xzf "$RUNNER_TEMP/sites/site-base.tar.gz" -C "$RUNNER_TEMP/site-base"
+      - name: Three interleaved head and base timing passes
+        run: |
+          mkdir -p reports/stacked-browser-benchmark
+          for pass in 1 2 3; do
+            ./tools/benchmark/serve-and-run.sh --dist "$RUNNER_TEMP/site-head" --port 4601 --output "reports/stacked-browser-benchmark/head.r$pass.json" -- --examples high-perf-bar-stacked --timeout 360000
+            ./tools/benchmark/serve-and-run.sh --dist "$RUNNER_TEMP/site-base" --port 4602 --output "reports/stacked-browser-benchmark/base.r$pass.json" -- --examples high-perf-bar-stacked --timeout 360000
+          done
+      - name: Compare with official regression thresholds
+        run: |
+          node tools/benchmark/compare-browser-results.js --base reports/stacked-browser-benchmark/base.r1.json --base reports/stacked-browser-benchmark/base.r2.json --base reports/stacked-browser-benchmark/base.r3.json --compare reports/stacked-browser-benchmark/head.r1.json --compare reports/stacked-browser-benchmark/head.r2.json --compare reports/stacked-browser-benchmark/head.r3.json --base-label upstream --compare-label stacked-fix | tee reports/stacked-browser-benchmark/comparison.txt
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-browser-benchmark-results
+          path: reports/stacked-browser-benchmark
+          retention-days: 1

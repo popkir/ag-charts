@@ -11,7 +11,7 @@ Preparing 7293 stacked series across 12 synthetic categories took a median **956
 - [Source-only branch](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series-checked).
 - [Download the source patch](https://github.com/popkir/ag-charts/commit/bec53b4495a6866beeeb1dcd727de6162b2dd3bd.patch).
 
-The source-only commit is the contribution candidate. The `kirill/perf-stacked-series` branch also contains the reproducible evidence and this handoff. Fork verification workflows live on separate branches.
+Submit from `kirill/perf-stacked-series-checked`: it is the single source-only commit above. `kirill/perf-stacked-series` is also kept free of evidence files. This handoff, benchmarks and report archives live on the separate `kirill/evidence-stacked-series` branch. Fork verification workflows also remain on separate branches.
 
 To bring the candidate into a maintainer's chosen review branch:
 
@@ -28,6 +28,22 @@ Property and invalidity-reference indexes narrow candidates before the original 
 
 The existing dataset/transform boundaries, full definition equality, directed batch comparison, encounter order, signed-stack/visibility semantics, bigint endpoints and caller-owned output tuple contract are retained.
 
+## What the speedup numbers mean
+
+The optimisation targets repeated preparation work across **many series**. A large row count with only two series exercises a different workload.
+
+| Workload and measured boundary | Before | After | Observed change |
+| --- | ---: | ---: | ---: |
+| 100 series × 12 categories, `DataController.execute` | 27.577 ms | 7.041 ms | about 3.9× |
+| 1000 series × 12 categories, `DataController.execute` | 1553.544 ms | 53.434 ms | about 29× |
+| 7293 series × 12 categories, `DataController.execute` | 95612.930 ms | 262.565 ms | about 364× |
+| Official browser example: 2 series × 100000 rows, chart create | 164.8 ms | 152.7 ms | 7.3% less time |
+| Same official browser example, zoom × 20 | 378.6 ms | 374.2 ms | 1.1% less time |
+
+All rows summarise three runs per side. The preparation and browser results were collected on different machines and cover different boundaries; they are not directly interchangeable. Raw results and source provenance are retained.
+
+The large speedup is established for the synthetic many-series **data-preparation phase**. A matched full-browser rendering measurement with 7293 series has not been performed, so a 364× improvement in total chart rendering or interaction latency is not claimed. The small stock-browser differences are observations, not a statistical-significance claim.
+
 ## Verification
 
 | Check | Candidate result |
@@ -39,7 +55,7 @@ The existing dataset/transform boundaries, full definition equality, directed ba
 | Stock PNG/browser probes, Chromium + Firefox + WebKit | 18 passed; also passed on the baseline |
 | Official `high-perf-bar-stacked` browser benchmark | Passed, 3 interleaved runs per side |
 
-[Exact commands, pinned workflows, CI jobs and remaining scope](./CI.md) · [machine-readable results and image hashes](./ci-summary.json).
+[Exact commands, pinned workflows, CI jobs and remaining scope](./CI.md) · [machine-readable results and image hashes](./ci-summary.json) · [permanent full Actions archives](./actions/README.md).
 
 ### The tooltip failure predates the patch
 

@@ -1,6 +1,8 @@
 # Repository and browser verification
 
-[Maintainer handoff and source-only submission](./SUBMISSION.md).
+[Maintainer handoff and source-only submission](./SUBMISSION.md) · [preserved full HTML, trace, JUnit and job-log archives](./actions/README.md).
+
+Evidence lives on `kirill/evidence-stacked-series`; neither submission branch includes these files.
 
 Verified source: [`bec53b4495a6866beeeb1dcd727de6162b2dd3bd`](https://github.com/popkir/ag-charts/commit/bec53b4495a6866beeeb1dcd727de6162b2dd3bd), based on upstream [`fd652e876a2b059924848a2177c82e67d6752327`](https://github.com/ag-grid/ag-charts/commit/fd652e876a2b059924848a2177c82e67d6752327).
 
@@ -72,6 +74,12 @@ Each pinned revision was built through `yarn nx build:benchmarks ag-charts-websi
 These are medians of the three run medians, as reported by the stock comparison script. The stock example has **100000 rows and 2 stacked series**. It is a different workload from the **7293-series × 12-category preparation benchmark**. These modest differences are not a claim of statistical significance or of a comparable browser speedup for thousands of series.
 
 The six raw timing reports and comparison output are retained under [browser-benchmark](./browser-benchmark). No heap-sampling memory pass was performed for this browser comparison.
+
+## Interpreting the performance results
+
+The official browser benchmark above has only **2 series**. The source benchmark deliberately has up to **7293 series**, because the changed preparation loops repeat work across series definitions and scopes. At 7293 × 12 positive values, the same `DataController.execute` boundary improved from 95612.930 to 262.565 ms (about **364×**, median of three runs per side). At 1000 series it improved by about 29×.
+
+The stock chart-create reduction of 7.3% and zoom reduction of 1.1% describe a different workload and a wider browser boundary. They do not negate the measured preparation improvement, and they do not establish the full-render speedup of a 7293-series chart. That matched browser measurement remains unperformed.
 
 ## Remaining scope
 

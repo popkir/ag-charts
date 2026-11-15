@@ -1,0 +1,13 @@
+{
+  "conclusion": "success",
+  "created_at": "2026-11-15T14:53:59Z",
+  "event": "push",
+  "head_branch": "kirill/benchmark-stacked-series",
+  "head_sha": "7dc5ff7277b22c4f4efe3328c623f0ec24c61544",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43726854766",
+  "id": 43726854766,
+  "name": "Stacked series official browser benchmark",
+  "path": ".github/workflows/stacked-browser-benchmark.yml",
+  "status": "completed",
+  "updated_at": "2026-11-15T15:04:39Z"
+}

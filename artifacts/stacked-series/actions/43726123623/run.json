@@ -1,0 +1,13 @@
+{
+  "conclusion": "success",
+  "created_at": "2026-11-15T14:45:51Z",
+  "event": "push",
+  "head_branch": "kirill/format-stacked-series",
+  "head_sha": "0b4368fbf8b17db8bc2ee79651d10e69bb307c93",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43726123623",
+  "id": 43726123623,
+  "name": "Prepare stacked-series formatter patch",
+  "path": ".github/workflows/stacked-format.yml",
+  "status": "completed",
+  "updated_at": "2026-11-15T14:46:16Z"
+}

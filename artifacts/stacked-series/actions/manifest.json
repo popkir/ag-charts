@@ -1,0 +1,387 @@
+{
+  "repository": "popkir/ag-charts",
+  "archivedAtUtc": "2026-11-15T22:23:01.439688+00:00",
+  "verifiedSource": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+  "upstreamBase": "fd652e876a2b059924848a2177c82e67d6752327",
+  "runs": [
+    {
+      "conclusion": "failure",
+      "created_at": "2026-11-15T14:25:59Z",
+      "event": "push",
+      "head_branch": "kirill/verify-stacked-series",
+      "head_sha": "3c64d094aa629ce77595e378bbbc90af61d06e93",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43724323719",
+      "id": 43724323719,
+      "name": "Stacked series source verification",
+      "path": ".github/workflows/stacked-series-checks.yml",
+      "status": "completed",
+      "updated_at": "2026-11-15T14:42:27Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-11-15T14:45:51Z",
+      "event": "push",
+      "head_branch": "kirill/format-stacked-series",
+      "head_sha": "0b4368fbf8b17db8bc2ee79651d10e69bb307c93",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43726123623",
+      "id": 43726123623,
+      "name": "Prepare stacked-series formatter patch",
+      "path": ".github/workflows/stacked-format.yml",
+      "status": "completed",
+      "updated_at": "2026-11-15T14:46:16Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-11-15T14:50:29Z",
+      "event": "push",
+      "head_branch": "kirill/verify-stacked-series",
+      "head_sha": "1b970b0bb38d54f237822c53d8712fafef1e7720",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43726542138",
+      "id": 43726542138,
+      "name": "Stacked series source verification",
+      "path": ".github/workflows/stacked-series-checks.yml",
+      "status": "completed",
+      "updated_at": "2026-11-15T15:12:35Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-11-15T14:53:59Z",
+      "event": "push",
+      "head_branch": "kirill/benchmark-stacked-series",
+      "head_sha": "7dc5ff7277b22c4f4efe3328c623f0ec24c61544",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43726854766",
+      "id": 43726854766,
+      "name": "Stacked series official browser benchmark",
+      "path": ".github/workflows/stacked-browser-benchmark.yml",
+      "status": "completed",
+      "updated_at": "2026-11-15T15:04:39Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-11-15T15:09:52Z",
+      "event": "push",
+      "head_branch": "kirill/export-stacked-series",
+      "head_sha": "d66720c31916cd931dc6fd251f8fa10f910f5c0b",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43728327077",
+      "id": 43728327077,
+      "name": "Stacked series PNG and cross-browser verification",
+      "path": ".github/workflows/stacked-export-checks.yml",
+      "status": "completed",
+      "updated_at": "2026-11-15T15:16:18Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-11-15T15:17:47Z",
+      "event": "push",
+      "head_branch": "kirill/export-stacked-series",
+      "head_sha": "5de9112d57d177b134325e51ad0fb7fc62addba5",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43729070987",
+      "id": 43729070987,
+      "name": "Stacked series PNG and cross-browser verification",
+      "path": ".github/workflows/stacked-export-checks.yml",
+      "status": "completed",
+      "updated_at": "2026-11-15T15:24:39Z"
+    }
+  ],
+  "archives": [
+    {
+      "kind": "run-logs",
+      "runId": 43724323719,
+      "path": "43724323719/run-logs.zip",
+      "bytes": 169157,
+      "sha256": "f3bd94fe1bcd759d4798d0e16abae1555bd335ff774baa7d5635fb15b12b13a7",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 4,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      }
+    },
+    {
+      "kind": "artifact",
+      "runId": 43724323719,
+      "path": "43724323719/stacked-browser-reports.zip",
+      "bytes": 2959776,
+      "sha256": "911c6f5ae9b2d7130660b74fcae7622b61ba9a7cba5fc64103b25bfed48491a0",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 41,
+        "html": 4,
+        "xml": 1,
+        "traceZips": 2
+      },
+      "artifactId": 14166119349,
+      "artifactName": "stacked-browser-reports",
+      "githubDigest": "sha256:911c6f5ae9b2d7130660b74fcae7622b61ba9a7cba5fc64103b25bfed48491a0",
+      "originalExpiresAt": "2026-11-16T14:42:24Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "artifact",
+      "runId": 43724323719,
+      "path": "43724323719/stacked-native-reports.zip",
+      "bytes": 159061,
+      "sha256": "b61a5f86fd31df0d49f1fa06f0d98e79c8f09c37d34b47613140c9f271cf53ab",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 1,
+        "html": 0,
+        "xml": 1,
+        "traceZips": 0
+      },
+      "artifactId": 14165349464,
+      "artifactName": "stacked-native-reports",
+      "githubDigest": "sha256:b61a5f86fd31df0d49f1fa06f0d98e79c8f09c37d34b47613140c9f271cf53ab",
+      "originalExpiresAt": "2026-11-16T14:42:11Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "run-logs",
+      "runId": 43726123623,
+      "path": "43726123623/run-logs.zip",
+      "bytes": 6541,
+      "sha256": "641f660dca417c21b2520b39ac4d7e5d9d49ef0916f363f6e28204ae9f611f23",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 2,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      }
+    },
+    {
+      "kind": "artifact",
+      "runId": 43726123623,
+      "path": "43726123623/stacked-formatter-patch.zip",
+      "bytes": 2939,
+      "sha256": "736171013a58ddd15f53d8573434d6d4c9a15b4cb6e0e5d7353ba80ecdfef886",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 1,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      },
+      "artifactId": 14165419839,
+      "artifactName": "stacked-formatter-patch",
+      "githubDigest": "sha256:736171013a58ddd15f53d8573434d6d4c9a15b4cb6e0e5d7353ba80ecdfef886",
+      "originalExpiresAt": "2026-11-16T14:46:12Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "run-logs",
+      "runId": 43726542138,
+      "path": "43726542138/run-logs.zip",
+      "bytes": 230171,
+      "sha256": "a6f901897a1d6354ed513528d77cbfb22b4ccc6f96bb5f9cd58db51a3e129434",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 6,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      }
+    },
+    {
+      "kind": "artifact",
+      "runId": 43726542138,
+      "path": "43726542138/stacked-browser-baseline-reports.zip",
+      "bytes": 2278986,
+      "sha256": "64785af8ef066f3599be81a4b1e6fd05e69dcf8e62d270fa3f9ea54a12d83be1",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 41,
+        "html": 4,
+        "xml": 1,
+        "traceZips": 2
+      },
+      "artifactId": 14167356130,
+      "artifactName": "stacked-browser-baseline-reports",
+      "githubDigest": "sha256:64785af8ef066f3599be81a4b1e6fd05e69dcf8e62d270fa3f9ea54a12d83be1",
+      "originalExpiresAt": "2026-11-16T15:04:53Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "artifact",
+      "runId": 43726542138,
+      "path": "43726542138/stacked-browser-reports.zip",
+      "bytes": 2234999,
+      "sha256": "d5f70746da4292f4ea1f8558cc012021047e8703290073c0ff6443765f84fabf",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 40,
+        "html": 4,
+        "xml": 1,
+        "traceZips": 2
+      },
+      "artifactId": 14166977356,
+      "artifactName": "stacked-browser-reports",
+      "githubDigest": "sha256:d5f70746da4292f4ea1f8558cc012021047e8703290073c0ff6443765f84fabf",
+      "originalExpiresAt": "2026-11-16T15:05:49Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "artifact",
+      "runId": 43726542138,
+      "path": "43726542138/stacked-native-reports.zip",
+      "bytes": 343777,
+      "sha256": "fe28d095769996c420668299eeee58f7f30e3f27a7792ca851a2c197e67083c4",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 2,
+        "html": 0,
+        "xml": 2,
+        "traceZips": 0
+      },
+      "artifactId": 14167640486,
+      "artifactName": "stacked-native-reports",
+      "githubDigest": "sha256:fe28d095769996c420668299eeee58f7f30e3f27a7792ca851a2c197e67083c4",
+      "originalExpiresAt": "2026-11-16T15:12:31Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "run-logs",
+      "runId": 43726854766,
+      "path": "43726854766/run-logs.zip",
+      "bytes": 87643,
+      "sha256": "7efd7db2894714a2f10f88b0e234c82c361884fed406344b4123954ffb99af3c",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 6,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      }
+    },
+    {
+      "kind": "artifact",
+      "runId": 43726854766,
+      "path": "43726854766/stacked-browser-benchmark-results.zip",
+      "bytes": 11892,
+      "sha256": "fdee07f3a0b55e817d04df54c587ad8ef11b83d04386a819f1ec8dff08d6a5fe",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 7,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      },
+      "artifactId": 14167221680,
+      "artifactName": "stacked-browser-benchmark-results",
+      "githubDigest": "sha256:fdee07f3a0b55e817d04df54c587ad8ef11b83d04386a819f1ec8dff08d6a5fe",
+      "originalExpiresAt": "2026-11-16T15:04:35Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "artifact",
+      "runId": 43726854766,
+      "path": "43726854766/stacked-site-base.zip",
+      "bytes": 50833942,
+      "sha256": "021b43b75506081b9cd57107c39803ab45519f89de99c977ef7eaf76edc698e7",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 1,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      },
+      "artifactId": 14166707154,
+      "artifactName": "stacked-site-base",
+      "githubDigest": "sha256:021b43b75506081b9cd57107c39803ab45519f89de99c977ef7eaf76edc698e7",
+      "originalExpiresAt": "2026-11-16T14:59:50Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "artifact",
+      "runId": 43726854766,
+      "path": "43726854766/stacked-site-head.zip",
+      "bytes": 50798391,
+      "sha256": "bdc46df075ac25e46bfe3a43d0ed4ce4257290269447f8e6d1af10726ff06840",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 1,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      },
+      "artifactId": 14166259759,
+      "artifactName": "stacked-site-head",
+      "githubDigest": "sha256:bdc46df075ac25e46bfe3a43d0ed4ce4257290269447f8e6d1af10726ff06840",
+      "originalExpiresAt": "2026-11-16T14:58:57Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "run-logs",
+      "runId": 43728327077,
+      "path": "43728327077/run-logs.zip",
+      "bytes": 71766,
+      "sha256": "5593e1022d5b4c80a247bbef9df7fe14a558dc68ce93df13dbb10b417dce906a",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 4,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      }
+    },
+    {
+      "kind": "run-logs",
+      "runId": 43729070987,
+      "path": "43729070987/run-logs.zip",
+      "bytes": 114176,
+      "sha256": "318bd61d1022a142d2c9c64a49ce4a03f41e1b22c676ada5d3d2b9087a2310ab",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 4,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      }
+    },
+    {
+      "kind": "artifact",
+      "runId": 43729070987,
+      "path": "43729070987/stacked-export-base-reports.zip",
+      "bytes": 423798,
+      "sha256": "43f5f64db88945b8010a867373efee1c65d6189b4801634e74b351aff3766476",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 6,
+        "html": 2,
+        "xml": 2,
+        "traceZips": 0
+      },
+      "artifactId": 14167089256,
+      "artifactName": "stacked-export-base-reports",
+      "githubDigest": "sha256:43f5f64db88945b8010a867373efee1c65d6189b4801634e74b351aff3766476",
+      "originalExpiresAt": "2026-11-16T15:23:57Z",
+      "githubDigestMatches": true
+    },
+    {
+      "kind": "artifact",
+      "runId": 43729070987,
+      "path": "43729070987/stacked-export-head-reports.zip",
+      "bytes": 423956,
+      "sha256": "19860b7231da639da8e9d0f7f19e7aaa1b1cc8a88ab8896cd74e09be389b8d73",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 6,
+        "html": 2,
+        "xml": 2,
+        "traceZips": 0
+      },
+      "artifactId": 14168170493,
+      "artifactName": "stacked-export-head-reports",
+      "githubDigest": "sha256:19860b7231da639da8e9d0f7f19e7aaa1b1cc8a88ab8896cd74e09be389b8d73",
+      "originalExpiresAt": "2026-11-16T15:24:36Z",
+      "githubDigestMatches": true
+    }
+  ],
+  "notes": [
+    "All artifacts present in the six verification runs are retained, including both built benchmark sites.",
+    "Historical failed attempts and the formatter run are retained alongside the final verified runs.",
+    "Original ZIP bytes were retained; every archive passed ZIP CRC checks. Artifact SHA-256 values match GitHub digests.",
+    "run.json and workflow.yml beside each archive identify the original run and exact workflow definition."
+  ]
+}

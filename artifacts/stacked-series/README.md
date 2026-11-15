@@ -4,6 +4,8 @@ This change keeps the ordinary stacked bar series and its data requests. It redu
 
 Base: [`ag-grid/ag-charts@fd652e876a2b059924848a2177c82e67d6752327`](https://github.com/ag-grid/ag-charts/commit/fd652e876a2b059924848a2177c82e67d6752327), `latest`, version `14.3.0-beta.20261113`. Evidence was collected on 15 November 2026, macOS arm64, Node `24.21.0`, esbuild `0.19.9`. Node matches the repository's `^24.21.0` engine requirement.
 
+Evidence branch: `kirill/evidence-stacked-series`. Both submission branches contain only source/tests; reports, measurements and archives remain outside the contribution diff. [Full Actions archives](./actions/README.md).
+
 Implementation: [six-file source/test commit](https://github.com/popkir/ag-charts/commit/bec53b4495a6866beeeb1dcd727de6162b2dd3bd) · [clean fix diff](https://github.com/popkir/ag-charts/compare/fd652e876a2b059924848a2177c82e67d6752327...bec53b4495a6866beeeb1dcd727de6162b2dd3bd). The evidence in this directory is a separate fork-only commit.
 
 ## Review entry point
@@ -35,7 +37,7 @@ The positive fixture has 12 category keys and one distinct numeric `yKey` per se
 | 1000 | 12000 | 1553.544 (1508.511–1591.189) | 53.434 (49.926–55.172) |
 | 7293 | 87516 | 95612.930 (91573.348–98062.929) | 262.565 (258.777–293.825) |
 
-For 7293 series, the median merge stage is 52635.022 → 56.883 ms; `groupBatches` is 9389.835 → 22.270 ms. These stages are included in `execute`, not added to it. The small-case intervals and three-run sample do not establish statistical significance or a browser-latency guarantee.
+For 7293 series, the median merge stage is 52635.022 → 56.883 ms; `groupBatches` is 9389.835 → 22.270 ms. These stages are included in `execute`, not added to it. The small-case intervals and three-run sample do not establish statistical significance or a browser-latency guarantee. The 7293-series preparation ratio is about **364×**; the stock browser benchmark has only two series and reports much smaller changes. [Workload and measurement-boundary comparison](./SUBMISSION.md#what-the-speedup-numbers-mean).
 
 The mixed fixture additionally includes negative values, `-0`, zero, absent properties, `null`, hidden series and two stacks:
 

@@ -1,0 +1,13 @@
+{
+  "conclusion": "success",
+  "created_at": "2026-11-15T15:17:47Z",
+  "event": "push",
+  "head_branch": "kirill/export-stacked-series",
+  "head_sha": "5de9112d57d177b134325e51ad0fb7fc62addba5",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43729070987",
+  "id": 43729070987,
+  "name": "Stacked series PNG and cross-browser verification",
+  "path": ".github/workflows/stacked-export-checks.yml",
+  "status": "completed",
+  "updated_at": "2026-11-15T15:24:39Z"
+}

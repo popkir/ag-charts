@@ -1,0 +1,13 @@
+{
+  "conclusion": "failure",
+  "created_at": "2026-11-15T14:50:29Z",
+  "event": "push",
+  "head_branch": "kirill/verify-stacked-series",
+  "head_sha": "1b970b0bb38d54f237822c53d8712fafef1e7720",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43726542138",
+  "id": 43726542138,
+  "name": "Stacked series source verification",
+  "path": ".github/workflows/stacked-series-checks.yml",
+  "status": "completed",
+  "updated_at": "2026-11-15T15:12:35Z"
+}

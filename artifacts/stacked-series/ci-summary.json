@@ -499,5 +499,14 @@
       "firefox",
       "webkit"
     ]
+  },
+  "archive": {
+    "branch": "kirill/evidence-stacked-series",
+    "index": "actions/README.md",
+    "manifest": "actions/manifest.json",
+    "sourceBranches": [
+      "kirill/perf-stacked-series-checked",
+      "kirill/perf-stacked-series"
+    ]
   }
 }

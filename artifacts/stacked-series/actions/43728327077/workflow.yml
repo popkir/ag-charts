@@ -1,0 +1,83 @@
+name: Stacked series PNG and cross-browser verification
+
+on:
+  push:
+    branches: [kirill/export-stacked-series]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stacked-series-verification-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  BASE_SHA: fd652e876a2b059924848a2177c82e67d6752327
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+  SOURCE_SHA: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+
+jobs:
+  browser:
+    name: PNG and cross-browser checks (${{ matrix.role }})
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/export-stacked-series'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - role: head
+            source: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          - role: base
+            source: fd652e876a2b059924848a2177c82e67d6752327
+    env:
+      SOURCE_SHA: ${{ matrix.source }}
+      AG_FORCE_ALL_TESTS: '1'
+      AG_E2E_FRAMEWORKS: vanilla
+    steps:
+      - name: Checkout exact source-only fix
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ matrix.source }}
+          fetch-depth: 2
+          persist-credentials: false
+      - name: Set up official toolchain on the disposable runner
+        uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Verify the exact source under browser test
+        run: |
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          git diff --exit-code HEAD -- packages/ag-charts-community/src/chart/data
+          printf 'Browser source under test: %s\n' "$SOURCE_SHA" >> "$GITHUB_STEP_SUMMARY"
+      - name: Nx-managed browser and image comparisons, with no snapshot updates
+        run: >-
+          yarn nx test:e2e ag-charts-website --
+          cross-browser.spec.ts
+          --project=chromium --project=firefox --project=webkit
+      - name: Keep browser results and failure traces
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-export-${{ matrix.role }}-reports
+          path: |
+            reports/ag-charts-website-e2e.xml
+            reports/ag-charts-website-e2e.json
+            reports/ag-charts-website-e2e-html
+            reports/ag-charts-website-e2e-reports
+          if-no-files-found: ignore
+          retention-days: 1

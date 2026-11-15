@@ -1,0 +1,54 @@
+name: Prepare stacked-series formatter patch
+
+on:
+  push:
+    branches: [kirill/format-stacked-series]
+
+permissions:
+  contents: read
+
+jobs:
+  format:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/format-stacked-series'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: 669c38361b86883105bd3cfc0dd9678393f6693f
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.21.0'
+      - name: Install only the repository formatter and exact plugins
+        run: |
+          mkdir -p tmp/format-tools
+          npm install --prefix tmp/format-tools --no-save --no-audit --no-fund prettier@3.9.10 @trivago/prettier-plugin-sort-imports@6.0.2 prettier-plugin-astro@1.1.2
+      - name: Apply unchanged repository formatter options to the six fix files
+        run: |
+          node <<'JS'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const config = JSON.parse(fs.readFileSync('.prettierrc', 'utf8'));
+          config.plugins = config.plugins.map((name) => require.resolve(name, { paths: [path.resolve('tmp/format-tools')] }));
+          fs.writeFileSync('tmp/prettier-verified.json', JSON.stringify(config));
+          JS
+          node --version
+          tmp/format-tools/node_modules/.bin/prettier --version
+          tmp/format-tools/node_modules/.bin/prettier --config tmp/prettier-verified.json --write \
+            packages/ag-charts-community/src/chart/data/aggregateFunctions.ts \
+            packages/ag-charts-community/src/chart/data/aggregateFunctions.test.ts \
+            packages/ag-charts-community/src/chart/data/dataController.ts \
+            packages/ag-charts-community/src/chart/data/dataController.test.ts \
+            packages/ag-charts-community/src/chart/data/data-model/grouping/dataGrouper.ts \
+            packages/ag-charts-community/src/chart/data/data-model/grouping/dataGrouper.test.ts
+          git diff --full-index -- packages/ag-charts-community/src/chart/data > tmp/formatted.patch
+          git diff --stat
+      - name: Upload reviewable formatter patch
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-formatter-patch
+          path: tmp/formatted.patch
+          if-no-files-found: error
+          retention-days: 1
