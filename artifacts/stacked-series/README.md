@@ -6,6 +6,10 @@ Base: [`ag-grid/ag-charts@fd652e876a2b059924848a2177c82e67d6752327`](https://git
 
 Implementation: [six-file source/test commit](https://github.com/popkir/ag-charts/commit/bec53b4495a6866beeeb1dcd727de6162b2dd3bd) · [clean fix diff](https://github.com/popkir/ag-charts/compare/fd652e876a2b059924848a2177c82e67d6752327...bec53b4495a6866beeeb1dcd727de6162b2dd3bd). The evidence in this directory is a separate fork-only commit.
 
+## Review entry point
+
+[Maintainer handoff and source-only patch](./SUBMISSION.md) · [repository/browser verification](./CI.md). The handoff identifies the verified commit to cherry-pick, summarises the passed checks, and documents the tooltip snapshot failure reproduced unchanged on the upstream baseline.
+
 ## Change
 
 - Property definitions are indexed by string `property` names within the existing type/dataset/group buckets. The existing `deepEqual` check, including its key-count and skipped-key behaviour, remains the final compatibility test. Different datasets and transformations retain their existing boundaries. Non-string properties share a fallback bucket so the prefilter does not narrow structurally equal objects by reference.

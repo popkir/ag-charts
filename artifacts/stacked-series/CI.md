@@ -1,5 +1,7 @@
 # Repository and browser verification
 
+[Maintainer handoff and source-only submission](./SUBMISSION.md).
+
 Verified source: [`bec53b4495a6866beeeb1dcd727de6162b2dd3bd`](https://github.com/popkir/ag-charts/commit/bec53b4495a6866beeeb1dcd727de6162b2dd3bd), based on upstream [`fd652e876a2b059924848a2177c82e67d6752327`](https://github.com/ag-grid/ag-charts/commit/fd652e876a2b059924848a2177c82e67d6752327).
 
 The source-only commit contains six files. It supersedes the original `b2a56531f4b48e94f4533a0b94f8c96017248587` fix with test type/assertion API corrections and Prettier formatting. Runtime calculations are unchanged. The preparation measurements in the original report were collected on that original fix; they have not been relabelled as measurements of this revision.
