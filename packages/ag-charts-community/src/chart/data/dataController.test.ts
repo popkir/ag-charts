@@ -1,11 +1,13 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import type { LogIssue } from 'ag-charts-core';
 import { testLogger } from 'ag-charts-test';
 
+import { range } from './aggregateFunctions';
 import { DataController } from './dataController';
 import type { DataModelOptions, DatumPropertyDefinition } from './dataModel';
 import { DataSet } from './dataSet';
+import { groupAccumulativeValueProperty, keyProperty, valueProperty } from './processors';
 
 describe('DataController', () => {
     let controller: DataController;
@@ -14,6 +16,157 @@ describe('DataController', () => {
     beforeEach(() => {
         controller = new DataController('standalone', false, undefined, testLogger);
         data = [];
+    });
+
+    it('does not compare unrelated value properties when merging many series', async () => {
+        const count = 256;
+        const dataSet = new DataSet([Object.fromEntries(Array.from({ length: count }, (_, i) => [`y${i}`, i]))], testLogger);
+        const comparison = vi.spyOn(DataController, 'deepEqual');
+        try {
+            const requests = Array.from({ length: count }, (_, i) =>
+                controller.request(`series${i}`, dataSet, { props: [valueProperty(`y${i}`, 'number')] })
+            );
+            controller.execute(undefined, undefined);
+            const results = await Promise.all(requests);
+
+            expect(results[0].processedData.defs.values).toHaveLength(count);
+            expect(comparison).not.toHaveBeenCalled();
+        } finally {
+            comparison.mockRestore();
+        }
+    });
+
+    it.each([
+        [{ missingValue: 0 }, { missingValue: 1 }],
+        [{ forceValue: 0 }, { forceValue: 1 }],
+        [{ invalidValue: null }, { invalidValue: undefined }],
+        [{ processor: () => (value: number) => value }, { processor: () => (value: number) => value * 2 }],
+    ])('keeps the full compatibility check for the same property: %o vs %o', async (firstOptions, secondOptions) => {
+        const dataSet = new DataSet([{ y: 3 }], testLogger);
+        const first = controller.request('first', dataSet, {
+            props: [valueProperty('y' as const, 'number', { id: 'value', ...firstOptions })],
+        });
+        const second = controller.request('second', dataSet, {
+            props: [valueProperty('y' as const, 'number', { id: 'value', ...secondOptions })],
+        });
+
+        controller.execute(undefined, undefined);
+        const [result] = await Promise.all([first, second]);
+        expect(result.processedData.defs.values).toHaveLength(2);
+    });
+
+    it('keeps identical property names from different datasets separate in a shared model', async () => {
+        const props = [
+            keyProperty('x' as const, 'category', { id: 'key' }),
+            valueProperty('y' as const, 'number', { id: 'value' }),
+        ];
+        const requests = [3, 9].map((y, i) =>
+            controller.request(`series${i}`, new DataSet([{ x: 'A', y }], testLogger), {
+                props,
+                groupByKeys: true,
+                groupByData: false,
+            })
+        );
+        controller.execute(undefined, undefined);
+        const results = await Promise.all(requests);
+        expect(results[0].processedData).toBe(results[1].processedData);
+        for (const [i, value] of [3, 9].entries()) {
+            const { dataModel, processedData } = results[i];
+            expect(dataModel.resolveColumnById({ id: `series${i}` }, 'value', processedData, 'number')).toEqual([value]);
+        }
+        expect(results[0].processedData.defs.values).toHaveLength(2);
+    });
+
+    it('preserves every aggregate ID and scope when sharing equivalent ranges', async () => {
+        const dataSet = new DataSet<Record<string, string | number>>([{ x: 'A', a: 4, b: -7 }], testLogger);
+        const requests = ['first', 'second', 'other'].map((id) => {
+            const groupId = id === 'other' ? 'b' : 'a';
+            return controller.request(id, dataSet, {
+                groupByKeys: true,
+                props: [
+                    keyProperty('x', 'category', { id: 'key' }),
+                    valueProperty(groupId, 'number', { id: 'value', groupId }),
+                    range(`${id}-range`, groupId),
+                    range(`${id}-alias`, groupId),
+                ],
+            });
+        });
+
+        controller.execute(undefined, undefined);
+        const results = await Promise.all(requests);
+        for (const [i, id] of ['first', 'second', 'other'].entries()) {
+            const { dataModel, processedData } = results[i];
+            const expected = id === 'other' ? [-7, -7] : [4, 4];
+            expect(dataModel.getDomain({ id }, `${id}-range`, 'aggregate', processedData).domain).toEqual(expected);
+            expect(dataModel.getDomain({ id }, `${id}-alias`, 'aggregate', processedData).domain).toEqual(expected);
+            expect(dataModel.resolveProcessedDataIndexById({ id }, `${id}-range`)).toBe(id === 'other' ? 1 : 0);
+        }
+        expect(results[0].processedData.domain.aggValues).toHaveLength(2);
+    });
+
+    it('preserves stacked ranges across visibility changes and cached transactions', async () => {
+        const dataSet = new DataSet<Record<string, string | number>>(
+            [{ x: 'A', a: 2, b: 3 }, { x: 'B', a: -4, b: 5 }],
+            testLogger,
+            'x'
+        );
+        let cache: ReturnType<DataController['execute']> | undefined;
+        const processStack = async (hidden = false) => {
+            const next = new DataController('standalone', false, undefined, testLogger);
+            const requests = (['a', 'b'] as const).map((key) => {
+                const visibleProps = hidden && key === 'b' ? { forceValue: 0 } : {};
+                return next.request(key, dataSet, {
+                    groupByKeys: true,
+                    groupByData: false,
+                    props: [
+                        keyProperty('x', 'category', { id: 'key' }),
+                        ...groupAccumulativeValueProperty(
+                            key,
+                            'normal',
+                            { id: 'end', rangeId: 'range', groupId: 'stack', separateNegative: true, ...visibleProps },
+                            'number'
+                        ),
+                        ...groupAccumulativeValueProperty(
+                            key,
+                            'trailing',
+                            { id: 'start', groupId: 'trailing', separateNegative: true, ...visibleProps },
+                            'number'
+                        ),
+                    ],
+                });
+            });
+            cache = next.execute(cache, undefined);
+            const results = await Promise.all(requests);
+            const { dataModel, processedData } = results[0];
+            return {
+                keys: dataModel.resolveKeysById({ id: 'a' }, 'key', processedData),
+                ends: ['a', 'b'].map((id) => dataModel.resolveColumnById({ id }, 'end', processedData, 'number')),
+                ranges: ['a', 'b'].map((id) => dataModel.getDomain({ id }, 'range', 'aggregate', processedData).domain),
+            };
+        };
+
+        expect(await processStack()).toEqual({
+            keys: ['A', 'B'],
+            ends: [[2, -4], [5, 5]],
+            ranges: [[-4, 5], [-4, 5]],
+        });
+        expect(await processStack(true)).toEqual({
+            keys: ['A', 'B'],
+            ends: [[2, -4], [2, 0]],
+            ranges: [[-4, 2], [-4, 2]],
+        });
+        dataSet.addTransaction({ update: [{ x: 'A', a: 7, b: -1 }], append: [{ x: 'C', a: -2, b: -3 }] });
+        expect(await processStack()).toEqual({
+            keys: ['A', 'B', 'C'],
+            ends: [[7, -4, -2], [-1, 5, -5]],
+            ranges: [[-5, 7], [-5, 7]],
+        });
+        dataSet.addTransaction({ remove: [dataSet.data[1]], prepend: [{ x: 'D', a: 1, b: 2 }] });
+        expect(await processStack()).toEqual({
+            keys: ['D', 'A', 'C'],
+            ends: [[1, 7, -2], [3, -1, -5]],
+            ranges: [[-5, 7], [-5, 7]],
+        });
     });
 
     it('should merge compatible requests with identical definitions', async () => {

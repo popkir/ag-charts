@@ -281,7 +281,7 @@ export class DataController {
             opts: { ...requests[0].opts, props: [] },
         };
 
-        const optsByTypeAndDataId = new Map<string, PropertyDefinition<any>[]>();
+        const optsByTypeAndDataId = new Map<string, Map<string | undefined, PropertyDefinition<any>[]>>();
         const dataIds = new Map<unknown, number>();
         let nextDataId = 0;
         for (const request of requests) {
@@ -314,12 +314,19 @@ export class DataController {
                 }
 
                 const matchKey = `${clone.type}-${dataId}-${clone.groupId}`;
-                const matches = optsByTypeAndDataId.get(matchKey);
+                let matchesByProperty = optsByTypeAndDataId.get(matchKey);
+                if (matchesByProperty == null) {
+                    matchesByProperty = new Map();
+                    optsByTypeAndDataId.set(matchKey, matchesByProperty);
+                }
+                // Narrow candidates without changing the full compatibility check below.
+                const property = 'property' in clone && typeof clone.property === 'string' ? clone.property : undefined;
+                const matches = matchesByProperty.get(property);
                 const match = matches?.find((existing) => DataController.deepEqual(existing, clone));
 
                 if (matches == null) {
                     result.opts.props.push(clone);
-                    optsByTypeAndDataId.set(matchKey, [clone]);
+                    matchesByProperty.set(property, [clone]);
                     continue;
                 } else if (match == null) {
                     result.opts.props.push(clone);
@@ -332,7 +339,11 @@ export class DataController {
                     (match as any).scopes.push(...clone.scopes);
                 }
 
-                if ((match.type === 'key' || match.type === 'value') && clone.idsMap != null && clone.idsMap.size > 0) {
+                if (
+                    (match.type === 'key' || match.type === 'value' || match.type === 'aggregate') &&
+                    clone.idsMap != null &&
+                    clone.idsMap.size > 0
+                ) {
                     match.idsMap ??= new Map();
                     DataController.mergeIdsMap(clone.idsMap, match.idsMap);
                 }

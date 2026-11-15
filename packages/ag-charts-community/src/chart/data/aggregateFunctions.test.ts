@@ -89,6 +89,25 @@ describe('aggregateFunctions bigint support (AG-16608)', () => {
 });
 
 describe('caller-provided output tuple', () => {
+    it('shares the range function without sharing mutable output or losing bigint precision', () => {
+        const first = range('first', 'group');
+        const second = range('second', 'other-group');
+        expect(first.aggregateFunction).toBe(second.aggregateFunction);
+
+        const big = 9_007_199_254_740_993n;
+        const result = first.aggregateFunction([big, big + 1n]);
+        expect(result).toEqual([big, big + 1n]);
+        expect(second.aggregateFunction([1, 2])).toEqual([1, 2]);
+        expect(result).toEqual([big, big + 1n]);
+        expect(first.aggregateFunction([big])).not.toBe(first.aggregateFunction([big]));
+
+        const out: [number | bigint, number | bigint] = [0, 0];
+        expect(second.aggregateFunction([-big, big], undefined, out)).toBe(out);
+        expect(out).toEqual([-big, big]);
+        expect(first.aggregateFunction([], undefined, out)).toBe(out);
+        expect(out).toEqual([Infinity, -Infinity]);
+    });
+
     it('re-seeds and returns the tuple instead of allocating', () => {
         const out: [number | bigint, number | bigint] = [99n, 99n];
 

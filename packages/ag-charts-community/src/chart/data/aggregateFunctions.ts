@@ -75,13 +75,19 @@ export function groupSum(
     };
 }
 
+// Stable identity lets equivalent scoped ranges share one aggregate definition.
+const aggregateRange: AggregatePropertyDefinition<any, any, [AgNumericValue, AgNumericValue]>['aggregateFunction'] = (
+    values,
+    _keys,
+    out
+) => ContinuousDomain.extendDomain(values, seedTuple(out, Infinity, -Infinity));
+
 export function range(id: string, matchGroupId: string) {
     const result: AggregatePropertyDefinition<any, any, [AgNumericValue, AgNumericValue]> = {
         id,
         matchGroupIds: [matchGroupId],
         type: 'aggregate',
-        aggregateFunction: (values, _keys, out) =>
-            ContinuousDomain.extendDomain(values, seedTuple(out, Infinity, -Infinity)),
+        aggregateFunction: aggregateRange,
     };
 
     return result;
