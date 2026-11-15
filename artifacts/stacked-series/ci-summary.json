@@ -508,5 +508,107 @@
       "kirill/perf-stacked-series-checked",
       "kirill/perf-stacked-series"
     ]
+  },
+  "fullRender7293": {
+    "sources": {
+      "base": "fd652e876a2b059924848a2177c82e67d6752327",
+      "head": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd"
+    },
+    "series": 7293,
+    "rows": 12,
+    "points": 87516,
+    "repeatsPerSide": 3,
+    "legend": true,
+    "base": {
+      "updateCompleteMs": {
+        "median": 123577.10000000003,
+        "min": 123251.70000000001,
+        "max": 123688.70000000001,
+        "values": [
+          123688.70000000001,
+          123251.70000000001,
+          123577.10000000003
+        ]
+      },
+      "twoFramesCompleteMs": {
+        "median": 123805.99999999994,
+        "min": 123475.39999999997,
+        "max": 123910.5,
+        "values": [
+          123910.5,
+          123475.39999999997,
+          123805.99999999994
+        ]
+      }
+    },
+    "head": {
+      "updateCompleteMs": {
+        "median": 50734.29999999993,
+        "min": 50525,
+        "max": 51715.600000000006,
+        "values": [
+          51715.600000000006,
+          50525,
+          50734.29999999993
+        ]
+      },
+      "twoFramesCompleteMs": {
+        "median": 51013.70000000007,
+        "min": 50760.899999999965,
+        "max": 51941.79999999999,
+        "values": [
+          51941.79999999999,
+          50760.899999999965,
+          51013.70000000007
+        ]
+      }
+    },
+    "updateRatio": 2.4357702777016774,
+    "twoFramesRatio": 2.426916691006529,
+    "comparisons": [
+      {
+        "label": "run1",
+        "differentPixels": 0,
+        "totalPixels": 960000,
+        "geometryIdentical": true,
+        "rawScenesIdentical": true,
+        "inputIdentical": true,
+        "updateRatio": 2.3917096582075814,
+        "twoFramesRatio": 2.3855642276547986
+      },
+      {
+        "label": "run2",
+        "differentPixels": 0,
+        "totalPixels": 960000,
+        "geometryIdentical": true,
+        "rawScenesIdentical": true,
+        "inputIdentical": true,
+        "updateRatio": 2.4394200890648197,
+        "twoFramesRatio": 2.4324903616760154
+      },
+      {
+        "label": "run3",
+        "differentPixels": 0,
+        "totalPixels": 960000,
+        "geometryIdentical": true,
+        "rawScenesIdentical": true,
+        "inputIdentical": true,
+        "updateRatio": 2.4357702777016774,
+        "twoFramesRatio": 2.426916691006529
+      }
+    ],
+    "host": {
+      "cpuModel": "AMD EPYC 7763 64-Core Processor",
+      "nproc": 4,
+      "bogomips": 4890.86,
+      "totalMemMb": 15984
+    },
+    "browserVersion": "148.0.7778.96",
+    "run": "https://github.com/popkir/ag-charts/actions/runs/43774538081",
+    "helperCommit": "4c89501c8c0819d51762a7ee2afdd7491dbb6874",
+    "conclusion": "success",
+    "report": "full-render-7293/README.md",
+    "rawSummary": "full-render-7293/results/summary.json",
+    "remainingLatencySeconds": 51.01370000000007
   }
 }

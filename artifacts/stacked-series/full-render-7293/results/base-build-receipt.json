@@ -1,0 +1,41 @@
+{
+  "role": "base",
+  "source": "fd652e876a2b059924848a2177c82e67d6752327",
+  "originalBuildRun": 43726854766,
+  "archiveCommit": "b3c820cc5b6ccf82333979e331db2d457d040dc5",
+  "archiveSha256": "021b43b75506081b9cd57107c39803ab45519f89de99c977ef7eaf76edc698e7",
+  "filesBeforeFixtureInstallation": {
+    "vanilla/benchmarks/examples/high-perf-bar-stacked/ag-example-styles.css": {
+      "sha256": "6bc4106ca860f759ded5d10a688001d3483112bdecd1c0b27e7e523f1bb7592a",
+      "bytes": 17990
+    },
+    "vanilla/benchmarks/examples/high-perf-bar-stacked/main.js": {
+      "sha256": "95f185717101019f04f6cce53f1393edd0f0026e4086d1eedcdb290a7d4763b8",
+      "bytes": 11682
+    },
+    "vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkHarness.js": {
+      "sha256": "3be11c47c1f4aa7c9433867621e6cf8773b1fa9e5c15812fb891a94757a69a9a",
+      "bytes": 90409
+    },
+    "vanilla/benchmarks/examples/high-perf-bar-stacked/index.html": {
+      "sha256": "05d27d8e39a9d0fab45e9983db2e180652e1f231ed0f2a90338cbb764e5c588f",
+      "bytes": 2798
+    },
+    "vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkUtils.js": {
+      "sha256": "7f38bc8bc5bf62c3e40d407fdd9fd584fa1404cb46f581d133e6d869ac60f876",
+      "bytes": 18005
+    },
+    "vanilla/benchmarks/examples/high-perf-bar-stacked/data.js": {
+      "sha256": "d9d01641ec034b041a57288b1ec5002dc96879706290f074d9e7296a41f517a0",
+      "bytes": 1349
+    },
+    "dev/ag-charts-enterprise/dist/umd/ag-charts-enterprise.js": {
+      "sha256": "0144e3db7fada5ede027281de91a2e2ded33922d41222cfe72e7758308129f40",
+      "bytes": 5455391
+    }
+  },
+  "fixtureSourceSha256": "ff7eb0a72570ab1ad076bb9d3e610f333a3599f9500444bfffa473ebd6621963",
+  "installedMainSha256": "97e1e01be4e37747c928a548b5acf988db576ae4a88d923c1e81d3a5abeba042",
+  "runtimeBundleUnmodified": true,
+  "note": "Only the example main.js is replaced. Benchmark helpers and runtime UMD remain byte-identical."
+}

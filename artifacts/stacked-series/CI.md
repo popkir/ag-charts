@@ -75,11 +75,19 @@ These are medians of the three run medians, as reported by the stock comparison 
 
 The six raw timing reports and comparison output are retained under [browser-benchmark](./browser-benchmark). No heap-sampling memory pass was performed for this browser comparison.
 
+## Full browser rendering with 7293 series
+
+[Successful paired run](https://github.com/popkir/ag-charts/actions/runs/43774538081) · [full 7293-series browser results](./full-render-7293/README.md).
+
+Three complete renders per revision, with 7293 visible series, 12 categories, legend on and animation off, passed the complete bar-node audit and byte-identical scene/PNG comparisons. Median create-through-update-plus-two-frames time improved **123.806 s → 51.014 s (2.427×, 58.8% less time)**. The create-through-`waitForUpdate` medians were 123.577 → 50.734 s (2.436×).
+
+All 87516 bar datum nodes were retained in every render. All six completed. The initial 32-series pilot layout assertion and its corrected rerun are preserved in the [permanent archive](./actions/README.md). Canonical timing data, scene snapshots, screenshots, source snapshots and receipts are retained separately from the source contribution.
+
 ## Interpreting the performance results
 
-The official browser benchmark above has only **2 series**. The source benchmark deliberately has up to **7293 series**, because the changed preparation loops repeat work across series definitions and scopes. At 7293 × 12 positive values, the same `DataController.execute` boundary improved from 95612.930 to 262.565 ms (about **364×**, median of three runs per side). At 1000 series it improved by about 29×.
+The approximately 364× result covers only `DataController.execute` in the source benchmark. The new full browser initial-render result is about **2.43×**, and still takes about **51 seconds** after the patch. The earlier stock browser example has only two series and showed 7.3% less chart-create time and 1.1% less zoom time.
 
-The stock chart-create reduction of 7.3% and zoom reduction of 1.1% describe a different workload and a wider browser boundary. They do not negate the measured preparation improvement, and they do not establish the full-render speedup of a 7293-series chart. That matched browser measurement remains unperformed.
+Different machines, workloads and boundaries are involved. These results must not be combined or their absolute milliseconds subtracted. Remaining latency in the extreme full-render workload requires separate profiling; this patch is not presented as making that workload interactive-speed.
 
 ## Remaining scope
 

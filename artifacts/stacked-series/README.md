@@ -1,6 +1,6 @@
 # Stacked-series data preparation
 
-This change keeps the ordinary stacked bar series and its data requests. It reduces repeated work in data preparation when many series share a dataset and stack. The measured boundary is `DataController.execute`, before chart rendering.
+This change keeps the ordinary stacked bar series and its data requests. It reduces repeated work in data preparation when many series share a dataset and stack. The original source benchmark measures `DataController.execute`, before chart rendering. A separately measured full browser render now shows **123.806 s → 51.014 s (2.427×)** for 7293 series × 12 categories, with legend enabled and identical output. [Full browser report](./full-render-7293/README.md).
 
 Base: [`ag-grid/ag-charts@fd652e876a2b059924848a2177c82e67d6752327`](https://github.com/ag-grid/ag-charts/commit/fd652e876a2b059924848a2177c82e67d6752327), `latest`, version `14.3.0-beta.20261113`. Evidence was collected on 15 November 2026, macOS arm64, Node `24.21.0`, esbuild `0.19.9`. Node matches the repository's `^24.21.0` engine requirement.
 
@@ -20,6 +20,10 @@ Implementation: [six-file source/test commit](https://github.com/popkir/ag-chart
 - `range()` reuses a stateless function. Its calculation still uses `ContinuousDomain.extendDomain` and re-seeds the caller-owned output tuple. Merged aggregate definitions retain all IDs/scopes through `idsMap`.
 
 The indexes are local to one processing call. There is no unbounded global cache. This targets the measured shared stacked-series case; arbitrary incompatible keys sharing the same invalidity references can still require repeated final compatibility checks.
+
+## Full browser rendering
+
+The matched 7293-series browser measurement completed three runs per revision on one VM. Median create-through-update-plus-two-frames time improved from **123.806 to 51.014 seconds** (2.427×, 58.8% less time). Every render retained all 7293 series and 87516 bar datum nodes; full scenes and PNGs were byte-identical before/after. The candidate still takes about 51 seconds. [Method, raw results, screenshots and remaining scope](./full-render-7293/README.md).
 
 ## Repeated measurements
 
@@ -82,7 +86,7 @@ The paired targeted Chromium runs on the verified fix and upstream baseline each
 
 The official `high-perf-bar-stacked` browser benchmark also passed, with three interleaved runs per side on one runner. Its stock workload is 100000 rows and 2 series, which is distinct from the 7293-series preparation workload above. Detailed results, PNG export/cross-browser coverage, exact commands, pinned source identities and remaining scope are recorded in [CI.md](./CI.md).
 
-These fork runs are not upstream CI approval. Maintainer review and the upstream merge gates are still required. No browser speedup for the 7293-series case is claimed.
+These fork runs are not upstream CI approval. Maintainer review and the upstream merge gates are still required. The full browser render is separately measured at about 2.43×; the 364× source-preparation result is not a total-render claim. See the [full browser report](./full-render-7293/README.md).
 
 ## Reproduce without installing the full monorepo
 

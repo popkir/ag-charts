@@ -1,0 +1,39 @@
+{
+  "helperCommit": "4c89501c8c0819d51762a7ee2afdd7491dbb6874",
+  "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+  "base": "fd652e876a2b059924848a2177c82e67d6752327",
+  "files": [
+    {
+      "path": "tools/full-render-7293/fixture.js",
+      "sha256": "ff7eb0a72570ab1ad076bb9d3e610f333a3599f9500444bfffa473ebd6621963",
+      "bytes": 4817
+    },
+    {
+      "path": "tools/full-render-7293/prepare.py",
+      "sha256": "ca4fbc77cbd658366a06689572f2ca15091f517ad80581fb2f6114ad291fd4c6",
+      "bytes": 5127
+    },
+    {
+      "path": "tools/full-render-7293/run.mjs",
+      "sha256": "434276116f246bbb51dd01718fe6945d25d89c2b0d6dcaf6c95cde8e9c49c965",
+      "bytes": 15049
+    },
+    {
+      "path": "tools/full-render-7293/README.md",
+      "sha256": "1be420ff5265860484e72a6d998756d1e7a57830a8bd9e8adc7d3601863575df",
+      "bytes": 3048
+    },
+    {
+      "path": ".github/workflows/full-render-7293.yml",
+      "sha256": "1c12850af02d5a47030f8d38e4950a3c9a04e09d6a977fb19bca0f223e1e9a52",
+      "bytes": 2804
+    }
+  ],
+  "sharedUpstreamHelpers": [
+    "tools/benchmark/serve-static.js",
+    "tools/benchmark/contention.ts",
+    "archived generated benchmarkHarness.js",
+    "archived generated benchmarkUtils.js",
+    "archived generated read-only E2E captureScenes block"
+  ]
+}

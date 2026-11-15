@@ -1,6 +1,6 @@
 {
   "repository": "popkir/ag-charts",
-  "archivedAtUtc": "2026-11-15T22:23:01.439688+00:00",
+  "archivedAtUtc": "2026-11-15T23:39:37.014564+00:00",
   "verifiedSource": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
   "upstreamBase": "fd652e876a2b059924848a2177c82e67d6752327",
   "runs": [
@@ -81,6 +81,30 @@
       "path": ".github/workflows/stacked-export-checks.yml",
       "status": "completed",
       "updated_at": "2026-11-15T15:24:39Z"
+    },
+    {
+      "id": 43774220145,
+      "name": "Full render of 7293 stacked series",
+      "head_sha": "f17e56552304717ade2523f2df6b0ad1f2abadfc",
+      "head_branch": "kirill/benchmark-7293-render",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-15T23:19:55Z",
+      "updated_at": "2026-11-15T23:20:44Z",
+      "path": ".github/workflows/full-render-7293.yml",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43774220145"
+    },
+    {
+      "id": 43774538081,
+      "name": "Full render of 7293 stacked series",
+      "head_sha": "4c89501c8c0819d51762a7ee2afdd7491dbb6874",
+      "head_branch": "kirill/benchmark-7293-render",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-15T23:23:25Z",
+      "updated_at": "2026-11-15T23:33:51Z",
+      "path": ".github/workflows/full-render-7293.yml",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43774538081"
     }
   ],
   "archives": [
@@ -376,12 +400,82 @@
       "githubDigest": "sha256:19860b7231da639da8e9d0f7f19e7aaa1b1cc8a88ab8896cd74e09be389b8d73",
       "originalExpiresAt": "2026-11-16T15:24:36Z",
       "githubDigestMatches": true
+    },
+    {
+      "runId": 43774220145,
+      "kind": "artifact",
+      "artifactId": 14185149541,
+      "artifactName": "full-render-7293-results",
+      "bytes": 183159,
+      "sha256": "f68f18e7bf06f9d3df7a7c3892e1b475e3e7709301ab8fc45e9a51bf499e21a4",
+      "githubDigest": "sha256:f68f18e7bf06f9d3df7a7c3892e1b475e3e7709301ab8fc45e9a51bf499e21a4",
+      "githubDigestMatches": true,
+      "originalExpiresAt": "2026-12-15T23:20:40Z",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 10,
+        "png": 1,
+        "sceneGzip": 1,
+        "traceZips": 1,
+        "html": 0,
+        "xml": 0
+      },
+      "path": "43774220145/full-render-7293-results.zip"
+    },
+    {
+      "runId": 43774220145,
+      "kind": "run-logs",
+      "bytes": 24227,
+      "sha256": "3bc7c74610f28fda1b63177e6ef6d16a4600457ee137d0a93d1da38ec97292e0",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 11,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      },
+      "path": "43774220145/run-logs.zip"
+    },
+    {
+      "runId": 43774538081,
+      "kind": "artifact",
+      "artifactId": 14185891514,
+      "artifactName": "full-render-7293-results",
+      "bytes": 8386472,
+      "sha256": "18ad076c0a6c789c42755a1fc18f298cc531ae8286429386dc76bd268f68ac53",
+      "githubDigest": "sha256:18ad076c0a6c789c42755a1fc18f298cc531ae8286429386dc76bd268f68ac53",
+      "githubDigestMatches": true,
+      "originalExpiresAt": "2026-12-15T23:33:46Z",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 62,
+        "png": 12,
+        "sceneGzip": 8,
+        "traceZips": 2,
+        "html": 0,
+        "xml": 0
+      },
+      "path": "43774538081/full-render-7293-results.zip"
+    },
+    {
+      "runId": 43774538081,
+      "kind": "run-logs",
+      "bytes": 31110,
+      "sha256": "b455a2c0e7dae6aee1d28afec7dd7d6c1e7b8f38d8be679e88376d0537a4bf75",
+      "zipCrcVerified": true,
+      "contents": {
+        "entries": 16,
+        "html": 0,
+        "xml": 0,
+        "traceZips": 0
+      },
+      "path": "43774538081/run-logs.zip"
     }
   ],
   "notes": [
-    "All artifacts present in the six verification runs are retained, including both built benchmark sites.",
-    "Historical failed attempts and the formatter run are retained alongside the final verified runs.",
-    "Original ZIP bytes were retained; every archive passed ZIP CRC checks. Artifact SHA-256 values match GitHub digests.",
-    "run.json and workflow.yml beside each archive identify the original run and exact workflow definition."
+    "All artifacts and complete run logs from eight verification runs are retained, including historical failed attempts, both benchmark-site builds and the 7293-series browser render runs.",
+    "The 32-series initial layout assertion failure is historical setup evidence; canonical timing summaries include only the three successful 7293-series pairs.",
+    "Original ZIP bytes passed CRC validation; every artifact ZIP matched the SHA-256 digest reported by GitHub.",
+    "Full render canonical images, JSON reports and source snapshots are also linked from ../full-render-7293/README.md."
   ]
 }

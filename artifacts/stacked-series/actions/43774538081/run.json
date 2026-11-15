@@ -1,0 +1,12 @@
+{
+  "id": 43774538081,
+  "name": "Full render of 7293 stacked series",
+  "head_sha": "4c89501c8c0819d51762a7ee2afdd7491dbb6874",
+  "head_branch": "kirill/benchmark-7293-render",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-11-15T23:23:25Z",
+  "updated_at": "2026-11-15T23:33:51Z",
+  "path": ".github/workflows/full-render-7293.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43774538081"
+}

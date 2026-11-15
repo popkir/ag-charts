@@ -1,0 +1,370 @@
+{
+  "role": "base",
+  "source": "fd652e876a2b059924848a2177c82e67d6752327",
+  "label": "pilot",
+  "seriesCount": 32,
+  "categories": 12,
+  "expectedPoints": 384,
+  "timestamp": "2026-11-15T23:24:11.071Z",
+  "timings": {
+    "updateCompleteMs": 177.29999999999563,
+    "twoFramesCompleteMs": 202.10000000000582,
+    "extraFrameWaitMs": 24.80000000000291
+  },
+  "benchmark": {
+    "version": "14.3.0-beta.20261113",
+    "parameterKeys": [
+      "Series",
+      "Categories",
+      "Legend"
+    ],
+    "environment": {
+      "viewport": {
+        "width": 1280,
+        "height": 960
+      },
+      "chart": {
+        "width": 1200,
+        "height": 800
+      },
+      "devicePixelRatio": 1,
+      "hostname": "localhost",
+      "browser": "Chrome 148.0"
+    },
+    "metadata": {
+      "scenario": "7293-series-12-categories-positive",
+      "seriesCount": 32,
+      "rows": 12,
+      "points": 384,
+      "legend": true,
+      "animation": false,
+      "chartWidth": 1200,
+      "chartHeight": 800,
+      "version": "14.3.0-beta.20261113",
+      "warmup": "Separate 32-series chart, then destruction and GC outside timing",
+      "boundary": "AgCharts.create through waitForUpdate plus two requestAnimationFrame callbacks",
+      "libraryBoundary": "Unmodified upstream performInitialLoad"
+    },
+    "results": [
+      {
+        "testCase": "Full many-series initial render",
+        "params": {
+          "Series": "32",
+          "Categories": "12",
+          "Legend": "enabled"
+        },
+        "averageTime": 202.10000000000582,
+        "minTime": 202.10000000000582,
+        "maxTime": 202.10000000000582,
+        "sampleCount": 1,
+        "timings": [
+          202.10000000000582
+        ],
+        "frameStats": {
+          "frameCount": 3,
+          "wallTimeMs": 208.50000000000136,
+          "avgFrameIntervalMs": 104.25000000000068,
+          "longFrameCount": 0,
+          "longFrameMaxDurationMs": 0,
+          "longFrameTotalBlockingMs": 0,
+          "longFrames": [],
+          "longFramesUnsupported": false
+        },
+        "gcStats": {
+          "supported": true,
+          "precise": true,
+          "sampleCount": 5,
+          "startUsedBytes": 20387690,
+          "endUsedBytes": 46068810,
+          "peakUsedBytes": 46068810,
+          "avgUsedBytes": 40929047.6,
+          "detectedGcCount": 0,
+          "totalReclaimedBytes": 0,
+          "allocationRateBytesPerSec": 123170839.32853638
+        }
+      }
+    ]
+  },
+  "configured": {
+    "series": 32,
+    "yKeys": [
+      "y0",
+      "y1",
+      "y2",
+      "y3",
+      "y4",
+      "y5",
+      "y6",
+      "y7",
+      "y8",
+      "y9",
+      "y10",
+      "y11",
+      "y12",
+      "y13",
+      "y14",
+      "y15",
+      "y16",
+      "y17",
+      "y18",
+      "y19",
+      "y20",
+      "y21",
+      "y22",
+      "y23",
+      "y24",
+      "y25",
+      "y26",
+      "y27",
+      "y28",
+      "y29",
+      "y30",
+      "y31"
+    ],
+    "rows": 12,
+    "animation": {
+      "enabled": false
+    },
+    "legend": {
+      "enabled": true
+    },
+    "width": 1200,
+    "height": 800
+  },
+  "layout": {
+    "container": {
+      "width": 1200,
+      "height": 800
+    },
+    "wrapper": {
+      "width": 1200,
+      "height": 800
+    },
+    "canvases": [
+      {
+        "width": 1200,
+        "height": 800,
+        "cssWidth": "1200px",
+        "cssHeight": "800px"
+      }
+    ]
+  },
+  "chartState": {
+    "version": "14.3.0",
+    "legend": [
+      {
+        "visible": true,
+        "seriesId": "BarSeries-33",
+        "itemId": "y0"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-34",
+        "itemId": "y1"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-35",
+        "itemId": "y2"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-36",
+        "itemId": "y3"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-37",
+        "itemId": "y4"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-38",
+        "itemId": "y5"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-39",
+        "itemId": "y6"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-40",
+        "itemId": "y7"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-41",
+        "itemId": "y8"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-42",
+        "itemId": "y9"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-43",
+        "itemId": "y10"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-44",
+        "itemId": "y11"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-45",
+        "itemId": "y12"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-46",
+        "itemId": "y13"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-47",
+        "itemId": "y14"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-48",
+        "itemId": "y15"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-49",
+        "itemId": "y16"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-50",
+        "itemId": "y17"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-51",
+        "itemId": "y18"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-52",
+        "itemId": "y19"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-53",
+        "itemId": "y20"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-54",
+        "itemId": "y21"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-55",
+        "itemId": "y22"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-56",
+        "itemId": "y23"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-57",
+        "itemId": "y24"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-58",
+        "itemId": "y25"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-59",
+        "itemId": "y26"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-60",
+        "itemId": "y27"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-61",
+        "itemId": "y28"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-62",
+        "itemId": "y29"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-63",
+        "itemId": "y30"
+      },
+      {
+        "visible": true,
+        "seriesId": "BarSeries-64",
+        "itemId": "y31"
+      }
+    ],
+    "active": {
+      "frozen": false
+    },
+    "collapsed": []
+  },
+  "inputSha256": "756fe950e49fb12629b173abef8d7d2c4b6d5a011dfd605ed29685e833746ed6",
+  "expectedCategoryStackTotals": [
+    528,
+    560,
+    592,
+    624,
+    656,
+    688,
+    720,
+    752,
+    784,
+    816,
+    848,
+    880
+  ],
+  "sceneAudit": {
+    "actualSeries": 32,
+    "actualBarDatumNodes": 384,
+    "categoriesPerSeries": 12,
+    "zeroSizeRects": 0,
+    "geometrySha256": "7ee0ce78e980e1aac146d11625e9ab18937148e20252fad4c57428de1b1e0a3c",
+    "sceneSha256": "81922e0d0678ea052b5e96493229eb60814720df46a7492c0dfd6b8fbc964307"
+  },
+  "screenshot": {
+    "width": 1200,
+    "height": 800,
+    "sha256": "6cc7f12ac37aa06d5d768e2b479cda3b26969eff59148cd1a6cb694e94a7bd9e"
+  },
+  "host": {
+    "cpuModel": "AMD EPYC 7763 64-Core Processor",
+    "nproc": 4,
+    "bogomips": 4890.86,
+    "totalMemMb": 15984
+  },
+  "browserVersion": "148.0.7778.96",
+  "viewport": {
+    "width": 1280,
+    "height": 960,
+    "deviceScaleFactor": 1
+  },
+  "contention": {
+    "stealPct": 0,
+    "psiSomeUs": 51824,
+    "psiFullUs": 0,
+    "windowMs": 3155
+  },
+  "timingInstrumentation": "No tracing or heap sampling for canonical measurements; trace enabled only for the excluded 32-series pilot",
+  "completion": "Unmodified upstream performInitialLoad -> waitForUpdate; then two animation frames",
+  "runtime": "Exact archived UMD; bundle SHA-256 recorded in build receipt"
+}

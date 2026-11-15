@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "canonicalMeasurements": 6,
+  "seriesPerMeasurement": 7293,
+  "barDatumNodesPerMeasurement": 87516,
+  "allCanonicalRectanglesPositiveSize": true,
+  "allSceneGzipHashesMatch": true,
+  "allScreenshotHashesMatch": true,
+  "pngsAndScenesByteIdenticalPerPair": true,
+  "allLegendEntriesVisible": true,
+  "mediansIndependentlyRecomputed": true,
+  "sourceArchive": "43774538081/full-render-7293-results.zip"
+}

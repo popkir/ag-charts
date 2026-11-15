@@ -1,0 +1,49 @@
+{
+  "messages": [
+    {
+      "type": "error",
+      "text": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "error",
+      "text": "****************************************************************************************************************************"
+    },
+    {
+      "type": "error",
+      "text": "*********************************************** AG Charts Enterprise License ***********************************************"
+    },
+    {
+      "type": "error",
+      "text": "************************************************** License Key Not Found ***************************************************"
+    },
+    {
+      "type": "error",
+      "text": "* All AG Charts Enterprise features are unlocked for trial.                                                                *"
+    },
+    {
+      "type": "error",
+      "text": "* If you want to hide the watermark please email info@ag-grid.com for a trial license key.                                 *"
+    },
+    {
+      "type": "error",
+      "text": "****************************************************************************************************************************"
+    },
+    {
+      "type": "error",
+      "text": "****************************************************************************************************************************"
+    },
+    {
+      "type": "info",
+      "text": "MANY_SERIES_RENDER_START 7293"
+    },
+    {
+      "type": "info",
+      "text": "MANY_SERIES_RENDER_COMPLETE {\"updateCompleteMs\":50525,\"twoFramesCompleteMs\":50760.899999999965,\"extraFrameWaitMs\":235.89999999996508}"
+    },
+    {
+      "type": "table",
+      "text": "[Object]"
+    }
+  ],
+  "pageErrors": []
+}

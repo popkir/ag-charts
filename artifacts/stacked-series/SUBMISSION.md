@@ -2,7 +2,9 @@
 
 Issue: [ag-grid/ag-charts#9096](https://github.com/ag-grid/ag-charts/issues/9096).
 
-Preparing 7293 stacked series across 12 synthetic categories took a median **95612.930 ms before and 262.565 ms after** at the same `DataController.execute` boundary, with three runs per side. This measures data preparation before rendering. [Reproducer, raw timings and measurement limits](./README.md).
+Full browser initial rendering of 7293 stacked series × 12 categories, with legend enabled, improved from **123.806 s to 51.014 s** (three runs per side, **2.427×**, 58.8% less time), with byte-identical screenshots and complete scene graphs. [full 7293-series browser results](./full-render-7293/README.md).
+
+The narrower source preparation benchmark improved from 95612.930 to 262.565 ms (about 364×); its different boundary and machine are documented in [the original report](./README.md). The candidate's full render still takes about 51 seconds for this extreme case.
 
 ## Source to review or cherry-pick
 
@@ -37,12 +39,13 @@ The optimisation targets repeated preparation work across **many series**. A lar
 | 100 series × 12 categories, `DataController.execute` | 27.577 ms | 7.041 ms | about 3.9× |
 | 1000 series × 12 categories, `DataController.execute` | 1553.544 ms | 53.434 ms | about 29× |
 | 7293 series × 12 categories, `DataController.execute` | 95612.930 ms | 262.565 ms | about 364× |
+| Full browser render, 7293 series × 12 categories, legend enabled | 123806.0 ms | 51013.7 ms | about 2.427× |
 | Official browser example: 2 series × 100000 rows, chart create | 164.8 ms | 152.7 ms | 7.3% less time |
 | Same official browser example, zoom × 20 | 378.6 ms | 374.2 ms | 1.1% less time |
 
 All rows summarise three runs per side. The preparation and browser results were collected on different machines and cover different boundaries; they are not directly interchangeable. Raw results and source provenance are retained.
 
-The large speedup is established for the synthetic many-series **data-preparation phase**. A matched full-browser rendering measurement with 7293 series has not been performed, so a 364× improvement in total chart rendering or interaction latency is not claimed. The small stock-browser differences are observations, not a statistical-significance claim.
+The large speedup is established for the synthetic many-series **data-preparation phase**. The matched full-browser render is now measured at about 2.43×; 364× applies only to source preparation. These are separate experiments on different machines and their absolute times cannot be subtracted. The approximately 51-second remaining render latency is not considered solved. The small stock-browser differences are observations, not a statistical-significance claim.
 
 ## Verification
 
@@ -52,6 +55,7 @@ The large speedup is established for the synthetic many-series **data-preparatio
 | Complete Community unit suite | 7214 passed, 16 skipped |
 | Complete Enterprise unit suite | 7258 passed, 52 skipped |
 | Targeted Chromium visual/interaction suite | 398 passed, 3 skipped, 1 baseline-reproduced failure |
+| Full 7293-series browser render and data/visual audit | 3 pairs passed; all 87516 bar datums and byte-identical PNG/scenes |
 | Stock PNG/browser probes, Chromium + Firefox + WebKit | 18 passed; also passed on the baseline |
 | Official `high-perf-bar-stacked` browser benchmark | Passed, 3 interleaved runs per side |
 
@@ -69,6 +73,6 @@ Those jobs remain failed. No screenshot baseline, tolerance or test exclusion wa
 
 The source is ready for maintainer review with fork verification attached. The complete upstream CI matrix and normal merge gates still need to run in the upstream repository.
 
-The stock browser benchmark covers 100000 rows and 2 series, separately from the 7293-series preparation case. No browser-render speedup for the many-series workload is claimed.
+The stock two-series browser benchmark, the source preparation benchmark and the new full 7293-series browser render have distinct scopes. See [full 7293-series browser results](./full-render-7293/README.md) for raw timings, exact boundaries and the 2.43× browser result. Remaining extreme-workload latency is about 51 seconds.
 
 PR creation is currently restricted to collaborators. A maintainer can review/cherry-pick the single source commit, or advise how personal GitHub account `popkir` should submit it through the normal contribution process. No upstream PR, acceptance, merge or release is implied.
