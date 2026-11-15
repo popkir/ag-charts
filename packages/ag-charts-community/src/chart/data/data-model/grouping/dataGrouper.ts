@@ -271,11 +271,23 @@ export class DataGrouper<D extends object, K extends keyof D & string> {
     ) {
         const columnBatches: ColumnBatch[] = [];
         const processedColumnIndexes = new Set<number>();
+        // Preserve column order while indexing once rather than scanning every column for each scope.
+        const columnIndexesByScope = new Map<ScopeId, number[]>();
+        for (let columnIdx = 0; columnIdx < allColumns.length; columnIdx++) {
+            for (const scope of columnScopes[columnIdx]) {
+                let indexes = columnIndexesByScope.get(scope);
+                if (indexes == null) {
+                    indexes = [];
+                    columnIndexesByScope.set(scope, indexes);
+                }
+                indexes.push(columnIdx);
+            }
+        }
         for (const scope of allScopes) {
-            const scopeColumnIndexes = allColumns
-                .map((_, idx) => idx)
-                .filter((idx) => !processedColumnIndexes.has(idx) && columnScopes[idx].has(scope));
-            if (scopeColumnIndexes.length === 0) continue;
+            const scopeColumnIndexes = columnIndexesByScope
+                .get(scope)
+                ?.filter((idx) => !processedColumnIndexes.has(idx));
+            if (scopeColumnIndexes == null || scopeColumnIndexes.length === 0) continue;
             for (const idx of scopeColumnIndexes) {
                 processedColumnIndexes.add(idx);
             }
@@ -320,6 +332,24 @@ export class DataGrouper<D extends object, K extends keyof D & string> {
     private mergeCompatibleBatches(columnBatches: ColumnBatch[]): MergedColumnBatch[] {
         const merged: MergedColumnBatch[] = [];
         const processed = new Set<number>();
+        const indexesByInvalidity = new Map<ColumnBatch[5], Map<ColumnBatch[4], number[]>>();
+        const candidateIndexes: number[][] = [];
+        // Different invalidity arrays cannot merge, even when they contain identical flags.
+        for (let i = 0; i < columnBatches.length; i++) {
+            const [, , , , invalidData, invalidKeys] = columnBatches[i];
+            let indexesByInvalidData = indexesByInvalidity.get(invalidKeys);
+            if (indexesByInvalidData == null) {
+                indexesByInvalidData = new Map();
+                indexesByInvalidity.set(invalidKeys, indexesByInvalidData);
+            }
+            let indexes = indexesByInvalidData.get(invalidData);
+            if (indexes == null) {
+                indexes = [];
+                indexesByInvalidData.set(invalidData, indexes);
+            }
+            indexes.push(i);
+            candidateIndexes.push(indexes);
+        }
 
         for (let i = 0; i < columnBatches.length; i++) {
             if (processed.has(i)) continue;
@@ -335,7 +365,7 @@ export class DataGrouper<D extends object, K extends keyof D & string> {
             ];
 
             // Try to merge with subsequent batches
-            this.findAndMergeCompatibleBatches(columnBatches, i, mergedBatch, processed);
+            this.findAndMergeCompatibleBatches(columnBatches, i, candidateIndexes[i], mergedBatch, processed);
 
             merged.push(mergedBatch);
             processed.add(i);
@@ -347,12 +377,13 @@ export class DataGrouper<D extends object, K extends keyof D & string> {
     private findAndMergeCompatibleBatches(
         columnBatches: ColumnBatch[],
         startIndex: number,
+        candidateIndexes: number[],
         mergedBatch: MergedColumnBatch,
         processed: Set<number>
     ) {
         const firstBatch = columnBatches[startIndex];
-        for (let j = startIndex + 1; j < columnBatches.length; j++) {
-            if (processed.has(j)) continue;
+        for (const j of candidateIndexes) {
+            if (j <= startIndex || processed.has(j)) continue;
 
             const otherBatch = columnBatches[j];
             const [scope, otherColumnIndexes, , otherSiblingScopes] = otherBatch;

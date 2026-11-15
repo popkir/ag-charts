@@ -1,15 +1,135 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 
 import { testLogger } from 'ag-charts-test';
 
 import { expectWarningsCalls, setupMockConsole } from '../../../test/utils';
 import { DataModel } from '../../dataModel';
-import type { GroupByFn } from '../../dataModelTypes';
+import type { ColumnBatch, GroupByFn } from '../../dataModelTypes';
 import { DataSet } from '../../dataSet';
 import { categoryKey, categoryKeyAllowNull, scopedValue } from '../test/testUtils';
 import { toKeyString } from '../utils/helpers';
+import { DataGrouper } from './dataGrouper';
 
 describe('DataGrouper', () => {
+    it('does not compare batches with distinct invalidity arrays', () => {
+        const count = 256;
+        const scopes = Array.from({ length: count }, (_, i) => `scope${i}`);
+        const dataSet = new DataSet(
+            [
+                Object.fromEntries([['key', 'A'], ...scopes.map((scope) => [scope, null])]),
+                Object.fromEntries([['key', 'B'], ...scopes.map((scope, i) => [scope, i])]),
+            ],
+            testLogger
+        );
+        const model = new DataModel<any, any, true>(
+            {
+                props: [
+                    categoryKey('key', scopes),
+                    ...scopes.map((scope) => ({
+                        ...scopedValue(scope, scope),
+                        validation: Number.isFinite,
+                        invalidValue: null,
+                    })),
+                ],
+                groupByKeys: true,
+            },
+            testLogger
+        );
+        // Observe comparisons as a deterministic complexity check, independently of wall-clock speed.
+        const grouper = DataGrouper.prototype as unknown as {
+            areBatchesCompatible(first: ColumnBatch, second: ColumnBatch): boolean;
+        };
+        const comparison = vi.spyOn(grouper, 'areBatchesCompatible');
+        try {
+            const result = model.processData(new Map(scopes.map((scope) => [scope, dataSet])));
+            expect(result?.groups.map((group) => group.keys)).toEqual([['A'], ['B']]);
+            expect(result?.groups.map((group) => group.validScopes.size)).toEqual([0, count]);
+            expect(result?.columns).toEqual(scopes.map((_, i) => [null, i]));
+            expect(comparison).not.toHaveBeenCalled();
+        } finally {
+            comparison.mockRestore();
+        }
+    });
+
+    it.each([
+        ['scope1', 'scope2'],
+        ['scope2', 'scope1'],
+    ])('groups shared columns once with scope order %s, %s and an empty scope', (first, second) => {
+        const dataSet = new DataSet(
+            [
+                { key: 'A', a: 1, shared: 10, b: 100 },
+                { key: 'A', a: 2, shared: 20, b: 200 },
+                { key: 'B', a: 3, shared: 30, b: 300 },
+            ],
+            testLogger
+        );
+        const scopes = [first, 'empty', second];
+        const model = new DataModel<any, any, true>(
+            {
+                props: [
+                    categoryKey('key', scopes),
+                    scopedValue('scope1', 'a'),
+                    scopedValue(['scope1', 'scope2'], 'shared'),
+                    scopedValue('scope2', 'b'),
+                ],
+                groupByKeys: true,
+            },
+            testLogger
+        );
+        const result = model.processData(new Map(scopes.map((scope) => [scope, dataSet])));
+        expect(result?.columns).toEqual([
+            [1, 2, 3],
+            [10, 20, 30],
+            [100, 200, 300],
+        ]);
+        expect(result?.groups.map((group) => group.keys)).toEqual([['A'], ['B']]);
+        expect(result?.groups.map((group) => group.datumIndices)).toEqual([
+            [
+                [0, 1],
+                [0, 1],
+                [0, 1],
+            ],
+            [[1], [1], [1]],
+        ]);
+        expect(result?.groups.map((group) => [...group.validScopes])).toEqual([scopes, scopes]);
+    });
+
+    it('does not scan unrelated column scopes for every series', () => {
+        const count = 256;
+        const scopes = Array.from({ length: count }, (_, i) => `scope${i}`);
+        const row = Object.fromEntries([['key', 'A'], ...scopes.map((scope, i) => [scope, i])]);
+        const dataSet = new DataSet([row], testLogger);
+        const model = new DataModel<any, any, true>(
+            {
+                props: [categoryKey('key', scopes), ...scopes.map((scope) => scopedValue(scope, scope))],
+                groupByKeys: true,
+            },
+            testLogger
+        );
+        const groupData = DataGrouper.prototype.groupData;
+        let membershipChecks = 0;
+        const grouping = vi.spyOn(DataGrouper.prototype, 'groupData').mockImplementation(function (
+            this: DataGrouper<object, never>,
+            data,
+            groupingFn
+        ) {
+            const checks = data.columnScopes.map((scopeSet) => vi.spyOn(scopeSet, 'has'));
+            try {
+                return groupData.call(this, data, groupingFn);
+            } finally {
+                membershipChecks = checks.reduce((total, check) => total + check.mock.calls.length, 0);
+                for (const check of checks) check.mockRestore();
+            }
+        });
+        try {
+            const result = model.processData(new Map(scopes.map((scope) => [scope, dataSet])));
+            expect(result?.columns.map((column) => column[0])).toEqual(scopes.map((_, i) => i));
+            expect(membershipChecks).toBeLessThanOrEqual(count);
+        } finally {
+            grouping.mockRestore();
+        }
+    });
+
     describe('Column Batch Merging', () => {
         it('should merge batches with identical keys and invalidKeys', () => {
             const dataSet1 = new DataSet(
