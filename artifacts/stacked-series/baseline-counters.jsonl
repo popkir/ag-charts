@@ -1,0 +1,4 @@
+{"variant":"baseline","scenario":"positive","series":100,"candidates":20197,"columnVisits":30000,"batchComparisons":99,"aggregates":100}
+{"variant":"baseline","scenario":"positive","series":1000,"candidates":2001997,"columnVisits":3000000,"batchComparisons":999,"aggregates":1000}
+{"variant":"baseline","scenario":"mixed","series":100,"candidates":15395,"columnVisits":30000,"batchComparisons":3754,"aggregates":100}
+{"variant":"baseline","scenario":"mixed","series":1000,"candidates":1503995,"columnVisits":3000000,"batchComparisons":377277,"aggregates":1000}

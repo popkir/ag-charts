@@ -1,0 +1,482 @@
+[
+  {
+    "scenario": "mixed",
+    "series": 100,
+    "variant": "baseline",
+    "repeats": 3,
+    "executeMs": {
+      "median": 38.85474999999997,
+      "min": 36.33541700000001,
+      "max": 42.612083
+    },
+    "mergeMs": {
+      "median": 12.416499999999985,
+      "min": 10.385166999999996,
+      "max": 12.423333
+    },
+    "groupBatchesMs": {
+      "median": 6.4837909999999965,
+      "min": 6.330624999999998,
+      "max": 6.589416
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 1631736,
+      "min": 1568608,
+      "max": 1692960
+    },
+    "heapDeltaBytes": {
+      "median": 3814872,
+      "min": 3619888,
+      "max": 5496656
+    },
+    "processMaxRssKiB": 79360
+  },
+  {
+    "scenario": "mixed",
+    "series": 100,
+    "variant": "candidate",
+    "repeats": 3,
+    "executeMs": {
+      "median": 8.604084,
+      "min": 7.773458000000005,
+      "max": 10.08941699999999
+    },
+    "mergeMs": {
+      "median": 1.4567499999999995,
+      "min": 1.2641670000000005,
+      "max": 1.7286670000000015
+    },
+    "groupBatchesMs": {
+      "median": 0.42729199999999423,
+      "min": 0.3418749999999875,
+      "max": 0.4964999999999975
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 1493056,
+      "min": 1422520,
+      "max": 1573856
+    },
+    "heapDeltaBytes": {
+      "median": 4760128,
+      "min": 2952648,
+      "max": 5570848
+    },
+    "processMaxRssKiB": 72208
+  },
+  {
+    "scenario": "mixed",
+    "series": 1000,
+    "variant": "baseline",
+    "repeats": 3,
+    "executeMs": {
+      "median": 1573.358958,
+      "min": 1341.595875,
+      "max": 2990.563375
+    },
+    "mergeMs": {
+      "median": 749.3845829999998,
+      "min": 564.127917,
+      "max": 1433.287417
+    },
+    "groupBatchesMs": {
+      "median": 271.8473750000003,
+      "min": 199.74966700000004,
+      "max": 275.89870900000005
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 15047328,
+      "min": 15007224,
+      "max": 15531120
+    },
+    "heapDeltaBytes": {
+      "median": 50751192,
+      "min": 40479072,
+      "max": 79447200
+    },
+    "processMaxRssKiB": 221456
+  },
+  {
+    "scenario": "mixed",
+    "series": 1000,
+    "variant": "candidate",
+    "repeats": 3,
+    "executeMs": {
+      "median": 73.194875,
+      "min": 64.06087500000001,
+      "max": 79.52737500000002
+    },
+    "mergeMs": {
+      "median": 13.024749999999997,
+      "min": 9.583500000000015,
+      "max": 13.726624999999984
+    },
+    "groupBatchesMs": {
+      "median": 3.517124999999993,
+      "min": 2.582417000000021,
+      "max": 4.10220799999999
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 13586752,
+      "min": 13548480,
+      "max": 14082200
+    },
+    "heapDeltaBytes": {
+      "median": 30703120,
+      "min": 16507064,
+      "max": 31132832
+    },
+    "processMaxRssKiB": 159888
+  },
+  {
+    "scenario": "mixed",
+    "series": 7293,
+    "variant": "candidate",
+    "repeats": 3,
+    "executeMs": {
+      "median": 393.7895830000001,
+      "min": 367.7902079999999,
+      "max": 449.30175
+    },
+    "mergeMs": {
+      "median": 73.22391700000003,
+      "min": 66.25383299999999,
+      "max": 76.597791
+    },
+    "groupBatchesMs": {
+      "median": 29.838833000000022,
+      "min": 28.88383299999998,
+      "max": 39.59216599999991
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 98283072,
+      "min": 98142888,
+      "max": 101713520
+    },
+    "heapDeltaBytes": {
+      "median": 161046344,
+      "min": 121991744,
+      "max": 165544312
+    },
+    "processMaxRssKiB": 354528
+  },
+  {
+    "scenario": "positive",
+    "series": 1,
+    "variant": "baseline",
+    "repeats": 3,
+    "executeMs": {
+      "median": 0.5837910000000051,
+      "min": 0.4314999999999998,
+      "max": 0.6142500000000126
+    },
+    "mergeMs": {
+      "median": 0.056416999999996165,
+      "min": 0.054666999999994914,
+      "max": 0.07945800000000247
+    },
+    "groupBatchesMs": {
+      "median": 0.009791000000006989,
+      "min": 0.00750000000000739,
+      "max": 0.014707999999998833
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 36720,
+      "min": 32912,
+      "max": 42472
+    },
+    "heapDeltaBytes": {
+      "median": 117032,
+      "min": 116880,
+      "max": 133824
+    },
+    "processMaxRssKiB": 56272
+  },
+  {
+    "scenario": "positive",
+    "series": 1,
+    "variant": "candidate",
+    "repeats": 3,
+    "executeMs": {
+      "median": 0.49125000000000796,
+      "min": 0.46454200000000156,
+      "max": 0.6557919999999982
+    },
+    "mergeMs": {
+      "median": 0.0665830000000085,
+      "min": 0.061084000000001026,
+      "max": 0.07766699999999815
+    },
+    "groupBatchesMs": {
+      "median": 0.011458999999995001,
+      "min": 0.0108330000000052,
+      "max": 0.01837499999999892
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 36992,
+      "min": 33032,
+      "max": 45496
+    },
+    "heapDeltaBytes": {
+      "median": 162256,
+      "min": 122376,
+      "max": 197712
+    },
+    "processMaxRssKiB": 54720
+  },
+  {
+    "scenario": "positive",
+    "series": 10,
+    "variant": "baseline",
+    "repeats": 3,
+    "executeMs": {
+      "median": 1.6816659999999928,
+      "min": 1.5936669999999964,
+      "max": 1.7395420000000001
+    },
+    "mergeMs": {
+      "median": 0.30774999999999864,
+      "min": 0.2699579999999884,
+      "max": 0.313291999999997
+    },
+    "groupBatchesMs": {
+      "median": 0.06379200000000651,
+      "min": 0.059459000000003925,
+      "max": 0.06866700000000492
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 111728,
+      "min": 95752,
+      "max": 113440
+    },
+    "heapDeltaBytes": {
+      "median": 699544,
+      "min": 676368,
+      "max": 704640
+    },
+    "processMaxRssKiB": 57632
+  },
+  {
+    "scenario": "positive",
+    "series": 10,
+    "variant": "candidate",
+    "repeats": 3,
+    "executeMs": {
+      "median": 1.1864999999999952,
+      "min": 1.1468750000000085,
+      "max": 1.3727499999999964
+    },
+    "mergeMs": {
+      "median": 0.22987499999999983,
+      "min": 0.2240420000000114,
+      "max": 0.2628750000000011
+    },
+    "groupBatchesMs": {
+      "median": 0.05712500000000631,
+      "min": 0.0536249999999967,
+      "max": 0.059499999999999886
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 87768,
+      "min": 83120,
+      "max": 104160
+    },
+    "heapDeltaBytes": {
+      "median": 476864,
+      "min": 465864,
+      "max": 496960
+    },
+    "processMaxRssKiB": 55184
+  },
+  {
+    "scenario": "positive",
+    "series": 100,
+    "variant": "baseline",
+    "repeats": 3,
+    "executeMs": {
+      "median": 27.576915999999997,
+      "min": 25.559917000000013,
+      "max": 30.862041999999995
+    },
+    "mergeMs": {
+      "median": 10.88308400000001,
+      "min": 10.84450000000001,
+      "max": 11.674583999999996
+    },
+    "groupBatchesMs": {
+      "median": 2.6007079999999974,
+      "min": 2.171999999999997,
+      "max": 2.6528749999999945
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 808224,
+      "min": 740592,
+      "max": 812256
+    },
+    "heapDeltaBytes": {
+      "median": 2194840,
+      "min": 1516904,
+      "max": 3291832
+    },
+    "processMaxRssKiB": 69792
+  },
+  {
+    "scenario": "positive",
+    "series": 100,
+    "variant": "candidate",
+    "repeats": 3,
+    "executeMs": {
+      "median": 7.040750000000003,
+      "min": 6.806207999999998,
+      "max": 8.204999999999998
+    },
+    "mergeMs": {
+      "median": 1.5593330000000023,
+      "min": 1.432457999999997,
+      "max": 1.5882500000000022
+    },
+    "groupBatchesMs": {
+      "median": 0.43241700000000094,
+      "min": 0.4258750000000049,
+      "max": 0.4759999999999991
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 659784,
+      "min": 585960,
+      "max": 668536
+    },
+    "heapDeltaBytes": {
+      "median": 3916752,
+      "min": 1794600,
+      "max": 3941616
+    },
+    "processMaxRssKiB": 67824
+  },
+  {
+    "scenario": "positive",
+    "series": 1000,
+    "variant": "baseline",
+    "repeats": 3,
+    "executeMs": {
+      "median": 1553.544375,
+      "min": 1508.5108329999998,
+      "max": 1591.188709
+    },
+    "mergeMs": {
+      "median": 849.1884580000001,
+      "min": 828.6627080000003,
+      "max": 854.960958
+    },
+    "groupBatchesMs": {
+      "median": 120.80658300000005,
+      "min": 117.23279099999945,
+      "max": 156.65495800000008
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 7159160,
+      "min": 7138536,
+      "max": 7601968
+    },
+    "heapDeltaBytes": {
+      "median": 24249528,
+      "min": 20843168,
+      "max": 37152600
+    },
+    "processMaxRssKiB": 142688
+  },
+  {
+    "scenario": "positive",
+    "series": 1000,
+    "variant": "candidate",
+    "repeats": 3,
+    "executeMs": {
+      "median": 53.4345,
+      "min": 49.925791000000004,
+      "max": 55.172416999999996
+    },
+    "mergeMs": {
+      "median": 10.946041999999991,
+      "min": 8.706457999999998,
+      "max": 11.103000000000009
+    },
+    "groupBatchesMs": {
+      "median": 3.411541999999997,
+      "min": 2.7740420000000086,
+      "max": 8.570750000000004
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 5732552,
+      "min": 5673904,
+      "max": 6151760
+    },
+    "heapDeltaBytes": {
+      "median": 14452032,
+      "min": 9828384,
+      "max": 22503864
+    },
+    "processMaxRssKiB": 125120
+  },
+  {
+    "scenario": "positive",
+    "series": 7293,
+    "variant": "baseline",
+    "repeats": 3,
+    "executeMs": {
+      "median": 95612.93004199999,
+      "min": 91573.347917,
+      "max": 98062.929459
+    },
+    "mergeMs": {
+      "median": 52635.022083,
+      "min": 49129.211917,
+      "max": 52822.643667000026
+    },
+    "groupBatchesMs": {
+      "median": 9389.835374999995,
+      "min": 9158.934457999974,
+      "max": 9621.513291000003
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 51755912,
+      "min": 51393288,
+      "max": 54804832
+    },
+    "heapDeltaBytes": {
+      "median": 124089744,
+      "min": 76272664,
+      "max": 129592632
+    },
+    "processMaxRssKiB": 374816
+  },
+  {
+    "scenario": "positive",
+    "series": 7293,
+    "variant": "candidate",
+    "repeats": 3,
+    "executeMs": {
+      "median": 262.56474999999995,
+      "min": 258.776833,
+      "max": 293.82495800000004
+    },
+    "mergeMs": {
+      "median": 56.88270799999998,
+      "min": 56.347666000000004,
+      "max": 71.347291
+    },
+    "groupBatchesMs": {
+      "median": 22.269959000000085,
+      "min": 21.0246249999999,
+      "max": 45.99008299999997
+    },
+    "retainedHeapDeltaBytes": {
+      "median": 40653768,
+      "min": 40547760,
+      "max": 43991032
+    },
+    "heapDeltaBytes": {
+      "median": 93459248,
+      "min": 64982544,
+      "max": 112669216
+    },
+    "processMaxRssKiB": 290992
+  }
+]

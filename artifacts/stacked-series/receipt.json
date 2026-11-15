@@ -1,0 +1,23 @@
+{
+  "base": "fd652e876a2b059924848a2177c82e67d6752327",
+  "version": "14.3.0-beta.20261113",
+  "node": "v24.21.0",
+  "esbuild": "0.19.9",
+  "platform": "darwin",
+  "arch": "arm64",
+  "sourceSha256": {
+    "packages/ag-charts-community/src/chart/data/dataController.ts": "fdbf9e7e5c9aa177bc13c728cb5b8187be3986279bc0b2c5b99204c1adbe09fd",
+    "packages/ag-charts-community/src/chart/data/data-model/grouping/dataGrouper.ts": "a9c4821e9cd3e523a7feeeb903fd613a2b8e4013112b7b564d6bfb22bfbdee47",
+    "packages/ag-charts-community/src/chart/data/aggregateFunctions.ts": "15a1ec3ec7a23d9a8afbaa26951c9a8845d14b817569d9c90181d755deb4e7d2"
+  },
+  "measurementBoundary": "DataController.execute only; fixture and request creation outside boundary; uninstrumented modules; same mergeRequested/groupBatches stage wrappers; GC outside measured interval; 32-series warmup then three measured repeats in each fresh worker process",
+  "limitations": [
+    "source-level synthetic benchmark, not official browser benchmark",
+    "upstream Nx/visual/browser suites not run due incomplete dependency setup and disk constraints",
+    "mixed 7293 baseline not measured",
+    "standalone source strict typecheck used TypeScript 5.9.3 with installed Node 25 type definitions; not Nx build:types",
+    "no finite sample count proves absence of memory leaks"
+  ],
+  "counterBoundary": "Counts use separately instrumented modules; no instrumented timings are included in measurements.",
+  "fixCommit": "b2a56531f4b48e94f4533a0b94f8c96017248587"
+}

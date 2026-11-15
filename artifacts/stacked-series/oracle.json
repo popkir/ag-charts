@@ -1,0 +1,16 @@
+[
+  {
+    "scenario": "positive",
+    "series": 7293,
+    "points": 87516,
+    "checks": "every x/raw/start/end value, each value domain, every scoped range ID/domain",
+    "pass": true
+  },
+  {
+    "scenario": "mixed",
+    "series": 7293,
+    "points": 87516,
+    "checks": "every x/raw/start/end value, each value domain, every scoped range ID/domain",
+    "pass": true
+  }
+]

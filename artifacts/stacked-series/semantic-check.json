@@ -1,0 +1,84 @@
+[
+  {
+    "check": "before/after columns, keys, domains, aggregate IDs, group validity",
+    "n": 1,
+    "scenario": "positive",
+    "points": 12,
+    "pass": true
+  },
+  {
+    "check": "before/after columns, keys, domains, aggregate IDs, group validity",
+    "n": 1,
+    "scenario": "mixed",
+    "points": 12,
+    "pass": true
+  },
+  {
+    "check": "before/after columns, keys, domains, aggregate IDs, group validity",
+    "n": 10,
+    "scenario": "positive",
+    "points": 120,
+    "pass": true
+  },
+  {
+    "check": "before/after columns, keys, domains, aggregate IDs, group validity",
+    "n": 10,
+    "scenario": "mixed",
+    "points": 120,
+    "pass": true
+  },
+  {
+    "check": "before/after columns, keys, domains, aggregate IDs, group validity",
+    "n": 100,
+    "scenario": "positive",
+    "points": 1200,
+    "pass": true
+  },
+  {
+    "check": "before/after columns, keys, domains, aggregate IDs, group validity",
+    "n": 100,
+    "scenario": "mixed",
+    "points": 1200,
+    "pass": true
+  },
+  {
+    "check": "before/after columns, keys, domains, aggregate IDs, group validity",
+    "n": 1000,
+    "scenario": "positive",
+    "points": 12000,
+    "pass": true
+  },
+  {
+    "check": "before/after columns, keys, domains, aggregate IDs, group validity",
+    "n": 1000,
+    "scenario": "mixed",
+    "points": 12000,
+    "pass": true
+  },
+  {
+    "check": "cached visibility changes and append/remove transaction versus fresh processing",
+    "variant": "baseline",
+    "incremental": false,
+    "pass": true
+  },
+  {
+    "check": "cached visibility changes and append/remove transaction versus fresh processing",
+    "variant": "candidate",
+    "incremental": false,
+    "pass": true
+  },
+  {
+    "check": "shared pure range, exact bigint endpoints, independent output and scratch tuple reseeding",
+    "pass": true
+  },
+  {
+    "check": "overlapping columns, repeated keys, both scope orders and key-only empty scope",
+    "variant": "baseline",
+    "pass": true
+  },
+  {
+    "check": "overlapping columns, repeated keys, both scope orders and key-only empty scope",
+    "variant": "candidate",
+    "pass": true
+  }
+]
