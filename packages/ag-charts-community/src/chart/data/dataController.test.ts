@@ -20,7 +20,10 @@ describe('DataController', () => {
 
     it('does not compare unrelated value properties when merging many series', async () => {
         const count = 256;
-        const dataSet = new DataSet([Object.fromEntries(Array.from({ length: count }, (_, i) => [`y${i}`, i]))], testLogger);
+        const dataSet = new DataSet(
+            [Object.fromEntries(Array.from({ length: count }, (_, i) => [`y${i}`, i]))],
+            testLogger
+        );
         const comparison = vi.spyOn(DataController, 'deepEqual');
         try {
             const requests = Array.from({ length: count }, (_, i) =>
@@ -40,7 +43,10 @@ describe('DataController', () => {
         [{ missingValue: 0 }, { missingValue: 1 }],
         [{ forceValue: 0 }, { forceValue: 1 }],
         [{ invalidValue: null }, { invalidValue: undefined }],
-        [{ processor: () => (value: number) => value }, { processor: () => (value: number) => value * 2 }],
+        [
+            { processor: () => (value: unknown) => value },
+            { processor: () => (value: unknown) => (typeof value === 'number' ? value * 2 : value) },
+        ],
     ])('keeps the full compatibility check for the same property: %o vs %o', async (firstOptions, secondOptions) => {
         const dataSet = new DataSet([{ y: 3 }], testLogger);
         const first = controller.request('first', dataSet, {
@@ -72,7 +78,9 @@ describe('DataController', () => {
         expect(results[0].processedData).toBe(results[1].processedData);
         for (const [i, value] of [3, 9].entries()) {
             const { dataModel, processedData } = results[i];
-            expect(dataModel.resolveColumnById({ id: `series${i}` }, 'value', processedData, 'number')).toEqual([value]);
+            expect(dataModel.resolveColumnById({ id: `series${i}` }, 'value', processedData, 'number')).toEqual([
+                value,
+            ]);
         }
         expect(results[0].processedData.defs.values).toHaveLength(2);
     });
@@ -97,8 +105,12 @@ describe('DataController', () => {
         for (const [i, id] of ['first', 'second', 'other'].entries()) {
             const { dataModel, processedData } = results[i];
             const expected = id === 'other' ? [-7, -7] : [4, 4];
-            expect(dataModel.getDomain({ id }, `${id}-range`, 'aggregate', processedData).domain).toEqual(expected);
-            expect(dataModel.getDomain({ id }, `${id}-alias`, 'aggregate', processedData).domain).toEqual(expected);
+            expect(
+                processedData.domain.aggValues?.[dataModel.resolveProcessedDataIndexById({ id }, `${id}-range`)]
+            ).toEqual(expected);
+            expect(
+                processedData.domain.aggValues?.[dataModel.resolveProcessedDataIndexById({ id }, `${id}-alias`)]
+            ).toEqual(expected);
             expect(dataModel.resolveProcessedDataIndexById({ id }, `${id}-range`)).toBe(id === 'other' ? 1 : 0);
         }
         expect(results[0].processedData.domain.aggValues).toHaveLength(2);
@@ -106,7 +118,10 @@ describe('DataController', () => {
 
     it('preserves stacked ranges across visibility changes and cached transactions', async () => {
         const dataSet = new DataSet<Record<string, string | number>>(
-            [{ x: 'A', a: 2, b: 3 }, { x: 'B', a: -4, b: 5 }],
+            [
+                { x: 'A', a: 2, b: 3 },
+                { x: 'B', a: -4, b: 5 },
+            ],
             testLogger,
             'x'
         );
@@ -141,31 +156,57 @@ describe('DataController', () => {
             return {
                 keys: dataModel.resolveKeysById({ id: 'a' }, 'key', processedData),
                 ends: ['a', 'b'].map((id) => dataModel.resolveColumnById({ id }, 'end', processedData, 'number')),
-                ranges: ['a', 'b'].map((id) => dataModel.getDomain({ id }, 'range', 'aggregate', processedData).domain),
+                ranges: ['a', 'b'].map(
+                    (id) => processedData.domain.aggValues?.[dataModel.resolveProcessedDataIndexById({ id }, 'range')]
+                ),
             };
         };
 
         expect(await processStack()).toEqual({
             keys: ['A', 'B'],
-            ends: [[2, -4], [5, 5]],
-            ranges: [[-4, 5], [-4, 5]],
+            ends: [
+                [2, -4],
+                [5, 5],
+            ],
+            ranges: [
+                [-4, 5],
+                [-4, 5],
+            ],
         });
         expect(await processStack(true)).toEqual({
             keys: ['A', 'B'],
-            ends: [[2, -4], [2, 0]],
-            ranges: [[-4, 2], [-4, 2]],
+            ends: [
+                [2, -4],
+                [2, 0],
+            ],
+            ranges: [
+                [-4, 2],
+                [-4, 2],
+            ],
         });
         dataSet.addTransaction({ update: [{ x: 'A', a: 7, b: -1 }], append: [{ x: 'C', a: -2, b: -3 }] });
         expect(await processStack()).toEqual({
             keys: ['A', 'B', 'C'],
-            ends: [[7, -4, -2], [-1, 5, -5]],
-            ranges: [[-5, 7], [-5, 7]],
+            ends: [
+                [7, -4, -2],
+                [-1, 5, -5],
+            ],
+            ranges: [
+                [-5, 7],
+                [-5, 7],
+            ],
         });
         dataSet.addTransaction({ remove: [dataSet.data[1]], prepend: [{ x: 'D', a: 1, b: 2 }] });
         expect(await processStack()).toEqual({
             keys: ['D', 'A', 'C'],
-            ends: [[1, 7, -2], [3, -1, -5]],
-            ranges: [[-5, 7], [-5, 7]],
+            ends: [
+                [1, 7, -2],
+                [3, -1, -5],
+            ],
+            ranges: [
+                [-5, 7],
+                [-5, 7],
+            ],
         });
     });
 

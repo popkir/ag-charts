@@ -1,0 +1,268 @@
+{
+  "timestamp": "2026-11-15T15:04:06.281Z",
+  "environment": {
+    "viewport": {
+      "width": 800,
+      "height": 600
+    },
+    "devicePixelRatio": 2,
+    "browser": "chromium",
+    "host": {
+      "cpuModel": "AMD EPYC 9V45 96-Core Processor",
+      "nproc": 4,
+      "bogomips": 5192.24,
+      "totalMemMb": 15984
+    }
+  },
+  "summary": {
+    "total": 1,
+    "success": 1,
+    "error": 0,
+    "timeout": 0,
+    "totalDurationMs": 8433
+  },
+  "examples": {
+    "high-perf-bar-stacked": {
+      "status": "success",
+      "data": {
+        "version": "14.3.0-beta.20261113",
+        "parameterKeys": [
+          "Operation",
+          "Repetitions"
+        ],
+        "environment": {
+          "viewport": {
+            "width": 800,
+            "height": 600
+          },
+          "chart": {
+            "width": 768,
+            "height": 568
+          },
+          "devicePixelRatio": 2,
+          "hostname": "localhost",
+          "browser": "Chrome 148.0"
+        },
+        "metadata": {
+          "dataPoints": 100000,
+          "seriesCount": 2,
+          "seriesType": "bar-stacked",
+          "version": "14.3.0-beta.20261113",
+          "expectedRetainedSizeMB": 100,
+          "expectedCanvasCount": 5
+        },
+        "results": [
+          {
+            "testCase": "Initial Load",
+            "params": {
+              "Operation": "Chart Create"
+            },
+            "averageTime": 168.49000000000234,
+            "minTime": 148.5,
+            "maxTime": 221.29999999998836,
+            "sampleCount": 10,
+            "timings": [
+              183,
+              221.29999999998836,
+              164,
+              170.70000000001164,
+              165.29999999998836,
+              161.5,
+              148.5,
+              151.90000000002328,
+              151,
+              167.70000000001164
+            ],
+            "frameStats": {
+              "frameCount": 10,
+              "wallTimeMs": 1816.7999999999884,
+              "avgFrameIntervalMs": 201.86666666666537,
+              "longFrameCount": 7,
+              "longFrameMaxDurationMs": 228.79999999998836,
+              "longFrameTotalBlockingMs": 868.5789999999998,
+              "longFrames": [
+                {
+                  "startTime": 2011.7000000000116,
+                  "duration": 228.79999999998836,
+                  "blockingDuration": 177.688,
+                  "renderStart": 2012.9000000000233,
+                  "styleAndLayoutStart": 2239.600000000035,
+                  "scriptCount": 1,
+                  "longestScript": {
+                    "duration": 226,
+                    "invoker": "FrameRequestCallback",
+                    "sourceURL": "http://localhost:4602/charts/vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkHarness.js",
+                    "sourceFunctionName": ""
+                  }
+                },
+                {
+                  "startTime": 2247.5,
+                  "duration": 170.90000000002328,
+                  "blockingDuration": 118.794,
+                  "renderStart": 2249.7999999999884,
+                  "styleAndLayoutStart": 2417.600000000035,
+                  "scriptCount": 1,
+                  "longestScript": {
+                    "duration": 167,
+                    "invoker": "FrameRequestCallback",
+                    "sourceURL": "http://localhost:4602/charts/vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkHarness.js",
+                    "sourceFunctionName": ""
+                  }
+                },
+                {
+                  "startTime": 2425.2000000000116,
+                  "duration": 176.5,
+                  "blockingDuration": 125.258,
+                  "renderStart": 2426.600000000035,
+                  "styleAndLayoutStart": 2600.7999999999884,
+                  "scriptCount": 1,
+                  "longestScript": {
+                    "duration": 174,
+                    "invoker": "FrameRequestCallback",
+                    "sourceURL": "http://localhost:4602/charts/vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkHarness.js",
+                    "sourceFunctionName": ""
+                  }
+                },
+                {
+                  "startTime": 2609.100000000035,
+                  "duration": 171.09999999997672,
+                  "blockingDuration": 120.262,
+                  "renderStart": 2610.100000000035,
+                  "styleAndLayoutStart": 2779.4000000000233,
+                  "scriptCount": 1,
+                  "longestScript": {
+                    "duration": 169,
+                    "invoker": "FrameRequestCallback",
+                    "sourceURL": "http://localhost:4602/charts/vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkHarness.js",
+                    "sourceFunctionName": ""
+                  }
+                },
+                {
+                  "startTime": 2787.2000000000116,
+                  "duration": 168.20000000001164,
+                  "blockingDuration": 116.098,
+                  "renderStart": 2789.5,
+                  "styleAndLayoutStart": 2954.600000000035,
+                  "scriptCount": 1,
+                  "longestScript": {
+                    "duration": 165,
+                    "invoker": "FrameRequestCallback",
+                    "sourceURL": "http://localhost:4602/charts/vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkHarness.js",
+                    "sourceFunctionName": ""
+                  }
+                },
+                {
+                  "startTime": 2962.4000000000233,
+                  "duration": 154.09999999997672,
+                  "blockingDuration": 103.526,
+                  "renderStart": 2963.100000000035,
+                  "styleAndLayoutStart": 3115.600000000035,
+                  "scriptCount": 1,
+                  "longestScript": {
+                    "duration": 152,
+                    "invoker": "FrameRequestCallback",
+                    "sourceURL": "http://localhost:4602/charts/vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkHarness.js",
+                    "sourceFunctionName": ""
+                  }
+                },
+                {
+                  "startTime": 3123.600000000035,
+                  "duration": 157.69999999995343,
+                  "blockingDuration": 106.953,
+                  "renderStart": 3124.4000000000233,
+                  "styleAndLayoutStart": 3280.4000000000233,
+                  "scriptCount": 1,
+                  "longestScript": {
+                    "duration": 155,
+                    "invoker": "FrameRequestCallback",
+                    "sourceURL": "http://localhost:4602/charts/vanilla/benchmarks/examples/high-perf-bar-stacked/benchmarkHarness.js",
+                    "sourceFunctionName": ""
+                  }
+                }
+              ],
+              "longFramesUnsupported": false
+            },
+            "gcStats": {
+              "supported": true,
+              "precise": true,
+              "sampleCount": 12,
+              "startUsedBytes": 201947950,
+              "endUsedBytes": 696458776,
+              "peakUsedBytes": 696458776,
+              "avgUsedBytes": 467896559.8333333,
+              "detectedGcCount": 0,
+              "totalReclaimedBytes": 0,
+              "allocationRateBytesPerSec": 272187817.04095286
+            }
+          },
+          {
+            "testCase": "Zoom",
+            "params": {
+              "Repetitions": "20x"
+            },
+            "averageTime": 377.42000000000115,
+            "minTime": 337.8999999999651,
+            "maxTime": 451.80000000004657,
+            "sampleCount": 10,
+            "timings": [
+              451.80000000004657,
+              399.19999999995343,
+              367.70000000001164,
+              365.8999999999651,
+              360.4000000000233,
+              361.70000000001164,
+              385.1000000000349,
+              378.29999999998836,
+              366.20000000001164,
+              337.8999999999651
+            ],
+            "frameStats": {
+              "frameCount": 199,
+              "wallTimeMs": 3782.8999999999887,
+              "avgFrameIntervalMs": 19.105555555555497,
+              "longFrameCount": 1,
+              "longFrameMaxDurationMs": 58.70000000001164,
+              "longFrameTotalBlockingMs": 7.72,
+              "longFrames": [
+                {
+                  "startTime": 4837.299999999988,
+                  "duration": 58.70000000001164,
+                  "blockingDuration": 7.72,
+                  "renderStart": 4895.600000000035,
+                  "styleAndLayoutStart": 4895.600000000035,
+                  "scriptCount": 1,
+                  "longestScript": {
+                    "duration": 57,
+                    "invoker": "TimerHandler:setTimeout",
+                    "sourceURL": "",
+                    "sourceFunctionName": ""
+                  }
+                }
+              ],
+              "longFramesUnsupported": false
+            },
+            "gcStats": {
+              "supported": true,
+              "precise": true,
+              "sampleCount": 201,
+              "startUsedBytes": 723511143,
+              "endUsedBytes": 148993961,
+              "peakUsedBytes": 753292860,
+              "avgUsedBytes": 193644742.21393034,
+              "detectedGcCount": 20,
+              "totalReclaimedBytes": 1156744867,
+              "allocationRateBytesPerSec": 153910408.681171
+            }
+          }
+        ]
+      },
+      "durationMs": 8395,
+      "contention": {
+        "stealPct": 0,
+        "psiSomeUs": 109502,
+        "psiFullUs": 0,
+        "windowMs": 8390
+      }
+    }
+  }
+}

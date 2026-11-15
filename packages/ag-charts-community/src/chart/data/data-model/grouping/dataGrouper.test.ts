@@ -14,16 +14,27 @@ describe('DataGrouper', () => {
     it('does not compare batches with distinct invalidity arrays', () => {
         const count = 256;
         const scopes = Array.from({ length: count }, (_, i) => `scope${i}`);
-        const dataSet = new DataSet([
-            Object.fromEntries([['key', 'A'], ...scopes.map((scope) => [scope, null])]),
-            Object.fromEntries([['key', 'B'], ...scopes.map((scope, i) => [scope, i])]),
-        ], testLogger);
-        const model = new DataModel<any, any, true>({
-            props: [categoryKey('key', scopes), ...scopes.map((scope) => ({
-                ...scopedValue(scope, scope), validation: Number.isFinite, invalidValue: null,
-            }))],
-            groupByKeys: true,
-        }, testLogger);
+        const dataSet = new DataSet(
+            [
+                Object.fromEntries([['key', 'A'], ...scopes.map((scope) => [scope, null])]),
+                Object.fromEntries([['key', 'B'], ...scopes.map((scope, i) => [scope, i])]),
+            ],
+            testLogger
+        );
+        const model = new DataModel<any, any, true>(
+            {
+                props: [
+                    categoryKey('key', scopes),
+                    ...scopes.map((scope) => ({
+                        ...scopedValue(scope, scope),
+                        validation: Number.isFinite,
+                        invalidValue: null,
+                    })),
+                ],
+                groupByKeys: true,
+            },
+            testLogger
+        );
         // Observe comparisons as a deterministic complexity check, independently of wall-clock speed.
         const grouper = DataGrouper.prototype as unknown as {
             areBatchesCompatible(first: ColumnBatch, second: ColumnBatch): boolean;
@@ -44,26 +55,40 @@ describe('DataGrouper', () => {
         ['scope1', 'scope2'],
         ['scope2', 'scope1'],
     ])('groups shared columns once with scope order %s, %s and an empty scope', (first, second) => {
-        const dataSet = new DataSet([
-            { key: 'A', a: 1, shared: 10, b: 100 },
-            { key: 'A', a: 2, shared: 20, b: 200 },
-            { key: 'B', a: 3, shared: 30, b: 300 },
-        ], testLogger);
-        const scopes = [first, 'empty', second];
-        const model = new DataModel<any, any, true>({
-            props: [
-                categoryKey('key', scopes),
-                scopedValue('scope1', 'a'),
-                scopedValue(['scope1', 'scope2'], 'shared'),
-                scopedValue('scope2', 'b'),
+        const dataSet = new DataSet(
+            [
+                { key: 'A', a: 1, shared: 10, b: 100 },
+                { key: 'A', a: 2, shared: 20, b: 200 },
+                { key: 'B', a: 3, shared: 30, b: 300 },
             ],
-            groupByKeys: true,
-        }, testLogger);
+            testLogger
+        );
+        const scopes = [first, 'empty', second];
+        const model = new DataModel<any, any, true>(
+            {
+                props: [
+                    categoryKey('key', scopes),
+                    scopedValue('scope1', 'a'),
+                    scopedValue(['scope1', 'scope2'], 'shared'),
+                    scopedValue('scope2', 'b'),
+                ],
+                groupByKeys: true,
+            },
+            testLogger
+        );
         const result = model.processData(new Map(scopes.map((scope) => [scope, dataSet])));
-        expect(result?.columns).toEqual([[1, 2, 3], [10, 20, 30], [100, 200, 300]]);
+        expect(result?.columns).toEqual([
+            [1, 2, 3],
+            [10, 20, 30],
+            [100, 200, 300],
+        ]);
         expect(result?.groups.map((group) => group.keys)).toEqual([['A'], ['B']]);
         expect(result?.groups.map((group) => group.datumIndices)).toEqual([
-            [[0, 1], [0, 1], [0, 1]],
+            [
+                [0, 1],
+                [0, 1],
+                [0, 1],
+            ],
             [[1], [1], [1]],
         ]);
         expect(result?.groups.map((group) => [...group.validScopes])).toEqual([scopes, scopes]);
@@ -74,10 +99,13 @@ describe('DataGrouper', () => {
         const scopes = Array.from({ length: count }, (_, i) => `scope${i}`);
         const row = Object.fromEntries([['key', 'A'], ...scopes.map((scope, i) => [scope, i])]);
         const dataSet = new DataSet([row], testLogger);
-        const model = new DataModel<any, any, true>({
-            props: [categoryKey('key', scopes), ...scopes.map((scope) => scopedValue(scope, scope))],
-            groupByKeys: true,
-        }, testLogger);
+        const model = new DataModel<any, any, true>(
+            {
+                props: [categoryKey('key', scopes), ...scopes.map((scope) => scopedValue(scope, scope))],
+                groupByKeys: true,
+            },
+            testLogger
+        );
         const groupData = DataGrouper.prototype.groupData;
         let membershipChecks = 0;
         const grouping = vi.spyOn(DataGrouper.prototype, 'groupData').mockImplementation(function (

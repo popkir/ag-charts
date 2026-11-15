@@ -1,0 +1,11 @@
+Comparing upstream (baseline) vs. stacked-fix
+Aggregated across 3 runs per side (median of run medians; cross-run CV gates noise).
+Time (top 5/bottom 5)
+┌─────────┬─────────────────────────────────────────────────────────────────┬─────────┬─────────────┬────────────┐
+│ (index) │ test                                                            │ %       │ Before (ms) │ After (ms) │
+├─────────┼─────────────────────────────────────────────────────────────────┼─────────┼─────────────┼────────────┤
+│ 0       │ 'high-perf-bar-stacked / Initial Load / Operation=Chart Create' │ '-7.3%' │ 164.8       │ 152.7      │
+│ 1       │ 'high-perf-bar-stacked / Zoom / Repetitions=20x'                │ '-1.1%' │ 378.6       │ 374.2      │
+└─────────┴─────────────────────────────────────────────────────────────────┴─────────┴─────────────┴────────────┘
+
+Summary: 2 improved, 0 regressed, 2 total

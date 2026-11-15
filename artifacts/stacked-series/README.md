@@ -4,7 +4,7 @@ This change keeps the ordinary stacked bar series and its data requests. It redu
 
 Base: [`ag-grid/ag-charts@fd652e876a2b059924848a2177c82e67d6752327`](https://github.com/ag-grid/ag-charts/commit/fd652e876a2b059924848a2177c82e67d6752327), `latest`, version `14.3.0-beta.20261113`. Evidence was collected on 15 November 2026, macOS arm64, Node `24.21.0`, esbuild `0.19.9`. Node matches the repository's `^24.21.0` engine requirement.
 
-Implementation: [six-file source/test commit](https://github.com/popkir/ag-charts/commit/b2a56531f4b48e94f4533a0b94f8c96017248587) · [clean fix diff](https://github.com/popkir/ag-charts/compare/fd652e876a2b059924848a2177c82e67d6752327...b2a56531f4b48e94f4533a0b94f8c96017248587). The evidence in this directory is a separate fork-only commit.
+Implementation: [six-file source/test commit](https://github.com/popkir/ag-charts/commit/bec53b4495a6866beeeb1dcd727de6162b2dd3bd) · [clean fix diff](https://github.com/popkir/ag-charts/compare/fd652e876a2b059924848a2177c82e67d6752327...bec53b4495a6866beeeb1dcd727de6162b2dd3bd). The evidence in this directory is a separate fork-only commit.
 
 ## Change
 
@@ -16,6 +16,8 @@ Implementation: [six-file source/test commit](https://github.com/popkir/ag-chart
 The indexes are local to one processing call. There is no unbounded global cache. This targets the measured shared stacked-series case; arbitrary incompatible keys sharing the same invalidity references can still require repeated final compatibility checks.
 
 ## Repeated measurements
+
+The preparation measurements below were collected on the [original fix](https://github.com/popkir/ag-charts/commit/b2a56531f4b48e94f4533a0b94f8c96017248587). The verified source revision adds test type/assertion corrections and Prettier formatting; runtime calculations are unchanged. The original measurement receipts are preserved.
 
 Each cell below is median milliseconds, with min–max in parentheses, from three measured runs. Each fresh worker first processes a separate 32-series warmup fixture. Both variants use the same stage wrappers. Fixture creation, request creation, explicit garbage collection and result inspection are outside the `execute` interval. Raw per-run timings, memory observations and request times are in [measurements.jsonl](./measurements.jsonl); [summary.json](./summary.json) contains the aggregates.
 
@@ -66,13 +68,15 @@ Executed standalone checks, using the real source classes and synthetic data:
 
 Deterministic regression tests have been added beside the existing `DataController`, `DataGrouper` and aggregate-function tests. They include unrelated-property comparisons, dataset/transform compatibility, aggregate aliases/scopes, signed stacks across visibility and transactional updates, overlapping scopes and incompatible invalidity arrays.
 
-## Checks still required
+## Repository and browser checks
 
-The normal `yarn nx format`, `build:types`, lint, community/enterprise test suites and website E2E checks have **not completed locally**. Dependency setup failed with the pinned Yarn 4.10.3 `onCancel` error. Yarn 4.18.1 required a generated lockfile migration, and its subsequent dependency link exceeded the available disk headroom. All original tracked package/lock/config files were restored; no dependency or tooling changes are included in the fix. An attempted Nx test invocation could not start without a completed installation.
+The normal repository checks have now been run on GitHub-hosted runners in the personal fork. Format, Community/Enterprise type checks and lint passed. The full Community suite passed **7214 tests** (16 skipped), and the full Enterprise suite passed **7258 tests** (52 skipped), including the new regression tests.
 
-The standalone checks are not a substitute for the upstream Vitest/Nx suites. The new tests have not been executed by that suite. Maintainer CI should run the normal checks, existing stacked-bar/legend/tooltip/hidden/update/export coverage, and the official `high-perf-bar-stacked` browser benchmark before merging.
+The paired targeted Chromium runs on the verified fix and upstream baseline each produced **398 passed, 3 skipped and 1 failed**. The one tooltip snapshot failure is reproduced on the baseline; actual, expected and diff images are byte-identical between both revisions and all retries. Those browser jobs remain failed; no snapshots were updated.
 
-There is no patched-browser render, image-snapshot, legend, tooltip or PNG/export evidence in this report. The measurements do not cover chart construction, layout, drawing, interactions or UI integration. The source patch changes no series options, orientation, data selection or visual implementation.
+The official `high-perf-bar-stacked` browser benchmark also passed, with three interleaved runs per side on one runner. Its stock workload is 100000 rows and 2 series, which is distinct from the 7293-series preparation workload above. Detailed results, PNG export/cross-browser coverage, exact commands, pinned source identities and remaining scope are recorded in [CI.md](./CI.md).
+
+These fork runs are not upstream CI approval. Maintainer review and the upstream merge gates are still required. No browser speedup for the 7293-series case is claimed.
 
 ## Reproduce without installing the full monorepo
 

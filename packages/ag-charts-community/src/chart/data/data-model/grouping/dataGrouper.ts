@@ -284,7 +284,9 @@ export class DataGrouper<D extends object, K extends keyof D & string> {
             }
         }
         for (const scope of allScopes) {
-            const scopeColumnIndexes = columnIndexesByScope.get(scope)?.filter((idx) => !processedColumnIndexes.has(idx));
+            const scopeColumnIndexes = columnIndexesByScope
+                .get(scope)
+                ?.filter((idx) => !processedColumnIndexes.has(idx));
             if (scopeColumnIndexes == null || scopeColumnIndexes.length === 0) continue;
             for (const idx of scopeColumnIndexes) {
                 processedColumnIndexes.add(idx);

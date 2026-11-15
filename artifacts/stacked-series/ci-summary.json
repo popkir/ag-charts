@@ -1,0 +1,503 @@
+{
+  "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+  "base": "fd652e876a2b059924848a2177c82e67d6752327",
+  "toolchain": {
+    "node": "24.22.3",
+    "yarn": "4.10.3"
+  },
+  "native": {
+    "run": "https://github.com/popkir/ag-charts/actions/runs/43726542138",
+    "job": 132849597291,
+    "conclusion": "success",
+    "community": {
+      "filesPassed": 159,
+      "passed": 7214,
+      "skipped": 16,
+      "failed": 0
+    },
+    "enterprise": {
+      "filesPassed": 151,
+      "passed": 7258,
+      "skipped": 52,
+      "failed": 0
+    },
+    "xml": {
+      "ag-charts-community.xml": {
+        "totals": {
+          "name": "vitest tests",
+          "tests": "7230",
+          "failures": "0",
+          "errors": "0",
+          "time": "339.245"
+        },
+        "regression_suites": [
+          {
+            "name": "src/chart/data/aggregateFunctions.test.ts",
+            "timestamp": "2026-11-15T15:03:56.218Z",
+            "hostname": "runnervm8axu0",
+            "tests": "15",
+            "failures": "0",
+            "errors": "0",
+            "skipped": "0",
+            "time": "0.006883195"
+          },
+          {
+            "name": "src/chart/data/dataController.test.ts",
+            "timestamp": "2026-11-15T15:03:56.222Z",
+            "hostname": "runnervm8axu0",
+            "tests": "24",
+            "failures": "0",
+            "errors": "0",
+            "skipped": "0",
+            "time": "0.033009506"
+          },
+          {
+            "name": "src/chart/data/data-model/grouping/dataGrouper.test.ts",
+            "timestamp": "2026-11-15T15:03:56.600Z",
+            "hostname": "runnervm8axu0",
+            "tests": "86",
+            "failures": "0",
+            "errors": "0",
+            "skipped": "0",
+            "time": "0.0833987"
+          }
+        ]
+      },
+      "ag-charts-enterprise.xml": {
+        "totals": {
+          "name": "vitest tests",
+          "tests": "7310",
+          "failures": "0",
+          "errors": "0",
+          "time": "491.455"
+        },
+        "regression_suites": []
+      }
+    }
+  },
+  "chromium": {
+    "candidate": {
+      "totals": {
+        "id": "",
+        "name": "",
+        "tests": "402",
+        "failures": "1",
+        "skipped": "3",
+        "errors": "0",
+        "time": "465.818219"
+      },
+      "suites": [
+        {
+          "name": "api-events.spec.ts",
+          "tests": "14",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "bar-series.spec.ts",
+          "tests": "5",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "caption-tooltip.spec.ts",
+          "tests": "13",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "context-menu.spec.ts",
+          "tests": "79",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-api-state.spec.ts",
+          "tests": "9",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-bar-series.spec.ts",
+          "tests": "13",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-context-menu.spec.ts",
+          "tests": "19",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-legend.spec.ts",
+          "tests": "16",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-radial-bar-series.spec.ts",
+          "tests": "6",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-range-bar-series.spec.ts",
+          "tests": "6",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "interactive-tooltip.spec.ts",
+          "tests": "7",
+          "failures": "1",
+          "skipped": "0"
+        },
+        {
+          "name": "legend-item-tooltip.spec.ts",
+          "tests": "6",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "legend.spec.ts",
+          "tests": "44",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "state.spec.ts",
+          "tests": "150",
+          "failures": "0",
+          "skipped": "2"
+        },
+        {
+          "name": "tooltip.spec.ts",
+          "tests": "15",
+          "failures": "0",
+          "skipped": "1"
+        }
+      ],
+      "fail_images": {
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-actual.png": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-diff.png": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-expected.png": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-actual.png": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-diff.png": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-expected.png": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-actual.png": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-diff.png": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-expected.png": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a"
+      }
+    },
+    "baseline": {
+      "totals": {
+        "id": "",
+        "name": "",
+        "tests": "402",
+        "failures": "1",
+        "skipped": "3",
+        "errors": "0",
+        "time": "450.36176499999993"
+      },
+      "suites": [
+        {
+          "name": "api-events.spec.ts",
+          "tests": "14",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "bar-series.spec.ts",
+          "tests": "5",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "caption-tooltip.spec.ts",
+          "tests": "13",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "context-menu.spec.ts",
+          "tests": "79",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-api-state.spec.ts",
+          "tests": "9",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-bar-series.spec.ts",
+          "tests": "13",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-context-menu.spec.ts",
+          "tests": "19",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-legend.spec.ts",
+          "tests": "16",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-radial-bar-series.spec.ts",
+          "tests": "6",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "generated/examples-range-bar-series.spec.ts",
+          "tests": "6",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "interactive-tooltip.spec.ts",
+          "tests": "7",
+          "failures": "1",
+          "skipped": "0"
+        },
+        {
+          "name": "legend-item-tooltip.spec.ts",
+          "tests": "6",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "legend.spec.ts",
+          "tests": "44",
+          "failures": "0",
+          "skipped": "0"
+        },
+        {
+          "name": "state.spec.ts",
+          "tests": "150",
+          "failures": "0",
+          "skipped": "2"
+        },
+        {
+          "name": "tooltip.spec.ts",
+          "tests": "15",
+          "failures": "0",
+          "skipped": "1"
+        }
+      ],
+      "fail_images": {
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-diff.png": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-actual.png": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-expected.png": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-actual.png": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-diff.png": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-expected.png": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-actual.png": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-diff.png": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+        "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-expected.png": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a"
+      }
+    },
+    "sameSelectedSuites": true,
+    "failurePngsByteIdentical": true,
+    "knownFailure": {
+      "file": "interactive-tooltip.spec.ts",
+      "line": 49,
+      "test": "interactive-tooltip > hover 4 steps",
+      "snapshot": "interactive-tooltip-visible.png",
+      "differentPixels": 1614
+    }
+  },
+  "browserBenchmark": {
+    "run": "https://github.com/popkir/ag-charts/actions/runs/43726854766",
+    "conclusion": "success",
+    "example": "high-perf-bar-stacked",
+    "rows": 100000,
+    "series": 2,
+    "runsPerSide": 3,
+    "comparison": "median of run medians",
+    "initialLoad": {
+      "baselineMs": 164.8,
+      "candidateMs": 152.7,
+      "changePercent": -7.3
+    },
+    "zoom20": {
+      "baselineMs": 378.6,
+      "candidateMs": 374.2,
+      "changePercent": -1.1
+    },
+    "memoryPass": false
+  },
+  "export": {
+    "run": "https://github.com/popkir/ag-charts/actions/runs/43729070987",
+    "conclusion": "success",
+    "candidate": {
+      "ag-charts-website-e2e.xml": {
+        "totals": {
+          "id": "",
+          "name": "",
+          "tests": "6",
+          "failures": "0",
+          "skipped": "0",
+          "errors": "0",
+          "time": "7.947538"
+        },
+        "suites": [
+          {
+            "name": "cross-browser.spec.ts",
+            "timestamp": "2026-11-15T15:23:34.445Z",
+            "hostname": "chromium",
+            "tests": "6",
+            "failures": "0",
+            "skipped": "0",
+            "time": "13.951",
+            "errors": "0"
+          }
+        ],
+        "png_tests": [
+          {
+            "name": "cross-browser › AG-18059 chart downloads a PNG",
+            "classname": "cross-browser.spec.ts",
+            "result": "passed"
+          }
+        ]
+      },
+      "ag-charts-website-e2e-cross-browser.xml": {
+        "totals": {
+          "id": "",
+          "name": "",
+          "tests": "12",
+          "failures": "0",
+          "skipped": "0",
+          "errors": "0",
+          "time": "18.365078"
+        },
+        "suites": [
+          {
+            "name": "cross-browser.spec.ts",
+            "timestamp": "2026-11-15T15:24:17.422Z",
+            "hostname": "firefox",
+            "tests": "6",
+            "failures": "0",
+            "skipped": "0",
+            "time": "17.339",
+            "errors": "0"
+          },
+          {
+            "name": "cross-browser.spec.ts",
+            "timestamp": "2026-11-15T15:24:17.422Z",
+            "hostname": "webkit",
+            "tests": "6",
+            "failures": "0",
+            "skipped": "0",
+            "time": "12.704",
+            "errors": "0"
+          }
+        ],
+        "png_tests": [
+          {
+            "name": "cross-browser › AG-18059 chart downloads a PNG",
+            "classname": "cross-browser.spec.ts",
+            "result": "passed"
+          },
+          {
+            "name": "cross-browser › AG-18059 chart downloads a PNG",
+            "classname": "cross-browser.spec.ts",
+            "result": "passed"
+          }
+        ]
+      }
+    },
+    "baseline": {
+      "ag-charts-website-e2e.xml": {
+        "totals": {
+          "id": "",
+          "name": "",
+          "tests": "6",
+          "failures": "0",
+          "skipped": "0",
+          "errors": "0",
+          "time": "7.294007"
+        },
+        "suites": [
+          {
+            "name": "cross-browser.spec.ts",
+            "timestamp": "2026-11-15T15:23:03.116Z",
+            "hostname": "chromium",
+            "tests": "6",
+            "failures": "0",
+            "skipped": "0",
+            "time": "12.808",
+            "errors": "0"
+          }
+        ],
+        "png_tests": [
+          {
+            "name": "cross-browser › AG-18059 chart downloads a PNG",
+            "classname": "cross-browser.spec.ts",
+            "result": "passed"
+          }
+        ]
+      },
+      "ag-charts-website-e2e-cross-browser.xml": {
+        "totals": {
+          "id": "",
+          "name": "",
+          "tests": "12",
+          "failures": "0",
+          "skipped": "0",
+          "errors": "0",
+          "time": "16.676308000000002"
+        },
+        "suites": [
+          {
+            "name": "cross-browser.spec.ts",
+            "timestamp": "2026-11-15T15:23:40.912Z",
+            "hostname": "firefox",
+            "tests": "6",
+            "failures": "0",
+            "skipped": "0",
+            "time": "15.444",
+            "errors": "0"
+          },
+          {
+            "name": "cross-browser.spec.ts",
+            "timestamp": "2026-11-15T15:23:40.912Z",
+            "hostname": "webkit",
+            "tests": "6",
+            "failures": "0",
+            "skipped": "0",
+            "time": "12.101",
+            "errors": "0"
+          }
+        ],
+        "png_tests": [
+          {
+            "name": "cross-browser › AG-18059 chart downloads a PNG",
+            "classname": "cross-browser.spec.ts",
+            "result": "passed"
+          },
+          {
+            "name": "cross-browser › AG-18059 chart downloads a PNG",
+            "classname": "cross-browser.spec.ts",
+            "result": "passed"
+          }
+        ]
+      }
+    },
+    "passedPerRevision": 18,
+    "skippedPerRevision": 0,
+    "failedPerRevision": 0,
+    "pngDownloadPassed": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ]
+  }
+}
