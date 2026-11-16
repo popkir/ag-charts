@@ -1367,54 +1367,62 @@ export class Chart implements ModuleInstance, ChartService, ChartTypeHost {
     }
 
     private setCategoryLegendData(initialState?: AgInitialStateLegendOptions[]) {
-        const { legendManager, stateManager } = this.ctx;
+        const update = () => {
+            const { legendManager, stateManager } = this.ctx;
 
-        if (initialState) {
-            for (const s of this.series) {
-                const seriesState = initialState.find((init) => init.seriesId === s.id);
-                s.onLegendInitialState('category', seriesState);
-            }
-        }
-
-        const legendData = this.series.flatMap((s) => {
-            const seriesLegendData = s.getLegendData('category');
-            legendManager?.updateData(s.id, seriesLegendData);
-            return seriesLegendData;
-        });
-
-        if (initialState && legendManager) {
-            stateManager.setStateAndRestore(legendManager, initialState);
-            return;
-        }
-
-        if (this.ctx.chartState.getValue('options', 'mode') !== 'integrated') {
-            // Validate each series that shares a legend item label uses the same fill colour
-            const seriesMarkerFills: { [key: string]: Map<NormalisedTextOrSegments, AgColorType | undefined> } = {};
-            const seriesMap = new Map(this.series.map((s) => [s.id, s]));
-
-            for (const {
-                seriesId,
-                symbol: { marker },
-                label,
-            } of legendData.filter((d) => !d.hideInLegend)) {
-                if (marker.fill == null) continue;
-
-                const series = seriesMap.get(seriesId);
-                if (!series?.hasData) continue;
-
-                const seriesType = series.type;
-                const markerFill = (seriesMarkerFills[seriesType] ??= new Map());
-
-                if (markerFill.has(label.text)) {
-                    if (markerFill.get(label.text) !== marker.fill) {
-                        this.ctx.logger.warnOnce(
-                            `legend item '${toPlainText(label.text)}' has multiple fill colours, this may cause unexpected behaviour.`
-                        );
-                    }
-                } else {
-                    markerFill.set(label.text, marker.fill);
+            if (initialState) {
+                for (const s of this.series) {
+                    const seriesState = initialState.find((init) => init.seriesId === s.id);
+                    s.onLegendInitialState('category', seriesState);
                 }
             }
+
+            const legendData = this.series.flatMap((s) => {
+                const seriesLegendData = s.getLegendData('category');
+                legendManager?.updateData(s.id, seriesLegendData);
+                return seriesLegendData;
+            });
+
+            if (initialState && legendManager) {
+                stateManager.setStateAndRestore(legendManager, initialState);
+                return;
+            }
+
+            if (this.ctx.chartState.getValue('options', 'mode') !== 'integrated') {
+                // Validate each series that shares a legend item label uses the same fill colour
+                const seriesMarkerFills: { [key: string]: Map<NormalisedTextOrSegments, AgColorType | undefined> } = {};
+                const seriesMap = new Map(this.series.map((s) => [s.id, s]));
+
+                for (const {
+                    seriesId,
+                    symbol: { marker },
+                    label,
+                } of legendData.filter((d) => !d.hideInLegend)) {
+                    if (marker.fill == null) continue;
+
+                    const series = seriesMap.get(seriesId);
+                    if (!series?.hasData) continue;
+
+                    const seriesType = series.type;
+                    const markerFill = (seriesMarkerFills[seriesType] ??= new Map());
+
+                    if (markerFill.has(label.text)) {
+                        if (markerFill.get(label.text) !== marker.fill) {
+                            this.ctx.logger.warnOnce(
+                                `legend item '${toPlainText(label.text)}' has multiple fill colours, this may cause unexpected behaviour.`
+                            );
+                        }
+                    } else {
+                        markerFill.set(label.text, marker.fill);
+                    }
+                }
+            }
+        };
+        const { legendManager } = this.ctx;
+        if (legendManager == null) {
+            update();
+        } else {
+            legendManager.batchDataUpdates(update);
         }
     }
 
@@ -1836,77 +1844,84 @@ export class Chart implements ModuleInstance, ChartService, ChartTypeHost {
         optSeries: AgChartOptions['series'],
         oldOptSeries?: AgChartOptions['series']
     ): SeriesChangeType {
-        if (!optSeries) {
-            return 'no-change';
-        }
+        const apply = (): SeriesChangeType => {
+            if (!optSeries) {
+                return 'no-change';
+            }
 
-        const matchResult = matchSeriesOptions(chart.series, optSeries, oldOptSeries, this.ctx.moduleRegistry);
-        if (matchResult.status === 'no-overlap') {
-            debug(`Chart.applySeries() - creating new series instances, status: ${matchResult.status}`, matchResult);
-            const chartSeries = optSeries.map((opts) => this.createSeries(opts));
-            this.initSeriesDeclarationOrder(chartSeries);
-            chart.setSeries(chartSeries);
-            return 'replaced';
-        }
+            const matchResult = matchSeriesOptions(chart.series, optSeries, oldOptSeries, this.ctx.moduleRegistry);
+            if (matchResult.status === 'no-overlap') {
+                debug(
+                    `Chart.applySeries() - creating new series instances, status: ${matchResult.status}`,
+                    matchResult
+                );
+                const chartSeries = optSeries.map((opts) => this.createSeries(opts));
+                this.initSeriesDeclarationOrder(chartSeries);
+                chart.setSeries(chartSeries);
+                return 'replaced';
+            }
 
-        debug(`Chart.applySeries() - matchResult`, matchResult);
+            debug(`Chart.applySeries() - matchResult`, matchResult);
 
-        const seriesInstances = [];
-        let dataChanged = false;
-        let groupingChanged = false;
-        let isUpdated = false;
-        let seriesCountChanged = false;
+            const seriesInstances = [];
+            let dataChanged = false;
+            let groupingChanged = false;
+            let isUpdated = false;
+            let seriesCountChanged = false;
 
-        const changes = matchResult.changes.toSorted((a, b) => a.targetIdx - b.targetIdx);
-        for (const change of changes) {
-            groupingChanged ||= change.status === 'series-grouping';
-            dataChanged ||= change.diff?.data != null;
-            isUpdated ||= change.status !== 'no-op';
-            seriesCountChanged ||= change.status === 'add' || change.status === 'remove';
+            const changes = matchResult.changes.toSorted((a, b) => a.targetIdx - b.targetIdx);
+            for (const change of changes) {
+                groupingChanged ||= change.status === 'series-grouping';
+                dataChanged ||= change.diff?.data != null;
+                isUpdated ||= change.status !== 'no-op';
+                seriesCountChanged ||= change.status === 'add' || change.status === 'remove';
 
-            switch (change.status) {
-                case 'add': {
-                    const newSeries = this.createSeries(change.opts);
-                    seriesInstances.push(newSeries);
-                    debug(`Chart.applySeries() - created new series`, newSeries);
-                    break;
-                }
+                switch (change.status) {
+                    case 'add': {
+                        const newSeries = this.createSeries(change.opts);
+                        seriesInstances.push(newSeries);
+                        debug(`Chart.applySeries() - created new series`, newSeries);
+                        break;
+                    }
 
-                case 'remove':
-                    debug(`Chart.applySeries() - removing series at previous idx ${change.idx}`, change.series);
-                    break;
+                    case 'remove':
+                        debug(`Chart.applySeries() - removing series at previous idx ${change.idx}`, change.series);
+                        break;
 
-                case 'no-op':
-                    seriesInstances.push(change.series);
-                    debug(`Chart.applySeries() - no change to series at previous idx ${change.idx}`, change.series);
-                    break;
+                    case 'no-op':
+                        seriesInstances.push(change.series);
+                        debug(`Chart.applySeries() - no change to series at previous idx ${change.idx}`, change.series);
+                        break;
 
-                case 'series-grouping':
-                case 'update':
-                default: {
-                    const { series, opts, diff, idx } = change;
-                    debug(`Chart.applySeries() - applying series diff previous idx ${idx}`, diff, series);
-                    this.applySeriesValues(series, opts, diff);
-                    series.markNodeDataDirty();
-                    seriesInstances.push(series);
+                    case 'series-grouping':
+                    case 'update':
+                    default: {
+                        const { series, opts, diff, idx } = change;
+                        debug(`Chart.applySeries() - applying series diff previous idx ${idx}`, diff, series);
+                        this.applySeriesValues(series, opts, diff);
+                        series.markNodeDataDirty();
+                        seriesInstances.push(series);
+                    }
                 }
             }
-        }
-        this.initSeriesDeclarationOrder(seriesInstances);
+            this.initSeriesDeclarationOrder(seriesInstances);
 
-        debug(`Chart.applySeries() - final series instances`, seriesInstances);
-        chart.setSeries(seriesInstances);
+            debug(`Chart.applySeries() - final series instances`, seriesInstances);
+            chart.setSeries(seriesInstances);
 
-        if (groupingChanged) {
-            return 'series-grouping-change';
-        }
-        if (seriesCountChanged) {
-            return 'series-count-changed';
-        }
-        if (dataChanged) {
-            return 'data-change';
-        }
-        return isUpdated ? 'updated' : 'no-op';
+            if (groupingChanged) {
+                return 'series-grouping-change';
+            }
+            if (seriesCountChanged) {
+                return 'series-count-changed';
+            }
+            if (dataChanged) {
+                return 'data-change';
+            }
+            return isUpdated ? 'updated' : 'no-op';
+        };
+        const { legendManager } = this.ctx;
+        return legendManager == null ? apply() : legendManager.batchDataUpdates(apply);
     }
 
     private createSeries(seriesOptions: SeriesOptionsTypes): UnknownSeries {

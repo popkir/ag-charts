@@ -19,6 +19,24 @@ export class LegendManager implements MementoOriginator<LegendDataMemento> {
 
     private readonly chartState: ReactiveState<ChartState>;
     private readonly logger: Logger;
+    private dataBatchDepth = 0;
+    private pendingDataRecord?: Record<string, CategoryLegendDatum[]>;
+
+    /** Keep intermediate reads current while publishing one immutable record for a synchronous batch. */
+    batchDataUpdates<T>(callback: () => T): T {
+        this.dataBatchDepth++;
+        try {
+            return callback();
+        } finally {
+            this.dataBatchDepth--;
+            if (this.dataBatchDepth === 0 && this.pendingDataRecord != null) {
+                const record = this.pendingDataRecord;
+                this.pendingDataRecord = undefined;
+                // Preserve partial updates if the callback throws, as individual writes would have done.
+                this.chartState.setValue('legendData', record);
+            }
+        }
+    }
 
     constructor(ctx: { chartState: ReactiveState<ChartState>; logger: Logger }) {
         this.chartState = ctx.chartState;
@@ -106,15 +124,24 @@ export class LegendManager implements MementoOriginator<LegendDataMemento> {
     }
 
     private get legendDataRecord(): Record<string, CategoryLegendDatum[]> {
-        return this.chartState.getValue('legendData') ?? {};
+        return this.pendingDataRecord ?? this.chartState.getValue('legendData') ?? {};
     }
 
     public updateData(seriesId: string, data: CategoryLegendDatum[] = []) {
-        this.chartState.setValue('legendData', { ...this.legendDataRecord, [seriesId]: data });
+        if (this.dataBatchDepth > 0) {
+            this.pendingDataRecord ??= { ...this.legendDataRecord };
+            this.pendingDataRecord[seriesId] = data;
+        } else {
+            this.chartState.setValue('legendData', { ...this.legendDataRecord, [seriesId]: data });
+        }
     }
 
     public clearData() {
-        this.chartState.setValue('legendData', {});
+        if (this.dataBatchDepth > 0) {
+            this.pendingDataRecord = {};
+        } else {
+            this.chartState.setValue('legendData', {});
+        }
     }
 
     public toggleItem(enabled: boolean, seriesId: string, itemId?: any, legendItemName?: string) {
