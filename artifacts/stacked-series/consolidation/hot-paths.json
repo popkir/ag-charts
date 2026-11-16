@@ -1,0 +1,443 @@
+{
+  "range": "9ee57509a4..ae4e8907037ca9aec35f19d6898d3cfb8da84721",
+  "changedSourceFiles": 7,
+  "maxScore": 11,
+  "stage1": {
+    "files": 6,
+    "tiers": [
+      1,
+      3
+    ]
+  },
+  "stage2": {
+    "files": 4,
+    "tiers": [
+      1,
+      3
+    ]
+  },
+  "triggered": true,
+  "hits": [
+    {
+      "file": "packages/ag-charts-community/src/chart/chart.ts",
+      "tier": 3,
+      "tierId": "per-interaction",
+      "addedLineCount": 119,
+      "signals": {
+        "loops": [
+          {
+            "line": 1374,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (const s of this.series) {"
+          },
+          {
+            "line": 1380,
+            "needle": ".flatMap(",
+            "where": "added",
+            "text": "const legendData = this.series.flatMap((s) => {"
+          },
+          {
+            "line": 1394,
+            "needle": ".map(",
+            "where": "added",
+            "text": "const seriesMap = new Map(this.series.map((s) => [s.id, s]));"
+          },
+          {
+            "line": 1396,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (const {"
+          },
+          {
+            "line": 1400,
+            "needle": ".filter(",
+            "where": "added",
+            "text": "} of legendData.filter((d) => !d.hideInLegend)) {"
+          }
+        ],
+        "allocation": [
+          {
+            "line": 1394,
+            "needle": "new Map(",
+            "where": "added",
+            "text": "const seriesMap = new Map(this.series.map((s) => [s.id, s]));"
+          },
+          {
+            "line": 1407,
+            "needle": "new Map(",
+            "where": "added",
+            "text": "const markerFill = (seriesMarkerFills[seriesType] ??= new Map());"
+          },
+          {
+            "line": 1872,
+            "needle": "toSorted(",
+            "where": "added",
+            "text": "const changes = matchResult.changes.toSorted((a, b) => a.targetIdx - b.targetIdx);"
+          },
+          {
+            "line": 1379,
+            "needle": "new Map(",
+            "where": "removed",
+            "text": "const seriesMap = new Map(this.series.map((s) => [s.id, s]));"
+          },
+          {
+            "line": 1386,
+            "needle": "new Map(",
+            "where": "removed",
+            "text": "const markerFill = (seriesMarkerFills[seriesType] ??= new Map());"
+          }
+        ],
+        "per-datum-locals": [
+          {
+            "line": 1888,
+            "needle": "idx",
+            "where": "added",
+            "text": "debug(`Chart.applySeries() - removing series at previous idx ${change.idx}`, change.series);"
+          },
+          {
+            "line": 1893,
+            "needle": "idx",
+            "where": "added",
+            "text": "debug(`Chart.applySeries() - no change to series at previous idx ${change.idx}`, change.series);"
+          },
+          {
+            "line": 1899,
+            "needle": "idx",
+            "where": "added",
+            "text": "const { series, opts, diff, idx } = change;"
+          },
+          {
+            "line": 1900,
+            "needle": "idx",
+            "where": "added",
+            "text": "debug(`Chart.applySeries() - applying series diff previous idx ${idx}`, diff, series);"
+          },
+          {
+            "line": 1837,
+            "needle": "idx",
+            "where": "context",
+            "text": "for (let idx = 0; idx < series.length; idx++) {"
+          }
+        ],
+        "update-type": [
+          {
+            "line": 1440,
+            "needle": "performUpdate",
+            "where": "context",
+            "text": "this.debug('Chart.performUpdate() - seriesRect', this.seriesRect);"
+          }
+        ]
+      },
+      "markers": [],
+      "loops": [
+        {
+          "line": 1375,
+          "loopLine": 1375,
+          "loop": "const seriesState = initialState.find((init) => init.seriesId === s.id);"
+        },
+        {
+          "line": 1376,
+          "loopLine": 1374,
+          "loop": "for (const s of this.series) {"
+        },
+        {
+          "line": 1381,
+          "loopLine": 1380,
+          "loop": "const legendData = this.series.flatMap((s) => {"
+        },
+        {
+          "line": 1394,
+          "loopLine": 1394,
+          "loop": "const seriesMap = new Map(this.series.map((s) => [s.id, s]));"
+        },
+        {
+          "line": 1397,
+          "loopLine": 1396,
+          "loop": "for (const {"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "file": "packages/ag-charts-community/src/chart/data/data-model/grouping/dataGrouper.ts",
+      "tier": 1,
+      "tierId": "per-datum",
+      "addedLineCount": 38,
+      "signals": {
+        "per-datum-locals": [
+          {
+            "line": 275,
+            "needle": "columnIndex",
+            "where": "added",
+            "text": "const columnIndexesByScope = new Map<ScopeId, number[]>();"
+          },
+          {
+            "line": 278,
+            "needle": "columnIndex",
+            "where": "added",
+            "text": "let indexes = columnIndexesByScope.get(scope);"
+          },
+          {
+            "line": 281,
+            "needle": "columnIndex",
+            "where": "added",
+            "text": "columnIndexesByScope.set(scope, indexes);"
+          },
+          {
+            "line": 287,
+            "needle": "columnIndex",
+            "where": "added",
+            "text": "const scopeColumnIndexes = columnIndexesByScope"
+          },
+          {
+            "line": 289,
+            "needle": "idx",
+            "where": "added",
+            "text": "?.filter((idx) => !processedColumnIndexes.has(idx));"
+          }
+        ],
+        "loops": [
+          {
+            "line": 276,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (let columnIdx = 0; columnIdx < allColumns.length; columnIdx++) {"
+          },
+          {
+            "line": 277,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (const scope of columnScopes[columnIdx]) {"
+          },
+          {
+            "line": 289,
+            "needle": ".filter(",
+            "where": "added",
+            "text": "?.filter((idx) => !processedColumnIndexes.has(idx));"
+          },
+          {
+            "line": 338,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (let i = 0; i < columnBatches.length; i++) {"
+          },
+          {
+            "line": 385,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (const j of candidateIndexes) {"
+          }
+        ],
+        "allocation": [
+          {
+            "line": 342,
+            "needle": "new Map(",
+            "where": "added",
+            "text": "indexesByInvalidData = new Map();"
+          },
+          {
+            "line": 362,
+            "needle": "new Set(",
+            "where": "context",
+            "text": "new Set(siblingScopes),"
+          }
+        ]
+      },
+      "markers": [],
+      "loops": [
+        {
+          "line": 277,
+          "loopLine": 276,
+          "loop": "for (let columnIdx = 0; columnIdx < allColumns.length; columnIdx++) {"
+        },
+        {
+          "line": 278,
+          "loopLine": 277,
+          "loop": "for (const scope of columnScopes[columnIdx]) {"
+        },
+        {
+          "line": 287,
+          "loopLine": 286,
+          "loop": "for (const scope of allScopes) {"
+        },
+        {
+          "line": 289,
+          "loopLine": 289,
+          "loop": "?.filter((idx) => !processedColumnIndexes.has(idx));"
+        },
+        {
+          "line": 339,
+          "loopLine": 338,
+          "loop": "for (let i = 0; i < columnBatches.length; i++) {"
+        }
+      ],
+      "score": 10
+    },
+    {
+      "file": "packages/ag-charts-community/src/chart/data/data-model/utils/resolvers.ts",
+      "tier": 1,
+      "tierId": "per-datum",
+      "addedLineCount": 24,
+      "signals": {
+        "loops": [
+          {
+            "line": 77,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (const value of ctx.values) {"
+          },
+          {
+            "line": 82,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (const scope of value.scopes) {"
+          },
+          {
+            "line": 97,
+            "needle": "for (",
+            "where": "added",
+            "text": "for (const value of values) {"
+          },
+          {
+            "line": 95,
+            "needle": "for (",
+            "where": "removed",
+            "text": "for (const value of this.ctx.values) {"
+          }
+        ]
+      },
+      "markers": [
+        {
+          "line": 114,
+          "text": "// Inlined to skip the `{ index, def }` allocation in resolveProcessedDataDefById on the hot path."
+        }
+      ],
+      "loops": [
+        {
+          "line": 78,
+          "loopLine": 77,
+          "loop": "for (const value of ctx.values) {"
+        },
+        {
+          "line": 83,
+          "loopLine": 82,
+          "loop": "for (const scope of value.scopes) {"
+        },
+        {
+          "line": 98,
+          "loopLine": 97,
+          "loop": "for (const value of values) {"
+        }
+      ],
+      "score": 11
+    },
+    {
+      "file": "packages/ag-charts-community/src/chart/data/dataController.ts",
+      "tier": 3,
+      "tierId": "per-interaction",
+      "addedLineCount": 15,
+      "signals": {
+        "allocation": [
+          {
+            "line": 319,
+            "needle": "new Map(",
+            "where": "added",
+            "text": "matchesByProperty = new Map();"
+          },
+          {
+            "line": 271,
+            "needle": "new Set(",
+            "where": "context",
+            "text": "private static readonly crossScopeMergableTypes = new Set(['key', 'group-value-processor']);"
+          },
+          {
+            "line": 347,
+            "needle": "new Map(",
+            "where": "context",
+            "text": "match.idsMap ??= new Map();"
+          },
+          {
+            "line": 360,
+            "needle": "new Set(",
+            "where": "context",
+            "text": "toMap.set(scope, new Set(ids));"
+          }
+        ],
+        "loops": [
+          {
+            "line": 287,
+            "needle": "for (",
+            "where": "context",
+            "text": "for (const request of requests) {"
+          },
+          {
+            "line": 302,
+            "needle": "for (",
+            "where": "context",
+            "text": "for (const prop of props) {"
+          },
+          {
+            "line": 357,
+            "needle": "for (",
+            "where": "context",
+            "text": "for (const [scope, ids] of fromMap) {"
+          },
+          {
+            "line": 362,
+            "needle": "for (",
+            "where": "context",
+            "text": "for (const id of ids) {"
+          }
+        ]
+      },
+      "markers": [],
+      "loops": [
+        {
+          "line": 317,
+          "loopLine": 302,
+          "loop": "for (const prop of props) {"
+        }
+      ],
+      "score": 8
+    }
+  ],
+  "invariants": {
+    "per-datum": {
+      "frequency": "once per datum, per SERIES_UPDATE — up to 1e6 iterations",
+      "invariants": [
+        "TypedArrays (Float64Array/Uint32Array/Int32Array) are reused across renders, not reallocated — reuse arrays are threaded through helper signatures",
+        "Two-pass count-then-fill so the second pass can write into a reused array",
+        "Scratch objects are pre-allocated outside the loop and mutated in place",
+        "No closure, array, object or template-string allocation inside the loop body",
+        "Per-datum callbacks (getDatumId, label formatting) are gated on whether their result is used",
+        "Positional parameters, not destructuring, on per-datum helpers"
+      ]
+    },
+    "per-interaction": {
+      "frequency": "once per pointer move, data transaction, or chart update",
+      "invariants": [
+        "The narrowest sufficient ChartUpdateType is requested — never FULL where PERFORM_LAYOUT or SERIES_UPDATE suffices",
+        "Incremental paths keyed off processedData.changeDescription are preserved, not degraded to a full rescan",
+        "DOM writes go through DOMElementProxy's compare-before-write surface; layout-triggering reads are cached and invalidated by listener",
+        "Tick and domain computation is memoised or gated, not recomputed per update"
+      ]
+    }
+  },
+  "evidence": {
+    "benchmarkTrigger": "/benchmarks [example...]",
+    "benchmarkWorkflow": ".github/workflows/benchmark.yml",
+    "benchmarkBase": "merge-base of the PR branch, not the base-branch tip",
+    "noiseFilters": "compare-browser-results.js requires a change to clear --min-pct, --min-abs-ms, and NOISE_BAND_FACTOR x cross-run CV before it counts as a regression",
+    "sizeLimits": [
+      "packages/ag-charts-community/.size-limit.js",
+      "packages/ag-charts-enterprise/.size-limit.js"
+    ],
+    "memoryGuard": "packages/ag-charts-community/src/chart/chartHeapMemory.test.ts",
+    "localProfiling": [
+      "/ag-charts:benchmark-profile",
+      "/ag-eng:profile-analyse"
+    ],
+    "playbook": "/ag-charts:optimize-series"
+  }
+}

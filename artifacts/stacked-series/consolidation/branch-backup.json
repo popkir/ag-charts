@@ -1,0 +1,106 @@
+{
+  "fork": "popkir/ag-charts",
+  "keptBranches": [
+    "kirill/perf-stacked-series",
+    "kirill/evidence-stacked-series"
+  ],
+  "deletedBranchCandidates": [
+    {
+      "name": "kirill/benchmark-7293-render",
+      "sha": "4c89501c8c0819d51762a7ee2afdd7491dbb6874"
+    },
+    {
+      "name": "kirill/benchmark-stacked-series",
+      "sha": "7dc5ff7277b22c4f4efe3328c623f0ec24c61544"
+    },
+    {
+      "name": "kirill/benchmark-total-stacked-final",
+      "sha": "c83ab6ebdb18ffcd44d13c5550cf7bd7f1d782f2"
+    },
+    {
+      "name": "kirill/experiment-stacked-7293-ab",
+      "sha": "3646cf2bd409f6ec99f1a5ccc7cb3b5c5ce964e6"
+    },
+    {
+      "name": "kirill/experiment-stacked-7293-counters",
+      "sha": "260a9b473ed7ffdb6cb8dbdf593037152052a01f"
+    },
+    {
+      "name": "kirill/experiment-stacked-7293-matrix",
+      "sha": "76d84c709b2824838353d875dc0fe5589b7ba5db"
+    },
+    {
+      "name": "kirill/experiment-stacked-7293-verify",
+      "sha": "c472e9949f41d7165e0724a94b167ec03d835e09"
+    },
+    {
+      "name": "kirill/experiment-stacked-7293",
+      "sha": "e2bc81d97ecddd4cd1de3ba19a2638cd3633a1de"
+    },
+    {
+      "name": "kirill/export-stacked-series",
+      "sha": "5de9112d57d177b134325e51ad0fb7fc62addba5"
+    },
+    {
+      "name": "kirill/format-stacked-series",
+      "sha": "0b4368fbf8b17db8bc2ee79651d10e69bb307c93"
+    },
+    {
+      "name": "kirill/perf-stacked-series-checked",
+      "sha": "52f45beae1fd50b3a23b678219f5d1b81ffea509"
+    },
+    {
+      "name": "kirill/perf-stacked-series-verified",
+      "sha": "669c38361b86883105bd3cfc0dd9678393f6693f"
+    },
+    {
+      "name": "kirill/validate-stacked-baseline",
+      "sha": "0d02b6e1da374b4b7b803f6801f1b515d4983894"
+    },
+    {
+      "name": "kirill/validate-stacked-delivery",
+      "sha": "c6604380d8def50d42a2840459162a162bada208"
+    },
+    {
+      "name": "kirill/validate-stacked-upstream-base",
+      "sha": "6c14ab16a038328146099d401cee2d3fbdbd2a24"
+    },
+    {
+      "name": "kirill/validate-stacked-web-complete",
+      "sha": "d4cea26f3e568203acf0f0bc14b62130450c45b4"
+    },
+    {
+      "name": "kirill/verify-stacked-series",
+      "sha": "1b970b0bb38d54f237822c53d8712fafef1e7720"
+    },
+    {
+      "name": "latest",
+      "sha": "fd652e876a2b059924848a2177c82e67d6752327"
+    }
+  ],
+  "bundle": "obsolete-branches.bundle",
+  "bundleSha256": "fb072b710db9bdc14cc77605505520fadceeb96574b37bba0750376cfd752de1",
+  "bundleBytes": 105881,
+  "bundleHeads": [
+    "4c89501c8c0819d51762a7ee2afdd7491dbb6874 refs/remotes/personal/kirill/benchmark-7293-render",
+    "7dc5ff7277b22c4f4efe3328c623f0ec24c61544 refs/remotes/personal/kirill/benchmark-stacked-series",
+    "c83ab6ebdb18ffcd44d13c5550cf7bd7f1d782f2 refs/remotes/personal/kirill/benchmark-total-stacked-final",
+    "3646cf2bd409f6ec99f1a5ccc7cb3b5c5ce964e6 refs/remotes/personal/kirill/experiment-stacked-7293-ab",
+    "260a9b473ed7ffdb6cb8dbdf593037152052a01f refs/remotes/personal/kirill/experiment-stacked-7293-counters",
+    "76d84c709b2824838353d875dc0fe5589b7ba5db refs/remotes/personal/kirill/experiment-stacked-7293-matrix",
+    "c472e9949f41d7165e0724a94b167ec03d835e09 refs/remotes/personal/kirill/experiment-stacked-7293-verify",
+    "e2bc81d97ecddd4cd1de3ba19a2638cd3633a1de refs/remotes/personal/kirill/experiment-stacked-7293",
+    "5de9112d57d177b134325e51ad0fb7fc62addba5 refs/remotes/personal/kirill/export-stacked-series",
+    "0b4368fbf8b17db8bc2ee79651d10e69bb307c93 refs/remotes/personal/kirill/format-stacked-series",
+    "52f45beae1fd50b3a23b678219f5d1b81ffea509 refs/remotes/personal/kirill/perf-stacked-series-checked",
+    "669c38361b86883105bd3cfc0dd9678393f6693f refs/remotes/personal/kirill/perf-stacked-series-verified",
+    "0d02b6e1da374b4b7b803f6801f1b515d4983894 refs/remotes/personal/kirill/validate-stacked-baseline",
+    "c6604380d8def50d42a2840459162a162bada208 refs/remotes/personal/kirill/validate-stacked-delivery",
+    "6c14ab16a038328146099d401cee2d3fbdbd2a24 refs/remotes/personal/kirill/validate-stacked-upstream-base",
+    "d4cea26f3e568203acf0f0bc14b62130450c45b4 refs/remotes/personal/kirill/validate-stacked-web-complete",
+    "1b970b0bb38d54f237822c53d8712fafef1e7720 refs/remotes/personal/kirill/verify-stacked-series"
+  ],
+  "verified": true,
+  "prerequisiteCommit": "fd652e876a2b059924848a2177c82e67d6752327",
+  "note": "The obsolete fork latest ref already equals the prerequisite and is recoverable directly from either source history. All17 other removal candidates have named heads in the verified thin bundle. No branch deleted before this bundle is publicly archived."
+}
