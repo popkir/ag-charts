@@ -1,11 +1,11 @@
 <!-- current-integration:start -->
 # Current source branch and evidence
 
-**Submit only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series) as a PR against upstream `latest`.** It is the fork default. Current head `ae4e8907037ca9aec35f19d6898d3cfb8da84721` includes upstream `9ee57509a4141b2477b6c3220efac87e1010982a`; the PR diff remains thirteen code/test files, identical to the original contribution patch.
+**Submit only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series) as a PR against upstream `latest`.** It is the fork default. Current head `64f85dea3b32382b6ef4169c0f684ee4a21e4e87` includes upstream `d78787368dc6b5ff88d6dbe144df639d8dd012cf`; the PR diff remains thirteen code/test files, identical to the original contribution patch.
 
 `kirill/evidence-stacked-series` holds reports, recoverable Git history and verification workflows. The third fork branch `latest` is retained by explicit owner decision and is not the PR source. All seventeen obsolete helper/duplicate branches have been removed.
 
-**Current exact-head checks:** format/check, both types and lint passed; full native/E2E and three-pair latest→merged-source full-render verification are running in [run 43854079208](https://github.com/popkir/ag-charts/actions/runs/43854079208). [Current branch map, integration and recoverable backup](consolidation/README.md). Earlier results below are historical measurements of pre-sync `52f45bea`, not results relabelled for the merged head. A targeted maintainer follow-up will link the completed verification.
+**Current exact-head checks:** format/types/lint, full native/E2E and three-pair latest→merged-source full-render verification are running in [run 43859617103](https://github.com/popkir/ag-charts/actions/runs/43859617103). [Current branch map, integration and recoverable backup](consolidation/README.md). Earlier results below are historical measurements of pre-sync `52f45bea`, not results relabelled for the merged head. A targeted maintainer follow-up will link the completed verification.
 <!-- current-integration:end -->
 
 <details>
