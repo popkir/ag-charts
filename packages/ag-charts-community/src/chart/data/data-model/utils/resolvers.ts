@@ -69,12 +69,33 @@ function assertColumnValueType(
 export class DataModelResolvers<D extends object, K extends keyof D & string> {
     private readonly rangeBetweenBuffer: [number, number] = [0, 0];
 
-    constructor(private readonly ctx: DataModelContext<D, K>) {}
+    private readonly valuesByScope = new Map<string, DataModelContext<D, K>['values']>();
+    private readonly hasUnscopedValues: boolean = false;
+
+    constructor(private readonly ctx: DataModelContext<D, K>) {
+        // Definitions retain their missing maps across incremental processing; index definitions, not counts.
+        for (const value of ctx.values) {
+            if (value.scopes == null || value.scopes.length === 0) {
+                this.hasUnscopedValues = true;
+                continue;
+            }
+            for (const scope of value.scopes) {
+                let values = this.valuesByScope.get(scope);
+                if (values == null) {
+                    values = [];
+                    this.valuesByScope.set(scope, values);
+                }
+                values.push(value);
+            }
+        }
+    }
 
     resolveMissingDataCount(scope: ScopeProvider): number {
         let missingDataCount = 0;
-        for (const value of this.ctx.values) {
-            missingDataCount = Math.max(missingDataCount, value.missing.get(scope.id) ?? 0);
+        const scopeId = scope.id;
+        const values = this.hasUnscopedValues ? this.ctx.values : (this.valuesByScope.get(scopeId) ?? []);
+        for (const value of values) {
+            missingDataCount = Math.max(missingDataCount, value.missing.get(scopeId) ?? 0);
         }
         return missingDataCount;
     }

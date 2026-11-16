@@ -3927,3 +3927,42 @@ describe('DataModel', () => {
         });
     });
 });
+
+describe('DataModel scoped missing counts', () => {
+    it('retains per-scope maximum missing counts across a real incremental transaction', () => {
+        type Row = { x: string; a?: number; b?: number; shared: number };
+        const makeModel = () =>
+            new DataModel<Row, keyof Row>(
+                {
+                    props: [
+                        { ...categoryKey('x', ['a', 'b']), property: 'x' },
+                        { ...scopedValue('a', 'a'), property: 'a' },
+                        { ...scopedValue('b', 'b'), property: 'b' },
+                        { ...scopedValue(['a', 'b'], 'shared'), property: 'shared' },
+                    ],
+                },
+                testLogger
+            );
+        const data: Row[] = [
+            { x: 'A', a: 1, b: 1, shared: 1 },
+            { x: 'B', b: 2, shared: 2 },
+            { x: 'C', shared: 3 },
+        ];
+        const dataSet = new DataSet(data, testLogger);
+        const sources = new Map([
+            ['a', dataSet],
+            ['b', dataSet],
+        ]);
+        const model = makeModel();
+        const processed = model.processData(sources)!;
+        const counts = (m: ReturnType<typeof makeModel>) =>
+            ['a', 'b', 'unknown'].map((id) => m.resolveMissingDataCount({ id }));
+        expect(counts(model)).toEqual([2, 1, 0]);
+        const appended: Row = { x: 'D', b: 4, shared: 4 };
+        dataSet.addTransaction({ append: [appended] });
+        model.reprocessData(processed, undefined, undefined);
+        const rebuilt = makeModel();
+        rebuilt.processData(basicDataSet(dataSet.data, ['a', 'b']));
+        expect(counts(model)).toEqual(counts(rebuilt));
+    });
+});
