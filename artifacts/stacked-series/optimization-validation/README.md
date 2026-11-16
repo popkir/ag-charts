@@ -71,6 +71,7 @@ Required upstream checks on the intended merge state and maintainer acceptance r
 
 Original native build/results ZIPs, complete job-log ZIPs, HTML reports, traces, raw CPU profiles, full scenes and PNGs are preserved without rewriting their ZIP contents. Failed experiments and failed harness attempts are included. Each original artifact digest and ZIP CRC was checked; metadata retain original Actions expiry dates.
 
+- [Download all new HTML/report/trace/log ZIPs](./ARCHIVES.md).
 - [Twelve-run optimisation archive](./experiment-summary.json): 27 original ZIPs, 81,418,363 bytes.
 - [Eight-run delivery/attribution archive](./delivery-archive-index.json): 35 original ZIPs, 221,897,828 bytes.
 - [Earlier eight-run verification archive](../actions/README.md): 21 original ZIPs, 119,775,939 bytes.
