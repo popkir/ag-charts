@@ -1,0 +1,10 @@
+{
+  "file": "final-7293-series.png",
+  "sourceArchive": "actions/43859617103/stacked-merged-render-results.zip",
+  "archiveMember": "run3-head.png",
+  "source": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+  "sha256": "495bfbed1bb51a38e5113dac6db160f578cf41982f8625037a7db60c5d4f0e8d",
+  "fixture": "Synthetic 7293 series \u00d7 12 periods; all 87516 positive bar datums; normal paginated legend enabled; not customer data",
+  "width": 1200,
+  "height": 800
+}

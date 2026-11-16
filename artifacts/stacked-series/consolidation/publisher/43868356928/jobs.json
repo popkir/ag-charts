@@ -1,0 +1,73 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 133302630899,
+      "run_id": 43868356928,
+      "workflow_name": "Archive final stacked-series browser evidence",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43868356928",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfCXS58w",
+      "head_sha": "73f229ba40a264453ce8dcea9d07e00e0dce6a57",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133302630899",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43868356928/job/133302630899",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T12:38:05Z",
+      "started_at": "2026-11-16T12:38:07Z",
+      "completed_at": "2026-11-16T12:38:26Z",
+      "name": "archive",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T12:38:08Z",
+          "completed_at": "2026-11-16T12:38:10Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T12:38:10Z",
+          "completed_at": "2026-11-16T12:38:14Z"
+        },
+        {
+          "name": "Archive exact original ZIP bytes on evidence branch only",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T12:38:14Z",
+          "completed_at": "2026-11-16T12:38:25Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T12:38:25Z",
+          "completed_at": "2026-11-16T12:38:25Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T12:38:25Z",
+          "completed_at": "2026-11-16T12:38:25Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133302630899",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004371,
+      "runner_name": "GitHub Actions 1000004371",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

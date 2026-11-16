@@ -1,0 +1,49 @@
+name: Archive final stacked-series browser evidence
+'on':
+  push:
+    branches:
+    - kirill/evidence-stacked-series
+    paths:
+    - .github/workflows/stacked-series-archive.yml
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: stacked-evidence-publisher
+  cancel-in-progress: false
+jobs:
+  archive:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/evidence-stacked-series'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: kirill/evidence-stacked-series
+        fetch-depth: 1
+        sparse-checkout: artifacts/stacked-series/consolidation/actions/43859617103
+        persist-credentials: true
+    - name: Archive exact original ZIP bytes on evidence branch only
+      env:
+        GH_TOKEN: ${{ github.token }}
+        GODEBUG: http2client=0
+      run: |
+        python3 - <<'PYARCHIVE'
+        import os,json,pathlib,subprocess,hashlib,zipfile
+        assert os.environ['GITHUB_REPOSITORY']=='popkir/ag-charts'
+        assert os.environ['GITHUB_REF']=='refs/heads/kirill/evidence-stacked-series'
+        root=pathlib.Path('artifacts/stacked-series/consolidation/actions/43859617103');root.mkdir(parents=True,exist_ok=True)
+        entries=[{'artifactId': 14223633047, 'name': 'stacked-merged-e2e-8', 'bytes': 32610713, 'sha256': 'e1a8fa78c0deba27e5f07f8f040662f0efccb87b0fbf8a34d0ee9b332dc7c95e', 'githubDigest': 'sha256:e1a8fa78c0deba27e5f07f8f040662f0efccb87b0fbf8a34d0ee9b332dc7c95e', 'zipCrcVerified': True, 'originalExpiresAt': '2026-12-16T12:07:42Z'}, {'artifactId': 14223223576, 'name': 'stacked-merged-upstream-baseline', 'bytes': 24103870, 'sha256': '7bcbadaf1a39f01cdafd4c700adc141036048b3d6b43150c3c22475be6df7a0b', 'githubDigest': 'sha256:7bcbadaf1a39f01cdafd4c700adc141036048b3d6b43150c3c22475be6df7a0b', 'zipCrcVerified': True, 'originalExpiresAt': '2026-12-16T11:58:26Z'}]
+        paths=[]
+        for e in entries:
+         p=root/(e['name']+'.zip')
+         with p.open('wb') as f: subprocess.run(['gh','api',f"repos/popkir/ag-charts/actions/artifacts/{e['artifactId']}/zip"],stdout=f,check=True)
+         digest=hashlib.sha256(p.read_bytes()).hexdigest();assert digest==e['sha256'] and e['githubDigest']=='sha256:'+digest
+         with zipfile.ZipFile(p) as z: assert z.testzip() is None
+         assert p.stat().st_size==e['bytes'];paths.append(str(p));print('Original archive verified',p,e['bytes'],digest)
+        subprocess.run(['git','add','--sparse','--',*paths],check=True)
+        changed=subprocess.check_output(['git','diff','--cached','--name-only'],text=True).splitlines();assert set(changed)==set(paths),changed
+        subprocess.run(['git','-c','user.name=Kirill Popov','-c','user.email=8480855+popkir@users.noreply.github.com','commit','-m','docs: preserve original final browser evidence archives'],check=True)
+        subprocess.run(['git','push','origin','HEAD:refs/heads/kirill/evidence-stacked-series'],check=True)
+        print('Archive publication commit',subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip())
+        PYARCHIVE

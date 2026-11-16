@@ -1,11 +1,15 @@
 <!-- current-integration:start -->
-# Current source branch and evidence
+# Current PR source and complete verification
 
-**Submit only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series) as a PR against upstream `latest`.** It is the fork default. Current head `64f85dea3b32382b6ef4169c0f684ee4a21e4e87` includes upstream `d78787368dc6b5ff88d6dbe144df639d8dd012cf`; the PR diff remains thirteen code/test files, identical to the original contribution patch.
+**For the PR, use only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series)**, fork default, head `64f85dea3b32382b6ef4169c0f684ee4a21e4e87`. It includes upstream `latest` snapshot `d78787368dc6b5ff88d6dbe144df639d8dd012cf`. The [PR diff](https://github.com/popkir/ag-charts/compare/d78787368dc6b5ff88d6dbe144df639d8dd012cf...64f85dea3b32382b6ef4169c0f684ee4a21e4e87) remains thirteen code/test files, with no evidence or workflow helpers. `kirill/evidence-stacked-series` holds verification and archives; the third fork `latest` was retained by owner decision. Seventeen technical/duplicate branches were removed, with recoverable history preserved.
 
-`kirill/evidence-stacked-series` holds reports, recoverable Git history and verification workflows. The third fork branch `latest` is retained by explicit owner decision and is not the PR source. All seventeen obsolete helper/duplicate branches have been removed.
+**Exact final-head result:** official format/types/lint and **14548 unit tests passed**, 68 skipped. Complete Chromium: 5192 passed, 8 skipped, 9 failed, 0 flaky. Standard Firefox/WebKit: 220 passed, 24 skipped, 2 failed. **Browser jobs remain red:** all eleven stable failures reproduce on unmodified target `d7878736` with **99 byte-identical PNG comparisons**; no references/tolerances/exclusions/retry policy changed.
 
-**Current exact-head checks:** format/types/lint, full native/E2E and three-pair latest→merged-source full-render verification are running in [run 43859617103](https://github.com/popkir/ag-charts/actions/runs/43859617103). [Current branch map, integration and recoverable backup](consolidation/README.md). Earlier results below are historical measurements of pre-sync `52f45bea`, not results relabelled for the merged head. A targeted maintainer follow-up will link the completed verification.
+**Direct current-target full render:** 7293×12, legend on: **110.8734→21.8631s, 5.071×, 80.28% less time**, three pairs on one VM. All inputs, full scenes, PNGs and public states matched, all 87516 datum rectangles retained. Earlier results below are historical, not timings relabelled for this new head.
+
+[Current handoff, raw reports, all 119 retained original ZIPs, Git backup and activity audit](consolidation/README.md) · [complete workflow](https://github.com/popkir/ag-charts/actions/runs/43859617103). Upstream review/required merge-state CI and a normal PR submission route remain necessary.
+**Upstream policy:** [David confirmed that external PRs and cherry-picks are not accepted](https://github.com/ag-grid/ag-charts/issues/9096#issuecomment-6915125807). A technical assessment and Enterprise escalation route are being requested; no upstream acceptance is implied.
+
 <!-- current-integration:end -->
 
 <details>

@@ -1,0 +1,209 @@
+{
+  "runId": 43859617103,
+  "helper": "378d3285e20ba9c3c876f8fd1b34f4488866415c",
+  "sources": {
+    "base": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+    "head": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87"
+  },
+  "builds": {
+    "base": {
+      "role": "base",
+      "source": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+      "tree": "eb2f3909d23d2829d424a1ca590e73b559194be1",
+      "bundleSha256": "33cdcc158ebd13b7942607aef2984e376134b00a58027542bd08a868fa6921d2",
+      "bundleBytes": 5459093,
+      "nodeVersion": "v24.22.3",
+      "buildCommand": "yarn nx build:umd ag-charts-enterprise --skip-nx-cache",
+      "trackedRuntimeDiff": ""
+    },
+    "head": {
+      "role": "head",
+      "source": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+      "tree": "6fb9460609781a08e2f479f224b5430edb1ee744",
+      "bundleSha256": "f1c7f399a154d6f711b0c5f4cbba2f63693ce65e6701e269e6f586b2245a7963",
+      "bundleBytes": 5464329,
+      "nodeVersion": "v24.22.3",
+      "buildCommand": "yarn nx build:umd ag-charts-enterprise --skip-nx-cache",
+      "trackedRuntimeDiff": ""
+    }
+  },
+  "archives": [
+    {
+      "file": "stacked-merged-build-base.zip",
+      "bytes": 3745009,
+      "sha256": "bc2f9d84808bafebf45f027191c267db0910f9e6f66bf5a116b90bdf1683dd07",
+      "crcVerified": true,
+      "githubArtifactDigestVerified": true
+    },
+    {
+      "file": "stacked-merged-build-head.zip",
+      "bytes": 3748232,
+      "sha256": "1eafb7b92e6eeee198b1f16a3145e4cad04539256c07c084e5f01260a8d4d93f",
+      "crcVerified": true,
+      "githubArtifactDigestVerified": true
+    },
+    {
+      "file": "stacked-merged-render-results.zip",
+      "bytes": 8854960,
+      "sha256": "542c53a00dd5889538939562f6f91865852ad8049472c0c84d43525d70d59e59",
+      "crcVerified": true,
+      "githubArtifactDigestVerified": true
+    }
+  ],
+  "seriesPerScene": 7293,
+  "datumRectsPerScene": 87516,
+  "enabledLegendRecordsPerRun": 7293,
+  "inputValuesPerRun": 87516,
+  "fullScenesHashed": 6,
+  "inputsIndependentlyChecked": 6,
+  "fullSceneIndependentlyParsed": true,
+  "allPairScenePngGeometryInputPublicStateEqual": true,
+  "zeroPixelDifferencesAllPairs": true,
+  "mediansMs": {
+    "base": {
+      "updateCompleteMs": 110641.90000000002,
+      "twoFramesCompleteMs": 110873.40000000002
+    },
+    "head": {
+      "updateCompleteMs": 21657,
+      "twoFramesCompleteMs": 21863.100000000006
+    }
+  },
+  "totalSpeedup": 5.07125704954924,
+  "renderTimeReductionPercent": 80.28102322107917,
+  "pairedRatios": [
+    5.039267075574825,
+    5.10767855826638,
+    5.050998181850907
+  ],
+  "rows": [
+    {
+      "pair": 1,
+      "role": "base",
+      "source": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+      "timings": {
+        "updateCompleteMs": 109947.5,
+        "twoFramesCompleteMs": 110174,
+        "extraFrameWaitMs": 226.5
+      },
+      "timestamp": "2026-11-16T11:53:53.204Z",
+      "host": {
+        "cpuModel": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "nproc": 4,
+        "bogomips": 4599.99,
+        "totalMemMb": 15983
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "33cdcc158ebd13b7942607aef2984e376134b00a58027542bd08a868fa6921d2"
+    },
+    {
+      "pair": 1,
+      "role": "head",
+      "source": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+      "timings": {
+        "updateCompleteMs": 21657,
+        "twoFramesCompleteMs": 21863.100000000006,
+        "extraFrameWaitMs": 206.10000000000582
+      },
+      "timestamp": "2026-11-16T11:54:21.314Z",
+      "host": {
+        "cpuModel": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "nproc": 4,
+        "bogomips": 4599.99,
+        "totalMemMb": 15983
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "f1c7f399a154d6f711b0c5f4cbba2f63693ce65e6701e269e6f586b2245a7963"
+    },
+    {
+      "pair": 2,
+      "role": "base",
+      "source": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+      "timings": {
+        "updateCompleteMs": 110641.90000000002,
+        "twoFramesCompleteMs": 110873.40000000002,
+        "extraFrameWaitMs": 231.5
+      },
+      "timestamp": "2026-11-16T11:56:47.210Z",
+      "host": {
+        "cpuModel": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "nproc": 4,
+        "bogomips": 4599.99,
+        "totalMemMb": 15983
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "33cdcc158ebd13b7942607aef2984e376134b00a58027542bd08a868fa6921d2"
+    },
+    {
+      "pair": 2,
+      "role": "head",
+      "source": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+      "timings": {
+        "updateCompleteMs": 21510.20000000001,
+        "twoFramesCompleteMs": 21707.20000000001,
+        "extraFrameWaitMs": 197
+      },
+      "timestamp": "2026-11-16T11:54:50.103Z",
+      "host": {
+        "cpuModel": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "nproc": 4,
+        "bogomips": 4599.99,
+        "totalMemMb": 15983
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "f1c7f399a154d6f711b0c5f4cbba2f63693ce65e6701e269e6f586b2245a7963"
+    },
+    {
+      "pair": 3,
+      "role": "base",
+      "source": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+      "timings": {
+        "updateCompleteMs": 112033.90000000002,
+        "twoFramesCompleteMs": 112235.20000000001,
+        "extraFrameWaitMs": 201.29999999998836
+      },
+      "timestamp": "2026-11-16T11:58:46.668Z",
+      "host": {
+        "cpuModel": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "nproc": 4,
+        "bogomips": 4599.99,
+        "totalMemMb": 15983
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "33cdcc158ebd13b7942607aef2984e376134b00a58027542bd08a868fa6921d2"
+    },
+    {
+      "pair": 3,
+      "role": "head",
+      "source": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+      "timings": {
+        "updateCompleteMs": 22017.099999999977,
+        "twoFramesCompleteMs": 22220.400000000023,
+        "extraFrameWaitMs": 203.30000000004657
+      },
+      "timestamp": "2026-11-16T11:59:15.216Z",
+      "host": {
+        "cpuModel": "INTEL(R) XEON(R) PLATINUM 8573C",
+        "nproc": 4,
+        "bogomips": 4599.99,
+        "totalMemMb": 15983
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "f1c7f399a154d6f711b0c5f4cbba2f63693ce65e6701e269e6f586b2245a7963"
+    }
+  ],
+  "host": {
+    "cpuModel": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "nproc": 4,
+    "bogomips": 4599.99,
+    "totalMemMb": 15983
+  },
+  "browserVersion": "148.0.7778.96",
+  "comparisonJobId": 133278732112,
+  "sourceBranchesUnchanged": true,
+  "limitations": [
+    "One synthetic7293series x12positive-data fixture on one VM, three runs per side.",
+    "This direct unpatched->final ratio is not multiplied from earlier cross-host experiments.",
+    "Not a measurement of CLIMATISE application load time."
+  ]
+}

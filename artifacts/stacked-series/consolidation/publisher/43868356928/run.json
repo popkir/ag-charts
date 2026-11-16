@@ -1,0 +1,12 @@
+{
+  "id": 43868356928,
+  "name": "Archive final stacked-series browser evidence",
+  "head_sha": "73f229ba40a264453ce8dcea9d07e00e0dce6a57",
+  "head_branch": "kirill/evidence-stacked-series",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-11-16T12:38:05Z",
+  "updated_at": "2026-11-16T12:38:27Z",
+  "path": ".github/workflows/stacked-series-archive.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43868356928"
+}

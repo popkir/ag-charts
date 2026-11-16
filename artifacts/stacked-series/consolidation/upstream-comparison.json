@@ -1,0 +1,504 @@
+{
+  "candidateSource": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+  "upstreamSource": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+  "runId": 43859617103,
+  "failureCaseSetsIdentical": true,
+  "images": [
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--10245-a-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium/initial-focus-large-dataset-viewport-start-actual.png",
+      "sha256": "45846acc26239b3bbb9e14687dc41c48424000f41ac12e31f1764d6fea08abd4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium/initial-focus-large-dataset-viewport-start-diff.png",
+      "sha256": "745891e7405ae70f59da46366b65b99193eae82725f3197bd9a613110328b262",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium/initial-focus-large-dataset-viewport-start-expected.png",
+      "sha256": "d8adfcee1913075f2690c70eb64d4ed1edae9f2b14e6f472a9a28ef4841d9ab5",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium-retry1/initial-focus-large-dataset-viewport-start-actual.png",
+      "sha256": "45846acc26239b3bbb9e14687dc41c48424000f41ac12e31f1764d6fea08abd4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium-retry1/initial-focus-large-dataset-viewport-start-diff.png",
+      "sha256": "745891e7405ae70f59da46366b65b99193eae82725f3197bd9a613110328b262",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium-retry1/initial-focus-large-dataset-viewport-start-expected.png",
+      "sha256": "d8adfcee1913075f2690c70eb64d4ed1edae9f2b14e6f472a9a28ef4841d9ab5",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium-retry2/initial-focus-large-dataset-viewport-start-actual.png",
+      "sha256": "45846acc26239b3bbb9e14687dc41c48424000f41ac12e31f1764d6fea08abd4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium-retry2/initial-focus-large-dataset-viewport-start-diff.png",
+      "sha256": "745891e7405ae70f59da46366b65b99193eae82725f3197bd9a613110328b262",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--19789-eads-the-initialFocus-value-chromium-retry2/initial-focus-large-dataset-viewport-start-expected.png",
+      "sha256": "d8adfcee1913075f2690c70eb64d4ed1edae9f2b14e6f472a9a28ef4841d9ab5",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--3965b-s-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--43c42-r-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4873a-t-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--4bec8-l-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium/initial-focus-large-dataset-viewport-start-diff.png",
+      "sha256": "745891e7405ae70f59da46366b65b99193eae82725f3197bd9a613110328b262",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium/initial-focus-large-dataset-viewport-start-actual.png",
+      "sha256": "45846acc26239b3bbb9e14687dc41c48424000f41ac12e31f1764d6fea08abd4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium/initial-focus-large-dataset-viewport-start-expected.png",
+      "sha256": "d8adfcee1913075f2690c70eb64d4ed1edae9f2b14e6f472a9a28ef4841d9ab5",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium-retry1/initial-focus-large-dataset-viewport-start-actual.png",
+      "sha256": "45846acc26239b3bbb9e14687dc41c48424000f41ac12e31f1764d6fea08abd4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium-retry1/initial-focus-large-dataset-viewport-start-diff.png",
+      "sha256": "745891e7405ae70f59da46366b65b99193eae82725f3197bd9a613110328b262",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium-retry1/initial-focus-large-dataset-viewport-start-expected.png",
+      "sha256": "d8adfcee1913075f2690c70eb64d4ed1edae9f2b14e6f472a9a28ef4841d9ab5",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium-retry2/initial-focus-large-dataset-viewport-start-actual.png",
+      "sha256": "45846acc26239b3bbb9e14687dc41c48424000f41ac12e31f1764d6fea08abd4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium-retry2/initial-focus-large-dataset-viewport-start-expected.png",
+      "sha256": "d8adfcee1913075f2690c70eb64d4ed1edae9f2b14e6f472a9a28ef4841d9ab5",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav--6e4c3-arge-dataset-viewport-start-chromium-retry2/initial-focus-large-dataset-viewport-start-diff.png",
+      "sha256": "745891e7405ae70f59da46366b65b99193eae82725f3197bd9a613110328b262",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium-retry1/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-actual.png",
+      "sha256": "68bb5cbf38a4cba44e019a20a0c35155f4be21eed48216824e5f4808d0064fa4",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-diff.png",
+      "sha256": "7fbd569de5d724f7b81a22e8c5ffe7bb7ba6a0c3c38a01412023af8e2bb77efc",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-reports/keyboard-nav-keyboard-nav-for-vue3-basic-keyboard-navigation-chromium-retry2/3rd-datum-2nd-series-focus-expected.png",
+      "sha256": "9600aa727fa4dac3a40f9577ae244070a9cf6d6c42daeeac7343c6ff6f8ebfa1",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "byteIdentical": true
+    }
+  ],
+  "allByteIdentical": true
+}

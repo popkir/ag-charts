@@ -1,0 +1,12 @@
+{
+  "id": 43859617103,
+  "name": "Stacked series synced latest verification",
+  "head_sha": "378d3285e20ba9c3c876f8fd1b34f4488866415c",
+  "head_branch": "kirill/evidence-stacked-series",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-11-16T11:39:06Z",
+  "updated_at": "2026-11-16T12:07:49Z",
+  "path": ".github/workflows/stacked-series-validation.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43859617103"
+}

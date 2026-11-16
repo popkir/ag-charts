@@ -1,7 +1,23 @@
 {
   "sample": "50 most recent commits returned for upstream latest;100 public repository events, a partial event feed",
-  "upstreamHead": "9ee57509a4141b2477b6c3220efac87e1010982a",
+  "upstreamHead": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
   "recentMerges": [
+    {
+      "pr": 9085,
+      "url": "https://github.com/ag-grid/ag-charts/pull/9085",
+      "title": "AG-18740 Bound range cross-line labels by their band",
+      "mergedAt": "2026-11-16T11:10:54Z",
+      "mergedBy": "alantreadway",
+      "author": "iMoses"
+    },
+    {
+      "pr": 9090,
+      "url": "https://github.com/ag-grid/ag-charts/pull/9090",
+      "title": "AG-18782 Add collideWith.errorBars label collision option",
+      "mergedAt": "2026-11-16T11:07:55Z",
+      "mergedBy": "alantreadway",
+      "author": "iMoses"
+    },
     {
       "pr": 9094,
       "url": "https://github.com/ag-grid/ag-charts/pull/9094",
@@ -58,19 +74,19 @@
     {
       "login": "iMoses",
       "name": "iMoses",
-      "authoredIn50": 5,
+      "authoredIn50": 12,
       "profile": "https://github.com/iMoses"
     },
     {
       "login": "taktran",
       "name": "Tak Tran",
-      "authoredIn50": 4,
+      "authoredIn50": 2,
       "profile": "https://github.com/taktran"
     },
     {
       "login": "lsjroberts",
       "name": "Laurence Roberts",
-      "authoredIn50": 2,
+      "authoredIn50": 0,
       "profile": "https://github.com/lsjroberts"
     },
     {
@@ -87,6 +103,27 @@
     }
   ],
   "commitSample": [
+    {
+      "sha": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+      "url": "https://github.com/ag-grid/ag-charts/commit/d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+      "subject": "Merge pull request #9085 from ag-grid/imoses/ag-18740-range-crossline-band-fit",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "f4250d152fa6ae4984c9a2d79cdbd68f52e4421c",
+      "url": "https://github.com/ag-grid/ag-charts/commit/f4250d152fa6ae4984c9a2d79cdbd68f52e4421c",
+      "subject": "Merge pull request #9090 from ag-grid/imoses/ag-18782-label-collide-with-error-bars",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "7a7d4545756878bde529e9498d88ff8b98f756b8",
+      "url": "https://github.com/ag-grid/ag-charts/commit/7a7d4545756878bde529e9498d88ff8b98f756b8",
+      "subject": "AG-18782 Add error-bar label obstacles on scatter only",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
     {
       "sha": "9ee57509a4141b2477b6c3220efac87e1010982a",
       "url": "https://github.com/ag-grid/ag-charts/commit/9ee57509a4141b2477b6c3220efac87e1010982a",
@@ -270,6 +307,20 @@
       "committer": "web-flow"
     },
     {
+      "sha": "b2b898a530ecf32814cf78f8a0663e4d12c58ae4",
+      "url": "https://github.com/ag-grid/ag-charts/commit/b2b898a530ecf32814cf78f8a0663e4d12c58ae4",
+      "subject": "AG-18740 Show a side label wrapped by its band in the snapshot",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
+      "sha": "ae1e1fcd2318b61553c3ab4b66b1f34ca6ce0335",
+      "url": "https://github.com/ag-grid/ag-charts/commit/ae1e1fcd2318b61553c3ab4b66b1f34ca6ce0335",
+      "subject": "AG-18782 Note sparkline label defs accept collideWith.errorBars",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
       "sha": "9aa19661c3480e1cfa4ad9adedd097d8b6b28a73",
       "url": "https://github.com/ag-grid/ag-charts/commit/9aa19661c3480e1cfa4ad9adedd097d8b6b28a73",
       "subject": "Merge pull request #9086 from ag-grid/dg/docs-markers-palette-upgrade-notes",
@@ -305,11 +356,32 @@
       "committer": "github-actions[bot]"
     },
     {
+      "sha": "b189cb787329448162706423cf41d979b4c50301",
+      "url": "https://github.com/ag-grid/ag-charts/commit/b189cb787329448162706423cf41d979b4c50301",
+      "subject": "AG-18782 Cover quadrant errorBars option and clarify own-box gate",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
+      "sha": "79af751e50932fded60609c93cefde3fa559e564",
+      "url": "https://github.com/ag-grid/ag-charts/commit/79af751e50932fded60609c93cefde3fa559e564",
+      "subject": "AG-18782 Add collideWith.errorBars label collision option",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
       "sha": "af595b30e4c774d81ebc85cce39786e2db69028a",
       "url": "https://github.com/ag-grid/ag-charts/commit/af595b30e4c774d81ebc85cce39786e2db69028a",
       "subject": "AG-17464 Judge a windowed load by the rendered datums inside the window",
       "author": "github-actions[bot]",
       "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "abc8d1015ea7c75df92eed5beea7fd0cdfdd7513",
+      "url": "https://github.com/ag-grid/ag-charts/commit/abc8d1015ea7c75df92eed5beea7fd0cdfdd7513",
+      "subject": "AG-18740 Fit band-bounded labels with the shared turned-bounds fit",
+      "author": "iMoses",
+      "committer": "iMoses"
     },
     {
       "sha": "bce50a279788501a0c897adf009a0f42a437c5e9",
@@ -319,6 +391,13 @@
       "committer": "AG-DavidG"
     },
     {
+      "sha": "2236e92a44660c4f9de88ba497e3d08c70f9d4e3",
+      "url": "https://github.com/ag-grid/ag-charts/commit/2236e92a44660c4f9de88ba497e3d08c70f9d4e3",
+      "subject": "AG-18740 Skip band-fitted padding while the band is out of view",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
       "sha": "28eba7d04858e53e64d7a04dee0b23844d90c8f2",
       "url": "https://github.com/ag-grid/ag-charts/commit/28eba7d04858e53e64d7a04dee0b23844d90c8f2",
       "subject": "AG-17464 Cover navigator re-drag after an invalid dataSource response",
@@ -326,9 +405,30 @@
       "committer": "github-actions[bot]"
     },
     {
+      "sha": "0df6d528a0304dffda5894452695ae698a9f40de",
+      "url": "https://github.com/ag-grid/ag-charts/commit/0df6d528a0304dffda5894452695ae698a9f40de",
+      "subject": "AG-18740 Re-run the axes layout until cross-line padding settles",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
       "sha": "435858e29512ae78abd03bdd6ff16c91d1011d32",
       "url": "https://github.com/ag-grid/ag-charts/commit/435858e29512ae78abd03bdd6ff16c91d1011d32",
       "subject": "Test zoom sync and toggling sync after creation",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
+      "sha": "ecb3e5eb024f71b7f885cb688e4ead17984eea50",
+      "url": "https://github.com/ag-grid/ag-charts/commit/ecb3e5eb024f71b7f885cb688e4ead17984eea50",
+      "subject": "AG-18740 Share the band room calculation across axes",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
+      "sha": "5468a0ae324d075e5238323fd55f0ab2feccc162",
+      "url": "https://github.com/ag-grid/ag-charts/commit/5468a0ae324d075e5238323fd55f0ab2feccc162",
+      "subject": "AG-18740 Bound range cross-line labels by their band",
       "author": "iMoses",
       "committer": "iMoses"
     },
@@ -352,95 +452,12 @@
       "subject": "AG-19287 Apply pattern tile defaults on the shape fill fallback",
       "author": "yinkelly",
       "committer": "yinkelly"
-    },
-    {
-      "sha": "0f8200f7004c87cea15b2c480ecbb1dfb0cf4d47",
-      "url": "https://github.com/ag-grid/ag-charts/commit/0f8200f7004c87cea15b2c480ecbb1dfb0cf4d47",
-      "subject": "AG-18791 Test toolbar button names through each toolbar",
-      "author": "github-actions[bot]",
-      "committer": "github-actions[bot]"
-    },
-    {
-      "sha": "0be85a47676f054c956ec9f3f2df342f4b83aba3",
-      "url": "https://github.com/ag-grid/ag-charts/commit/0be85a47676f054c956ec9f3f2df342f4b83aba3",
-      "subject": "AG-3390 Offer an email fallback when reCAPTCHA cannot load (#16008) (#9081)",
-      "author": "taktran",
-      "committer": "web-flow"
-    },
-    {
-      "sha": "3004ef36c2c147296a7a0f6bd0de7f59bf068172",
-      "url": "https://github.com/ag-grid/ag-charts/commit/3004ef36c2c147296a7a0f6bd0de7f59bf068172",
-      "subject": "AG-18791 Name toolbar buttons from ariaLabel, tooltip or label",
-      "author": "github-actions[bot]",
-      "committer": "github-actions[bot]"
-    },
-    {
-      "sha": "c3c54d7ed491384ea425ed273b75799b9e22aca7",
-      "url": "https://github.com/ag-grid/ag-charts/commit/c3c54d7ed491384ea425ed273b75799b9e22aca7",
-      "subject": "Automated package version bump to 14.3.0-beta.20261112.",
-      "author": "github-actions[bot]",
-      "committer": "github-actions[bot]"
-    },
-    {
-      "sha": "b312780069eb67631917b23720396b7bd59d5a48",
-      "url": "https://github.com/ag-grid/ag-charts/commit/b312780069eb67631917b23720396b7bd59d5a48",
-      "subject": "Address PR feedback: narrow the sync member context, test sibling active-item clearing",
-      "author": "iMoses",
-      "committer": "iMoses"
-    },
-    {
-      "sha": "b23eb6b4b41e0239e4131efef7cfae4db06d7538",
-      "url": "https://github.com/ag-grid/ag-charts/commit/b23eb6b4b41e0239e4131efef7cfae4db06d7538",
-      "subject": "Merge pull request #9079 from ag-grid/at/ag-19321-stub-actions-write",
-      "author": "alantreadway",
-      "committer": "web-flow"
-    },
-    {
-      "sha": "3b296240a4136bb3c8185a990711cdb1dc125517",
-      "url": "https://github.com/ag-grid/ag-charts/commit/3b296240a4136bb3c8185a990711cdb1dc125517",
-      "subject": "AG-18823 Trim the legendBorder JSDoc",
-      "author": "lsjroberts",
-      "committer": "lsjroberts"
-    },
-    {
-      "sha": "f7b8850b859ffeae962448bea824a85485f43564",
-      "url": "https://github.com/ag-grid/ag-charts/commit/f7b8850b859ffeae962448bea824a85485f43564",
-      "subject": "AG-3390 Consolidate Firefox import map fix into the docs middleware (#9065)",
-      "author": "taktran",
-      "committer": "web-flow"
-    },
-    {
-      "sha": "b918ff8ae695f7e6e956ed799e520ae03e2006ca",
-      "url": "https://github.com/ag-grid/ag-charts/commit/b918ff8ae695f7e6e956ed799e520ae03e2006ca",
-      "subject": "Drop the SyncManager chart-id passthrough",
-      "author": "iMoses",
-      "committer": "iMoses"
-    },
-    {
-      "sha": "4c6890ce8a09326997072a43b1486c2f2abb7f9f",
-      "url": "https://github.com/ag-grid/ag-charts/commit/4c6890ce8a09326997072a43b1486c2f2abb7f9f",
-      "subject": "AIW stub: actions: write on ci-success-handler (AG-19321)",
-      "author": "alantreadway",
-      "committer": "alantreadway"
-    },
-    {
-      "sha": "da7453aadc1cfae7b6aeee2a23e22080ec77c07c",
-      "url": "https://github.com/ag-grid/ag-charts/commit/da7453aadc1cfae7b6aeee2a23e22080ec77c07c",
-      "subject": "Move SyncManager and sync status out of the base chart",
-      "author": "iMoses",
-      "committer": "iMoses"
-    },
-    {
-      "sha": "99be5c21cd52be644183b5806131fda9666f8106",
-      "url": "https://github.com/ag-grid/ag-charts/commit/99be5c21cd52be644183b5806131fda9666f8106",
-      "subject": "AG-18823 Merge the legendBorder JSDoc and shorten the template comment",
-      "author": "lsjroberts",
-      "committer": "lsjroberts"
     }
   ],
   "outreachTargets": [
     "alantreadway",
+    "iMoses",
     "AG-DavidG"
   ],
-  "interpretation": "Git commit author, Git committer, PR merger and push-event actor are distinct. Recent verified human merger is Alan Treadway; public Nov13 latest push events also name him. Automated authors are not the people to ask for submission access. Actual GitHub permission levels are not inferred from commit names."
+  "interpretation": "Alan Treadway is verified merger of the four latest merged PRs. The two newest PRs were authored by iMoses. Public observed Nov13 latest push events also name Alan; the event feed is partial and does not prove every pusher. Do not confuse bot commit authors with human maintainers."
 }

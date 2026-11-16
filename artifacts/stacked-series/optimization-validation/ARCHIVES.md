@@ -1,3 +1,20 @@
+<!-- current-integration:start -->
+# Current PR source and complete verification
+
+**For the PR, use only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series)**, fork default, head `64f85dea3b32382b6ef4169c0f684ee4a21e4e87`. It includes upstream `latest` snapshot `d78787368dc6b5ff88d6dbe144df639d8dd012cf`. The [PR diff](https://github.com/popkir/ag-charts/compare/d78787368dc6b5ff88d6dbe144df639d8dd012cf...64f85dea3b32382b6ef4169c0f684ee4a21e4e87) remains thirteen code/test files, with no evidence or workflow helpers. `kirill/evidence-stacked-series` holds verification and archives; the third fork `latest` was retained by owner decision. Seventeen technical/duplicate branches were removed, with recoverable history preserved.
+
+**Exact final-head result:** official format/types/lint and **14548 unit tests passed**, 68 skipped. Complete Chromium: 5192 passed, 8 skipped, 9 failed, 0 flaky. Standard Firefox/WebKit: 220 passed, 24 skipped, 2 failed. **Browser jobs remain red:** all eleven stable failures reproduce on unmodified target `d7878736` with **99 byte-identical PNG comparisons**; no references/tolerances/exclusions/retry policy changed.
+
+**Direct current-target full render:** 7293×12, legend on: **110.8734→21.8631s, 5.071×, 80.28% less time**, three pairs on one VM. All inputs, full scenes, PNGs and public states matched, all 87516 datum rectangles retained. Earlier results below are historical, not timings relabelled for this new head.
+
+[Current handoff, raw reports, all 119 retained original ZIPs, Git backup and activity audit](../consolidation/README.md) · [complete workflow](https://github.com/popkir/ag-charts/actions/runs/43859617103). Upstream review/required merge-state CI and a normal PR submission route remain necessary.
+**Upstream policy:** [David confirmed that external PRs and cherry-picks are not accepted](https://github.com/ag-grid/ag-charts/issues/9096#issuecomment-6915125807). A technical assessment and Enterprise escalation route are being requested; no upstream acceptance is implied.
+
+<!-- current-integration:end -->
+
+<details>
+<summary>Historical pre-sync documentation (preserved)</summary>
+
 # Download complete optimisation and delivery archives
 
 **Current total: 87 ZIPs from 29 runs.** [The direct unpatched→final benchmark and its 4 original archives](../total-render-final/README.md#permanent-archives) extend the earlier archive tranche below.
@@ -209,3 +226,6 @@ Failed experiments and setup attempts are included. Empty/minimal quality artifa
 | --- | ---: | --- |
 | [run-logs.zip](./experiments/43788140772/run-logs.zip) | 26076 | complete job logs |
 | [stacked-optimization-matrix.zip](./experiments/43788140772/stacked-optimization-matrix.zip) | 1296766 | 125 files; 42 PNG, 36 full scenes |
+
+
+</details>
