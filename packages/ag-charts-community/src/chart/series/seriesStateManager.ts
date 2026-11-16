@@ -22,11 +22,30 @@ type SeriesLike = SeriesIdLike & {
 
 type SeriesGroupingEntry = {
     grouping: SeriesGrouping;
+    groupingSnapshot: SeriesGrouping;
     width?: number;
     visible: boolean;
 };
 
 export class SeriesStateManager {
+    private groupRevision = 0;
+    private readonly groupScaleCache = new Map<
+        string,
+        {
+            revision: number;
+            axis: PlainObject;
+            axisType: unknown;
+            axisPadding: unknown;
+            bandwidth: number;
+            domain: unknown[];
+            domainLength: number;
+            range0: number;
+            range1: number;
+            paddingInner: number;
+            paddingOuter: number;
+            round: boolean;
+        }
+    >();
     private readonly groups: Map<string, Map<string, SeriesGroupingEntry>> = new Map();
 
     private readonly groupScales: Map<string, IrregularBandScale> = new Map();
@@ -35,6 +54,7 @@ export class SeriesStateManager {
     private readonly datumValidKeys: Map<string, Set<unknown>> = new Map();
 
     public registerSeries({ internalId, seriesGrouping, visible, width, type }: SeriesLike) {
+        this.groupRevision++;
         if (!seriesGrouping) return;
 
         let group = this.groups.get(type);
@@ -42,7 +62,7 @@ export class SeriesStateManager {
             group = new Map();
             this.groups.set(type, group);
         }
-        group.set(internalId, { grouping: seriesGrouping, visible, width });
+        group.set(internalId, { grouping: seriesGrouping, groupingSnapshot: { ...seriesGrouping }, visible, width });
     }
 
     public updateSeries({ internalId, seriesGrouping, visible, width, type }: SeriesLike) {
@@ -50,6 +70,19 @@ export class SeriesStateManager {
 
         const entry = this.groups.get(type)?.get(internalId);
         if (entry) {
+            const previous = entry.groupingSnapshot;
+            if (
+                entry.visible !== visible ||
+                !Object.is(entry.width, width) ||
+                previous.groupIndex !== seriesGrouping.groupIndex ||
+                previous.groupCount !== seriesGrouping.groupCount ||
+                previous.stackIndex !== seriesGrouping.stackIndex ||
+                previous.stackCount !== seriesGrouping.stackCount
+            ) {
+                this.groupRevision++;
+                // Keep a scalar snapshot: the grouping object can be mutated before this call.
+                entry.groupingSnapshot = { ...seriesGrouping };
+            }
             entry.grouping = seriesGrouping;
             entry.width = width;
             entry.visible = visible;
@@ -57,6 +90,7 @@ export class SeriesStateManager {
     }
 
     public deregisterSeries({ internalId, type }: SeriesIdLike) {
+        this.groupRevision++;
         this.datumValidKeys.delete(internalId);
 
         const group = this.groups.get(type);
@@ -146,7 +180,23 @@ export class SeriesStateManager {
         const groupScale = this.groupScales.get(type) ?? new IrregularBandScale();
         this.groupScales.set(type, groupScale);
 
-        // TODO: can we short-circuit here if the groupScale already exists (with this bandwidth and axis?)
+        const axisPadding = (axis.options as { groupPaddingInner?: number } | undefined)?.groupPaddingInner;
+        const cached = this.groupScaleCache.get(type);
+        if (
+            cached?.revision === this.groupRevision &&
+            cached.axis === axis &&
+            cached.axisType === axis.type &&
+            cached.axisPadding === axisPadding &&
+            cached.bandwidth === bandwidth &&
+            cached.domain === groupScale.domain &&
+            cached.domainLength === groupScale.domain.length &&
+            cached.range0 === groupScale.range[0] &&
+            cached.range1 === groupScale.range[1] &&
+            cached.paddingInner === groupScale.paddingInner &&
+            cached.paddingOuter === groupScale.paddingOuter &&
+            cached.round === groupScale.round
+        )
+            return;
 
         groupScale.domain = []; // reset domain and band ranges
 
@@ -177,6 +227,20 @@ export class SeriesStateManager {
         }
 
         groupScale.update(); // TODO: don't hardcode this
+        this.groupScaleCache.set(type, {
+            revision: this.groupRevision,
+            axis,
+            axisType: axis.type,
+            axisPadding,
+            bandwidth,
+            domain: groupScale.domain,
+            domainLength: groupScale.domain.length,
+            range0: groupScale.range[0],
+            range1: groupScale.range[1],
+            paddingInner: groupScale.paddingInner,
+            paddingOuter: groupScale.paddingOuter,
+            round: groupScale.round,
+        });
     }
 
     public getGroupScale({ type }: SeriesLike): IrregularBandScale | undefined {
