@@ -1,0 +1,609 @@
+{
+  "commit": "e00ab4bcf62aff53da945b2fa7aad801027ac74f",
+  "verificationCount": 119,
+  "verificationBytes": 627634734,
+  "additionalPublisherLogs": 1,
+  "allOriginalGitBlobsMatch": true,
+  "files": [
+    {
+      "path": "artifacts/stacked-series/actions/43724323719/run-logs.zip",
+      "bytes": 169157,
+      "blob": "625a68b788ac88867a5187ea57a9d101ee0529d6"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43724323719/stacked-browser-reports.zip",
+      "bytes": 2959776,
+      "blob": "be8861532c52b4481e9db966e35f5c07b9724cc0"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43724323719/stacked-native-reports.zip",
+      "bytes": 159061,
+      "blob": "0e3e9e0f584e653e769eaf779d0eeaf43cd18c63"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726123623/run-logs.zip",
+      "bytes": 6541,
+      "blob": "a14a3d686105fe7136e8d33371c3f50c8eededfa"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726123623/stacked-formatter-patch.zip",
+      "bytes": 2939,
+      "blob": "d9c8c359b00123951f195a115cb25e037a0b5784"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726542138/run-logs.zip",
+      "bytes": 230171,
+      "blob": "7b43c2881e9cb90a71bfb178c22196d6851e8a2d"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726542138/stacked-browser-baseline-reports.zip",
+      "bytes": 2278986,
+      "blob": "e95ccc51e06616b642f56ae3673ce42a980d97e1"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726542138/stacked-browser-reports.zip",
+      "bytes": 2234999,
+      "blob": "0e147b0a2ca01108af27c441ed84b3e1bba0e101"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726542138/stacked-native-reports.zip",
+      "bytes": 343777,
+      "blob": "f9c370a350816b532cf445fe8937702263e61685"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726854766/run-logs.zip",
+      "bytes": 87643,
+      "blob": "60d1f7a3ea692efca99883a485b9af28246ac89a"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726854766/stacked-browser-benchmark-results.zip",
+      "bytes": 11892,
+      "blob": "c27e84490d5cd161f916cd7b8ab1612ec7727957"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726854766/stacked-site-base.zip",
+      "bytes": 50833942,
+      "blob": "6c605d109900cdeb4af2e0e1138022d69b9c21c4"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43726854766/stacked-site-head.zip",
+      "bytes": 50798391,
+      "blob": "a69306e857a7a6d3c7765fdc5fd17daa7043cf43"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43728327077/run-logs.zip",
+      "bytes": 71766,
+      "blob": "ea4fafcae489290ecdb04ccc9107b935e69ee061"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43729070987/run-logs.zip",
+      "bytes": 114176,
+      "blob": "214167cd7a678c568a17ee204671af42810e696a"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43729070987/stacked-export-base-reports.zip",
+      "bytes": 423798,
+      "blob": "13c32593ecd6b825b8449415ea17ba0f9c438a4a"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43729070987/stacked-export-head-reports.zip",
+      "bytes": 423956,
+      "blob": "3d53c82ef7eab4e85b8b6f1ff443e9ee91740313"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43774220145/full-render-7293-results.zip",
+      "bytes": 183159,
+      "blob": "93f297a6c4ba0d24184af53933125dbe2320df4a"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43774220145/run-logs.zip",
+      "bytes": 24227,
+      "blob": "c0154f04d735beff4d31162ef18f19b775f6da82"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43774538081/full-render-7293-results.zip",
+      "bytes": 8386472,
+      "blob": "69ce09fa09fe679e093a961bee2f9b55797033ab"
+    },
+    {
+      "path": "artifacts/stacked-series/actions/43774538081/run-logs.zip",
+      "bytes": 31110,
+      "blob": "9dc966db4dbbfc40542b22447e4b4dd7609cbc56"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/run-logs.zip",
+      "bytes": 2457047,
+      "blob": "39a097d97725bea73afd2e06e0849aff4cea0398"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-build-base.zip",
+      "bytes": 3742334,
+      "blob": "09f124dedc1508482c19ec72b6e37dbd4a17d0a1"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-build-head.zip",
+      "bytes": 3745516,
+      "blob": "67617a384067f9235f19db1095602a6efac529a4"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-cross-browser.zip",
+      "bytes": 3021467,
+      "blob": "d8aeb0d659f5c2c5deb7b9d3ec15852c8b08ccc3"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-e2e-1.zip",
+      "bytes": 2247505,
+      "blob": "d95e97e52e4e1c85ed4a26d1685b5106f19d1315"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-e2e-2.zip",
+      "bytes": 2606887,
+      "blob": "318a30490a92c60b8b3946211d5a28774dd0d7c6"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-e2e-3.zip",
+      "bytes": 2618440,
+      "blob": "54d80a955536ee5360c71542697c53d1609b3542"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-e2e-4.zip",
+      "bytes": 2163719,
+      "blob": "950086e9b338956c6de212a3389e4e36c07cf2fa"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-e2e-5.zip",
+      "bytes": 2077580,
+      "blob": "1adf5b7683b2c57ee41ecf28f914f45316867b41"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-e2e-6.zip",
+      "bytes": 1992102,
+      "blob": "6328e584f849c91011a358f68480072c21da45d3"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-e2e-7.zip",
+      "bytes": 2183348,
+      "blob": "ecb3c0e977b566a0d7c628f83a6d2dfc96c6b1c1"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-e2e-8.zip",
+      "bytes": 31758140,
+      "blob": "28ab227d50dcec603eed1d568f980b840bdbb0e8"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-native.zip",
+      "bytes": 345380,
+      "blob": "33aaccfa193f6fb2578cb17422c8f21dd4f0c2c1"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-quality.zip",
+      "bytes": 3104,
+      "blob": "d24245dba7cfa94edf14676e09879c9aa1731289"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-render-results.zip",
+      "bytes": 8854993,
+      "blob": "63e3ec11a4a8ed853ec84f60ed8c687a59a3cbba"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43854079208/stacked-merged-upstream-baseline.zip",
+      "bytes": 24246628,
+      "blob": "9424230865859360dd82f21c6a35bdbac16a2370"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/run-logs.zip",
+      "bytes": 2445767,
+      "blob": "f190ba505309e3e1e7f2cf2b4c5c3a377f59fd77"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-build-base.zip",
+      "bytes": 3745009,
+      "blob": "22adb0f61527e66a9f7b1801f7f9c565987b94cb"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-build-head.zip",
+      "bytes": 3748232,
+      "blob": "f226d5d81fbbea215aeea34f5a4735687057e42c"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-cross-browser.zip",
+      "bytes": 3008660,
+      "blob": "a5c749f845e359d266a121575fee4ab512fccf69"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-e2e-1.zip",
+      "bytes": 2252196,
+      "blob": "efd3c2679fbd294a43304e2560c036efdaecac21"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-e2e-2.zip",
+      "bytes": 2605201,
+      "blob": "e17bd616003ca636376257804e74db6ecbe66bd9"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-e2e-3.zip",
+      "bytes": 1920530,
+      "blob": "c41090f4cfa0ed9198e601409ad4a802de478df9"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-e2e-4.zip",
+      "bytes": 2146324,
+      "blob": "b11aa8a9566840663d265e17cd959273d43010c1"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-e2e-5.zip",
+      "bytes": 2070374,
+      "blob": "e9522e6d616fda90ee421e95edb9f3a84aaa627c"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-e2e-6.zip",
+      "bytes": 1994159,
+      "blob": "6515f8a96cdbea9ad54f3231a5b69a305f1a064c"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-e2e-7.zip",
+      "bytes": 2169994,
+      "blob": "087329c12208448cebbaeae161d89e2ca4ae0427"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-e2e-8.zip",
+      "bytes": 32610713,
+      "blob": "920098c46731515761f00aab3cc582d3980e1e28"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-native.zip",
+      "bytes": 345648,
+      "blob": "9f8596c52ee1d62ca1525c7f824432416de07319"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-quality.zip",
+      "bytes": 3103,
+      "blob": "9a3aa6e85b41ece3d52338640dd26377c9d7f1dd"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-render-results.zip",
+      "bytes": 8854960,
+      "blob": "8c7c84b994976b3a98db9d7786d463c0da5a6de9"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/actions/43859617103/stacked-merged-upstream-baseline.zip",
+      "bytes": 24103870,
+      "blob": "9731f9c300da347243a6b0cd461ee427f6030c1a"
+    },
+    {
+      "path": "artifacts/stacked-series/consolidation/publisher/43868356928/run-logs.zip",
+      "bytes": 11536,
+      "blob": "e57c446e8621809423b6f263c617a8679c4a1efc"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43829852216/run-logs.zip",
+      "bytes": 17134,
+      "blob": "bf2dd10041ef62e35d4edf7481e82ba17bdb224e"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43830002624/run-logs.zip",
+      "bytes": 36113,
+      "blob": "e78811c37ccd7e0c98ebd61c00c9fa6f305aaa77"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43830002624/stacked-delivery-quality.zip",
+      "bytes": 144,
+      "blob": "e80b1da16130e68253a13208c32d544469065bad"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43830615795/run-logs.zip",
+      "bytes": 58176,
+      "blob": "b738f690a844b70ba427b1190ad07d2ea16eddec"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43830615795/stacked-delivery-quality.zip",
+      "bytes": 8595,
+      "blob": "9af4e92e9bc9b7cce315bfdc2a68085538ac3a18"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43831924832/run-logs.zip",
+      "bytes": 37663,
+      "blob": "0328604e3bdc7e6985aeab53b85fc3dd4d6a4212"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43831924832/stacked-delivery-quality.zip",
+      "bytes": 8599,
+      "blob": "fe7e66c03d4f26f6a18c6f93d5892018e583c8bc"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/run-logs.zip",
+      "bytes": 2583749,
+      "blob": "4e773429efae3b98728d324d99fed7c654456c96"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-cross-browser.zip",
+      "bytes": 3087422,
+      "blob": "51c448358f319edeb05fbbe30ca7c6b7f2428049"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-e2e-1.zip",
+      "bytes": 45665290,
+      "blob": "4cc310201f0d69ad3948fb2d9c99584b075b20b4"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-e2e-2.zip",
+      "bytes": 2624552,
+      "blob": "bf55632e49c5e5b3d47e709ae96eb4b0f4d5c8e2"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-e2e-3.zip",
+      "bytes": 1939143,
+      "blob": "8c7e4d9eaaba7fcf251ac8d4b9cf3fd16eddfb29"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-e2e-4.zip",
+      "bytes": 2154325,
+      "blob": "b1d5a7edc91190584a4e3ab058c39aaa28845ae8"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-e2e-5.zip",
+      "bytes": 2084631,
+      "blob": "763f9efc24b448ed804aa270b8eb993baafe1aa6"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-e2e-6.zip",
+      "bytes": 2015736,
+      "blob": "28e423a3783f50368a6085098034ae66922a0100"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-e2e-7.zip",
+      "bytes": 19367001,
+      "blob": "101849d154cae1f452641a0e629565a674dad7e0"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-e2e-8.zip",
+      "bytes": 32777879,
+      "blob": "11b437de7d096a882b9134d76c60927c5707edea"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-native.zip",
+      "bytes": 350944,
+      "blob": "6f77720ec9b13cf369a087b4312acb2f45141958"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43832785047/stacked-delivery-quality.zip",
+      "bytes": 8603,
+      "blob": "4a7dcfc01c798a812f48c24dd260fdb88c90d794"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43835796435/run-logs.zip",
+      "bytes": 213760,
+      "blob": "da4f9afb57daf1eb6bba72807df99d49b9671880"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43835796435/stacked-baseline-chromium-tooltip.zip",
+      "bytes": 1177967,
+      "blob": "fe00b34427d0c3bf7e68078f4ef3844e31d5e9d5"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43835796435/stacked-baseline-cross-browser.zip",
+      "bytes": 3060130,
+      "blob": "773464df843ad817edcacc54ee3708f6656f0236"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/run-logs.zip",
+      "bytes": 1896135,
+      "blob": "8c0c994e815c06de42c210110a999b145bd9025b"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-baseline-keyboard.zip",
+      "bytes": 22243338,
+      "blob": "1e2968b081508023ebe8763a58611b58e635a1c1"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-web-complete-1.zip",
+      "bytes": 2257724,
+      "blob": "9d21f22e89a1088fee9924cd87ff9b88cbbc0c01"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-web-complete-2.zip",
+      "bytes": 2612269,
+      "blob": "ec9da46cfbc54f8e35355a29922c62b4e1c85a22"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-web-complete-3.zip",
+      "bytes": 1937355,
+      "blob": "ea025b32acc4590dcaf719e8ed6129f1f3b94a04"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-web-complete-4.zip",
+      "bytes": 2153754,
+      "blob": "5c7abceaf96968a6fbe382361ce3e8806bbd3657"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-web-complete-5.zip",
+      "bytes": 5149636,
+      "blob": "e7dfee750bd48c5462742aeef7e31606842be985"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-web-complete-6.zip",
+      "bytes": 2011011,
+      "blob": "a0d5d5cea7726d26fae85912b41be7860c259791"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-web-complete-7.zip",
+      "bytes": 2174716,
+      "blob": "4c797b37bef680d6a4dc65587561fd00e38334a5"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43838758393/stacked-web-complete-8.zip",
+      "bytes": 33818035,
+      "blob": "61fdbc98a7300db38456b79e3a0461b0a65ef116"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43840362951/run-logs.zip",
+      "bytes": 260605,
+      "blob": "32a408a1418a4e51c7ec27738cb0a67452b312b0"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43840362951/stacked-upstream-cross-browser.zip",
+      "bytes": 3006461,
+      "blob": "83eaac5547a6301aa75c4ebefdc71404ff97b244"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/delivery/43840362951/stacked-upstream-keyboard.zip",
+      "bytes": 23099233,
+      "blob": "cde99c34369761e019a6f66a4d26df93d782d1e7"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43783031324/run-logs.zip",
+      "bytes": 24836,
+      "blob": "07e91471d478c4d30f872c5b9c26bd0f578554a1"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43783031324/stacked-optimization-diagnostic.zip",
+      "bytes": 2781979,
+      "blob": "b40b266e8886764c234265fee9c0392780647aca"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43784525430/run-logs.zip",
+      "bytes": 67100,
+      "blob": "69ab676db7d63a7bc41ad92f2a41131c1db5a68e"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43784525430/stacked-optimization-ab-results.zip",
+      "bytes": 19632504,
+      "blob": "33494da5002af2653abbeac2c739c4bf5173e4a3"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43784525430/stacked-optimization-builds.zip",
+      "bytes": 18728445,
+      "blob": "fd6e3a76d720d6d71a2103b4e58793abcb941bb5"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43784832030/run-logs.zip",
+      "bytes": 84198,
+      "blob": "619165079e21c05af5cfb11bbf3a26877108ea75"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43784832030/stacked-optimization-native-results.zip",
+      "bytes": 164521,
+      "blob": "e13b2689248236fbb9b0dccde639c2f3ebe0e0f9"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43785108989/run-logs.zip",
+      "bytes": 23765,
+      "blob": "15acd0d5cb8455db19031682bfdb7df12679b759"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43785108989/stacked-optimization-counters.zip",
+      "bytes": 1312701,
+      "blob": "0724a252dfe01cb8d2384228efabbd0992a94e72"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43785948450/run-logs.zip",
+      "bytes": 77316,
+      "blob": "d0ece0958f42f2f5f94ede308547131396be6fa2"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43785948450/stacked-optimization-native-results.zip",
+      "bytes": 189101,
+      "blob": "7d99531be00a68d9fa0bb7063fe24490c3d2d984"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43786659217/run-logs.zip",
+      "bytes": 70722,
+      "blob": "2c09b7e23273beec7f9d0fd0d2b234bc61bb8aa7"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43786659217/stacked-optimization-ab-results.zip",
+      "bytes": 15707510,
+      "blob": "ca5c7d15e21e4510eacc8f41c4bd7084e3ec4d45"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43786659217/stacked-optimization-builds.zip",
+      "bytes": 18731135,
+      "blob": "6dc100bdc1947c6456845054d7bdcf1ece00d769"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43786659217/stacked-optimization-group-counters.zip",
+      "bytes": 1312745,
+      "blob": "9cd1a5ddde15892c45c061c5b5c78f3d4c7dbebc"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43786878613/run-logs.zip",
+      "bytes": 115564,
+      "blob": "41fbc99dc0daa0a2ab2f2c8413a32d31fcc26b78"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43786878613/stacked-optimization-native-results.zip",
+      "bytes": 348823,
+      "blob": "8487863ea193d246f69bebdbf5d86390450aa1c0"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43787261216/run-logs.zip",
+      "bytes": 25947,
+      "blob": "1dbd9eba4db3d43215935314a2213547cc066a07"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43787261216/stacked-optimization-matrix.zip",
+      "bytes": 55271,
+      "blob": "6af23799a81d31e37bda52960ece679e5562d8f9"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43787397170/run-logs.zip",
+      "bytes": 25873,
+      "blob": "c7fc856aaf4a9a4af1743d23e238242d4647249e"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43787397170/stacked-optimization-matrix.zip",
+      "bytes": 55271,
+      "blob": "d4800a49d3be3d81571daf65afc55054ad36a0e3"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43787612584/run-logs.zip",
+      "bytes": 25660,
+      "blob": "8a4e938f84d678d5adb6855acbd86783ab9ff553"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43787612584/stacked-optimization-matrix.zip",
+      "bytes": 252778,
+      "blob": "bc20f8c68ed6a69177e191d89e9d7335d2d61016"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43787855689/run-logs.zip",
+      "bytes": 25537,
+      "blob": "96558c49165733b750466e4585cb79c94b495b17"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43787855689/stacked-optimization-matrix.zip",
+      "bytes": 256219,
+      "blob": "04b4b05bfa66c5c132e0bef5c0676301e6fad4f2"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43788140772/run-logs.zip",
+      "bytes": 26076,
+      "blob": "f5a25708de8aa193e60df43aae858502df2cf5a2"
+    },
+    {
+      "path": "artifacts/stacked-series/optimization-validation/experiments/43788140772/stacked-optimization-matrix.zip",
+      "bytes": 1296766,
+      "blob": "3074540da3d931242e3fbcbd513fe0e2bce0fbf0"
+    },
+    {
+      "path": "artifacts/stacked-series/total-render-final/logs.zip",
+      "bytes": 111114,
+      "blob": "6f95827dca43715fd694ae88ad955f4c853c6826"
+    },
+    {
+      "path": "artifacts/stacked-series/total-render-final/stacked-total-build-base.zip",
+      "bytes": 3742480,
+      "blob": "a282a7d8a5a5cfc991858399ca854abebc472f96"
+    },
+    {
+      "path": "artifacts/stacked-series/total-render-final/stacked-total-build-head.zip",
+      "bytes": 3745683,
+      "blob": "80c5fd4cb01ff5ea3eae8843cf8e49be4680c2f8"
+    },
+    {
+      "path": "artifacts/stacked-series/total-render-final/stacked-total-render-results.zip",
+      "bytes": 8854397,
+      "blob": "ca868299d8d70b0d85f72008d7640c19edb3d3d3"
+    }
+  ]
+}

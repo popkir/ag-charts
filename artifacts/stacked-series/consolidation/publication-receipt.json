@@ -1,0 +1,17 @@
+{
+  "source": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+  "testedUpstream": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+  "evidence": "e00ab4bcf62aff53da945b2fa7aad801027ac74f",
+  "issue": "https://github.com/ag-grid/ag-charts/issues/9096",
+  "reply": "https://github.com/ag-grid/ag-charts/issues/9096#issuecomment-6916901903",
+  "replyId": 6916901903,
+  "publishingAccount": "popkir",
+  "screenshotEmbeddedInIssueAndReply": true,
+  "verificationZipCount": 119,
+  "verificationZipBytes": 627634734,
+  "all119PublishedGitBlobsMatchOriginalBytes": true,
+  "publisherLogAdditional": true,
+  "upstreamAccepted": false,
+  "enterpriseTicketSent": false,
+  "enterpriseTicketBlocker": "CLIMATISE Enterprise support login not yet available; credentials requested from Lennon."
+}

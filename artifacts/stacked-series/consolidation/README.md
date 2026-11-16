@@ -100,6 +100,8 @@ git fetch artifacts/stacked-series/consolidation/obsolete-branches.bundle refs/r
 
 ## Upstream response and remaining gates
 
+[Enterprise customer follow-up with the actual final screenshot](https://github.com/ag-grid/ag-charts/issues/9096#issuecomment-6916901903) was posted by `popkir`; the issue description and earlier result comments now identify the exact final source and verification. [Publication receipt](./publication-receipt.json) · [all 119 published original Git blobs checked against local bytes](./published-archives-audit.json).
+
 [David’s response](https://github.com/ag-grid/ag-charts/issues/9096#issuecomment-6915125807) states that company policy excludes external PRs, collaborator access and cherry-picking external commits. The issue was closed and David asked for a real-world use case. There is no accepted upstream PR route at present.
 
 CLIMATISE is an Enterprise customer (confirmed by the owner). The shareable use case is monthly analytics with separate series for breakdown members and a small number of periods; the public 7293-series fixture is synthetic. The follow-up requests a substantive technical assessment and a clear Enterprise escalation route. No client data, licence details or account credentials are published.

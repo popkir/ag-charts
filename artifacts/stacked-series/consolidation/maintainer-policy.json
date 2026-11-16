@@ -4,5 +4,6 @@
   "at": "2026-11-16T11:27:21Z",
   "policy": "AG Charts does not accept external PRs, collaborator access or external cherry-picks. David asked for a real-world use case.",
   "customerContext": "CLIMATISE Enterprise customer, confirmed by owner; monthly analytics with high-cardinality breakdowns. Public fixture and screenshot are synthetic.",
-  "nextStep": "Reply with minimal use-case context, screenshot and current evidence; request technical assessment and Enterprise support escalation route. No upstream contribution acceptance or permission is implied."
+  "nextStep": "Await technical assessment / Enterprise escalation route; public reply with use case, screenshot and exact evidence posted.",
+  "reply": "https://github.com/ag-grid/ag-charts/issues/9096#issuecomment-6916901903"
 }
