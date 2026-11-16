@@ -1,6 +1,6 @@
 # Complete evidence archive index
 
-The complete contribution evidence now retains **83 original ZIPs across 28 runs**, outside the source branches. [Download all new optimisation and full E2E ZIPs](../optimization-validation/ARCHIVES.md) adds 27 experimental ZIPs and 35 delivery/attribution ZIPs to the original 21 below. All are checksummed, including unsuccessful attempts.
+The complete contribution evidence now retains **87 original ZIPs across 29 runs**, outside the source branches. [Download all new optimisation and full E2E ZIPs](../optimization-validation/ARCHIVES.md) adds 27 experimental ZIPs and 35 delivery/attribution ZIPs to the original 21 below. All are checksummed, including unsuccessful attempts. [New direct unpatched→final benchmark archives](../total-render-final/README.md#permanent-archives) add 4 ZIPs.
 
 <details>
 <summary>Original eight-run archive: 21 ZIPs</summary>

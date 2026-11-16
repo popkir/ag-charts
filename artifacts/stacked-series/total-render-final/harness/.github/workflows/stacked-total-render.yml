@@ -1,0 +1,130 @@
+name: Total stacked rendering upstream to final
+on:
+  push:
+    branches: [kirill/benchmark-total-stacked-final]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: stacked-total-render-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+jobs:
+  build:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/benchmark-total-stacked-final'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - role: base
+            source: fd652e876a2b059924848a2177c82e67d6752327
+            tree: 2d0c9d919d49d37a524e423244063d34fbf8e347
+          - role: head
+            source: 52f45beae1fd50b3a23b678219f5d1b81ffea509
+            tree: c72fed50b4964896611eed6a69fb820e0efdf15e
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ matrix.source }}
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Build official UMD directly from the exact source revision
+        env:
+          SOURCE_SHA: ${{ matrix.source }}
+          SOURCE_TREE: ${{ matrix.tree }}
+          BUILD_ROLE: ${{ matrix.role }}
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, pathlib, shutil, subprocess
+          def git(*args): return subprocess.check_output(['git', *args], text=True).strip()
+          assert git('rev-parse', 'HEAD') == os.environ['SOURCE_SHA']
+          assert git('rev-parse', 'HEAD^{tree}') == os.environ['SOURCE_TREE']
+          assert not git('diff', 'HEAD', '--', 'packages', 'yarn.lock', 'nx.json', 'esbuild.config.cjs')
+          output = pathlib.Path('tmp/stacked-total-render/builds') / os.environ['BUILD_ROLE']
+          output.mkdir(parents=True, exist_ok=True)
+          with (output / 'build.log').open('w') as log:
+              result = subprocess.run(['yarn', 'nx', 'build:umd', 'ag-charts-enterprise', '--skip-nx-cache'], stdout=log, stderr=subprocess.STDOUT)
+          if result.returncode:
+              print((output / 'build.log').read_text())
+              result.check_returncode()
+          bundle = pathlib.Path('packages/ag-charts-enterprise/dist/umd/ag-charts-enterprise.js')
+          shutil.copyfile(bundle, output / bundle.name)
+          source_map = pathlib.Path(str(bundle) + '.map')
+          if source_map.exists(): shutil.copyfile(source_map, output / source_map.name)
+          receipt = {'role': os.environ['BUILD_ROLE'], 'source': git('rev-parse', 'HEAD'), 'tree': git('rev-parse', 'HEAD^{tree}'), 'bundleSha256': hashlib.sha256(bundle.read_bytes()).hexdigest(), 'bundleBytes': bundle.stat().st_size, 'nodeVersion': subprocess.check_output(['node', '--version'], text=True).strip(), 'buildCommand': 'yarn nx build:umd ag-charts-enterprise --skip-nx-cache', 'trackedRuntimeDiff': git('diff', 'HEAD', '--name-only', '--', 'packages')}
+          assert receipt['trackedRuntimeDiff'] == ''
+          (output / 'build.json').write_text(json.dumps(receipt, indent=2) + '\n')
+          print(json.dumps(receipt))
+          PY
+      - name: Retain exact UMD, map, build log and identity
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-total-build-${{ matrix.role }}
+          path: tmp/stacked-total-render/builds/${{ matrix.role }}
+          retention-days: 30
+  compare:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            tools/benchmark
+            tools/stacked-total-render
+            package.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.22.3'
+      - name: Install isolated browser runner on the disposable VM
+        run: |
+          mkdir -p tmp/stacked-total-render/browser-tools
+          npm install --prefix tmp/stacked-total-render/browser-tools --no-save --no-audit --no-fund playwright@1.60.0 pngjs@7.0.0 pixelmatch@5.3.0 tsx@4.23.15
+          tmp/stacked-total-render/browser-tools/node_modules/.bin/playwright install --with-deps chromium
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: stacked-total-build-base
+          path: tmp/stacked-total-render/builds/base
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: stacked-total-build-head
+          path: tmp/stacked-total-render/builds/head
+      - name: Install canonical full fixture and verified source-built runtimes
+        run: python3 tools/stacked-total-render/prepare.py
+      - name: Pair 1 upstream then final
+        run: tmp/stacked-total-render/browser-tools/node_modules/.bin/tsx tools/stacked-total-render/run.mjs --pair 1
+      - name: Pair 2 final then upstream
+        run: tmp/stacked-total-render/browser-tools/node_modules/.bin/tsx tools/stacked-total-render/run.mjs --pair 2
+      - name: Pair 3 upstream then final
+        run: tmp/stacked-total-render/browser-tools/node_modules/.bin/tsx tools/stacked-total-render/run.mjs --pair 3
+      - name: Reconcile all six full results
+        run: tmp/stacked-total-render/browser-tools/node_modules/.bin/tsx tools/stacked-total-render/run.mjs --summarise
+      - name: Retain every timing, full scene, PNG and receipt
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-total-render-results
+          path: tmp/stacked-total-render/results
+          retention-days: 30

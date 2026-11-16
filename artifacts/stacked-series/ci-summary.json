@@ -110,7 +110,29 @@
       "cleanlyApplies": true,
       "simulatedResultTree": "757aa8f66a63ddcab10e42735eea39d3cd44dc88",
       "note": "Read-only application in an isolated index, no branch merge/rebase/checkout. This is not CI on the newer upstream code."
-    }
+    },
+    "totalOriginalToFinalFullRender": {
+      "runId": 43848323068,
+      "helper": "c83ab6ebdb18ffcd44d13c5550cf7bd7f1d782f2",
+      "sourceBefore": "fd652e876a2b059924848a2177c82e67d6752327",
+      "sourceAfter": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+      "beforeMs": 125008.59999999998,
+      "afterMs": 24899.400000000023,
+      "ratio": 5.020546679839669,
+      "timeReductionPercent": 80.08185036869462,
+      "runsEach": 3,
+      "pairedRatios": [
+        5.112345749079769,
+        4.959505048314413,
+        4.926932702729343
+      ],
+      "scenePngInputPublicStateEqualAllPairs": true,
+      "independentAudit": "../total-render-final/parent-independent-verification.json",
+      "scope": "Direct unpatched upstream to actual final committed source on one comparison VM; not multiplied cross-host ratios"
+    },
+    "overallArchiveCount": 87,
+    "overallArchiveRunCount": 29,
+    "overallArchiveBytes": 439545804
   },
   "historicalInitialVerification": {
     "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",

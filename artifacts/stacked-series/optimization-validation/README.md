@@ -1,5 +1,7 @@
 # Stacked-series rendering optimisations: source and complete verification
 
+**Direct total improvement from unpatched upstream:** 7293 series × 12, legend enabled: **125.0086→24.8994 s (5.021×, 80.08% less time)**, three paired renders per side on one VM. The actual final committed source was built directly; all six renders retained every series/datum and matched complete scenes, input, public state and PNGs. [Direct measurement and original archives](../total-render-final/README.md).
+
 The contribution is now on [`52f45bea`](https://github.com/popkir/ag-charts/commit/52f45beae1fd50b3a23b678219f5d1b81ffea509), with four source commits and thirteen code/test files. The three rendering optimisations follow the original data-preparation fix. Both submission branches point to this head. Reports, archives and workflow helpers are outside the submission diff.
 
 ## Result
@@ -72,9 +74,10 @@ Required upstream checks on the intended merge state and maintainer acceptance r
 Original native build/results ZIPs, complete job-log ZIPs, HTML reports, traces, raw CPU profiles, full scenes and PNGs are preserved without rewriting their ZIP contents. Failed experiments and failed harness attempts are included. Each original artifact digest and ZIP CRC was checked; metadata retain original Actions expiry dates.
 
 - [Download all new HTML/report/trace/log ZIPs](./ARCHIVES.md).
+- [Direct original→final total-render archive](../total-render-final/README.md#permanent-archives): 4 original ZIPs, 16453674 bytes.
 - [Twelve-run optimisation archive](./experiment-summary.json): 27 original ZIPs, 81,418,363 bytes.
 - [Eight-run delivery/attribution archive](./delivery-archive-index.json): 35 original ZIPs, 221,897,828 bytes.
 - [Earlier eight-run verification archive](../actions/README.md): 21 original ZIPs, 119,775,939 bytes.
 - [Checksums of the new archive files](./SHA256SUMS).
 
-Together these retain **83 original ZIPs across 28 workflow runs**, 423,092,130 bytes. They are on a separate evidence branch and do not appear in the contribution diff. The source manifest, original workflow snapshots and exact helper SHAs allow inspection of the tested code and environment.
+Together these retain **87 original ZIPs across 29 workflow runs**, 439,545,804 bytes. They are on a separate evidence branch and do not appear in the contribution diff. The source manifest, original workflow snapshots and exact helper SHAs allow inspection of the tested code and environment.

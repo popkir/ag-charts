@@ -1,0 +1,275 @@
+{
+  "repository": "popkir/ag-charts",
+  "runId": 43848323068,
+  "runUrl": "https://github.com/popkir/ag-charts/actions/runs/43848323068",
+  "helperCommit": "c83ab6ebdb18ffcd44d13c5550cf7bd7f1d782f2",
+  "sources": {
+    "base": "fd652e876a2b059924848a2177c82e67d6752327",
+    "head": "52f45beae1fd50b3a23b678219f5d1b81ffea509"
+  },
+  "sourceTrees": {
+    "base": "2d0c9d919d49d37a524e423244063d34fbf8e347",
+    "head": "c72fed50b4964896611eed6a69fb820e0efdf15e"
+  },
+  "builds": {
+    "base": {
+      "role": "base",
+      "source": "fd652e876a2b059924848a2177c82e67d6752327",
+      "tree": "2d0c9d919d49d37a524e423244063d34fbf8e347",
+      "bundleSha256": "0144e3db7fada5ede027281de91a2e2ded33922d41222cfe72e7758308129f40",
+      "bundleBytes": 5455391,
+      "nodeVersion": "v24.22.3",
+      "buildCommand": "yarn nx build:umd ag-charts-enterprise --skip-nx-cache",
+      "trackedRuntimeDiff": ""
+    },
+    "head": {
+      "role": "head",
+      "source": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+      "tree": "c72fed50b4964896611eed6a69fb820e0efdf15e",
+      "bundleSha256": "0e631024e548ad74392c815f8bb090cb8eeb1a87a0ed65b2a3f3ac382cfbd08b",
+      "bundleBytes": 5460627,
+      "nodeVersion": "v24.22.3",
+      "buildCommand": "yarn nx build:umd ag-charts-enterprise --skip-nx-cache",
+      "trackedRuntimeDiff": ""
+    }
+  },
+  "comparisonJob": {
+    "id": 133237048522,
+    "runnerId": 1000004340,
+    "runnerName": "GitHub Actions 1000004340",
+    "startedAt": "2026-11-16T10:28:45Z",
+    "completedAt": "2026-11-16T10:37:43Z"
+  },
+  "host": {
+    "cpuModel": "AMD EPYC 7763 64-Core Processor",
+    "nproc": 4,
+    "bogomips": 4890.85,
+    "totalMemMb": 15984
+  },
+  "browserVersion": "148.0.7778.96",
+  "workload": {
+    "actualSeries": 7293,
+    "categories": 12,
+    "actualPositiveDatumRectangles": 87516,
+    "enabledLegendRecords": 7293,
+    "legendPagination": "normal; enabled records are not all drawn simultaneously on one page",
+    "animationEnabled": false,
+    "chartWidth": 1200,
+    "chartHeight": 800,
+    "deviceScaleFactor": 1
+  },
+  "methodology": {
+    "repeatsPerSide": 3,
+    "pairOrders": [
+      [
+        "base",
+        "head"
+      ],
+      [
+        "head",
+        "base"
+      ],
+      [
+        "base",
+        "head"
+      ]
+    ],
+    "browserProcess": "fresh per measurement",
+    "warmup": "separate 32-series chart, destroyed before timing; GC requested outside timing",
+    "primary": "AgCharts.create to public waitForUpdate plus two requestAnimationFrame callbacks",
+    "secondary": "unchanged upstream performInitialLoad: AgCharts.create to public waitForUpdate",
+    "canonicalInstrumentation": "no tracing, CPU profiler or heap sampling",
+    "renderer": "headless Chromium; --disable-gpu --use-gl=swiftshader",
+    "builds": "official pinned-source Nx UMD builds, without source/runtime instrumenting edits",
+    "ratios": "directly measured on one comparison VM; no multiplication of historical ratios"
+  },
+  "statistics": {
+    "updateCompleteMs": {
+      "base": {
+        "valuesMs": [
+          125873.19999999998,
+          123258.10000000003,
+          124723.10000000003
+        ],
+        "medianMs": 124723.10000000003,
+        "minMs": 123258.10000000003,
+        "maxMs": 125873.19999999998
+      },
+      "head": {
+        "valuesMs": [
+          24437.399999999994,
+          24660.300000000017,
+          25137.100000000035
+        ],
+        "medianMs": 24660.300000000017,
+        "minMs": 24437.399999999994,
+        "maxMs": 25137.100000000035
+      },
+      "ratioOfMedians": 5.0576473116709835,
+      "elapsedReductionPercent": 80.22796097916103,
+      "pairedRatios": [
+        5.150842560992578,
+        4.998240086292541,
+        4.9617139606398455
+      ],
+      "pairedRatioMin": 4.9617139606398455,
+      "pairedRatioMax": 5.150842560992578
+    },
+    "twoFramesCompleteMs": {
+      "base": {
+        "valuesMs": [
+          126109.29999999999,
+          123488.70000000001,
+          125008.59999999998
+        ],
+        "medianMs": 125008.59999999998,
+        "minMs": 123488.70000000001,
+        "maxMs": 126109.29999999999
+      },
+      "head": {
+        "valuesMs": [
+          24667.599999999977,
+          24899.400000000023,
+          25372.49999999994
+        ],
+        "medianMs": 24899.400000000023,
+        "minMs": 24667.599999999977,
+        "maxMs": 25372.49999999994
+      },
+      "ratioOfMedians": 5.020546679839669,
+      "elapsedReductionPercent": 80.08185036869462,
+      "pairedRatios": [
+        5.112345749079769,
+        4.959505048314413,
+        4.926932702729343
+      ],
+      "pairedRatioMin": 4.926932702729343,
+      "pairedRatioMax": 5.112345749079769
+    }
+  },
+  "records": [
+    {
+      "label": "run1",
+      "role": "base",
+      "source": "fd652e876a2b059924848a2177c82e67d6752327",
+      "timestamp": "2026-11-16T10:31:37.580Z",
+      "timingsMs": {
+        "updateCompleteMs": 125873.19999999998,
+        "twoFramesCompleteMs": 126109.29999999999,
+        "extraFrameWaitMs": 236.10000000000582
+      },
+      "contention": {
+        "stealPct": 0,
+        "psiSomeUs": 2722588,
+        "psiFullUs": 0,
+        "windowMs": 128804
+      }
+    },
+    {
+      "label": "run1",
+      "role": "head",
+      "source": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+      "timestamp": "2026-11-16T10:32:09.370Z",
+      "timingsMs": {
+        "updateCompleteMs": 24437.399999999994,
+        "twoFramesCompleteMs": 24667.599999999977,
+        "extraFrameWaitMs": 230.29999999998836
+      },
+      "contention": {
+        "stealPct": 0,
+        "psiSomeUs": 581864,
+        "psiFullUs": 0,
+        "windowMs": 27347
+      }
+    },
+    {
+      "label": "run2",
+      "role": "base",
+      "source": "fd652e876a2b059924848a2177c82e67d6752327",
+      "timestamp": "2026-11-16T10:34:52.711Z",
+      "timingsMs": {
+        "updateCompleteMs": 123258.10000000003,
+        "twoFramesCompleteMs": 123488.70000000001,
+        "extraFrameWaitMs": 230.5
+      },
+      "contention": {
+        "stealPct": 0,
+        "psiSomeUs": 5469290,
+        "psiFullUs": 0,
+        "windowMs": 126182
+      }
+    },
+    {
+      "label": "run2",
+      "role": "head",
+      "source": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+      "timestamp": "2026-11-16T10:32:42.226Z",
+      "timingsMs": {
+        "updateCompleteMs": 24660.300000000017,
+        "twoFramesCompleteMs": 24899.400000000023,
+        "extraFrameWaitMs": 239.10000000000582
+      },
+      "contention": {
+        "stealPct": 0,
+        "psiSomeUs": 557753,
+        "psiFullUs": 0,
+        "windowMs": 27612
+      }
+    },
+    {
+      "label": "run3",
+      "role": "base",
+      "source": "fd652e876a2b059924848a2177c82e67d6752327",
+      "timestamp": "2026-11-16T10:37:05.884Z",
+      "timingsMs": {
+        "updateCompleteMs": 124723.10000000003,
+        "twoFramesCompleteMs": 125008.59999999998,
+        "extraFrameWaitMs": 285.5
+      },
+      "contention": {
+        "stealPct": 0,
+        "psiSomeUs": 1407670,
+        "psiFullUs": 0,
+        "windowMs": 127715
+      }
+    },
+    {
+      "label": "run3",
+      "role": "head",
+      "source": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+      "timestamp": "2026-11-16T10:37:38.474Z",
+      "timingsMs": {
+        "updateCompleteMs": 25137.100000000035,
+        "twoFramesCompleteMs": 25372.49999999994,
+        "extraFrameWaitMs": 235.39999999990687
+      },
+      "contention": {
+        "stealPct": 0,
+        "psiSomeUs": 604307,
+        "psiFullUs": 0,
+        "windowMs": 28076
+      }
+    }
+  ],
+  "equivalence": {
+    "allSixRawInputsIdentical": true,
+    "allSixRawScenesIdentical": true,
+    "allSixPngBytesIdentical": true,
+    "allSixPublicStatesIdentical": true,
+    "independentlyParsedAllSixScenes": true,
+    "independentlyCheckedEveryInputValue": true,
+    "hashes": {
+      "input": "239dd3ea6e8112a8477241a60c7ab3ce73a2199e240f00989b54e7da8e20263b",
+      "scene": "177354a9e567d5e795b632cdac812684dc79142cf6357aae7957c2655bc87a47",
+      "geometryPythonCanonical": "9586813c3769395d97fce0d4ee5a4fb6029393a907e30ee0e7512ee9104afe62",
+      "png": "68f0fbf1793fee43fa5b2bd24ee13441273eaf5e5cd2b57f21f162bf8585aa76",
+      "publicStatePythonCanonical": "8aa0538a16f87887a3e86fab1c9735544018d21d4f7b2f8ee43de8fa3cf7376b"
+    }
+  },
+  "limitations": [
+    "Three samples per side on one VM are not a confidence interval or a hardware population estimate.",
+    "Synthetic positive initial render only; this run does not retest interactive semantics or all data/animation cases.",
+    "Headless software rendering; GPU contribution and real application time are not measured.",
+    "The archived HTML/CSS/capture scaffolding is reused; both installed runtime bundles are new official builds of the pinned source revisions."
+  ]
+}

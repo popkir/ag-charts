@@ -1,0 +1,14 @@
+{
+  "head": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+  "tree": "c72fed50b4964896611eed6a69fb820e0efdf15e",
+  "branch": "kirill/perf-stacked-series",
+  "trackedWorkingChanges": [],
+  "indexChanges": [],
+  "helperOnlyDiff": [
+    "A\t.github/workflows/stacked-total-render.yml",
+    "A\ttools/stacked-total-render/fixture.js",
+    "A\ttools/stacked-total-render/prepare.py",
+    "A\ttools/stacked-total-render/run.mjs"
+  ],
+  "reportLocalLinksVerified": 17
+}

@@ -1,5 +1,7 @@
 # Download complete optimisation and delivery archives
 
+**Current total: 87 ZIPs from 29 runs.** [The direct unpatched→final benchmark and its 4 original archives](../total-render-final/README.md#permanent-archives) extend the earlier archive tranche below.
+
 This index links all **62 new original ZIPs from 20 runs**, 303316191 bytes. The [earlier 21 archives from eight runs](../actions/README.md) remain available, bringing the total to **83 ZIPs from 28 runs** (423092130 bytes). All are on the separate evidence branch, outside the source contribution.
 
 Open an archive and use **Download raw file**. Extract the complete ZIP directory structure before opening a Playwright HTML report; use Playwright's report/trace viewers for report folders and nested trace ZIPs. Raw scene snapshots are gzip-compressed JSON. Original ZIP contents were retained; metadata record GitHub digests and expiry dates, and every SHA-256/ZIP CRC was checked. [Complete checksums](./SHA256SUMS) · [verification report](./README.md).

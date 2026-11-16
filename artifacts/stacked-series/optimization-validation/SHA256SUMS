@@ -60,3 +60,7 @@ fd01d6db32ffeb9327318e691f0ccf59be8feeed5948186c7623ac8fc81e23e5  experiments/43
 fdf214f36078266f79ad3e42f1916a1c63eb4ba6378b29191efdf18db7df5607  delivery/43838758393/stacked-web-complete-8.zip
 fe71c0dbd45641e7bd2cad55d72a7ae381a94f347fde7826ada9f82bb5278575  delivery/43840362951/stacked-upstream-keyboard.zip
 feba0c1c7f24b685891b4772c5734998b0ea5db08afc63bf1b8fa371551174e3  experiments/43784525430/stacked-optimization-ab-results.zip
+699ed1d97841fc8da4457879c5be4d15462d42a8d32a8f64887d8161a71f6b4b  ../total-render-final/stacked-total-build-base.zip
+e859028cc473d290b6e15556819db93e6fdb11d46df578d80419c3941dee81c1  ../total-render-final/stacked-total-build-head.zip
+b8c4bccea9c674b78e8ea4d335359e43fd64e143e5fc3f29454816094d3749b7  ../total-render-final/stacked-total-render-results.zip
+5f85a74c33dcf2aaec0c643d301155bbdef9635b3beb076bf58ab3a5093ac351  ../total-render-final/logs.zip

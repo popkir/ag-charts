@@ -1,0 +1,65 @@
+{
+  "total_count": 3,
+  "artifacts": [
+    {
+      "id": 14217511300,
+      "node_id": "MDg6QXJ0aWZhY3QxNDIxNzUxMTMwMA==",
+      "name": "stacked-total-render-results",
+      "size_in_bytes": 8854397,
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/artifacts/14217511300",
+      "archive_download_url": "https://api.github.com/repos/popkir/ag-charts/actions/artifacts/14217511300/zip",
+      "expired": false,
+      "digest": "sha256:b8c4bccea9c674b78e8ea4d335359e43fd64e143e5fc3f29454816094d3749b7",
+      "created_at": "2026-11-16T10:37:41Z",
+      "updated_at": "2026-11-16T10:37:41Z",
+      "expires_at": "2026-12-16T10:37:40Z",
+      "workflow_run": {
+        "id": 43848323068,
+        "repository_id": 1458850866,
+        "head_repository_id": 1458850866,
+        "head_branch": "kirill/benchmark-total-stacked-final",
+        "head_sha": "c83ab6ebdb18ffcd44d13c5550cf7bd7f1d782f2"
+      }
+    },
+    {
+      "id": 14216401987,
+      "node_id": "MDg6QXJ0aWZhY3QxNDIxNjQwMTk4Nw==",
+      "name": "stacked-total-build-base",
+      "size_in_bytes": 3742480,
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/artifacts/14216401987",
+      "archive_download_url": "https://api.github.com/repos/popkir/ag-charts/actions/artifacts/14216401987/zip",
+      "expired": false,
+      "digest": "sha256:699ed1d97841fc8da4457879c5be4d15462d42a8d32a8f64887d8161a71f6b4b",
+      "created_at": "2026-11-16T10:28:41Z",
+      "updated_at": "2026-11-16T10:28:41Z",
+      "expires_at": "2026-12-16T10:28:40Z",
+      "workflow_run": {
+        "id": 43848323068,
+        "repository_id": 1458850866,
+        "head_repository_id": 1458850866,
+        "head_branch": "kirill/benchmark-total-stacked-final",
+        "head_sha": "c83ab6ebdb18ffcd44d13c5550cf7bd7f1d782f2"
+      }
+    },
+    {
+      "id": 14215474619,
+      "node_id": "MDg6QXJ0aWZhY3QxNDIxNTQ3NDYxOQ==",
+      "name": "stacked-total-build-head",
+      "size_in_bytes": 3745683,
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/artifacts/14215474619",
+      "archive_download_url": "https://api.github.com/repos/popkir/ag-charts/actions/artifacts/14215474619/zip",
+      "expired": false,
+      "digest": "sha256:e859028cc473d290b6e15556819db93e6fdb11d46df578d80419c3941dee81c1",
+      "created_at": "2026-11-16T10:28:11Z",
+      "updated_at": "2026-11-16T10:28:11Z",
+      "expires_at": "2026-12-16T10:28:09Z",
+      "workflow_run": {
+        "id": 43848323068,
+        "repository_id": 1458850866,
+        "head_repository_id": 1458850866,
+        "head_branch": "kirill/benchmark-total-stacked-final",
+        "head_sha": "c83ab6ebdb18ffcd44d13c5550cf7bd7f1d782f2"
+      }
+    }
+  ]
+}
