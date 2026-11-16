@@ -1,0 +1,190 @@
+name: Stacked series complete contribution validation
+on:
+  push:
+    branches: [kirill/validate-stacked-delivery]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: stacked-delivery-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+jobs:
+  quality:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/validate-stacked-delivery'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 10
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Apply source and verify exact tree
+        run: python3 tools/stacked-delivery/apply.py
+      - name: Official formatter
+        run: |
+          files=$(python3 -c "import json; print(','.join(r['path'] for r in json.load(open('tools/stacked-delivery/manifest.json'))['files']))")
+          yarn nx format --files="$files"
+          yarn nx format:check --files="$files"
+          python3 tools/stacked-delivery/apply.py verify
+      - name: Community types
+        run: yarn nx build:types ag-charts-community
+      - name: Enterprise types
+        run: yarn nx build:types ag-charts-enterprise
+      - name: Community lint
+        run: yarn nx lint ag-charts-community
+      - name: Enterprise lint
+        run: yarn nx lint ag-charts-enterprise
+      - name: Record hot path analysis
+        if: always()
+        run: node tools/hot-paths/detect.js --base bec53b4495a6866beeeb1dcd727de6162b2dd3bd > tmp/stacked-delivery-proofs/hot-paths.json
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-delivery-quality
+          path: tmp/stacked-delivery-proofs
+          retention-days: 30
+  native:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 10
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - run: python3 tools/stacked-delivery/apply.py
+        id: source
+      - name: Complete Community unit suite
+        run: yarn nx test ag-charts-community -- --maxWorkers=2 --minWorkers=1
+      - name: Complete Enterprise unit suite
+        if: ${{ !cancelled() && steps.source.outcome == 'success' }}
+        run: yarn nx test ag-charts-enterprise -- --maxWorkers=2 --minWorkers=1
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-delivery-native
+          path: |
+            tmp/stacked-delivery-proofs
+            reports/ag-charts-community.xml
+            reports/ag-charts-enterprise.xml
+          retention-days: 30
+  e2e:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 100
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8]
+    env:
+      AG_FORCE_ALL_TESTS: '1'
+      AG_E2E_FRAMEWORKS: vanilla,typescript,reactFunctional,reactFunctionalTs,angular,vue3
+      AG_SCENE_SNAPSHOTS: diff
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 10
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - run: |
+          mkdir -p tmp/stacked-delivery-runner
+          python3 tools/stacked-delivery/apply.py
+      - name: Complete website E2E shard without snapshot updates
+        env:
+          NX_BASE: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+        run: yarn nx test:e2e ag-charts-website -- --shard=${{ matrix.shard }}/8
+      - name: Preserve wrapper server log
+        if: always()
+        run: |
+          mkdir -p tmp/stacked-delivery-runner
+          if [ -f "${RUNNER_TEMP}/ag-charts-astro-dev.log" ]; then
+            cp "${RUNNER_TEMP}/ag-charts-astro-dev.log" tmp/stacked-delivery-runner/
+          fi
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-delivery-e2e-${{ matrix.shard }}
+          path: |
+            reports/
+            tmp/stacked-delivery-proofs
+            tmp/stacked-delivery-runner/
+            packages/ag-charts-website/**/__scene_snapshots__/*
+          retention-days: 30
+  cross_browser:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      AG_FORCE_ALL_TESTS: '1'
+      AG_SCENE_SNAPSHOTS: diff
+      AG_E2E_REPORT_JSON: ./reports/ag-charts-website-e2e-cross-browser.json
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 10
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - run: |
+          mkdir -p tmp/stacked-delivery-runner
+          python3 tools/stacked-delivery/apply.py
+      - name: Complete standard Firefox and WebKit coverage
+        env:
+          NX_BASE: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+        run: yarn nx test:e2e ag-charts-website -- --config playwright.cross-browser.config.ts
+      - name: Preserve wrapper server log
+        if: always()
+        run: |
+          mkdir -p tmp/stacked-delivery-runner
+          if [ -f "${RUNNER_TEMP}/ag-charts-astro-dev.log" ]; then
+            cp "${RUNNER_TEMP}/ag-charts-astro-dev.log" tmp/stacked-delivery-runner/
+          fi
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-delivery-cross-browser
+          path: |
+            reports/
+            tmp/stacked-delivery-proofs
+            tmp/stacked-delivery-runner/
+            packages/ag-charts-website/**/__scene_snapshots__/*
+          retention-days: 30

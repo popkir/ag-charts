@@ -1,0 +1,171 @@
+{
+  "runId": 43784525430,
+  "archives": [
+    {
+      "file": "stacked-optimization-ab-results.zip",
+      "bytes": 19632504,
+      "sha256": "feba0c1c7f24b685891b4772c5734998b0ea5db08afc63bf1b8fa371551174e3",
+      "crcVerified": true
+    },
+    {
+      "file": "stacked-optimization-builds.zip",
+      "bytes": 18728445,
+      "sha256": "db64905e5aa9a921cfd49de2e3d50be5a42348f440f7bd5cfb3529a0becd895d",
+      "crcVerified": true
+    },
+    {
+      "file": "run-logs.zip",
+      "bytes": 67100,
+      "sha256": "04a6f3b1ea1ef04852cf3511364d65462b72c82e02e5a9abad994eff53452679",
+      "crcVerified": true
+    }
+  ],
+  "independentlyParsedFullScenes": 15,
+  "seriesPerScene": 7293,
+  "pointsPerScene": 87516,
+  "identicalFullSceneSha256": "177354a9e567d5e795b632cdac812684dc79142cf6357aae7957c2655bc87a47",
+  "identicalPngSha256": "68f0fbf1793fee43fa5b2bd24ee13441273eaf5e5cd2b57f21f162bf8585aa76",
+  "allPublicStatesEquivalentWithinRepeat": true,
+  "controlBundleMatchesArchivedBEC": true,
+  "mediansMs": {
+    "control": 39444.5,
+    "legend-batch": 25798.400000000023,
+    "group-scale": 38700.5,
+    "missing-scope": 34191.79999999999,
+    "combined": 23580
+  },
+  "ratiosToControl": {
+    "control": 1.0,
+    "legend-batch": 1.5289514078392445,
+    "group-scale": 1.0192245578222503,
+    "missing-scope": 1.1536245532554592,
+    "combined": 1.6727947413061917
+  },
+  "rows": [
+    {
+      "repeat": 1,
+      "variant": "control",
+      "ms": 39869.600000000006,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "9d14b0fb7d607b89506cafa251cb2a621dbb8310e9e1fd8b608cf60e7324cc2e"
+    },
+    {
+      "repeat": 1,
+      "variant": "legend-batch",
+      "ms": 25582.5,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "cd4d12e73126476ad869748203c06e411f0a99bcd63c811bf5d6d8b6e4a5286d"
+    },
+    {
+      "repeat": 1,
+      "variant": "group-scale",
+      "ms": 38700.5,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "b58b6343ed5384ba9c85b6e48d12284d15a283e3e164ad83c18ecc467a1de3ff"
+    },
+    {
+      "repeat": 1,
+      "variant": "missing-scope",
+      "ms": 34191.79999999999,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "a9b6fe93afb98dda70adec3b9a61a62530cf66688776ede27b67aa5ba9426f05"
+    },
+    {
+      "repeat": 1,
+      "variant": "combined",
+      "ms": 23580,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "e65da2f59143b72fa3dd822d8a14b5261b7875744ecca487382a235ed50df2dd"
+    },
+    {
+      "repeat": 2,
+      "variant": "control",
+      "ms": 35988.20000000001,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "9d14b0fb7d607b89506cafa251cb2a621dbb8310e9e1fd8b608cf60e7324cc2e"
+    },
+    {
+      "repeat": 2,
+      "variant": "legend-batch",
+      "ms": 25798.400000000023,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "cd4d12e73126476ad869748203c06e411f0a99bcd63c811bf5d6d8b6e4a5286d"
+    },
+    {
+      "repeat": 2,
+      "variant": "group-scale",
+      "ms": 39178.29999999999,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "b58b6343ed5384ba9c85b6e48d12284d15a283e3e164ad83c18ecc467a1de3ff"
+    },
+    {
+      "repeat": 2,
+      "variant": "missing-scope",
+      "ms": 33949.30000000005,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "a9b6fe93afb98dda70adec3b9a61a62530cf66688776ede27b67aa5ba9426f05"
+    },
+    {
+      "repeat": 2,
+      "variant": "combined",
+      "ms": 23732.099999999977,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "e65da2f59143b72fa3dd822d8a14b5261b7875744ecca487382a235ed50df2dd"
+    },
+    {
+      "repeat": 3,
+      "variant": "control",
+      "ms": 39444.5,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "9d14b0fb7d607b89506cafa251cb2a621dbb8310e9e1fd8b608cf60e7324cc2e"
+    },
+    {
+      "repeat": 3,
+      "variant": "legend-batch",
+      "ms": 25858.599999999977,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "cd4d12e73126476ad869748203c06e411f0a99bcd63c811bf5d6d8b6e4a5286d"
+    },
+    {
+      "repeat": 3,
+      "variant": "group-scale",
+      "ms": 38255.30000000005,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "b58b6343ed5384ba9c85b6e48d12284d15a283e3e164ad83c18ecc467a1de3ff"
+    },
+    {
+      "repeat": 3,
+      "variant": "missing-scope",
+      "ms": 34312,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "a9b6fe93afb98dda70adec3b9a61a62530cf66688776ede27b67aa5ba9426f05"
+    },
+    {
+      "repeat": 3,
+      "variant": "combined",
+      "ms": 23221.29999999993,
+      "source": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+      "count": 87516,
+      "bundleSha256": "e65da2f59143b72fa3dd822d8a14b5261b7875744ecca487382a235ed50df2dd"
+    }
+  ],
+  "limitations": [
+    "Not a full compatibility proof; inspect native suites and browser interactions separately.",
+    "Group-scale benefit inconclusive given paired variability.",
+    "Same-run comparisons only; do not compare directly against previous hosts."
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "artifactId": 14211486680,
+    "name": "stacked-baseline-cross-browser",
+    "bytes": 3060130,
+    "sha256": "85134d873320318d45c492b7960f1075f55fd8f39989fe1978d0261a432f110d",
+    "githubDigest": "sha256:85134d873320318d45c492b7960f1075f55fd8f39989fe1978d0261a432f110d",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:09:50Z"
+  },
+  {
+    "artifactId": 14210792634,
+    "name": "stacked-baseline-chromium-tooltip",
+    "bytes": 1177967,
+    "sha256": "28193af270dcd602fcc10bf4ba8f2d3dd6a77503d62d0d395f83626b4b1115a5",
+    "githubDigest": "sha256:28193af270dcd602fcc10bf4ba8f2d3dd6a77503d62d0d395f83626b4b1115a5",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:06:28Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 213760,
+    "sha256": "9f073fb0db950458b4a3033441f0fcc3179fcff6716e53120b191baa3d5b6258",
+    "zipCrcVerified": true
+  }
+]

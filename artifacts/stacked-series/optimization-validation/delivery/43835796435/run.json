@@ -1,0 +1,12 @@
+{
+  "id": 43835796435,
+  "name": "Stacked series unchanged baseline browser attribution",
+  "head_sha": "0d02b6e1da374b4b7b803f6801f1b515d4983894",
+  "head_branch": "kirill/validate-stacked-baseline",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-11-16T08:59:42Z",
+  "updated_at": "2026-11-16T09:09:57Z",
+  "path": ".github/workflows/stacked-baseline.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43835796435"
+}

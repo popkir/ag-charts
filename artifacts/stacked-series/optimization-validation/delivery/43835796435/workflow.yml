@@ -1,0 +1,97 @@
+name: Stacked series unchanged baseline browser attribution
+on:
+  push:
+    branches: [kirill/validate-stacked-baseline]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+  AG_FORCE_ALL_TESTS: '1'
+  AG_SCENE_SNAPSHOTS: diff
+jobs:
+  cross_browser:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/validate-stacked-baseline'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Verify untouched baseline
+        run: |
+          test "$(git rev-parse HEAD)" = bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          git diff --exit-code HEAD -- packages
+          mkdir -p tmp/stacked-baseline-proofs
+          git rev-parse HEAD HEAD^{tree} > tmp/stacked-baseline-proofs/source.txt
+      - name: Complete unchanged Firefox and WebKit suite
+        env:
+          NX_BASE: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          AG_E2E_REPORT_JSON: ./reports/ag-charts-website-e2e-cross-browser.json
+        run: yarn nx test:e2e ag-charts-website -- --config playwright.cross-browser.config.ts
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-baseline-cross-browser
+          path: |
+            reports/
+            tmp/stacked-baseline-proofs
+            packages/ag-charts-website/**/__scene_snapshots__/*
+          retention-days: 30
+  chromium_tooltip:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/validate-stacked-baseline'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    env:
+      AG_E2E_FRAMEWORKS: vanilla,typescript,reactFunctional,reactFunctionalTs,angular,vue3
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Verify untouched baseline
+        run: |
+          test "$(git rev-parse HEAD)" = bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          git diff --exit-code HEAD -- packages
+          mkdir -p tmp/stacked-baseline-proofs
+          git rev-parse HEAD HEAD^{tree} > tmp/stacked-baseline-proofs/source.txt
+      - name: Unchanged Chromium interactive tooltip attribution
+        env:
+          NX_BASE: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+        run: yarn nx test:e2e ag-charts-website -- interactive-tooltip.spec.ts
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-baseline-chromium-tooltip
+          path: |
+            reports/
+            tmp/stacked-baseline-proofs
+            packages/ag-charts-website/**/__scene_snapshots__/*
+          retention-days: 30

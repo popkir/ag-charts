@@ -1,0 +1,64 @@
+name: Stacked optimisation community preservation rerun
+on:
+  push:
+    branches: [kirill/experiment-stacked-7293-verify]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+jobs:
+  native:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/experiment-stacked-7293-verify'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 10
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Apply exact measured combined prototype and focused preservation tests
+        id: patch
+        run: |
+          git diff --exit-code bec53b4495a6866beeeb1dcd727de6162b2dd3bd -- packages
+          git apply --check tools/stacked-optimization/variants/combined.patch
+          git apply tools/stacked-optimization/variants/combined.patch
+          cp tools/stacked-optimization/tests/stackedOptimizationExperiment.test.ts packages/ag-charts-community/src/chart/test/stackedOptimizationExperiment.test.ts
+          mkdir -p tmp/stacked-optimization-validation
+          git diff -- packages > tmp/stacked-optimization-validation/runtime.patch
+          sha256sum tools/stacked-optimization/variants/combined.patch > tmp/stacked-optimization-validation/patch.sha256
+      - name: Community types
+        if: ${{ !cancelled() && steps.patch.outcome == 'success' }}
+        run: yarn nx build:types ag-charts-community
+      - name: Focused preservation tests
+        if: ${{ !cancelled() && steps.patch.outcome == 'success' }}
+        run: yarn nx test ag-charts-community -- stackedOptimizationExperiment.test.ts --maxWorkers=2 --minWorkers=1
+      - name: Full community unit suite without snapshot updates
+        if: ${{ !cancelled() && steps.patch.outcome == 'success' }}
+        run: yarn nx test ag-charts-community -- --maxWorkers=2 --minWorkers=1
+      - name: Keep all native results and source identity
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-optimization-native-results
+          path: |
+            tmp/stacked-optimization-validation
+            reports/ag-charts-community.xml
+            reports/ag-charts-enterprise.xml
+          retention-days: 30

@@ -1,0 +1,323 @@
+{
+  "baseSource": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+  "primaryWorkload": {
+    "series": 7293,
+    "categories": 12,
+    "positiveRectangles": 87516,
+    "legend": "all enabled, normal pagination",
+    "animation": false,
+    "canvas": [
+      1200,
+      800
+    ],
+    "dpr": 1
+  },
+  "fullNormalRenders": 27,
+  "performanceV1": {
+    "run": 43784525430,
+    "statistics": {
+      "control": {
+        "updateCompleteMs": {
+          "values": [
+            39712.20000000001,
+            35840.600000000035,
+            39280.5
+          ],
+          "median": 39280.5,
+          "min": 35840.600000000035,
+          "max": 39712.20000000001
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            39869.600000000006,
+            35988.20000000001,
+            39444.5
+          ],
+          "median": 39444.5,
+          "min": 35988.20000000001,
+          "max": 39869.600000000006
+        },
+        "ratioOfMedians": 1,
+        "reductionPercent": 0
+      },
+      "legend-batch": {
+        "updateCompleteMs": {
+          "values": [
+            25439,
+            25647.800000000047,
+            25705.599999999977
+          ],
+          "median": 25647.800000000047,
+          "min": 25439,
+          "max": 25705.599999999977
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            25582.5,
+            25798.400000000023,
+            25858.599999999977
+          ],
+          "median": 25798.400000000023,
+          "min": 25582.5,
+          "max": 25858.599999999977
+        },
+        "ratioOfMedians": 1.5289514078392445,
+        "reductionPercent": 34.59569775253832
+      },
+      "group-scale": {
+        "updateCompleteMs": {
+          "values": [
+            38545.20000000001,
+            39008.5,
+            38102.09999999998
+          ],
+          "median": 38545.20000000001,
+          "min": 38102.09999999998,
+          "max": 39008.5
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            38700.5,
+            39178.29999999999,
+            38255.30000000005
+          ],
+          "median": 38700.5,
+          "min": 38255.30000000005,
+          "max": 39178.29999999999
+        },
+        "ratioOfMedians": 1.0192245578222503,
+        "reductionPercent": 1.8861945264865732
+      },
+      "missing-scope": {
+        "updateCompleteMs": {
+          "values": [
+            34014.40000000002,
+            33807.70000000001,
+            34154.79999999993
+          ],
+          "median": 34014.40000000002,
+          "min": 33807.70000000001,
+          "max": 34154.79999999993
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            34191.79999999999,
+            33949.30000000005,
+            34312
+          ],
+          "median": 34191.79999999999,
+          "min": 33949.30000000005,
+          "max": 34312
+        },
+        "ratioOfMedians": 1.1536245532554592,
+        "reductionPercent": 13.316685469457113
+      },
+      "combined": {
+        "updateCompleteMs": {
+          "values": [
+            23422.599999999977,
+            23580.79999999999,
+            23078.699999999953
+          ],
+          "median": 23422.599999999977,
+          "min": 23078.699999999953,
+          "max": 23580.79999999999
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            23580,
+            23732.099999999977,
+            23221.29999999993
+          ],
+          "median": 23580,
+          "min": 23221.29999999993,
+          "max": 23732.099999999977
+        },
+        "ratioOfMedians": 1.6727947413061917,
+        "reductionPercent": 40.21980250732041
+      }
+    }
+  },
+  "performanceV2": {
+    "run": 43786659217,
+    "statistics": {
+      "control": {
+        "updateCompleteMs": {
+          "values": [
+            40289.899999999965,
+            37732.69999999995,
+            39634.20000000007
+          ],
+          "median": 39634.20000000007,
+          "min": 37732.69999999995,
+          "max": 40289.899999999965
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            40439.09999999998,
+            37893.40000000002,
+            39787.70000000007
+          ],
+          "median": 39787.70000000007,
+          "min": 37893.40000000002,
+          "max": 40439.09999999998
+        },
+        "ratioOfMedians": 1,
+        "reductionPercent": 0
+      },
+      "legend-missing": {
+        "updateCompleteMs": {
+          "values": [
+            24283.900000000023,
+            24825.5,
+            24042.800000000047
+          ],
+          "median": 24283.900000000023,
+          "min": 24042.800000000047,
+          "max": 24825.5
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            24437.5,
+            24981.79999999999,
+            24199.5
+          ],
+          "median": 24437.5,
+          "min": 24199.5,
+          "max": 24981.79999999999
+        },
+        "ratioOfMedians": 1.628141176470591,
+        "reductionPercent": 38.58026475518827
+      },
+      "group-scale-v2": {
+        "updateCompleteMs": {
+          "values": [
+            30488.800000000047,
+            32640.70000000001,
+            32862.39999999991
+          ],
+          "median": 32640.70000000001,
+          "min": 30488.800000000047,
+          "max": 32862.39999999991
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            30668,
+            32808.5,
+            33029.80000000005
+          ],
+          "median": 32808.5,
+          "min": 30668,
+          "max": 33029.80000000005
+        },
+        "ratioOfMedians": 1.2127253608058908,
+        "reductionPercent": 17.541099384985948
+      },
+      "combined-v2": {
+        "updateCompleteMs": {
+          "values": [
+            17596,
+            17290.600000000035,
+            17310.599999999977
+          ],
+          "median": 17310.599999999977,
+          "min": 17290.600000000035,
+          "max": 17596
+        },
+        "twoFramesCompleteMs": {
+          "values": [
+            17762.399999999965,
+            17466.900000000023,
+            17475.400000000023
+          ],
+          "median": 17475.400000000023,
+          "min": 17466.900000000023,
+          "max": 17762.399999999965
+        },
+        "ratioOfMedians": 2.2767833640431703,
+        "reductionPercent": 56.07838603387481
+      }
+    }
+  },
+  "originalGroupCacheDiagnostic": {
+    "calls": 7293,
+    "hits": 0,
+    "misses": 7293,
+    "absent": 1,
+    "revisionMismatch": 7292,
+    "otherMismatch": 0
+  },
+  "hypotheses": {
+    "1": "measured A/B confirmed: legend batching",
+    "2": "measured A/B confirmed: scope-indexed definitions",
+    "3": "v1 no cache reuse; v2 measured A/B confirmed with scalar snapshot invalidation",
+    "4": "profile-supported only; no prototype A/B",
+    "5": "profile-supported only; no prototype A/B",
+    "6": "not supported as a major bottleneck in this workload",
+    "7": "not supported as an explanation for tens of seconds",
+    "8": "initial creation profile minor; update throughput inconclusive",
+    "9": "outside library-only scope; real application unmeasured"
+  },
+  "browserMatrix": {
+    "run": 43788140772,
+    "variants": [
+      "control",
+      "legend-missing",
+      "combined-v2"
+    ],
+    "stages": [
+      "initial",
+      "legend-page-next",
+      "legend-off",
+      "legend-on",
+      "restore-off",
+      "mixed",
+      "normalised",
+      "resized",
+      "remove-add-reorder",
+      "tooltip",
+      "export-download",
+      "initial-state",
+      "keyboard-legend"
+    ],
+    "passed": true,
+    "sceneSnapshots": 36,
+    "pngSnapshots": 36
+  },
+  "native": {
+    "run": 43786878613,
+    "results": {
+      "checkedPatchIdentity": "2932ed699284b5ba3d89c55dacfb27c485a97ed08ec2b4b86095a24d2aa5d09e  tools/stacked-optimization/variants/combined-v2.patch",
+      "runtimePatchSha256": "185b72114803dda282d1565844cf63788c3cf700d13b014b8f25ea7803c678ff",
+      "reports/ag-charts-community.xml": {
+        "total": 7238,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 16,
+        "passed": 7222
+      },
+      "reports/ag-charts-enterprise.xml": {
+        "total": 7310,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 52,
+        "passed": 7258
+      }
+    },
+    "passed": 14480,
+    "skipped": 68,
+    "failures": 0,
+    "errors": 0
+  },
+  "notClaimed": [
+    "merge/upstream readiness",
+    "new-prototype format/lint pass",
+    "complete official website E2E coverage",
+    "all animation or screen-reader cases",
+    "long-lived memory/leak behaviour",
+    "real CLIMATISE before/after speedup",
+    "remaining combined-v2 phase attribution"
+  ],
+  "sourceContributionUnchanged": true,
+  "publicIssueCommentsOrPullRequestsCreated": false
+}

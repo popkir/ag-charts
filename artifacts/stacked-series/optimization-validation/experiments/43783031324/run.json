@@ -1,0 +1,12 @@
+{
+  "id": 43783031324,
+  "name": "Stacked series optimisation experiments",
+  "head_sha": "e2bc81d97ecddd4cd1de3ba19a2638cd3633a1de",
+  "head_branch": "kirill/experiment-stacked-7293",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-11-16T00:53:37Z",
+  "updated_at": "2026-11-16T00:56:15Z",
+  "path": ".github/workflows/stacked-optimization.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43783031324"
+}

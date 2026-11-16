@@ -1,0 +1,39 @@
+{
+  "runId": 43788140772,
+  "archives": [
+    {
+      "file": "stacked-optimization-matrix.zip",
+      "sha256": "99369aff471fbc6a91878d66fea52381ed57fa6a2c3c79dd4d8ce9e26a646160",
+      "crcVerified": true
+    },
+    {
+      "file": "run-logs.zip",
+      "sha256": "bddb8556e876cd59d686267737d093262f37cbb7d3a5494efc15646f96c284c9",
+      "crcVerified": true
+    }
+  ],
+  "variants": [
+    "control",
+    "legend-missing",
+    "combined-v2"
+  ],
+  "stages": [
+    "initial",
+    "legend-page-next",
+    "legend-off",
+    "legend-on",
+    "restore-off",
+    "mixed",
+    "normalised",
+    "resized",
+    "remove-add-reorder",
+    "tooltip",
+    "export-download",
+    "initial-state",
+    "keyboard-legend"
+  ],
+  "identicalObservableRecords": true,
+  "independentSnapshotHashChecks": 36,
+  "paginationToggleRestoreKeyboardTooltipExportAssertionsVerified": true,
+  "limitation": "Bounded64-series Chromium matrix; full7293timings and broader native suites are separate."
+}

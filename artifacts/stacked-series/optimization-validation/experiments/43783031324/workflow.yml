@@ -1,0 +1,50 @@
+name: Stacked series optimisation experiments
+on:
+  push:
+    branches: [kirill/experiment-stacked-7293]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: stacked-optimisation-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  diagnostic:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/experiment-stacked-7293'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      CI: 'true'
+      NODE_OPTIONS: --max-old-space-size=4096
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            tools/benchmark
+            tools/stacked-optimization
+            package.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.22.3'
+      - name: Install isolated browser runner
+        run: |
+          mkdir -p tmp/render-tools
+          npm install --prefix tmp/render-tools --no-save --no-audit --no-fund playwright@1.60.0 pngjs@7.0.0 pixelmatch@5.3.0 tsx@4.23.15
+          tmp/render-tools/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify and prepare exact archived runtime
+        run: python3 tools/stacked-optimization/prepare.py
+      - name: Full 7293-series CPU diagnostic
+        run: tmp/render-tools/node_modules/.bin/tsx tools/stacked-optimization/run.mjs --profile
+      - name: Full 7293-series unsampled diagnostic control
+        if: ${{ !cancelled() }}
+        run: tmp/render-tools/node_modules/.bin/tsx tools/stacked-optimization/run.mjs --control
+      - name: Retain raw profiles, audits and screenshots
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-optimization-diagnostic
+          path: tmp/stacked-optimization-results
+          retention-days: 30
+          if-no-files-found: warn

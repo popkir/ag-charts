@@ -1,0 +1,17 @@
+[
+  {
+    "artifactId": 14190395284,
+    "name": "stacked-optimization-counters",
+    "bytes": 1312701,
+    "sha256": "09bc62181886ef2de74663cd5afdb3bfb04dc4aff0abcb01bd5866c3fd5dade3",
+    "githubDigest": "sha256:09bc62181886ef2de74663cd5afdb3bfb04dc4aff0abcb01bd5866c3fd5dade3",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T01:16:15Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 23765,
+    "sha256": "0bf18cd0ab9ac9d1794e1d8256019ee79c55c6d4a7411fcd59b72b57fca25323",
+    "zipCrcVerified": true
+  }
+]

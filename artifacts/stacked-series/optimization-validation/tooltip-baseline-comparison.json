@@ -1,0 +1,199 @@
+{
+  "candidateRun": 43832785047,
+  "unchangedBaseRun": 43835796435,
+  "baseSource": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+  "candidateSourceTree": "c72fed50b4964896611eed6a69fb820e0efdf15e",
+  "comparison": "actual/expected/diff PNG bytes for all three retries and all three engines",
+  "images": [
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "bytes": 24429,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "bytes": 24374,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "bytes": 8111,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "bytes": 24429,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "bytes": 8111,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "bytes": 24374,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "bytes": 24429,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "bytes": 8111,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "bytes": 24374,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "bytes": 9864,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "bytes": 7441,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "bytes": 9891,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "bytes": 9864,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "bytes": 7441,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "bytes": 9891,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "bytes": 9864,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "bytes": 7441,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "cross-browser",
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "bytes": 9891,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "bytes": 9066,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "bytes": 7755,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "bytes": 9108,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "bytes": 9066,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "bytes": 7755,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "bytes": 9108,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "bytes": 9066,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "bytes": 7755,
+      "baselineAndCandidateByteIdentical": true
+    },
+    {
+      "engineGroup": "chromium",
+      "path": "reports/ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "bytes": 9108,
+      "baselineAndCandidateByteIdentical": true
+    }
+  ],
+  "allByteIdentical": true
+}

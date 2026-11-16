@@ -1,3 +1,27 @@
+# Maintainer submission handoff
+
+**Current source:** [`52f45bea`](https://github.com/popkir/ag-charts/commit/52f45beae1fd50b3a23b678219f5d1b81ffea509), four commits and thirteen code/test files. Both source branches are updated; all reports and workflow helpers remain separate.
+
+**Additional complete-render improvement:** 7293 × 12, legend enabled: **39.7877 → 17.4754 s (2.277×, −56.08%)** on one VM, three repeats each. All 27 full renders retained complete output. **14481 unit tests passed**, 68 skipped; format/types/lint passed. Full Chromium and standard Firefox/WebKit E2E completed with eleven screenshot failures that exactly match unpatched upstream (99 PNG comparisons); one Chromium test was flaky. Browser jobs therefore remain red.
+
+[Current implementation, complete verification, baseline comparisons and permanent archives](./optimization-validation/README.md). Upstream CI/review remain required; no upstream PR or merge has occurred.
+
+## Source commits
+
+```bash
+git remote add popkir https://github.com/popkir/ag-charts.git
+git fetch popkir kirill/perf-stacked-series-checked
+git cherry-pick bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+git cherry-pick d65edede3fdeec26a5fb490becbba093687c7a6a
+git cherry-pick b4aa2cdb0b84e29f727c93ab8bd302a6d935978a
+git cherry-pick 52f45beae1fd50b3a23b678219f5d1b81ffea509
+```
+
+The complete source diff is [upstream base → current head](https://github.com/popkir/ag-charts/compare/fd652e876a2b059924848a2177c82e67d6752327...52f45beae1fd50b3a23b678219f5d1b81ffea509). The final code tree equals the tested source tree `c72fed50b4964896611eed6a69fb820e0efdf15e`. The patch applies cleanly to the newer upstream head documented in the report; required upstream CI is separate.
+
+<details>
+<summary>Historical initial data-preparation record at bec53b44</summary>
+
 # Maintainer handoff: many stacked series
 
 Issue: [ag-grid/ag-charts#9096](https://github.com/ag-grid/ag-charts/issues/9096).
@@ -76,3 +100,5 @@ The source is ready for maintainer review with fork verification attached. The c
 The stock two-series browser benchmark, the source preparation benchmark and the new full 7293-series browser render have distinct scopes. See [full 7293-series browser results](./full-render-7293/README.md) for raw timings, exact boundaries and the 2.43× browser result. Remaining extreme-workload latency is about 51 seconds.
 
 PR creation is currently restricted to collaborators. A maintainer can review/cherry-pick the single source commit, or advise how personal GitHub account `popkir` should submit it through the normal contribution process. No upstream PR, acceptance, merge or release is implied.
+
+</details>

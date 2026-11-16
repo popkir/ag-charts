@@ -1,0 +1,80 @@
+name: Stacked series isolated prototype comparison
+on:
+  push:
+    branches: [kirill/experiment-stacked-7293-ab]
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+jobs:
+  build:
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/experiment-stacked-7293-ab'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 10
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Build untouched control and isolated real source variants
+        run: python3 tools/stacked-optimization/build-variants.py
+      - name: Archive complete builds, maps, patches and logs
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-optimization-builds
+          path: tmp/stacked-optimization-builds
+          retention-days: 30
+  compare:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            tools/benchmark
+            tools/stacked-optimization
+            package.json
+          sparse-checkout-cone-mode: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: '24.22.3'
+      - name: Install isolated browser runner
+        run: |
+          mkdir -p tmp/render-tools
+          npm install --prefix tmp/render-tools --no-save --no-audit --no-fund playwright@1.60.0 pngjs@7.0.0 pixelmatch@5.3.0 tsx@4.23.15
+          tmp/render-tools/node_modules/.bin/playwright install --with-deps chromium
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: stacked-optimization-builds
+          path: tmp/stacked-optimization-builds
+      - name: Prepare canonical complete workload and verified helpers
+        run: python3 tools/stacked-optimization/prepare-perf.py
+      - name: Three balanced full-size comparisons without profiling
+        run: tmp/render-tools/node_modules/.bin/tsx tools/stacked-optimization/run-ab.mjs
+      - name: Archive every result, full scene and PNG
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: stacked-optimization-ab-results
+          path: tmp/stacked-optimization-ab-results
+          retention-days: 30

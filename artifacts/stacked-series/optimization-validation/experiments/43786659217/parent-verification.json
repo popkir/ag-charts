@@ -1,0 +1,126 @@
+{
+  "runId": 43786659217,
+  "archives": [
+    {
+      "file": "stacked-optimization-ab-results.zip",
+      "sha256": "fa8b90afcc544a32529278508e5d5e388491388fc5e79ba12e1d2ff38b266f7a",
+      "bytes": 15707510,
+      "crcVerified": true
+    },
+    {
+      "file": "stacked-optimization-builds.zip",
+      "sha256": "e9902b6cf2a3b38a2b0ed812182ea4ad44de1f11417cfebb0532163cc3681137",
+      "bytes": 18731135,
+      "crcVerified": true
+    },
+    {
+      "file": "stacked-optimization-group-counters.zip",
+      "sha256": "dd80cd628418b3aebc0e8ac4c7ca2b0edfa5089a6949a7f238ba52a206395ea3",
+      "bytes": 1312745,
+      "crcVerified": true
+    },
+    {
+      "file": "run-logs.zip",
+      "sha256": "2943984325336ff7771123ba745db149300d285757e3972612f18973c14d214a",
+      "bytes": 70722,
+      "crcVerified": true
+    }
+  ],
+  "verifiedFullSceneHashes": 12,
+  "independentlyParsedRepresentativeScene": true,
+  "seriesPerScene": 7293,
+  "pointsPerScene": 87516,
+  "identicalSceneSha256": "177354a9e567d5e795b632cdac812684dc79142cf6357aae7957c2655bc87a47",
+  "identicalPngSha256": "68f0fbf1793fee43fa5b2bd24ee13441273eaf5e5cd2b57f21f162bf8585aa76",
+  "publicStateEquivalentWithinRepeat": true,
+  "mediansMs": {
+    "control": 39787.70000000007,
+    "legend-missing": 24437.5,
+    "group-scale-v2": 32808.5,
+    "combined-v2": 17475.400000000023
+  },
+  "ratiosToControl": {
+    "control": 1.0,
+    "legend-missing": 1.628141176470591,
+    "group-scale-v2": 1.2127253608058908,
+    "combined-v2": 2.2767833640431703
+  },
+  "rows": [
+    {
+      "repeat": 1,
+      "variant": "control",
+      "ms": 40439.09999999998,
+      "bundleSha256": "9d14b0fb7d607b89506cafa251cb2a621dbb8310e9e1fd8b608cf60e7324cc2e"
+    },
+    {
+      "repeat": 1,
+      "variant": "legend-missing",
+      "ms": 24437.5,
+      "bundleSha256": "5672ac8a9ee663214064a1bdd668ba550dc1b17329be0688de5a8b70f9d3719b"
+    },
+    {
+      "repeat": 1,
+      "variant": "group-scale-v2",
+      "ms": 30668,
+      "bundleSha256": "535b682a8b00ca25c6a714314564d43350a9fbc1bc0836e8706c836345ba9519"
+    },
+    {
+      "repeat": 1,
+      "variant": "combined-v2",
+      "ms": 17762.399999999965,
+      "bundleSha256": "b78cafaaff81f6d1301f3299341a3eeaa644cbc09adc109bc000d460bd47b8cb"
+    },
+    {
+      "repeat": 2,
+      "variant": "control",
+      "ms": 37893.40000000002,
+      "bundleSha256": "9d14b0fb7d607b89506cafa251cb2a621dbb8310e9e1fd8b608cf60e7324cc2e"
+    },
+    {
+      "repeat": 2,
+      "variant": "legend-missing",
+      "ms": 24981.79999999999,
+      "bundleSha256": "5672ac8a9ee663214064a1bdd668ba550dc1b17329be0688de5a8b70f9d3719b"
+    },
+    {
+      "repeat": 2,
+      "variant": "group-scale-v2",
+      "ms": 32808.5,
+      "bundleSha256": "535b682a8b00ca25c6a714314564d43350a9fbc1bc0836e8706c836345ba9519"
+    },
+    {
+      "repeat": 2,
+      "variant": "combined-v2",
+      "ms": 17466.900000000023,
+      "bundleSha256": "b78cafaaff81f6d1301f3299341a3eeaa644cbc09adc109bc000d460bd47b8cb"
+    },
+    {
+      "repeat": 3,
+      "variant": "control",
+      "ms": 39787.70000000007,
+      "bundleSha256": "9d14b0fb7d607b89506cafa251cb2a621dbb8310e9e1fd8b608cf60e7324cc2e"
+    },
+    {
+      "repeat": 3,
+      "variant": "legend-missing",
+      "ms": 24199.5,
+      "bundleSha256": "5672ac8a9ee663214064a1bdd668ba550dc1b17329be0688de5a8b70f9d3719b"
+    },
+    {
+      "repeat": 3,
+      "variant": "group-scale-v2",
+      "ms": 33029.80000000005,
+      "bundleSha256": "535b682a8b00ca25c6a714314564d43350a9fbc1bc0836e8706c836345ba9519"
+    },
+    {
+      "repeat": 3,
+      "variant": "combined-v2",
+      "ms": 17475.400000000023,
+      "bundleSha256": "b78cafaaff81f6d1301f3299341a3eeaa644cbc09adc109bc000d460bd47b8cb"
+    }
+  ],
+  "limitations": [
+    "Synthetic full-size workload on this VM only.",
+    "Not a complete compatibility proof; native/browser matrix evidence is separate."
+  ]
+}

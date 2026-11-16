@@ -1,0 +1,112 @@
+name: Stacked series full website validation with official docs prerequisites
+on:
+  push:
+    branches: [kirill/validate-stacked-web-complete]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: stacked-delivery-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+jobs:
+  e2e:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 100
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8]
+    env:
+      AG_FORCE_ALL_TESTS: '1'
+      AG_E2E_FRAMEWORKS: vanilla,typescript,reactFunctional,reactFunctionalTs,angular,vue3
+      AG_SCENE_SNAPSHOTS: diff
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 10
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - run: |
+          mkdir -p tmp/stacked-delivery-runner
+          python3 tools/stacked-delivery/apply.py
+      - name: Generate official API reference prerequisite
+        run: yarn nx docs-resolved-interfaces ag-charts-types
+      - name: Complete website E2E shard without snapshot updates
+        env:
+          NX_BASE: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+        run: yarn nx test:e2e ag-charts-website -- --shard=${{ matrix.shard }}/8
+      - name: Preserve wrapper server log
+        if: always()
+        run: |
+          mkdir -p tmp/stacked-delivery-runner
+          if [ -f "${RUNNER_TEMP}/ag-charts-astro-dev.log" ]; then
+            cp "${RUNNER_TEMP}/ag-charts-astro-dev.log" tmp/stacked-delivery-runner/
+          fi
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-web-complete-${{ matrix.shard }}
+          path: |
+            reports/
+            tmp/stacked-delivery-proofs
+            tmp/stacked-delivery-runner/
+            packages/ag-charts-website/**/__scene_snapshots__/*
+          retention-days: 30
+  baseline_keyboard:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    env:
+      AG_FORCE_ALL_TESTS: '1'
+      AG_E2E_FRAMEWORKS: vanilla,typescript,reactFunctional,reactFunctionalTs,angular,vue3
+      AG_SCENE_SNAPSHOTS: diff
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          fetch-depth: 2
+          persist-credentials: false
+      - uses: ./.github/actions/setup-nx
+        with:
+          base_ref: latest
+          cache_mode: 'off'
+          nx_restore: 'false'
+          free_disk_space: 'true'
+          tidy_nx_cache: 'false'
+          save_yarn_cache: 'false'
+      - name: Verify unchanged baseline and generate official API reference prerequisite
+        run: |
+          test "$(git rev-parse HEAD)" = bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+          git diff --exit-code HEAD -- packages
+          mkdir -p tmp/stacked-baseline-proofs
+          git rev-parse HEAD HEAD^{tree} > tmp/stacked-baseline-proofs/source.txt
+          yarn nx docs-resolved-interfaces ag-charts-types
+      - name: Unchanged keyboard focus and navigation comparison
+        env:
+          NX_BASE: bec53b4495a6866beeeb1dcd727de6162b2dd3bd
+        run: yarn nx test:e2e ag-charts-website -- keyboard-nav.spec.ts
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: stacked-baseline-keyboard
+          path: |
+            reports/
+            tmp/stacked-baseline-proofs
+            packages/ag-charts-website/**/__scene_snapshots__/*
+          retention-days: 30

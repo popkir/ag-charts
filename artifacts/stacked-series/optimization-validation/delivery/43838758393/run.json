@@ -1,0 +1,12 @@
+{
+  "id": 43838758393,
+  "name": "Stacked series full website validation with official docs prerequisites",
+  "head_sha": "d4cea26f3e568203acf0f0bc14b62130450c45b4",
+  "head_branch": "kirill/validate-stacked-web-complete",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-11-16T09:19:52Z",
+  "updated_at": "2026-11-16T09:39:24Z",
+  "path": ".github/workflows/stacked-web-complete.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43838758393"
+}

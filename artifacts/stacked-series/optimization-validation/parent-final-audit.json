@@ -1,0 +1,179 @@
+{
+  "verifiedArchiveCount": 27,
+  "runCount": 12,
+  "totalBytes": 81418363,
+  "sha256GitHubDigestAndCrcVerified": true,
+  "archives": [
+    {
+      "run": "43783031324",
+      "file": "stacked-optimization-diagnostic.zip",
+      "sha256": "b2fd6cfa1d23bbad47970cfcdb8f40401f750f3a7fcec541e5b1894791e10b6a",
+      "bytes": 2781979
+    },
+    {
+      "run": "43783031324",
+      "file": "run-logs.zip",
+      "sha256": "e549aeb6acd370364bb1cb43919385f02e0413e9cdcd3d44ff03390c3bf5d90d",
+      "bytes": 24836
+    },
+    {
+      "run": "43784525430",
+      "file": "stacked-optimization-ab-results.zip",
+      "sha256": "feba0c1c7f24b685891b4772c5734998b0ea5db08afc63bf1b8fa371551174e3",
+      "bytes": 19632504
+    },
+    {
+      "run": "43784525430",
+      "file": "stacked-optimization-builds.zip",
+      "sha256": "db64905e5aa9a921cfd49de2e3d50be5a42348f440f7bd5cfb3529a0becd895d",
+      "bytes": 18728445
+    },
+    {
+      "run": "43784525430",
+      "file": "run-logs.zip",
+      "sha256": "04a6f3b1ea1ef04852cf3511364d65462b72c82e02e5a9abad994eff53452679",
+      "bytes": 67100
+    },
+    {
+      "run": "43784832030",
+      "file": "stacked-optimization-native-results.zip",
+      "sha256": "99d43d60b6d901845fb42131091e4b87a19a0322a4535f10d633660d8ba4713d",
+      "bytes": 164521
+    },
+    {
+      "run": "43784832030",
+      "file": "run-logs.zip",
+      "sha256": "b901ea8b4ae9eb166b14775670fe6d5f8ef378f5fed3424b10223f4bab9ca031",
+      "bytes": 84198
+    },
+    {
+      "run": "43785108989",
+      "file": "stacked-optimization-counters.zip",
+      "sha256": "09bc62181886ef2de74663cd5afdb3bfb04dc4aff0abcb01bd5866c3fd5dade3",
+      "bytes": 1312701
+    },
+    {
+      "run": "43785108989",
+      "file": "run-logs.zip",
+      "sha256": "0bf18cd0ab9ac9d1794e1d8256019ee79c55c6d4a7411fcd59b72b57fca25323",
+      "bytes": 23765
+    },
+    {
+      "run": "43785948450",
+      "file": "stacked-optimization-native-results.zip",
+      "sha256": "55f6fe464992c15fa26750ebae85d3369e6e2ad3e21b6807981ce0fbfac94ed0",
+      "bytes": 189101
+    },
+    {
+      "run": "43785948450",
+      "file": "run-logs.zip",
+      "sha256": "1f3952f69c97f0a8aa5d070788497b0ba5cb218e5b3dfc4388b0f7c74d422756",
+      "bytes": 77316
+    },
+    {
+      "run": "43786659217",
+      "file": "stacked-optimization-ab-results.zip",
+      "sha256": "fa8b90afcc544a32529278508e5d5e388491388fc5e79ba12e1d2ff38b266f7a",
+      "bytes": 15707510
+    },
+    {
+      "run": "43786659217",
+      "file": "stacked-optimization-builds.zip",
+      "sha256": "e9902b6cf2a3b38a2b0ed812182ea4ad44de1f11417cfebb0532163cc3681137",
+      "bytes": 18731135
+    },
+    {
+      "run": "43786659217",
+      "file": "stacked-optimization-group-counters.zip",
+      "sha256": "dd80cd628418b3aebc0e8ac4c7ca2b0edfa5089a6949a7f238ba52a206395ea3",
+      "bytes": 1312745
+    },
+    {
+      "run": "43786659217",
+      "file": "run-logs.zip",
+      "sha256": "2943984325336ff7771123ba745db149300d285757e3972612f18973c14d214a",
+      "bytes": 70722
+    },
+    {
+      "run": "43786878613",
+      "file": "stacked-optimization-native-results.zip",
+      "sha256": "b711a6bf4fa5d20fbc643e06b34c9f7e0b84d1153c8e0a06f2f624a3dc9e27a1",
+      "bytes": 348823
+    },
+    {
+      "run": "43786878613",
+      "file": "run-logs.zip",
+      "sha256": "4666bb1adbf65b53d0948beb8892d5bba4b984a980bb8860ee8e9501cb8b59b1",
+      "bytes": 115564
+    },
+    {
+      "run": "43787261216",
+      "file": "stacked-optimization-matrix.zip",
+      "sha256": "e1519c758a9db280be5cbb324a47dec846e44b76b3dd7f52e4ab95c81f0efff4",
+      "bytes": 55271
+    },
+    {
+      "run": "43787261216",
+      "file": "run-logs.zip",
+      "sha256": "eeb1d9b95321de1c0fa4bf6f16d457c6a375166c741085d491d48b4391e7fc9e",
+      "bytes": 25947
+    },
+    {
+      "run": "43787397170",
+      "file": "stacked-optimization-matrix.zip",
+      "sha256": "912d4106b99585133e9592d1611c8a52a76681ad3e877beba8f70d6e4124ce39",
+      "bytes": 55271
+    },
+    {
+      "run": "43787397170",
+      "file": "run-logs.zip",
+      "sha256": "6e940dbb3d20cc8deafb161f05cd92fe7a58f4f74ad4474b70581d5583156b50",
+      "bytes": 25873
+    },
+    {
+      "run": "43787612584",
+      "file": "stacked-optimization-matrix.zip",
+      "sha256": "53561105ff5ff69259e4b642cf6dd20634368596140839915ecbab02fb18d7de",
+      "bytes": 252778
+    },
+    {
+      "run": "43787612584",
+      "file": "run-logs.zip",
+      "sha256": "fd01d6db32ffeb9327318e691f0ccf59be8feeed5948186c7623ac8fc81e23e5",
+      "bytes": 25660
+    },
+    {
+      "run": "43787855689",
+      "file": "stacked-optimization-matrix.zip",
+      "sha256": "725bda142e2f3c56fe67db4e3861dff5fc3017b52bea389dacb1599015ca5d83",
+      "bytes": 256219
+    },
+    {
+      "run": "43787855689",
+      "file": "run-logs.zip",
+      "sha256": "b2580a048d1e53e322f186ac4a5f5e4578214e07c76261f95812c7b186429076",
+      "bytes": 25537
+    },
+    {
+      "run": "43788140772",
+      "file": "stacked-optimization-matrix.zip",
+      "sha256": "99369aff471fbc6a91878d66fea52381ed57fa6a2c3c79dd4d8ce9e26a646160",
+      "bytes": 1296766
+    },
+    {
+      "run": "43788140772",
+      "file": "run-logs.zip",
+      "sha256": "bddb8556e876cd59d686267737d093262f37cbb7d3a5494efc15646f96c284c9",
+      "bytes": 26076
+    }
+  ],
+  "originalSubmissionSource": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+  "sourceLocalAndTwoRemoteSubmissionHeadsVerifiedUnchanged": true,
+  "normalFullSizeRenders": 27,
+  "browserMatrixStagesPerVariant": 13,
+  "browserMatrixVariants": 3,
+  "nativePassed": 14480,
+  "nativeSkipped": 68,
+  "reportLocalLinksVerified": 41,
+  "note": "Local experimental evidence, not an upstream-ready claim or measured CLIMATISE application timing."
+}

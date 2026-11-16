@@ -1,3 +1,5 @@
+> Historical measurement of the initial data-preparation patch at `bec53b44`. For the current four-commit contribution, additional rendering optimisations and complete E2E attribution, see the [current report](../optimization-validation/README.md). The historical measurements below are unchanged.
+
 # Full browser rendering: 7293 stacked series
 
 The paired full-render benchmark passed. Median chart creation through settled update plus two browser animation-frame callbacks improved from **123.806 s to 51.014 s**: **2.427×**, or **58.8% less time**.

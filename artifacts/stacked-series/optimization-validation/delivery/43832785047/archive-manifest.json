@@ -1,0 +1,107 @@
+[
+  {
+    "artifactId": 14211375296,
+    "name": "stacked-delivery-e2e-7",
+    "bytes": 19367001,
+    "sha256": "d8cd592ebba2c54148b87d7b5690672b4b91e98ee760108427eea00fa587e4e8",
+    "githubDigest": "sha256:d8cd592ebba2c54148b87d7b5690672b4b91e98ee760108427eea00fa587e4e8",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:00:37Z"
+  },
+  {
+    "artifactId": 14211031227,
+    "name": "stacked-delivery-e2e-3",
+    "bytes": 1939143,
+    "sha256": "1966f60461bae022d37780b8fe3812edaafbfb40bc761098b13ee13e5c378384",
+    "githubDigest": "sha256:1966f60461bae022d37780b8fe3812edaafbfb40bc761098b13ee13e5c378384",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:00:29Z"
+  },
+  {
+    "artifactId": 14210936786,
+    "name": "stacked-delivery-e2e-4",
+    "bytes": 2154325,
+    "sha256": "ca6258e41ba2d9a9320ba15fe3b9c6dcc2e48c8e0cb88b0be4384c27b01aae92",
+    "githubDigest": "sha256:ca6258e41ba2d9a9320ba15fe3b9c6dcc2e48c8e0cb88b0be4384c27b01aae92",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:01:44Z"
+  },
+  {
+    "artifactId": 14210915965,
+    "name": "stacked-delivery-cross-browser",
+    "bytes": 3087422,
+    "sha256": "0b0d1b5fdcdd13268b6d4abf44fbb213fc314349cf239b1bf75ddc3aa2afea0c",
+    "githubDigest": "sha256:0b0d1b5fdcdd13268b6d4abf44fbb213fc314349cf239b1bf75ddc3aa2afea0c",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T08:57:17Z"
+  },
+  {
+    "artifactId": 14210906353,
+    "name": "stacked-delivery-e2e-5",
+    "bytes": 2084631,
+    "sha256": "cebc4263a58530a2b3e9d262b0068a63036e6d26b793b76fae1535820248f63e",
+    "githubDigest": "sha256:cebc4263a58530a2b3e9d262b0068a63036e6d26b793b76fae1535820248f63e",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T08:59:28Z"
+  },
+  {
+    "artifactId": 14210882806,
+    "name": "stacked-delivery-native",
+    "bytes": 350944,
+    "sha256": "6bfd85a5ca80e17de1bad45d4a5568e416935f55852c84b6a5a1f3a7e353a15a",
+    "githubDigest": "sha256:6bfd85a5ca80e17de1bad45d4a5568e416935f55852c84b6a5a1f3a7e353a15a",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:05:55Z"
+  },
+  {
+    "artifactId": 14210792522,
+    "name": "stacked-delivery-e2e-8",
+    "bytes": 32777879,
+    "sha256": "38107517f87c032d8f4dbf475229aadbf3fca88d9c5f52ac2a398c57a62bf7a2",
+    "githubDigest": "sha256:38107517f87c032d8f4dbf475229aadbf3fca88d9c5f52ac2a398c57a62bf7a2",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:05:44Z"
+  },
+  {
+    "artifactId": 14210729775,
+    "name": "stacked-delivery-e2e-1",
+    "bytes": 45665290,
+    "sha256": "9072da751d18936df3dac460eedba7eea958fee0fe4a8f5c5f7af4b4c14e023e",
+    "githubDigest": "sha256:9072da751d18936df3dac460eedba7eea958fee0fe4a8f5c5f7af4b4c14e023e",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:11:47Z"
+  },
+  {
+    "artifactId": 14210708067,
+    "name": "stacked-delivery-e2e-6",
+    "bytes": 2015736,
+    "sha256": "12025959583fdb2f072287ad9aa137810d44c9d0cb25bf35901972737bc0c2bb",
+    "githubDigest": "sha256:12025959583fdb2f072287ad9aa137810d44c9d0cb25bf35901972737bc0c2bb",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:02:20Z"
+  },
+  {
+    "artifactId": 14210683464,
+    "name": "stacked-delivery-e2e-2",
+    "bytes": 2624552,
+    "sha256": "3819f2b5fa64151e0be7486212798d54a2ac02b01a9c7450290bd99eed07186a",
+    "githubDigest": "sha256:3819f2b5fa64151e0be7486212798d54a2ac02b01a9c7450290bd99eed07186a",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T09:03:35Z"
+  },
+  {
+    "artifactId": 14209472981,
+    "name": "stacked-delivery-quality",
+    "bytes": 8603,
+    "sha256": "0d85ceda7855ff499b26f924473000eb7cf605069d826ebebc76fe7c09ceb56e",
+    "githubDigest": "sha256:0d85ceda7855ff499b26f924473000eb7cf605069d826ebebc76fe7c09ceb56e",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T08:45:49Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 2583749,
+    "sha256": "5da5ddee1f67abbcd48d9592c15a8237790530676c0a3a495426fc3e7d0b58d0",
+    "zipCrcVerified": true
+  }
+]

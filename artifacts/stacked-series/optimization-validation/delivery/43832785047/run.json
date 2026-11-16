@@ -1,0 +1,12 @@
+{
+  "id": 43832785047,
+  "name": "Stacked series complete contribution validation",
+  "head_sha": "c6604380d8def50d42a2840459162a162bada208",
+  "head_branch": "kirill/validate-stacked-delivery",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-11-16T08:37:50Z",
+  "updated_at": "2026-11-16T09:11:51Z",
+  "path": ".github/workflows/stacked-delivery.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43832785047"
+}

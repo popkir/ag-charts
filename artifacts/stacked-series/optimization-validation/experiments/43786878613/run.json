@@ -1,0 +1,12 @@
+{
+  "id": 43786878613,
+  "name": "Stacked optimisation refined preservation",
+  "head_sha": "c472e9949f41d7165e0724a94b167ec03d835e09",
+  "head_branch": "kirill/experiment-stacked-7293-verify",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-11-16T01:32:42Z",
+  "updated_at": "2026-11-16T01:50:55Z",
+  "path": ".github/workflows/stacked-optimization-verify.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43786878613"
+}

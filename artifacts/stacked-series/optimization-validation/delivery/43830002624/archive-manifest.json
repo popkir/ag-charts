@@ -1,0 +1,17 @@
+[
+  {
+    "artifactId": 14207629844,
+    "name": "stacked-delivery-quality",
+    "bytes": 144,
+    "sha256": "af3ac223ccf1ab7196d9d02fcbb8ff9ee256991aa263617f92d9178ec05e12fa",
+    "githubDigest": "sha256:af3ac223ccf1ab7196d9d02fcbb8ff9ee256991aa263617f92d9178ec05e12fa",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T08:20:49Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 36113,
+    "sha256": "e71e998e743e140346aff4e86348069244ae1cb2f20e3999bcd7410d47d2c9c7",
+    "zipCrcVerified": true
+  }
+]

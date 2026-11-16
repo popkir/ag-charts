@@ -1,0 +1,17 @@
+[
+  {
+    "artifactId": 14190474283,
+    "name": "stacked-optimization-native-results",
+    "bytes": 348823,
+    "sha256": "b711a6bf4fa5d20fbc643e06b34c9f7e0b84d1153c8e0a06f2f624a3dc9e27a1",
+    "githubDigest": "sha256:b711a6bf4fa5d20fbc643e06b34c9f7e0b84d1153c8e0a06f2f624a3dc9e27a1",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T01:50:52Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 115564,
+    "sha256": "4666bb1adbf65b53d0948beb8892d5bba4b984a980bb8860ee8e9501cb8b59b1",
+    "zipCrcVerified": true
+  }
+]

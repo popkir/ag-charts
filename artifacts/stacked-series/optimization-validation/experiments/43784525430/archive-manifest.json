@@ -1,0 +1,26 @@
+[
+  {
+    "artifactId": 14190511339,
+    "name": "stacked-optimization-ab-results",
+    "bytes": 19632504,
+    "sha256": "feba0c1c7f24b685891b4772c5734998b0ea5db08afc63bf1b8fa371551174e3",
+    "githubDigest": "sha256:feba0c1c7f24b685891b4772c5734998b0ea5db08afc63bf1b8fa371551174e3",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T01:23:27Z"
+  },
+  {
+    "artifactId": 14189459475,
+    "name": "stacked-optimization-builds",
+    "bytes": 18728445,
+    "sha256": "db64905e5aa9a921cfd49de2e3d50be5a42348f440f7bd5cfb3529a0becd895d",
+    "githubDigest": "sha256:db64905e5aa9a921cfd49de2e3d50be5a42348f440f7bd5cfb3529a0becd895d",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T01:13:05Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 67100,
+    "sha256": "04a6f3b1ea1ef04852cf3511364d65462b72c82e02e5a9abad994eff53452679",
+    "zipCrcVerified": true
+  }
+]

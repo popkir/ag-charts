@@ -1,0 +1,113 @@
+{
+  "sourceHead": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+  "sourceTree": "c72fed50b4964896611eed6a69fb820e0efdf15e",
+  "originalBase": "fd652e876a2b059924848a2177c82e67d6752327",
+  "initialDataPreparationCommit": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+  "newCommits": [
+    {
+      "sha": "d65edede3fdeec26a5fb490becbba093687c7a6a",
+      "subject": "perf: batch stacked series legend updates",
+      "paths": [
+        "packages/ag-charts-community/src/chart/chart.ts",
+        "packages/ag-charts-community/src/chart/legend/legendManager.ts",
+        "packages/ag-charts-community/src/chart/legend/legendManager.test.ts"
+      ]
+    },
+    {
+      "sha": "b4aa2cdb0b84e29f727c93ab8bd302a6d935978a",
+      "subject": "perf: index missing data definitions by scope",
+      "paths": [
+        "packages/ag-charts-community/src/chart/data/data-model/utils/resolvers.ts",
+        "packages/ag-charts-community/src/chart/data/dataModel.test.ts"
+      ]
+    },
+    {
+      "sha": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+      "subject": "perf: reuse unchanged bar group scales",
+      "paths": [
+        "packages/ag-charts-community/src/chart/series/seriesStateManager.ts",
+        "packages/ag-charts-community/src/chart/series/seriesStateManager.test.ts"
+      ]
+    }
+  ],
+  "sourceContributionCommits": 4,
+  "sourceContributionFiles": 13,
+  "sourceOnly": true,
+  "qualityRun": 43832785047,
+  "qualityPassed": [
+    "format",
+    "community types",
+    "enterprise types",
+    "community lint",
+    "enterprise lint"
+  ],
+  "unitSuites": {
+    "ag-charts-enterprise.xml": {
+      "passed": 7258,
+      "skipped": 52,
+      "failures": 0,
+      "errors": 0
+    },
+    "ag-charts-community.xml": {
+      "passed": 7223,
+      "skipped": 16,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "unitPassed": 14481,
+  "unitSkipped": 68,
+  "completeChromiumRun": 43838758393,
+  "completeChromiumStats": {
+    "expected": 5191,
+    "skipped": 8,
+    "unexpected": 9,
+    "flaky": 1
+  },
+  "frameworks": [
+    "vanilla",
+    "typescript",
+    "reactFunctional",
+    "reactFunctionalTs",
+    "angular",
+    "vue3"
+  ],
+  "standardCrossBrowserRun": 43832785047,
+  "standardCrossBrowserStats": {
+    "expected": 220,
+    "skipped": 24,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "unchangedOriginalUpstreamRun": 43840362951,
+  "upstreamSnapshotFailuresVerified": {
+    "keyboard": 8,
+    "tooltip": 3,
+    "byteIdenticalPngComparisons": 99
+  },
+  "ciCompletelyGreen": false,
+  "snapshotBaselinesOrToleranceChanged": false,
+  "remainingGates": [
+    "upstream required CI on latest and maintainer acceptance",
+    "upstream PR creation remains collaborators-only"
+  ],
+  "deliveryArchiveCount": 35,
+  "deliveryArchiveBytes": 221897828,
+  "newMeasuredFullRender": {
+    "beforeMs": 39787.70000000007,
+    "afterMs": 17475.400000000023,
+    "ratio": 2.2767833640431703,
+    "timeReductionPercent": 56.07838603387481,
+    "runsEach": 3,
+    "scope": "additional improvement over initial data-preparation patch on same VM; not a cross-host combined speedup"
+  },
+  "latestApplicability": {
+    "upstreamLatest": "9ee57509a4141b2477b6c3220efac87e1010982a",
+    "originalBase": "fd652e876a2b059924848a2177c82e67d6752327",
+    "candidateSourceTree": "c72fed50b4964896611eed6a69fb820e0efdf15e",
+    "fullContributionPatchSha256": "4208ab1e7db758c51ca695a3545ac0a7463fb68e91b9812efd6dd429987711e1",
+    "cleanlyApplies": true,
+    "simulatedResultTree": "757aa8f66a63ddcab10e42735eea39d3cd44dc88",
+    "note": "Read-only application in an isolated index, no branch merge/rebase/checkout. This is not CI on the newer upstream code."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": 43786659217,
+  "name": "Stacked series refined group cache comparison",
+  "head_sha": "3646cf2bd409f6ec99f1a5ccc7cb3b5c5ce964e6",
+  "head_branch": "kirill/experiment-stacked-7293-ab",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-11-16T01:30:24Z",
+  "updated_at": "2026-11-16T01:46:16Z",
+  "path": ".github/workflows/stacked-optimization-ab.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43786659217"
+}

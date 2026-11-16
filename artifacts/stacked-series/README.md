@@ -1,3 +1,14 @@
+# Stacked-series performance contribution
+
+**Current source:** [`52f45bea`](https://github.com/popkir/ag-charts/commit/52f45beae1fd50b3a23b678219f5d1b81ffea509), four commits and thirteen code/test files. Both source branches are updated; all reports and workflow helpers remain separate.
+
+**Additional complete-render improvement:** 7293 × 12, legend enabled: **39.7877 → 17.4754 s (2.277×, −56.08%)** on one VM, three repeats each. All 27 full renders retained complete output. **14481 unit tests passed**, 68 skipped; format/types/lint passed. Full Chromium and standard Firefox/WebKit E2E completed with eleven screenshot failures that exactly match unpatched upstream (99 PNG comparisons); one Chromium test was flaky. Browser jobs therefore remain red.
+
+[Current implementation, complete verification, baseline comparisons and permanent archives](./optimization-validation/README.md). Upstream CI/review remain required; no upstream PR or merge has occurred.
+
+<details>
+<summary>Historical initial data-preparation record at bec53b44</summary>
+
 # Stacked-series data preparation
 
 This change keeps the ordinary stacked bar series and its data requests. It reduces repeated work in data preparation when many series share a dataset and stack. The original source benchmark measures `DataController.execute`, before chart rendering. A separately measured full browser render now shows **123.806 s → 51.014 s (2.427×)** for 7293 series × 12 categories, with legend enabled and identical output. [Full browser report](./full-render-7293/README.md).
@@ -123,3 +134,5 @@ Inspect [receipt.json](./receipt.json) for the measured source hashes and bounda
 Searches for stacked performance, quadratic processing, `dataController`, `groupBatches` and range aggregate performance did not identify the same current fix. [Issue #3428](https://github.com/ag-grid/ag-charts/issues/3428) describes an older click-time infinite loop on missing/null values (11.0.4, AG-13928), rather than the initial many-series preparation measured here.
 
 Upstream currently permits PR creation only for collaborators. This personal fork is a proposed fix/evidence handoff, not an upstream PR or an accepted change. Adoption requires maintainer review, normal CI, merge and an official release; no acceptance or release date is assumed.
+
+</details>

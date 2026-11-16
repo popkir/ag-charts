@@ -1,0 +1,42 @@
+{
+  "base": "bec53b4495a6866beeeb1dcd727de6162b2dd3bd",
+  "sourceTree": "c72fed50b4964896611eed6a69fb820e0efdf15e",
+  "patchSha256": "819be2a02f894b139e18d8b9016b3749d20368680fbb8040995747b3ef30611e",
+  "files": [
+    {
+      "path": "packages/ag-charts-community/src/chart/chart.ts",
+      "sha256": "5390a3e8b6cff108dbf182354aa5b92b6cba75e54c4990ec2deef03606a9aabe",
+      "blob": "a10b9a705a3dada4ea353e1fc47cc0aa0e2573d5"
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/data/data-model/utils/resolvers.ts",
+      "sha256": "469981d690748d3a81070bfc189ce0b2dac6c2db1371714996ca7fa842f5bde1",
+      "blob": "7014eb84ce8534145441178f04d8344a77390d85"
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/data/dataModel.test.ts",
+      "sha256": "fde3564749ddc3a628d2f88ed5e0870a0c8e44c56db167cb80584e7d60d08958",
+      "blob": "7f6df6b116b001c27ce5c05b755568e59fe368d0"
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/legend/legendManager.test.ts",
+      "sha256": "dc8e012ac7adb68f40aa5ebe92a7c7ad38eddabf60466925095d06863748c17a",
+      "blob": "b4df8dd9c3b012897af2998d9f4c75b45c968f34"
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/legend/legendManager.ts",
+      "sha256": "9f97f95d80856dc561c8f4a7b45e5acc15e9d3e20813f60c6d30d0de910df675",
+      "blob": "7c3d670708906ef8947a0f4b76b1a66eb8ca8e9c"
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/series/seriesStateManager.test.ts",
+      "sha256": "a9b87f91b3a68d043b8bca92da95f42523c9777568ddcde839e3f1da0f317a8c",
+      "blob": "b83ee0e87d842b8e4baf6aea8a707aace7e86bbf"
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/series/seriesStateManager.ts",
+      "sha256": "9c246133d181e6f3f9a1f206ceb327a3ee8b6e31f47a490910ad74541e738423",
+      "blob": "ba9546749a44e4d0e788fb270dd2eb8636e801bf"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": 43787855689,
+  "name": "Stacked optimisation public behaviour matrix",
+  "head_sha": "12365b9be101891e95cc98e77c663561d20066f0",
+  "head_branch": "kirill/experiment-stacked-7293-matrix",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-11-16T01:42:55Z",
+  "updated_at": "2026-11-16T01:44:01Z",
+  "path": ".github/workflows/stacked-optimization-matrix.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43787855689"
+}

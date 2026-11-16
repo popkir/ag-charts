@@ -1,3 +1,10 @@
+# Complete evidence archive index
+
+The complete contribution evidence now retains **83 original ZIPs across 28 runs**, outside the source branches. [Current optimisation and full E2E archive](../optimization-validation/README.md) adds 27 experimental ZIPs and 35 delivery/attribution ZIPs to the original 21 below. All are checksummed, including unsuccessful attempts.
+
+<details>
+<summary>Original eight-run archive: 21 ZIPs</summary>
+
 # Permanent GitHub Actions archives
 
 All **21 ZIP archives** from 8 verification runs are retained: all 13 uploaded artifacts and complete logs for every run (114.23 MiB). Original artifact ZIPs match GitHub SHA-256 digests; all ZIPs passed CRC checks.
@@ -100,3 +107,5 @@ The successful full-render run includes six canonical measurements (three per re
 \`\`\`sh
 shasum -a 256 -c SHA256SUMS
 \`\`\`
+
+</details>

@@ -1,0 +1,9 @@
+{
+  "upstreamLatest": "9ee57509a4141b2477b6c3220efac87e1010982a",
+  "originalBase": "fd652e876a2b059924848a2177c82e67d6752327",
+  "candidateSourceTree": "c72fed50b4964896611eed6a69fb820e0efdf15e",
+  "fullContributionPatchSha256": "4208ab1e7db758c51ca695a3545ac0a7463fb68e91b9812efd6dd429987711e1",
+  "cleanlyApplies": true,
+  "simulatedResultTree": "757aa8f66a63ddcab10e42735eea39d3cd44dc88",
+  "note": "Read-only application in an isolated index, no branch merge/rebase/checkout. This is not CI on the newer upstream code."
+}

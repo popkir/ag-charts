@@ -1,0 +1,53 @@
+{
+  "upstreamSource": "fd652e876a2b059924848a2177c82e67d6752327",
+  "upstreamBaselineRun": 43726542138,
+  "candidateRun": 43832785047,
+  "images": [
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "byteIdentical": true
+    },
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "byteIdentical": true
+    },
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "byteIdentical": true
+    },
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "byteIdentical": true
+    },
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "byteIdentical": true
+    },
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "byteIdentical": true
+    },
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "87362837b7902edbf8e4e8ae940d5c0e8d03a91676729832575d60bbbcca9447",
+      "byteIdentical": true
+    },
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "9809205228f510ceb5d6c99db433b3004f13082ff0521a573842231a7404f784",
+      "byteIdentical": true
+    },
+    {
+      "path": "ag-charts-website-e2e-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-chromium-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "36204ff99eb8296ba4b56ad27d48d2123b75f36aea534040cee464e0fad7a01a",
+      "byteIdentical": true
+    }
+  ],
+  "allByteIdentical": true
+}

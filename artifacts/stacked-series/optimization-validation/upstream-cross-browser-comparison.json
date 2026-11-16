@@ -1,0 +1,98 @@
+{
+  "upstreamSource": "fd652e876a2b059924848a2177c82e67d6752327",
+  "upstreamBaselineRun": 43840362951,
+  "candidateRun": 43832785047,
+  "images": [
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "2fae81090996385d0c3081a2dd39fb7f9897e8d63658adb3e9f37105920a7504",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "605c8ee392fc67402caad5ecfaeda6fec10930e0bbc02f3b46181b5a5a420cbe",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-firefox-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "eac883b31e5bb344e08575ed17d740bc6dc2dc57aa3ce239fcbee9e0b61d34d9",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry1/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-actual.png",
+      "sha256": "6af31cddfb6dd13ca2013cb47cb3b6ff8dc17e216f444ca874bef7fe3793a860",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-diff.png",
+      "sha256": "b34ab3f35b31ff74d29b30e6c59cde8de8b67a02c8515183f3e715cef6326060",
+      "byteIdentical": true
+    },
+    {
+      "path": "reports/ag-charts-website-e2e-cross-browser-reports/interactive-tooltip-interactive-tooltip-hover-4-steps-webkit-retry2/interactive-tooltip-visible-1-expected.png",
+      "sha256": "87e6a396bcdbc912e90c378f0e9dd90780c48ccbec25817a3a1d9cb048eabeb8",
+      "byteIdentical": true
+    }
+  ],
+  "allByteIdentical": true
+}

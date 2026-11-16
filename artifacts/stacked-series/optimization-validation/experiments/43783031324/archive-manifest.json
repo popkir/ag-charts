@@ -1,0 +1,17 @@
+[
+  {
+    "artifactId": 14189765109,
+    "name": "stacked-optimization-diagnostic",
+    "bytes": 2781979,
+    "sha256": "b2fd6cfa1d23bbad47970cfcdb8f40401f750f3a7fcec541e5b1894791e10b6a",
+    "githubDigest": "sha256:b2fd6cfa1d23bbad47970cfcdb8f40401f750f3a7fcec541e5b1894791e10b6a",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T00:56:10Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 24836,
+    "sha256": "e549aeb6acd370364bb1cb43919385f02e0413e9cdcd3d44ff03390c3bf5d90d",
+    "zipCrcVerified": true
+  }
+]

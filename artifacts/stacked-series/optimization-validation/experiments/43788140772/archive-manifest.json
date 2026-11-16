@@ -1,0 +1,17 @@
+[
+  {
+    "artifactId": 14190473754,
+    "name": "stacked-optimization-matrix",
+    "bytes": 1296766,
+    "sha256": "99369aff471fbc6a91878d66fea52381ed57fa6a2c3c79dd4d8ce9e26a646160",
+    "githubDigest": "sha256:99369aff471fbc6a91878d66fea52381ed57fa6a2c3c79dd4d8ce9e26a646160",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T01:46:59Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 26076,
+    "sha256": "bddb8556e876cd59d686267737d093262f37cbb7d3a5494efc15646f96c284c9",
+    "zipCrcVerified": true
+  }
+]

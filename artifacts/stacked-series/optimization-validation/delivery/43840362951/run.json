@@ -1,0 +1,12 @@
+{
+  "id": 43840362951,
+  "name": "Stacked series original upstream browser attribution",
+  "head_sha": "6c14ab16a038328146099d401cee2d3fbdbd2a24",
+  "head_branch": "kirill/validate-stacked-upstream-base",
+  "status": "completed",
+  "conclusion": "failure",
+  "created_at": "2026-11-16T09:30:29Z",
+  "updated_at": "2026-11-16T09:45:07Z",
+  "path": ".github/workflows/stacked-upstream-base.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43840362951"
+}

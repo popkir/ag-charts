@@ -1,0 +1,12 @@
+{
+  "id": 43784525430,
+  "name": "Stacked series isolated prototype comparison",
+  "head_sha": "2b15893bbf8f9e21ee4f2fc477d552fdaec5324e",
+  "head_branch": "kirill/experiment-stacked-7293-ab",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-11-16T01:09:00Z",
+  "updated_at": "2026-11-16T01:23:31Z",
+  "path": ".github/workflows/stacked-optimization-ab.yml",
+  "html_url": "https://github.com/popkir/ag-charts/actions/runs/43784525430"
+}

@@ -1,0 +1,40 @@
+{
+  "runId": 43786878613,
+  "archives": [
+    {
+      "file": "stacked-optimization-native-results.zip",
+      "sha256": "b711a6bf4fa5d20fbc643e06b34c9f7e0b84d1153c8e0a06f2f624a3dc9e27a1",
+      "crcVerified": true
+    },
+    {
+      "file": "run-logs.zip",
+      "sha256": "4666bb1adbf65b53d0948beb8892d5bba4b984a980bb8860ee8e9501cb8b59b1",
+      "crcVerified": true
+    }
+  ],
+  "measuredCombinedV2PatchSha256": "2932ed699284b5ba3d89c55dacfb27c485a97ed08ec2b4b86095a24d2aa5d09e",
+  "nativeRecordedAppliedPatchSha256": "2932ed699284b5ba3d89c55dacfb27c485a97ed08ec2b4b86095a24d2aa5d09e",
+  "appliedGitTrees": {
+    "measured": "ae526a89e7922b03ffa6dd34132424c64fdd4634",
+    "native": "ae526a89e7922b03ffa6dd34132424c64fdd4634"
+  },
+  "nativeRuntimeSourceExactlyMatchesMeasuredPatch": true,
+  "note": "Native git diff and supplied unified patch use different formatting; applied Git trees independently verified identical using isolated indexes. Working index/source unchanged.",
+  "suites": {
+    "reports/ag-charts-community.xml": {
+      "total": 7238,
+      "passed": 7222,
+      "skipped": 16,
+      "failures": 0,
+      "errors": 0
+    },
+    "reports/ag-charts-enterprise.xml": {
+      "total": 7310,
+      "passed": 7258,
+      "skipped": 52,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "readiness": "Experimental validation; upstream required CI and review remain separate."
+}

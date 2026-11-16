@@ -1,0 +1,44 @@
+{
+  "measuredPatchSha256": "2932ed699284b5ba3d89c55dacfb27c485a97ed08ec2b4b86095a24d2aa5d09e",
+  "candidateTree": "c72fed50b4964896611eed6a69fb820e0efdf15e",
+  "compiler": "esbuild transform (standalone check; native Nx builds/tests remain separate)",
+  "options": {
+    "loader": "ts",
+    "format": "esm",
+    "target": "es2022",
+    "minifySyntax": true,
+    "minifyWhitespace": true,
+    "minifyIdentifiers": false,
+    "legalComments": "none"
+  },
+  "files": [
+    {
+      "path": "packages/ag-charts-community/src/chart/chart.ts",
+      "measuredSourceSha256": "d1837dbc49684389a0d6c042d5d1b70e39bddf9ba09d5811fb08778ad0123842",
+      "promotedSourceSha256": "5390a3e8b6cff108dbf182354aa5b92b6cba75e54c4990ec2deef03606a9aabe",
+      "emittedJavaScriptSha256": "a504fb14fc11821a93549d85e83e44b392232ef9509b595d5ab3e71d96d25453",
+      "identicalEmittedJavaScript": true
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/data/data-model/utils/resolvers.ts",
+      "measuredSourceSha256": "8c2e7dca30a10748fa5c3d1b4835066da02abf53df491b4a48a219c2cf5e1ade",
+      "promotedSourceSha256": "469981d690748d3a81070bfc189ce0b2dac6c2db1371714996ca7fa842f5bde1",
+      "emittedJavaScriptSha256": "5f861bc27e501fab7d17f38cffc7b3d9afd6dd99428060e9a34878d6520e1696",
+      "identicalEmittedJavaScript": true
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/legend/legendManager.ts",
+      "measuredSourceSha256": "9f97f95d80856dc561c8f4a7b45e5acc15e9d3e20813f60c6d30d0de910df675",
+      "promotedSourceSha256": "9f97f95d80856dc561c8f4a7b45e5acc15e9d3e20813f60c6d30d0de910df675",
+      "emittedJavaScriptSha256": "23fb7e42d939db549f001d04ecd99100a492fd4a200b9469a1b3832b0862e582",
+      "identicalEmittedJavaScript": true
+    },
+    {
+      "path": "packages/ag-charts-community/src/chart/series/seriesStateManager.ts",
+      "measuredSourceSha256": "45fd3d1cc6ffa92455b23d69ac50e0b5d49bbad8375fdf3b9b94ac2a3634d4cb",
+      "promotedSourceSha256": "9c246133d181e6f3f9a1f206ceb327a3ee8b6e31f47a490910ad74541e738423",
+      "emittedJavaScriptSha256": "c4ddc9d9ce5e23c59e20a074ec01a179b1e64062207fdabffe066d94222ccefa",
+      "identicalEmittedJavaScript": true
+    }
+  ]
+}
