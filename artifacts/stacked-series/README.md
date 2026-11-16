@@ -1,3 +1,16 @@
+<!-- current-integration:start -->
+# Current source branch and evidence
+
+**Submit only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series) as a PR against upstream `latest`.** It is the fork default. Current head `ae4e8907037ca9aec35f19d6898d3cfb8da84721` includes upstream `9ee57509a4141b2477b6c3220efac87e1010982a`; the PR diff remains thirteen code/test files, identical to the original contribution patch.
+
+`kirill/evidence-stacked-series` holds reports, recoverable Git history and verification workflows. The third fork branch `latest` is retained by explicit owner decision and is not the PR source. All seventeen obsolete helper/duplicate branches have been removed.
+
+**Current exact-head checks:** format/check, both types and lint passed; full native/E2E and three-pair latest→merged-source full-render verification are running in [run 43854079208](https://github.com/popkir/ag-charts/actions/runs/43854079208). [Current branch map, integration and recoverable backup](consolidation/README.md). Earlier results below are historical measurements of pre-sync `52f45bea`, not results relabelled for the merged head. A targeted maintainer follow-up will link the completed verification.
+<!-- current-integration:end -->
+
+<details>
+<summary>Historical pre-sync documentation (preserved)</summary>
+
 # Stacked-series performance contribution
 
 **Direct total improvement from unpatched upstream:** 7293 series × 12, legend enabled: **125.0086→24.8994 s (5.021×, 80.08% less time)**, three paired renders per side on one VM. The actual final committed source was built directly; all six renders retained every series/datum and matched complete scenes, input, public state and PNGs. [Direct measurement and original archives](./total-render-final/README.md).
@@ -136,5 +149,8 @@ Inspect [receipt.json](./receipt.json) for the measured source hashes and bounda
 Searches for stacked performance, quadratic processing, `dataController`, `groupBatches` and range aggregate performance did not identify the same current fix. [Issue #3428](https://github.com/ag-grid/ag-charts/issues/3428) describes an older click-time infinite loop on missing/null values (11.0.4, AG-13928), rather than the initial many-series preparation measured here.
 
 Upstream currently permits PR creation only for collaborators. This personal fork is a proposed fix/evidence handoff, not an upstream PR or an accepted change. Adoption requires maintainer review, normal CI, merge and an official release; no acceptance or release date is assumed.
+
+</details>
+
 
 </details>

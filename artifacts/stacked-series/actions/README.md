@@ -1,3 +1,16 @@
+<!-- current-integration:start -->
+# Current source branch and evidence
+
+**Submit only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series) as a PR against upstream `latest`.** It is the fork default. Current head `ae4e8907037ca9aec35f19d6898d3cfb8da84721` includes upstream `9ee57509a4141b2477b6c3220efac87e1010982a`; the PR diff remains thirteen code/test files, identical to the original contribution patch.
+
+`kirill/evidence-stacked-series` holds reports, recoverable Git history and verification workflows. The third fork branch `latest` is retained by explicit owner decision and is not the PR source. All seventeen obsolete helper/duplicate branches have been removed.
+
+**Current exact-head checks:** format/check, both types and lint passed; full native/E2E and three-pair latest→merged-source full-render verification are running in [run 43854079208](https://github.com/popkir/ag-charts/actions/runs/43854079208). [Current branch map, integration and recoverable backup](../consolidation/README.md). Earlier results below are historical measurements of pre-sync `52f45bea`, not results relabelled for the merged head. A targeted maintainer follow-up will link the completed verification.
+<!-- current-integration:end -->
+
+<details>
+<summary>Historical pre-sync documentation (preserved)</summary>
+
 # Complete evidence archive index
 
 The complete contribution evidence now retains **87 original ZIPs across 29 runs**, outside the source branches. [Download all new optimisation and full E2E ZIPs](../optimization-validation/ARCHIVES.md) adds 27 experimental ZIPs and 35 delivery/attribution ZIPs to the original 21 below. All are checksummed, including unsuccessful attempts. [New direct unpatched→final benchmark archives](../total-render-final/README.md#permanent-archives) add 4 ZIPs.
@@ -107,5 +120,8 @@ The successful full-render run includes six canonical measurements (three per re
 \`\`\`sh
 shasum -a 256 -c SHA256SUMS
 \`\`\`
+
+</details>
+
 
 </details>

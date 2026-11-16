@@ -1,0 +1,446 @@
+{
+  "sample": "50 most recent commits returned for upstream latest;100 public repository events, a partial event feed",
+  "upstreamHead": "9ee57509a4141b2477b6c3220efac87e1010982a",
+  "recentMerges": [
+    {
+      "pr": 9094,
+      "url": "https://github.com/ag-grid/ag-charts/pull/9094",
+      "title": "AG-19315 Turn crosshairs off by default except on financial charts",
+      "mergedAt": "2026-11-16T09:19:55Z",
+      "mergedBy": "alantreadway",
+      "author": "ag-jira-agent-ci[bot]"
+    },
+    {
+      "pr": 9097,
+      "url": "https://github.com/ag-grid/ag-charts/pull/9097",
+      "title": "Optimise agentic context (weekly audit)",
+      "mergedAt": "2026-11-16T08:46:49Z",
+      "mergedBy": "alantreadway",
+      "author": "ag-jira-agent-ci[bot]"
+    }
+  ],
+  "latestPushEvents": [
+    {
+      "id": "27287220726",
+      "at": "2026-11-13T15:18:47Z",
+      "actor": "alantreadway",
+      "ref": "refs/heads/latest",
+      "head": "fd652e876a2b059924848a2177c82e67d6752327"
+    },
+    {
+      "id": "27275488255",
+      "at": "2026-11-13T15:15:26Z",
+      "actor": "alantreadway",
+      "ref": "refs/heads/latest",
+      "head": "d9e372e8f9358f7387ffcc013f6f20df82a2c34f"
+    },
+    {
+      "id": "27252206516",
+      "at": "2026-11-13T10:20:11Z",
+      "actor": "alantreadway",
+      "ref": "refs/heads/latest",
+      "head": "21f083b30c8493d1a845d3aee25539bbc6b225d2"
+    }
+  ],
+  "relevantAccounts": [
+    {
+      "login": "alantreadway",
+      "name": "Alan Treadway",
+      "authoredIn50": 10,
+      "profile": "https://github.com/alantreadway"
+    },
+    {
+      "login": "AG-DavidG",
+      "name": null,
+      "authoredIn50": 3,
+      "profile": "https://github.com/AG-DavidG"
+    },
+    {
+      "login": "iMoses",
+      "name": "iMoses",
+      "authoredIn50": 5,
+      "profile": "https://github.com/iMoses"
+    },
+    {
+      "login": "taktran",
+      "name": "Tak Tran",
+      "authoredIn50": 4,
+      "profile": "https://github.com/taktran"
+    },
+    {
+      "login": "lsjroberts",
+      "name": "Laurence Roberts",
+      "authoredIn50": 2,
+      "profile": "https://github.com/lsjroberts"
+    },
+    {
+      "login": "yinkelly",
+      "name": null,
+      "authoredIn50": 1,
+      "profile": "https://github.com/yinkelly"
+    },
+    {
+      "login": "olegat",
+      "name": "Oli Legat",
+      "authoredIn50": 0,
+      "profile": "https://github.com/olegat"
+    }
+  ],
+  "commitSample": [
+    {
+      "sha": "9ee57509a4141b2477b6c3220efac87e1010982a",
+      "url": "https://github.com/ag-grid/ag-charts/commit/9ee57509a4141b2477b6c3220efac87e1010982a",
+      "subject": "Merge pull request #9094 from ag-grid/ghabot-ag-19315-charts-turn-crosshairs-off-by",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "a9b96fa10366742513d106cadf0b6da5d9f4da3c",
+      "url": "https://github.com/ag-grid/ag-charts/commit/a9b96fa10366742513d106cadf0b6da5d9f4da3c",
+      "subject": "Merge pull request #9097 from ag-grid/ai/optimise-context-2026-11-16-43802870545",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "77d2b067007939b0cf9a78bc146c85d53fa97f50",
+      "url": "https://github.com/ag-grid/ag-charts/commit/77d2b067007939b0cf9a78bc146c85d53fa97f50",
+      "subject": "Correct stale size-limit path in hot-paths skill",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "76a6981e6e99d1e1843ef59884ec88188a1e98db",
+      "url": "https://github.com/ag-grid/ag-charts/commit/76a6981e6e99d1e1843ef59884ec88188a1e98db",
+      "subject": "Automated package version bump to 14.3.0-beta.20261115.",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "6af97e1b347667fcc340bbe1438a5bbe5b5fd01c",
+      "url": "https://github.com/ag-grid/ag-charts/commit/6af97e1b347667fcc340bbe1438a5bbe5b5fd01c",
+      "subject": "AG-19315 Adopt merged gallery e2e snapshots without the default crosshair",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "e999013c0e354d6dd4d907e6eaef1efd225f906c",
+      "url": "https://github.com/ag-grid/ag-charts/commit/e999013c0e354d6dd4d907e6eaef1efd225f906c",
+      "subject": "Merge remote-tracking branch 'origin/latest' into ghabot-ag-19315-charts-turn-crosshairs-off-by",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "fd652e876a2b059924848a2177c82e67d6752327",
+      "url": "https://github.com/ag-grid/ag-charts/commit/fd652e876a2b059924848a2177c82e67d6752327",
+      "subject": "Merge pull request #9084 from ag-grid/ghabot-ag-17464-charts-validate-data-returned-from",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "d9e372e8f9358f7387ffcc013f6f20df82a2c34f",
+      "url": "https://github.com/ag-grid/ag-charts/commit/d9e372e8f9358f7387ffcc013f6f20df82a2c34f",
+      "subject": "Merge pull request #9077 from ag-grid/AG-18823/legend-border-enabled-in-options",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "1efc4f045c4f1d013fb117899a8739ce1fd3a81a",
+      "url": "https://github.com/ag-grid/ag-charts/commit/1efc4f045c4f1d013fb117899a8739ce1fd3a81a",
+      "subject": "AG-19315 Enable the y-axis crosshair in the zoom-crosshairs fixture",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "e782abf346557dd41d654d28940132c672846827",
+      "url": "https://github.com/ag-grid/ag-charts/commit/e782abf346557dd41d654d28940132c672846827",
+      "subject": "AG-19315 Adopt e2e snapshots without the default crosshair",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "bd1842e4ee310e51ffa454ede64a8c8c3e793f89",
+      "url": "https://github.com/ag-grid/ag-charts/commit/bd1842e4ee310e51ffa454ede64a8c8c3e793f89",
+      "subject": "AG-19315 Restamp the trading-terminal React seed manifest",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "2111ac55a428708599668015ad53a8a08aff6fdd",
+      "url": "https://github.com/ag-grid/ag-charts/commit/2111ac55a428708599668015ad53a8a08aff6fdd",
+      "subject": "git subrepo pull external/ag-website-shared (#9093)",
+      "author": "taktran",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "c50c40cede04ce0b97d5ff79b0fa3002a6bb8689",
+      "url": "https://github.com/ag-grid/ag-charts/commit/c50c40cede04ce0b97d5ff79b0fa3002a6bb8689",
+      "subject": "AG-19315 Clarify the crosshair enabled default",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "c321727d3319494079fb1a661aa7057d16d6c87e",
+      "url": "https://github.com/ag-grid/ag-charts/commit/c321727d3319494079fb1a661aa7057d16d6c87e",
+      "subject": "AG-19315 Theme the price-volume crosshair snap interval and re-baseline snapshots",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "37d17f5e6135215d17fcca4e97b4ef91b0ccea33",
+      "url": "https://github.com/ag-grid/ag-charts/commit/37d17f5e6135215d17fcca4e97b4ef91b0ccea33",
+      "subject": "AG-19315 Turn crosshairs off by default except on financial charts",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "6e9dac4ba6a1f7fa6717faa0b2ff8d37c59c01aa",
+      "url": "https://github.com/ag-grid/ag-charts/commit/6e9dac4ba6a1f7fa6717faa0b2ff8d37c59c01aa",
+      "subject": "Merge pull request #9078 from ag-grid/AG-19060/phase-2-m",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "b5406629455cb6650509a54011f79ec891039a81",
+      "url": "https://github.com/ag-grid/ag-charts/commit/b5406629455cb6650509a54011f79ec891039a81",
+      "subject": "AG-19060 Let PopoverWidget own its panel and route cleanup through destroy()",
+      "author": "claude",
+      "committer": "olegat"
+    },
+    {
+      "sha": "80ef7e943def238c78d8475ebb93704fe6b85280",
+      "url": "https://github.com/ag-grid/ag-charts/commit/80ef7e943def238c78d8475ebb93704fe6b85280",
+      "subject": "AG-17464 Cover a windowed load whose rows arrive in descending x order",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "3936fc097fee9ff3c69edc686d6deba56a906053",
+      "url": "https://github.com/ag-grid/ag-charts/commit/3936fc097fee9ff3c69edc686d6deba56a906053",
+      "subject": "AG-17464 Binary-search the requested window instead of scanning every row",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "8a1be6a16f5dbf3c51bff4517f8727125f3249a7",
+      "url": "https://github.com/ag-grid/ag-charts/commit/8a1be6a16f5dbf3c51bff4517f8727125f3249a7",
+      "subject": "AG-17464 Skip the per-datum window check for series whose x-values sit on the vertical axis",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "e521da265a74acf8bbdd5fdbf10f5b5a93975b3a",
+      "url": "https://github.com/ag-grid/ag-charts/commit/e521da265a74acf8bbdd5fdbf10f5b5a93975b3a",
+      "subject": "AG-18965 Remove the example dev toolbar (#9091)",
+      "author": "taktran",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "21f083b30c8493d1a845d3aee25539bbc6b225d2",
+      "url": "https://github.com/ag-grid/ag-charts/commit/21f083b30c8493d1a845d3aee25539bbc6b225d2",
+      "subject": "Merge pull request #9083 from ag-grid/ghabot-ag-18791-charts-toolbar-buttons-do-not",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "4dd330884df249113de25a70c697e7f02ce1017e",
+      "url": "https://github.com/ag-grid/ag-charts/commit/4dd330884df249113de25a70c697e7f02ce1017e",
+      "subject": "Merge pull request #9088 from ag-grid/ghabot-ag-19233-charts-update-the-react-rows-r2",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "1bc362cf92d0ff97a250886043f7ebab79771951",
+      "url": "https://github.com/ag-grid/ag-charts/commit/1bc362cf92d0ff97a250886043f7ebab79771951",
+      "subject": "Merge pull request #9070 from ag-grid/ag-19287-accessible-theme-31244a",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "f9367ce65bf5954d683f26a0fd8bee120903ad2f",
+      "url": "https://github.com/ag-grid/ag-charts/commit/f9367ce65bf5954d683f26a0fd8bee120903ad2f",
+      "subject": "Automated package version bump to 14.3.0-beta.20261113.",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "fe394d4539a85bad88453cdee2f27a49637347b8",
+      "url": "https://github.com/ag-grid/ag-charts/commit/fe394d4539a85bad88453cdee2f27a49637347b8",
+      "subject": "Merge pull request #9080 from ag-grid/imoses/sync-manager-module-owned",
+      "author": "iMoses",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "9aa19661c3480e1cfa4ad9adedd097d8b6b28a73",
+      "url": "https://github.com/ag-grid/ag-charts/commit/9aa19661c3480e1cfa4ad9adedd097d8b6b28a73",
+      "subject": "Merge pull request #9086 from ag-grid/dg/docs-markers-palette-upgrade-notes",
+      "author": "AG-DavidG",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "2a1718ed7c3374cc29250dae09d08208a5e48b4a",
+      "url": "https://github.com/ag-grid/ag-charts/commit/2a1718ed7c3374cc29250dae09d08208a5e48b4a",
+      "subject": "AG-19233 Update the Vue 3.5 row on the Supported Frameworks page to 15+",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "7f1c8d5eb8131500ee52d9ef8c75992e9bdb4793",
+      "url": "https://github.com/ag-grid/ag-charts/commit/7f1c8d5eb8131500ee52d9ef8c75992e9bdb4793",
+      "subject": "AG-17464 Cover valid zoom loads for key-backed cartesian series",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "0c82226921ebb46bceb51187a2a7f04abe945fc7",
+      "url": "https://github.com/ag-grid/ag-charts/commit/0c82226921ebb46bceb51187a2a7f04abe945fc7",
+      "subject": "address codex feedback",
+      "author": "AG-DavidG",
+      "committer": "AG-DavidG"
+    },
+    {
+      "sha": "b293c90bdedad6d21f81bfcf80e9f2c1c1f3856a",
+      "url": "https://github.com/ag-grid/ag-charts/commit/b293c90bdedad6d21f81bfcf80e9f2c1c1f3856a",
+      "subject": "AG-17464 Read key-backed x-values from the keys when judging a windowed load",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "af595b30e4c774d81ebc85cce39786e2db69028a",
+      "url": "https://github.com/ag-grid/ag-charts/commit/af595b30e4c774d81ebc85cce39786e2db69028a",
+      "subject": "AG-17464 Judge a windowed load by the rendered datums inside the window",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "bce50a279788501a0c897adf009a0f42a437c5e9",
+      "url": "https://github.com/ag-grid/ag-charts/commit/bce50a279788501a0c897adf009a0f42a437c5e9",
+      "subject": "Docs updates for markers, palette and AG Charts 15 upgrade notes",
+      "author": "AG-DavidG",
+      "committer": "AG-DavidG"
+    },
+    {
+      "sha": "28eba7d04858e53e64d7a04dee0b23844d90c8f2",
+      "url": "https://github.com/ag-grid/ag-charts/commit/28eba7d04858e53e64d7a04dee0b23844d90c8f2",
+      "subject": "AG-17464 Cover navigator re-drag after an invalid dataSource response",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "435858e29512ae78abd03bdd6ff16c91d1011d32",
+      "url": "https://github.com/ag-grid/ag-charts/commit/435858e29512ae78abd03bdd6ff16c91d1011d32",
+      "subject": "Test zoom sync and toggling sync after creation",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
+      "sha": "6ba00b77f5b184dae6f9c0a547bcd0ec58d38dbd",
+      "url": "https://github.com/ag-grid/ag-charts/commit/6ba00b77f5b184dae6f9c0a547bcd0ec58d38dbd",
+      "subject": "AG-17464 Keep the rendered data for getData when a dataSource load is rejected",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "f5cc9b288c6f7c32f082490e76871f15c31d1e85",
+      "url": "https://github.com/ag-grid/ag-charts/commit/f5cc9b288c6f7c32f082490e76871f15c31d1e85",
+      "subject": "AG-17464 Reject dataSource loads with no valid data in the zoomed window",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "2805368d76025ba3267cee568f1e464a0aa5fc84",
+      "url": "https://github.com/ag-grid/ag-charts/commit/2805368d76025ba3267cee568f1e464a0aa5fc84",
+      "subject": "AG-19287 Apply pattern tile defaults on the shape fill fallback",
+      "author": "yinkelly",
+      "committer": "yinkelly"
+    },
+    {
+      "sha": "0f8200f7004c87cea15b2c480ecbb1dfb0cf4d47",
+      "url": "https://github.com/ag-grid/ag-charts/commit/0f8200f7004c87cea15b2c480ecbb1dfb0cf4d47",
+      "subject": "AG-18791 Test toolbar button names through each toolbar",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "0be85a47676f054c956ec9f3f2df342f4b83aba3",
+      "url": "https://github.com/ag-grid/ag-charts/commit/0be85a47676f054c956ec9f3f2df342f4b83aba3",
+      "subject": "AG-3390 Offer an email fallback when reCAPTCHA cannot load (#16008) (#9081)",
+      "author": "taktran",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "3004ef36c2c147296a7a0f6bd0de7f59bf068172",
+      "url": "https://github.com/ag-grid/ag-charts/commit/3004ef36c2c147296a7a0f6bd0de7f59bf068172",
+      "subject": "AG-18791 Name toolbar buttons from ariaLabel, tooltip or label",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "c3c54d7ed491384ea425ed273b75799b9e22aca7",
+      "url": "https://github.com/ag-grid/ag-charts/commit/c3c54d7ed491384ea425ed273b75799b9e22aca7",
+      "subject": "Automated package version bump to 14.3.0-beta.20261112.",
+      "author": "github-actions[bot]",
+      "committer": "github-actions[bot]"
+    },
+    {
+      "sha": "b312780069eb67631917b23720396b7bd59d5a48",
+      "url": "https://github.com/ag-grid/ag-charts/commit/b312780069eb67631917b23720396b7bd59d5a48",
+      "subject": "Address PR feedback: narrow the sync member context, test sibling active-item clearing",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
+      "sha": "b23eb6b4b41e0239e4131efef7cfae4db06d7538",
+      "url": "https://github.com/ag-grid/ag-charts/commit/b23eb6b4b41e0239e4131efef7cfae4db06d7538",
+      "subject": "Merge pull request #9079 from ag-grid/at/ag-19321-stub-actions-write",
+      "author": "alantreadway",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "3b296240a4136bb3c8185a990711cdb1dc125517",
+      "url": "https://github.com/ag-grid/ag-charts/commit/3b296240a4136bb3c8185a990711cdb1dc125517",
+      "subject": "AG-18823 Trim the legendBorder JSDoc",
+      "author": "lsjroberts",
+      "committer": "lsjroberts"
+    },
+    {
+      "sha": "f7b8850b859ffeae962448bea824a85485f43564",
+      "url": "https://github.com/ag-grid/ag-charts/commit/f7b8850b859ffeae962448bea824a85485f43564",
+      "subject": "AG-3390 Consolidate Firefox import map fix into the docs middleware (#9065)",
+      "author": "taktran",
+      "committer": "web-flow"
+    },
+    {
+      "sha": "b918ff8ae695f7e6e956ed799e520ae03e2006ca",
+      "url": "https://github.com/ag-grid/ag-charts/commit/b918ff8ae695f7e6e956ed799e520ae03e2006ca",
+      "subject": "Drop the SyncManager chart-id passthrough",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
+      "sha": "4c6890ce8a09326997072a43b1486c2f2abb7f9f",
+      "url": "https://github.com/ag-grid/ag-charts/commit/4c6890ce8a09326997072a43b1486c2f2abb7f9f",
+      "subject": "AIW stub: actions: write on ci-success-handler (AG-19321)",
+      "author": "alantreadway",
+      "committer": "alantreadway"
+    },
+    {
+      "sha": "da7453aadc1cfae7b6aeee2a23e22080ec77c07c",
+      "url": "https://github.com/ag-grid/ag-charts/commit/da7453aadc1cfae7b6aeee2a23e22080ec77c07c",
+      "subject": "Move SyncManager and sync status out of the base chart",
+      "author": "iMoses",
+      "committer": "iMoses"
+    },
+    {
+      "sha": "99be5c21cd52be644183b5806131fda9666f8106",
+      "url": "https://github.com/ag-grid/ag-charts/commit/99be5c21cd52be644183b5806131fda9666f8106",
+      "subject": "AG-18823 Merge the legendBorder JSDoc and shorten the template comment",
+      "author": "lsjroberts",
+      "committer": "lsjroberts"
+    }
+  ],
+  "outreachTargets": [
+    "alantreadway",
+    "AG-DavidG"
+  ],
+  "interpretation": "Git commit author, Git committer, PR merger and push-event actor are distinct. Recent verified human merger is Alan Treadway; public Nov13 latest push events also name him. Automated authors are not the people to ask for submission access. Actual GitHub permission levels are not inferred from commit names."
+}

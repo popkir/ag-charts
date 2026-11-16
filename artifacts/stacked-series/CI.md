@@ -1,3 +1,16 @@
+<!-- current-integration:start -->
+# Current source branch and evidence
+
+**Submit only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series) as a PR against upstream `latest`.** It is the fork default. Current head `ae4e8907037ca9aec35f19d6898d3cfb8da84721` includes upstream `9ee57509a4141b2477b6c3220efac87e1010982a`; the PR diff remains thirteen code/test files, identical to the original contribution patch.
+
+`kirill/evidence-stacked-series` holds reports, recoverable Git history and verification workflows. The third fork branch `latest` is retained by explicit owner decision and is not the PR source. All seventeen obsolete helper/duplicate branches have been removed.
+
+**Current exact-head checks:** format/check, both types and lint passed; full native/E2E and three-pair latest→merged-source full-render verification are running in [run 43854079208](https://github.com/popkir/ag-charts/actions/runs/43854079208). [Current branch map, integration and recoverable backup](consolidation/README.md). Earlier results below are historical measurements of pre-sync `52f45bea`, not results relabelled for the merged head. A targeted maintainer follow-up will link the completed verification.
+<!-- current-integration:end -->
+
+<details>
+<summary>Historical pre-sync documentation (preserved)</summary>
+
 # Stacked-series verification
 
 **Direct total improvement from unpatched upstream:** 7293 series × 12, legend enabled: **125.0086→24.8994 s (5.021×, 80.08% less time)**, three paired renders per side on one VM. The actual final committed source was built directly; all six renders retained every series/datum and matched complete scenes, input, public state and PNGs. [Direct measurement and original archives](./total-render-final/README.md).
@@ -105,5 +118,8 @@ Different machines, workloads and boundaries are involved. These results must no
 ## Remaining scope
 
 This is fork-based verification, not an upstream CI approval or acceptance. The full repository CI matrix, all website specs/frameworks and the entire cross-browser visual suite were not run. The targeted browser jobs retain the reproduced baseline failure. Maintainers still need to review the patch and apply their required merge gates. No upstream PR, merge or release has occurred.
+
+</details>
+
 
 </details>

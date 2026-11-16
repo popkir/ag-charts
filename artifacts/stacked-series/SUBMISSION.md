@@ -1,3 +1,16 @@
+<!-- current-integration:start -->
+# Current source branch and evidence
+
+**Submit only [`kirill/perf-stacked-series`](https://github.com/popkir/ag-charts/tree/kirill/perf-stacked-series) as a PR against upstream `latest`.** It is the fork default. Current head `ae4e8907037ca9aec35f19d6898d3cfb8da84721` includes upstream `9ee57509a4141b2477b6c3220efac87e1010982a`; the PR diff remains thirteen code/test files, identical to the original contribution patch.
+
+`kirill/evidence-stacked-series` holds reports, recoverable Git history and verification workflows. The third fork branch `latest` is retained by explicit owner decision and is not the PR source. All seventeen obsolete helper/duplicate branches have been removed.
+
+**Current exact-head checks:** format/check, both types and lint passed; full native/E2E and three-pair latest→merged-source full-render verification are running in [run 43854079208](https://github.com/popkir/ag-charts/actions/runs/43854079208). [Current branch map, integration and recoverable backup](consolidation/README.md). Earlier results below are historical measurements of pre-sync `52f45bea`, not results relabelled for the merged head. A targeted maintainer follow-up will link the completed verification.
+<!-- current-integration:end -->
+
+<details>
+<summary>Historical pre-sync documentation (preserved)</summary>
+
 # Maintainer submission handoff
 
 **Direct total improvement from unpatched upstream:** 7293 series × 12, legend enabled: **125.0086→24.8994 s (5.021×, 80.08% less time)**, three paired renders per side on one VM. The actual final committed source was built directly; all six renders retained every series/datum and matched complete scenes, input, public state and PNGs. [Direct measurement and original archives](./total-render-final/README.md).
@@ -102,5 +115,8 @@ The source is ready for maintainer review with fork verification attached. The c
 The stock two-series browser benchmark, the source preparation benchmark and the new full 7293-series browser render have distinct scopes. See [full 7293-series browser results](./full-render-7293/README.md) for raw timings, exact boundaries and the 2.43× browser result. Remaining extreme-workload latency is about 51 seconds.
 
 PR creation is currently restricted to collaborators. A maintainer can review/cherry-pick the single source commit, or advise how personal GitHub account `popkir` should submit it through the normal contribution process. No upstream PR, acceptance, merge or release is implied.
+
+</details>
+
 
 </details>
