@@ -1,0 +1,1753 @@
+{
+  "total_count": 15,
+  "jobs": [
+    {
+      "id": 133253741561,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBoq7-Q",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133253741561",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133253741561",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:01:48Z",
+      "started_at": "2026-11-16T11:01:50Z",
+      "completed_at": "2026-11-16T11:08:22Z",
+      "name": "quality",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:01:50Z",
+          "completed_at": "2026-11-16T11:01:52Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:01:52Z",
+          "completed_at": "2026-11-16T11:02:03Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:02:03Z",
+          "completed_at": "2026-11-16T11:05:23Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:05:23Z",
+          "completed_at": "2026-11-16T11:05:24Z"
+        },
+        {
+          "name": "Official formatter and check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:05:24Z",
+          "completed_at": "2026-11-16T11:05:28Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:05:28Z",
+          "completed_at": "2026-11-16T11:05:29Z"
+        },
+        {
+          "name": "Community types",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:05:29Z",
+          "completed_at": "2026-11-16T11:05:30Z"
+        },
+        {
+          "name": "Enterprise types",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:05:30Z",
+          "completed_at": "2026-11-16T11:05:40Z"
+        },
+        {
+          "name": "Community lint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-16T11:05:40Z",
+          "completed_at": "2026-11-16T11:07:17Z"
+        },
+        {
+          "name": "Enterprise lint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-16T11:07:17Z",
+          "completed_at": "2026-11-16T11:08:19Z"
+        },
+        {
+          "name": "Hot path analysis",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-16T11:08:19Z",
+          "completed_at": "2026-11-16T11:08:19Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-11-16T11:08:19Z",
+          "completed_at": "2026-11-16T11:08:20Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-11-16T11:08:20Z",
+          "completed_at": "2026-11-16T11:08:20Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-11-16T11:08:20Z",
+          "completed_at": "2026-11-16T11:08:20Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-11-16T11:08:20Z",
+          "completed_at": "2026-11-16T11:08:20Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133253741561",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004341,
+      "runner_name": "GitHub Actions 1000004341",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257113590,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4v9g",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257113590",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257113590",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:25Z",
+      "completed_at": "2026-11-16T11:21:44Z",
+      "name": "upstream_baseline",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:26Z",
+          "completed_at": "2026-11-16T11:08:29Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:29Z",
+          "completed_at": "2026-11-16T11:08:44Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:44Z",
+          "completed_at": "2026-11-16T11:13:01Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:13:01Z",
+          "completed_at": "2026-11-16T11:13:01Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:13:01Z",
+          "completed_at": "2026-11-16T11:13:05Z"
+        },
+        {
+          "name": "Unmodified latest keyboard and tooltip Chromium comparison",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 6,
+          "started_at": "2026-11-16T11:13:05Z",
+          "completed_at": "2026-11-16T11:17:24Z"
+        },
+        {
+          "name": "Unmodified latest complete standard Firefox and WebKit comparison",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7,
+          "started_at": "2026-11-16T11:17:24Z",
+          "completed_at": "2026-11-16T11:21:36Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:21:36Z",
+          "completed_at": "2026-11-16T11:21:40Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:21:40Z",
+          "completed_at": "2026-11-16T11:21:40Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:21:40Z",
+          "completed_at": "2026-11-16T11:21:40Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:21:40Z",
+          "completed_at": "2026-11-16T11:21:40Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257113590",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004346,
+      "runner_name": "GitHub Actions 1000004346",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257113665,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4wQQ",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257113665",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257113665",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:28:12Z",
+      "name": "native",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:29Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:29Z",
+          "completed_at": "2026-11-16T11:08:43Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:43Z",
+          "completed_at": "2026-11-16T11:13:19Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:13:19Z",
+          "completed_at": "2026-11-16T11:13:20Z"
+        },
+        {
+          "name": "Complete Community unit suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:13:20Z",
+          "completed_at": "2026-11-16T11:19:13Z"
+        },
+        {
+          "name": "Complete Enterprise unit suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:19:13Z",
+          "completed_at": "2026-11-16T11:28:07Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:28:07Z",
+          "completed_at": "2026-11-16T11:28:09Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-16T11:28:09Z",
+          "completed_at": "2026-11-16T11:28:09Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-16T11:28:09Z",
+          "completed_at": "2026-11-16T11:28:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:28:10Z",
+          "completed_at": "2026-11-16T11:28:10Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257113665",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004345,
+      "runner_name": "GitHub Actions 1000004345",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257113709,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4wbQ",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257113709",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257113709",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:12:53Z",
+      "name": "performance_build (base, 9ee57509a4141b2477b6c3220efac87e1010982a, 0c08e2d9522976b3f2f5690b218f8b...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:26Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:26Z",
+          "completed_at": "2026-11-16T11:08:34Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:34Z",
+          "completed_at": "2026-11-16T11:12:42Z"
+        },
+        {
+          "name": "Build official UMD directly from the exact source revision",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:12:42Z",
+          "completed_at": "2026-11-16T11:12:48Z"
+        },
+        {
+          "name": "Retain exact UMD, map, build log and identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:12:48Z",
+          "completed_at": "2026-11-16T11:12:50Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-16T11:12:50Z",
+          "completed_at": "2026-11-16T11:12:50Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-16T11:12:50Z",
+          "completed_at": "2026-11-16T11:12:51Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-16T11:12:51Z",
+          "completed_at": "2026-11-16T11:12:51Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257113709",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004347,
+      "runner_name": "GitHub Actions 1000004347",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257113739,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4wiw",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257113739",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257113739",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:13:40Z",
+      "name": "performance_build (head, ae4e8907037ca9aec35f19d6898d3cfb8da84721, 757aa8f66a63ddcab10e42735eea39...",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:26Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:26Z",
+          "completed_at": "2026-11-16T11:08:35Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:35Z",
+          "completed_at": "2026-11-16T11:13:29Z"
+        },
+        {
+          "name": "Build official UMD directly from the exact source revision",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:13:29Z",
+          "completed_at": "2026-11-16T11:13:34Z"
+        },
+        {
+          "name": "Retain exact UMD, map, build log and identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:13:34Z",
+          "completed_at": "2026-11-16T11:13:37Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-16T11:13:37Z",
+          "completed_at": "2026-11-16T11:13:37Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-16T11:13:37Z",
+          "completed_at": "2026-11-16T11:13:37Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-16T11:13:37Z",
+          "completed_at": "2026-11-16T11:13:37Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257113739",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004344,
+      "runner_name": "GitHub Actions 1000004344",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257113832,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4w6A",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257113832",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257113832",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:25Z",
+      "completed_at": "2026-11-16T11:19:24Z",
+      "name": "cross_browser",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:26Z",
+          "completed_at": "2026-11-16T11:08:26Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:26Z",
+          "completed_at": "2026-11-16T11:08:38Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:38Z",
+          "completed_at": "2026-11-16T11:13:11Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:13:11Z",
+          "completed_at": "2026-11-16T11:13:11Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:13:11Z",
+          "completed_at": "2026-11-16T11:13:15Z"
+        },
+        {
+          "name": "Complete standard Firefox and WebKit coverage",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 6,
+          "started_at": "2026-11-16T11:13:15Z",
+          "completed_at": "2026-11-16T11:19:17Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:19:17Z",
+          "completed_at": "2026-11-16T11:19:17Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:19:17Z",
+          "completed_at": "2026-11-16T11:19:20Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:19:20Z",
+          "completed_at": "2026-11-16T11:19:20Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:19:20Z",
+          "completed_at": "2026-11-16T11:19:21Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:19:21Z",
+          "completed_at": "2026-11-16T11:19:21Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257113832",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004343,
+      "runner_name": "GitHub Actions 1000004343",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257113976,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4xeA",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257113976",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257113976",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:23Z",
+      "completed_at": "2026-11-16T11:23:58Z",
+      "name": "e2e (6)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:24Z",
+          "completed_at": "2026-11-16T11:08:26Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:27Z",
+          "completed_at": "2026-11-16T11:08:35Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:35Z",
+          "completed_at": "2026-11-16T11:13:14Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:13:14Z",
+          "completed_at": "2026-11-16T11:13:15Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:13:15Z",
+          "completed_at": "2026-11-16T11:13:18Z"
+        },
+        {
+          "name": "Complete website E2E without snapshot updates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:13:18Z",
+          "completed_at": "2026-11-16T11:23:54Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:23:54Z",
+          "completed_at": "2026-11-16T11:23:55Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:23:55Z",
+          "completed_at": "2026-11-16T11:23:56Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:23:56Z",
+          "completed_at": "2026-11-16T11:23:56Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:23:56Z",
+          "completed_at": "2026-11-16T11:23:56Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:23:56Z",
+          "completed_at": "2026-11-16T11:23:57Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257113976",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004342,
+      "runner_name": "GitHub Actions 1000004342",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257114015,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4xnw",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257114015",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257114015",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:22:51Z",
+      "name": "e2e (3)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:24Z",
+          "completed_at": "2026-11-16T11:08:25Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:35Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:35Z",
+          "completed_at": "2026-11-16T11:12:02Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:12:02Z",
+          "completed_at": "2026-11-16T11:12:03Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:12:03Z",
+          "completed_at": "2026-11-16T11:12:07Z"
+        },
+        {
+          "name": "Complete website E2E without snapshot updates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:12:07Z",
+          "completed_at": "2026-11-16T11:22:46Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:22:46Z",
+          "completed_at": "2026-11-16T11:22:46Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:22:46Z",
+          "completed_at": "2026-11-16T11:22:48Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:22:48Z",
+          "completed_at": "2026-11-16T11:22:48Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:22:48Z",
+          "completed_at": "2026-11-16T11:22:49Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:22:49Z",
+          "completed_at": "2026-11-16T11:22:49Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257114015",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004348,
+      "runner_name": "GitHub Actions 1000004348",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257114030,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4xrg",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257114030",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257114030",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:26:12Z",
+      "name": "e2e (4)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:25Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:34Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:34Z",
+          "completed_at": "2026-11-16T11:12:41Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:12:41Z",
+          "completed_at": "2026-11-16T11:12:41Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:12:41Z",
+          "completed_at": "2026-11-16T11:12:46Z"
+        },
+        {
+          "name": "Complete website E2E without snapshot updates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:12:46Z",
+          "completed_at": "2026-11-16T11:26:07Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:26:07Z",
+          "completed_at": "2026-11-16T11:26:07Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:26:07Z",
+          "completed_at": "2026-11-16T11:26:09Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:26:09Z",
+          "completed_at": "2026-11-16T11:26:10Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:26:10Z",
+          "completed_at": "2026-11-16T11:26:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:26:10Z",
+          "completed_at": "2026-11-16T11:26:10Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257114030",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004353,
+      "runner_name": "GitHub Actions 1000004353",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257114050,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4xwg",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257114050",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257114050",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:26:05Z",
+      "name": "e2e (1)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:24Z",
+          "completed_at": "2026-11-16T11:08:25Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:33Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:33Z",
+          "completed_at": "2026-11-16T11:12:18Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:12:18Z",
+          "completed_at": "2026-11-16T11:12:19Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:12:19Z",
+          "completed_at": "2026-11-16T11:12:22Z"
+        },
+        {
+          "name": "Complete website E2E without snapshot updates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:12:22Z",
+          "completed_at": "2026-11-16T11:26:01Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:26:01Z",
+          "completed_at": "2026-11-16T11:26:01Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:26:01Z",
+          "completed_at": "2026-11-16T11:26:03Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:26:03Z",
+          "completed_at": "2026-11-16T11:26:03Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:26:03Z",
+          "completed_at": "2026-11-16T11:26:03Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:26:03Z",
+          "completed_at": "2026-11-16T11:26:03Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257114050",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004349,
+      "runner_name": "GitHub Actions 1000004349",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257114058,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4xyg",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257114058",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257114058",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:27:38Z",
+      "name": "e2e (8)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:24Z",
+          "completed_at": "2026-11-16T11:08:25Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:33Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:33Z",
+          "completed_at": "2026-11-16T11:12:03Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:12:03Z",
+          "completed_at": "2026-11-16T11:12:03Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:12:03Z",
+          "completed_at": "2026-11-16T11:12:07Z"
+        },
+        {
+          "name": "Complete website E2E without snapshot updates",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 6,
+          "started_at": "2026-11-16T11:12:07Z",
+          "completed_at": "2026-11-16T11:27:32Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:27:32Z",
+          "completed_at": "2026-11-16T11:27:32Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:27:32Z",
+          "completed_at": "2026-11-16T11:27:35Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:27:35Z",
+          "completed_at": "2026-11-16T11:27:35Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:27:35Z",
+          "completed_at": "2026-11-16T11:27:36Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:27:36Z",
+          "completed_at": "2026-11-16T11:27:36Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257114058",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004350,
+      "runner_name": "GitHub Actions 1000004350",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257114073,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4x2Q",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257114073",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257114073",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:25Z",
+      "completed_at": "2026-11-16T11:24:41Z",
+      "name": "e2e (2)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:26Z",
+          "completed_at": "2026-11-16T11:08:28Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:28Z",
+          "completed_at": "2026-11-16T11:08:40Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:40Z",
+          "completed_at": "2026-11-16T11:13:22Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:13:22Z",
+          "completed_at": "2026-11-16T11:13:22Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:13:22Z",
+          "completed_at": "2026-11-16T11:13:25Z"
+        },
+        {
+          "name": "Complete website E2E without snapshot updates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:13:25Z",
+          "completed_at": "2026-11-16T11:24:35Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:24:35Z",
+          "completed_at": "2026-11-16T11:24:35Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:24:35Z",
+          "completed_at": "2026-11-16T11:24:38Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:24:38Z",
+          "completed_at": "2026-11-16T11:24:38Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:24:38Z",
+          "completed_at": "2026-11-16T11:24:38Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:24:39Z",
+          "completed_at": "2026-11-16T11:24:39Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257114073",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004354,
+      "runner_name": "GitHub Actions 1000004354",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257114083,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4x4w",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257114083",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257114083",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:22:29Z",
+      "name": "e2e (5)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:24Z",
+          "completed_at": "2026-11-16T11:08:25Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:34Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:34Z",
+          "completed_at": "2026-11-16T11:12:00Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:12:00Z",
+          "completed_at": "2026-11-16T11:12:00Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:12:00Z",
+          "completed_at": "2026-11-16T11:12:04Z"
+        },
+        {
+          "name": "Complete website E2E without snapshot updates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:12:04Z",
+          "completed_at": "2026-11-16T11:22:25Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:22:25Z",
+          "completed_at": "2026-11-16T11:22:25Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:22:25Z",
+          "completed_at": "2026-11-16T11:22:26Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:22:26Z",
+          "completed_at": "2026-11-16T11:22:26Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:22:26Z",
+          "completed_at": "2026-11-16T11:22:27Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:22:27Z",
+          "completed_at": "2026-11-16T11:22:27Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257114083",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004351,
+      "runner_name": "GitHub Actions 1000004351",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133257114173,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBr4yPQ",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133257114173",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133257114173",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:08:22Z",
+      "started_at": "2026-11-16T11:08:24Z",
+      "completed_at": "2026-11-16T11:24:14Z",
+      "name": "e2e (7)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:08:24Z",
+          "completed_at": "2026-11-16T11:08:25Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:08:25Z",
+          "completed_at": "2026-11-16T11:08:34Z"
+        },
+        {
+          "name": "Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:08:34Z",
+          "completed_at": "2026-11-16T11:11:52Z"
+        },
+        {
+          "name": "Verify exact committed source and record identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:11:52Z",
+          "completed_at": "2026-11-16T11:11:52Z"
+        },
+        {
+          "name": "Generate official API reference prerequisite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:11:52Z",
+          "completed_at": "2026-11-16T11:11:57Z"
+        },
+        {
+          "name": "Complete website E2E without snapshot updates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:11:57Z",
+          "completed_at": "2026-11-16T11:24:09Z"
+        },
+        {
+          "name": "Preserve wrapper server log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:24:09Z",
+          "completed_at": "2026-11-16T11:24:09Z"
+        },
+        {
+          "name": "Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:24:09Z",
+          "completed_at": "2026-11-16T11:24:11Z"
+        },
+        {
+          "name": "Post Run ./.github/actions/setup-nx",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-16T11:24:11Z",
+          "completed_at": "2026-11-16T11:24:11Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-16T11:24:11Z",
+          "completed_at": "2026-11-16T11:24:11Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-16T11:24:11Z",
+          "completed_at": "2026-11-16T11:24:11Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133257114173",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004352,
+      "runner_name": "GitHub Actions 1000004352",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 133259841343,
+      "run_id": 43854079208,
+      "workflow_name": "Stacked series synced latest verification",
+      "head_branch": "kirill/evidence-stacked-series",
+      "run_url": "https://api.github.com/repos/popkir/ag-charts/actions/runs/43854079208",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVvRMMs8AAAAfBufPPw",
+      "head_sha": "64718901ee5a6d13ed610155ab36d703fed11b72",
+      "url": "https://api.github.com/repos/popkir/ag-charts/actions/jobs/133259841343",
+      "html_url": "https://github.com/popkir/ag-charts/actions/runs/43854079208/job/133259841343",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-16T11:13:40Z",
+      "started_at": "2026-11-16T11:13:42Z",
+      "completed_at": "2026-11-16T11:21:04Z",
+      "name": "performance_compare",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-16T11:13:42Z",
+          "completed_at": "2026-11-16T11:13:43Z"
+        },
+        {
+          "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-16T11:13:43Z",
+          "completed_at": "2026-11-16T11:13:45Z"
+        },
+        {
+          "name": "Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-16T11:13:45Z",
+          "completed_at": "2026-11-16T11:13:49Z"
+        },
+        {
+          "name": "Install isolated browser runner on the disposable VM",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-16T11:13:49Z",
+          "completed_at": "2026-11-16T11:14:13Z"
+        },
+        {
+          "name": "Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-16T11:14:13Z",
+          "completed_at": "2026-11-16T11:14:15Z"
+        },
+        {
+          "name": "Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-16T11:14:15Z",
+          "completed_at": "2026-11-16T11:14:15Z"
+        },
+        {
+          "name": "Install canonical full fixture and verified source-built runtimes",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-16T11:14:15Z",
+          "completed_at": "2026-11-16T11:14:17Z"
+        },
+        {
+          "name": "Pair 1 upstream then final",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-16T11:14:17Z",
+          "completed_at": "2026-11-16T11:16:33Z"
+        },
+        {
+          "name": "Pair 2 final then upstream",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-16T11:16:33Z",
+          "completed_at": "2026-11-16T11:18:45Z"
+        },
+        {
+          "name": "Pair 3 upstream then final",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-16T11:18:45Z",
+          "completed_at": "2026-11-16T11:21:00Z"
+        },
+        {
+          "name": "Reconcile all six full results",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-16T11:21:00Z",
+          "completed_at": "2026-11-16T11:21:00Z"
+        },
+        {
+          "name": "Retain every timing, full scene, PNG and receipt",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-11-16T11:21:00Z",
+          "completed_at": "2026-11-16T11:21:02Z"
+        },
+        {
+          "name": "Post Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-11-16T11:21:02Z",
+          "completed_at": "2026-11-16T11:21:02Z"
+        },
+        {
+          "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-11-16T11:21:02Z",
+          "completed_at": "2026-11-16T11:21:02Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-11-16T11:21:02Z",
+          "completed_at": "2026-11-16T11:21:02Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/popkir/ag-charts/check-runs/133259841343",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000004355,
+      "runner_name": "GitHub Actions 1000004355",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

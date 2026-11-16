@@ -1,0 +1,422 @@
+name: Stacked series synced latest verification
+'on':
+  push:
+    branches:
+    - kirill/evidence-stacked-series
+    paths:
+    - .github/workflows/stacked-series-validation.yml
+  workflow_dispatch: {}
+permissions:
+  contents: read
+concurrency:
+  group: stacked-merged-verification
+  cancel-in-progress: false
+env:
+  CI: 'true'
+  NX_DAEMON: 'false'
+  NX_NO_CLOUD: 'true'
+  AG_LIBRARY: charts
+  AG_SKIP_NATIVE_DEP_VERSION_CHECK: '1'
+  AG_DEV_PROMPTS_SKIP_FETCH: '1'
+  PUPPETEER_SKIP_DOWNLOAD: 'true'
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+  NODE_OPTIONS: --max-old-space-size=4096
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        fetch-depth: 24
+        persist-credentials: false
+    - uses: ./.github/actions/setup-nx
+      with:
+        base_ref: kirill/perf-stacked-series
+        fetch_base: 'false'
+        cache_mode: 'off'
+        nx_restore: 'false'
+        free_disk_space: 'true'
+        tidy_nx_cache: 'false'
+        save_yarn_cache: 'false'
+    - name: Verify exact committed source and record identity
+      run: |-
+        python3 - <<'PYGUARD'
+        import json,subprocess,pathlib
+        sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+        tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
+        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
+        p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        print('Exact source verified',sha,tree)
+        PYGUARD
+    - name: Official formatter and check
+      run: |-
+        yarn nx format --files='packages/ag-charts-community/src/chart/chart.ts,packages/ag-charts-community/src/chart/data/aggregateFunctions.test.ts,packages/ag-charts-community/src/chart/data/aggregateFunctions.ts,packages/ag-charts-community/src/chart/data/data-model/grouping/dataGrouper.test.ts,packages/ag-charts-community/src/chart/data/data-model/grouping/dataGrouper.ts,packages/ag-charts-community/src/chart/data/data-model/utils/resolvers.ts,packages/ag-charts-community/src/chart/data/dataController.test.ts,packages/ag-charts-community/src/chart/data/dataController.ts,packages/ag-charts-community/src/chart/data/dataModel.test.ts,packages/ag-charts-community/src/chart/legend/legendManager.test.ts,packages/ag-charts-community/src/chart/legend/legendManager.ts,packages/ag-charts-community/src/chart/series/seriesStateManager.test.ts,packages/ag-charts-community/src/chart/series/seriesStateManager.ts'
+        yarn nx format:check --files='packages/ag-charts-community/src/chart/chart.ts,packages/ag-charts-community/src/chart/data/aggregateFunctions.test.ts,packages/ag-charts-community/src/chart/data/aggregateFunctions.ts,packages/ag-charts-community/src/chart/data/data-model/grouping/dataGrouper.test.ts,packages/ag-charts-community/src/chart/data/data-model/grouping/dataGrouper.ts,packages/ag-charts-community/src/chart/data/data-model/utils/resolvers.ts,packages/ag-charts-community/src/chart/data/dataController.test.ts,packages/ag-charts-community/src/chart/data/dataController.ts,packages/ag-charts-community/src/chart/data/dataModel.test.ts,packages/ag-charts-community/src/chart/legend/legendManager.test.ts,packages/ag-charts-community/src/chart/legend/legendManager.ts,packages/ag-charts-community/src/chart/series/seriesStateManager.test.ts,packages/ag-charts-community/src/chart/series/seriesStateManager.ts'
+    - name: Verify exact committed source and record identity
+      run: |-
+        python3 - <<'PYGUARD'
+        import json,subprocess,pathlib
+        sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+        tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
+        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
+        p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        print('Exact source verified',sha,tree)
+        PYGUARD
+    - name: Community types
+      run: yarn nx build:types ag-charts-community
+    - name: Enterprise types
+      run: yarn nx build:types ag-charts-enterprise
+    - name: Community lint
+      run: yarn nx lint ag-charts-community
+    - name: Enterprise lint
+      run: yarn nx lint ag-charts-enterprise
+    - name: Hot path analysis
+      run: node tools/hot-paths/detect.js --range 9ee57509a4141b2477b6c3220efac87e1010982a...ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        > tmp/stacked-merged-proofs/hot-paths.json
+    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      if: always()
+      with:
+        name: stacked-merged-quality
+        path: tmp/stacked-merged-proofs
+        retention-days: 30
+    if: github.repository == 'popkir/ag-charts' && github.ref == 'refs/heads/kirill/evidence-stacked-series'
+  native:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 80
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        fetch-depth: 24
+        persist-credentials: false
+    - uses: ./.github/actions/setup-nx
+      with:
+        base_ref: kirill/perf-stacked-series
+        fetch_base: 'false'
+        cache_mode: 'off'
+        nx_restore: 'false'
+        free_disk_space: 'true'
+        tidy_nx_cache: 'false'
+        save_yarn_cache: 'false'
+    - name: Verify exact committed source and record identity
+      run: |-
+        python3 - <<'PYGUARD'
+        import json,subprocess,pathlib
+        sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+        tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
+        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
+        p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        print('Exact source verified',sha,tree)
+        PYGUARD
+    - name: Complete Community unit suite
+      id: community
+      run: yarn nx test ag-charts-community -- --maxWorkers=2 --minWorkers=1
+    - name: Complete Enterprise unit suite
+      if: ${{ !cancelled() }}
+      run: yarn nx test ag-charts-enterprise -- --maxWorkers=2 --minWorkers=1
+    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      if: always()
+      with:
+        name: stacked-merged-native
+        path: |-
+          tmp/stacked-merged-proofs
+          reports/ag-charts-community.xml
+          reports/ag-charts-enterprise.xml
+        retention-days: 30
+  e2e:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 110
+    strategy:
+      fail-fast: false
+      matrix:
+        shard:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+    env:
+      AG_FORCE_ALL_TESTS: '1'
+      AG_E2E_FRAMEWORKS: vanilla,typescript,reactFunctional,reactFunctionalTs,angular,vue3
+      AG_SCENE_SNAPSHOTS: diff
+      NX_BASE: 9ee57509a4141b2477b6c3220efac87e1010982a
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        fetch-depth: 24
+        persist-credentials: false
+    - uses: ./.github/actions/setup-nx
+      with:
+        base_ref: kirill/perf-stacked-series
+        fetch_base: 'false'
+        cache_mode: 'off'
+        nx_restore: 'false'
+        free_disk_space: 'true'
+        tidy_nx_cache: 'false'
+        save_yarn_cache: 'false'
+    - name: Verify exact committed source and record identity
+      run: |-
+        python3 - <<'PYGUARD'
+        import json,subprocess,pathlib
+        sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+        tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
+        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
+        p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        print('Exact source verified',sha,tree)
+        PYGUARD
+    - name: Generate official API reference prerequisite
+      run: yarn nx docs-resolved-interfaces ag-charts-types
+    - name: Complete website E2E without snapshot updates
+      run: yarn nx test:e2e ag-charts-website -- --shard=${{ matrix.shard }}/8
+    - name: Preserve wrapper server log
+      if: always()
+      run: |-
+        mkdir -p tmp/stacked-merged-runner
+        if [ -f "${RUNNER_TEMP}/ag-charts-astro-dev.log" ]; then cp "${RUNNER_TEMP}/ag-charts-astro-dev.log" tmp/stacked-merged-runner/; fi
+    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      if: always()
+      with:
+        name: stacked-merged-e2e-${{ matrix.shard }}
+        path: |-
+          reports/
+          tmp/stacked-merged-proofs
+          tmp/stacked-merged-runner/
+          packages/ag-charts-website/**/__scene_snapshots__/*
+        retention-days: 30
+  cross_browser:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      AG_FORCE_ALL_TESTS: '1'
+      AG_SCENE_SNAPSHOTS: diff
+      AG_E2E_REPORT_JSON: ./reports/ag-charts-website-e2e-cross-browser.json
+      NX_BASE: 9ee57509a4141b2477b6c3220efac87e1010982a
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        fetch-depth: 24
+        persist-credentials: false
+    - uses: ./.github/actions/setup-nx
+      with:
+        base_ref: kirill/perf-stacked-series
+        fetch_base: 'false'
+        cache_mode: 'off'
+        nx_restore: 'false'
+        free_disk_space: 'true'
+        tidy_nx_cache: 'false'
+        save_yarn_cache: 'false'
+    - name: Verify exact committed source and record identity
+      run: |-
+        python3 - <<'PYGUARD'
+        import json,subprocess,pathlib
+        sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+        tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
+        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
+        p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        print('Exact source verified',sha,tree)
+        PYGUARD
+    - name: Generate official API reference prerequisite
+      run: yarn nx docs-resolved-interfaces ag-charts-types
+    - name: Complete standard Firefox and WebKit coverage
+      run: yarn nx test:e2e ag-charts-website -- --config playwright.cross-browser.config.ts
+    - name: Preserve wrapper server log
+      if: always()
+      run: |-
+        mkdir -p tmp/stacked-merged-runner
+        if [ -f "${RUNNER_TEMP}/ag-charts-astro-dev.log" ]; then cp "${RUNNER_TEMP}/ag-charts-astro-dev.log" tmp/stacked-merged-runner/; fi
+    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      if: always()
+      with:
+        name: stacked-merged-cross-browser
+        path: |-
+          reports/
+          tmp/stacked-merged-proofs
+          tmp/stacked-merged-runner/
+          packages/ag-charts-website/**/__scene_snapshots__/*
+        retention-days: 30
+  upstream_baseline:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 100
+    env:
+      AG_FORCE_ALL_TESTS: '1'
+      AG_E2E_FRAMEWORKS: vanilla,typescript,reactFunctional,reactFunctionalTs,angular,vue3
+      AG_SCENE_SNAPSHOTS: diff
+      NX_BASE: 9ee57509a4141b2477b6c3220efac87e1010982a
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: 9ee57509a4141b2477b6c3220efac87e1010982a
+        fetch-depth: 24
+        persist-credentials: false
+    - uses: ./.github/actions/setup-nx
+      with:
+        base_ref: kirill/perf-stacked-series
+        fetch_base: 'false'
+        cache_mode: 'off'
+        nx_restore: 'false'
+        free_disk_space: 'true'
+        tidy_nx_cache: 'false'
+        save_yarn_cache: 'false'
+    - name: Verify exact committed source and record identity
+      run: |-
+        python3 - <<'PYGUARD'
+        import json,subprocess,pathlib
+        sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+        tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
+        assert sha=='9ee57509a4141b2477b6c3220efac87e1010982a' and tree=='0c08e2d9522976b3f2f5690b218f8bd3faf1a595',(sha,tree)
+        subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
+        p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        print('Exact source verified',sha,tree)
+        PYGUARD
+    - name: Generate official API reference prerequisite
+      run: yarn nx docs-resolved-interfaces ag-charts-types
+    - name: Unmodified latest keyboard and tooltip Chromium comparison
+      id: chromium
+      run: yarn nx test:e2e ag-charts-website -- keyboard-nav.spec.ts interactive-tooltip.spec.ts --project=chromium
+    - name: Unmodified latest complete standard Firefox and WebKit comparison
+      if: ${{ !cancelled() }}
+      env:
+        AG_E2E_REPORT_JSON: ./reports/ag-charts-website-e2e-cross-browser.json
+      run: yarn nx test:e2e ag-charts-website -- --config playwright.cross-browser.config.ts
+    - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      if: always()
+      with:
+        name: stacked-merged-upstream-baseline
+        path: |-
+          reports/
+          tmp/stacked-merged-proofs
+          packages/ag-charts-website/**/__scene_snapshots__/*
+        retention-days: 30
+  performance_build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - role: base
+          source: 9ee57509a4141b2477b6c3220efac87e1010982a
+          tree: 0c08e2d9522976b3f2f5690b218f8bd3faf1a595
+        - role: head
+          source: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+          tree: 757aa8f66a63ddcab10e42735eea39d3cd44dc88
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: ${{ matrix.source }}
+        fetch-depth: 2
+        persist-credentials: false
+    - uses: ./.github/actions/setup-nx
+      with:
+        base_ref: kirill/perf-stacked-series
+        fetch_base: 'false'
+        cache_mode: 'off'
+        nx_restore: 'false'
+        free_disk_space: 'true'
+        tidy_nx_cache: 'false'
+        save_yarn_cache: 'false'
+    - name: Build official UMD directly from the exact source revision
+      env:
+        SOURCE_SHA: ${{ matrix.source }}
+        SOURCE_TREE: ${{ matrix.tree }}
+        BUILD_ROLE: ${{ matrix.role }}
+      run: |
+        python3 - <<'PY'
+        import hashlib, json, os, pathlib, shutil, subprocess
+        def git(*args): return subprocess.check_output(['git', *args], text=True).strip()
+        assert git('rev-parse', 'HEAD') == os.environ['SOURCE_SHA']
+        assert git('rev-parse', 'HEAD^{tree}') == os.environ['SOURCE_TREE']
+        assert not git('diff', 'HEAD', '--', 'packages', 'yarn.lock', 'nx.json', 'esbuild.config.cjs')
+        output = pathlib.Path('tmp/stacked-total-render/builds') / os.environ['BUILD_ROLE']
+        output.mkdir(parents=True, exist_ok=True)
+        with (output / 'build.log').open('w') as log:
+            result = subprocess.run(['yarn', 'nx', 'build:umd', 'ag-charts-enterprise', '--skip-nx-cache'], stdout=log, stderr=subprocess.STDOUT)
+        if result.returncode:
+            print((output / 'build.log').read_text())
+            result.check_returncode()
+        bundle = pathlib.Path('packages/ag-charts-enterprise/dist/umd/ag-charts-enterprise.js')
+        shutil.copyfile(bundle, output / bundle.name)
+        source_map = pathlib.Path(str(bundle) + '.map')
+        if source_map.exists(): shutil.copyfile(source_map, output / source_map.name)
+        receipt = {'role': os.environ['BUILD_ROLE'], 'source': git('rev-parse', 'HEAD'), 'tree': git('rev-parse', 'HEAD^{tree}'), 'bundleSha256': hashlib.sha256(bundle.read_bytes()).hexdigest(), 'bundleBytes': bundle.stat().st_size, 'nodeVersion': subprocess.check_output(['node', '--version'], text=True).strip(), 'buildCommand': 'yarn nx build:umd ag-charts-enterprise --skip-nx-cache', 'trackedRuntimeDiff': git('diff', 'HEAD', '--name-only', '--', 'packages')}
+        assert receipt['trackedRuntimeDiff'] == ''
+        (output / 'build.json').write_text(json.dumps(receipt, indent=2) + '\n')
+        print(json.dumps(receipt))
+        PY
+    - name: Retain exact UMD, map, build log and identity
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stacked-merged-build-${{ matrix.role }}
+        path: tmp/stacked-total-render/builds/${{ matrix.role }}
+        retention-days: 30
+    needs: quality
+  performance_compare:
+    needs: performance_build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
+        sparse-checkout: |
+          tools/benchmark
+          tools/stacked-total-render
+          package.json
+        sparse-checkout-cone-mode: false
+        ref: ${{ github.sha }}
+    - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+      with:
+        node-version: 24.22.3
+    - name: Install isolated browser runner on the disposable VM
+      run: |
+        mkdir -p tmp/stacked-total-render/browser-tools
+        npm install --prefix tmp/stacked-total-render/browser-tools --no-save --no-audit --no-fund playwright@1.60.0 pngjs@7.0.0 pixelmatch@5.3.0 tsx@4.23.15
+        tmp/stacked-total-render/browser-tools/node_modules/.bin/playwright install --with-deps chromium
+    - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+      with:
+        name: stacked-merged-build-base
+        path: tmp/stacked-total-render/builds/base
+    - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+      with:
+        name: stacked-merged-build-head
+        path: tmp/stacked-total-render/builds/head
+    - name: Install canonical full fixture and verified source-built runtimes
+      run: python3 tools/stacked-total-render/prepare.py
+    - name: Pair 1 upstream then final
+      run: tmp/stacked-total-render/browser-tools/node_modules/.bin/tsx tools/stacked-total-render/run.mjs --pair 1
+    - name: Pair 2 final then upstream
+      run: tmp/stacked-total-render/browser-tools/node_modules/.bin/tsx tools/stacked-total-render/run.mjs --pair 2
+    - name: Pair 3 upstream then final
+      run: tmp/stacked-total-render/browser-tools/node_modules/.bin/tsx tools/stacked-total-render/run.mjs --pair 3
+    - name: Reconcile all six full results
+      run: tmp/stacked-total-render/browser-tools/node_modules/.bin/tsx tools/stacked-total-render/run.mjs --summarise
+    - name: Retain every timing, full scene, PNG and receipt
+      if: always()
+      uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+      with:
+        name: stacked-merged-render-results
+        path: tmp/stacked-total-render/results
+        retention-days: 30

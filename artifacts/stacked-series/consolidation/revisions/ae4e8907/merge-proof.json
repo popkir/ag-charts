@@ -1,0 +1,11 @@
+{
+  "upstreamLatest": "9ee57509a4141b2477b6c3220efac87e1010982a",
+  "sourceBefore": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
+  "sourceAfter": "ae4e8907037ca9aec35f19d6898d3cfb8da84721",
+  "mergedTree": "757aa8f66a63ddcab10e42735eea39d3cd44dc88",
+  "contributionFullIndexPatchSha256": "bebc3a5995a2c9b66ee30e3275d2709af79ae500753486255173726a01faac26",
+  "contributionFiles": 13,
+  "contributionUnchanged": true,
+  "conflicts": false,
+  "note": "Stable full-index binary diffs are byte-identical. Earlier short-index diff digest changed when fetched Git objects increased SHA abbreviation length, not source content."
+}

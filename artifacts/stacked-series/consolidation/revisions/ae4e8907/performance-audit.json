@@ -1,0 +1,209 @@
+{
+  "runId": 43854079208,
+  "helper": "64718901ee5a6d13ed610155ab36d703fed11b72",
+  "sources": {
+    "base": "9ee57509a4141b2477b6c3220efac87e1010982a",
+    "head": "ae4e8907037ca9aec35f19d6898d3cfb8da84721"
+  },
+  "builds": {
+    "base": {
+      "role": "base",
+      "source": "9ee57509a4141b2477b6c3220efac87e1010982a",
+      "tree": "0c08e2d9522976b3f2f5690b218f8bd3faf1a595",
+      "bundleSha256": "3161b0b818095fd30bb897efdfc6d947dd488bb357cc79bfcc79548f959e4165",
+      "bundleBytes": 5455132,
+      "nodeVersion": "v24.22.3",
+      "buildCommand": "yarn nx build:umd ag-charts-enterprise --skip-nx-cache",
+      "trackedRuntimeDiff": ""
+    },
+    "head": {
+      "role": "head",
+      "source": "ae4e8907037ca9aec35f19d6898d3cfb8da84721",
+      "tree": "757aa8f66a63ddcab10e42735eea39d3cd44dc88",
+      "bundleSha256": "fde6ad66c529a02650f504356f4dfeb6d4118bb356b00c3d517f09e6f8495c3d",
+      "bundleBytes": 5460368,
+      "nodeVersion": "v24.22.3",
+      "buildCommand": "yarn nx build:umd ag-charts-enterprise --skip-nx-cache",
+      "trackedRuntimeDiff": ""
+    }
+  },
+  "archives": [
+    {
+      "file": "stacked-merged-build-base.zip",
+      "bytes": 3742334,
+      "sha256": "516626aa1c3fb1c6efcfc6cc714b205e8b911235dfef6411d55097a2be75d270",
+      "crcVerified": true,
+      "githubArtifactDigestVerified": true
+    },
+    {
+      "file": "stacked-merged-build-head.zip",
+      "bytes": 3745516,
+      "sha256": "cb656a76ace1caef3d92643b921f16ff78a4ad55425723a98a2d2d2bcf335643",
+      "crcVerified": true,
+      "githubArtifactDigestVerified": true
+    },
+    {
+      "file": "stacked-merged-render-results.zip",
+      "bytes": 8854993,
+      "sha256": "78a79b69cd8b16cc1b73ac9120d0f6defcd7c885835a7d4641b2659b1e985d97",
+      "crcVerified": true,
+      "githubArtifactDigestVerified": true
+    }
+  ],
+  "seriesPerScene": 7293,
+  "datumRectsPerScene": 87516,
+  "enabledLegendRecordsPerRun": 7293,
+  "inputValuesPerRun": 87516,
+  "fullScenesHashed": 6,
+  "inputsIndependentlyChecked": 6,
+  "fullSceneIndependentlyParsed": true,
+  "allPairScenePngGeometryInputPublicStateEqual": true,
+  "zeroPixelDifferencesAllPairs": true,
+  "mediansMs": {
+    "base": {
+      "updateCompleteMs": 99908.6,
+      "twoFramesCompleteMs": 100099.70000000001
+    },
+    "head": {
+      "updateCompleteMs": 20327.70000000001,
+      "twoFramesCompleteMs": 20548.600000000006
+    }
+  },
+  "totalSpeedup": 4.871363499216491,
+  "renderTimeReductionPercent": 79.4718665490506,
+  "pairedRatios": [
+    4.871363499216491,
+    4.901648514851486,
+    4.889133353041247
+  ],
+  "rows": [
+    {
+      "pair": 1,
+      "role": "base",
+      "source": "9ee57509a4141b2477b6c3220efac87e1010982a",
+      "timings": {
+        "updateCompleteMs": 99908.6,
+        "twoFramesCompleteMs": 100099.70000000001,
+        "extraFrameWaitMs": 191.10000000000582
+      },
+      "timestamp": "2026-11-16T11:16:07.029Z",
+      "host": {
+        "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+        "nproc": 4,
+        "bogomips": 5192.26,
+        "totalMemMb": 15984
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "3161b0b818095fd30bb897efdfc6d947dd488bb357cc79bfcc79548f959e4165"
+    },
+    {
+      "pair": 1,
+      "role": "head",
+      "source": "ae4e8907037ca9aec35f19d6898d3cfb8da84721",
+      "timings": {
+        "updateCompleteMs": 20327.70000000001,
+        "twoFramesCompleteMs": 20548.600000000006,
+        "extraFrameWaitMs": 220.79999999998836
+      },
+      "timestamp": "2026-11-16T11:16:33.608Z",
+      "host": {
+        "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+        "nproc": 4,
+        "bogomips": 5192.26,
+        "totalMemMb": 15984
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "fde6ad66c529a02650f504356f4dfeb6d4118bb356b00c3d517f09e6f8495c3d"
+    },
+    {
+      "pair": 2,
+      "role": "base",
+      "source": "9ee57509a4141b2477b6c3220efac87e1010982a",
+      "timings": {
+        "updateCompleteMs": 98814.80000000002,
+        "twoFramesCompleteMs": 99013.30000000002,
+        "extraFrameWaitMs": 198.5
+      },
+      "timestamp": "2026-11-16T11:18:45.448Z",
+      "host": {
+        "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+        "nproc": 4,
+        "bogomips": 5192.26,
+        "totalMemMb": 15984
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "3161b0b818095fd30bb897efdfc6d947dd488bb357cc79bfcc79548f959e4165"
+    },
+    {
+      "pair": 2,
+      "role": "head",
+      "source": "ae4e8907037ca9aec35f19d6898d3cfb8da84721",
+      "timings": {
+        "updateCompleteMs": 20004.5,
+        "twoFramesCompleteMs": 20200,
+        "extraFrameWaitMs": 195.5
+      },
+      "timestamp": "2026-11-16T11:17:00.501Z",
+      "host": {
+        "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+        "nproc": 4,
+        "bogomips": 5192.26,
+        "totalMemMb": 15984
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "fde6ad66c529a02650f504356f4dfeb6d4118bb356b00c3d517f09e6f8495c3d"
+    },
+    {
+      "pair": 3,
+      "role": "base",
+      "source": "9ee57509a4141b2477b6c3220efac87e1010982a",
+      "timings": {
+        "updateCompleteMs": 100640.40000000002,
+        "twoFramesCompleteMs": 100885.79999999999,
+        "extraFrameWaitMs": 245.29999999998836
+      },
+      "timestamp": "2026-11-16T11:20:33.126Z",
+      "host": {
+        "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+        "nproc": 4,
+        "bogomips": 5192.26,
+        "totalMemMb": 15984
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "3161b0b818095fd30bb897efdfc6d947dd488bb357cc79bfcc79548f959e4165"
+    },
+    {
+      "pair": 3,
+      "role": "head",
+      "source": "ae4e8907037ca9aec35f19d6898d3cfb8da84721",
+      "timings": {
+        "updateCompleteMs": 20423.399999999965,
+        "twoFramesCompleteMs": 20634.699999999953,
+        "extraFrameWaitMs": 211.40000000002328
+      },
+      "timestamp": "2026-11-16T11:20:59.744Z",
+      "host": {
+        "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+        "nproc": 4,
+        "bogomips": 5192.26,
+        "totalMemMb": 15984
+      },
+      "browserVersion": "148.0.7778.96",
+      "bundleSha256": "fde6ad66c529a02650f504356f4dfeb6d4118bb356b00c3d517f09e6f8495c3d"
+    }
+  ],
+  "host": {
+    "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+    "nproc": 4,
+    "bogomips": 5192.26,
+    "totalMemMb": 15984
+  },
+  "browserVersion": "148.0.7778.96",
+  "comparisonJobId": 133259841343,
+  "sourceBranchesUnchanged": true,
+  "limitations": [
+    "One synthetic7293series x12positive-data fixture on one VM, three runs per side.",
+    "This direct unpatched->final ratio is not multiplied from earlier cross-host experiments.",
+    "Not a measurement of CLIMATISE application load time."
+  ]
+}

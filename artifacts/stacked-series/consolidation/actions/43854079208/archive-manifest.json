@@ -1,0 +1,143 @@
+[
+  {
+    "artifactId": 14222590180,
+    "name": "stacked-merged-e2e-4",
+    "bytes": 2163719,
+    "sha256": "929888c7616b2f3227a2cc9101e7cda5909f04f31d3858fe4c286a405d225438",
+    "githubDigest": "sha256:929888c7616b2f3227a2cc9101e7cda5909f04f31d3858fe4c286a405d225438",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:26:08Z"
+  },
+  {
+    "artifactId": 14222180271,
+    "name": "stacked-merged-e2e-7",
+    "bytes": 2183348,
+    "sha256": "af27eece143016b9c93ffafd9d4b6d3c84fcfdf5efb768a6ae8467ae5ce7e70b",
+    "githubDigest": "sha256:af27eece143016b9c93ffafd9d4b6d3c84fcfdf5efb768a6ae8467ae5ce7e70b",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:24:10Z"
+  },
+  {
+    "artifactId": 14222015907,
+    "name": "stacked-merged-e2e-1",
+    "bytes": 2247505,
+    "sha256": "4747b27136007553f0c028d3e8ff6ade0f359355db0935ce92bd6f5f3d0471a0",
+    "githubDigest": "sha256:4747b27136007553f0c028d3e8ff6ade0f359355db0935ce92bd6f5f3d0471a0",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:26:01Z"
+  },
+  {
+    "artifactId": 14222000340,
+    "name": "stacked-merged-e2e-3",
+    "bytes": 2618440,
+    "sha256": "a960d12a571db35cf0ec866388219828bf3edd01c12b6b262c051055a3ad903b",
+    "githubDigest": "sha256:a960d12a571db35cf0ec866388219828bf3edd01c12b6b262c051055a3ad903b",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:22:47Z"
+  },
+  {
+    "artifactId": 14221926085,
+    "name": "stacked-merged-e2e-8",
+    "bytes": 31758140,
+    "sha256": "52fbfe2984f75b49bb425af126b624c117036826971d2f07e457f1cf9c99c365",
+    "githubDigest": "sha256:52fbfe2984f75b49bb425af126b624c117036826971d2f07e457f1cf9c99c365",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:27:33Z"
+  },
+  {
+    "artifactId": 14221915542,
+    "name": "stacked-merged-e2e-6",
+    "bytes": 1992102,
+    "sha256": "cf1cea8dd94923beff61ca22772ee95389a548eb11772717cebcb41c0944d914",
+    "githubDigest": "sha256:cf1cea8dd94923beff61ca22772ee95389a548eb11772717cebcb41c0944d914",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:23:55Z"
+  },
+  {
+    "artifactId": 14221895780,
+    "name": "stacked-merged-e2e-2",
+    "bytes": 2606887,
+    "sha256": "1c84ab7c87ceec8b2dfb67c35fde228fb54a97e44d2d7444556c5241efc48aea",
+    "githubDigest": "sha256:1c84ab7c87ceec8b2dfb67c35fde228fb54a97e44d2d7444556c5241efc48aea",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:24:36Z"
+  },
+  {
+    "artifactId": 14221871326,
+    "name": "stacked-merged-native",
+    "bytes": 345380,
+    "sha256": "f61a92759a23c3089c64f6041ee94f9f7b23db36f91b0bb41a6562d9503a9b9d",
+    "githubDigest": "sha256:f61a92759a23c3089c64f6041ee94f9f7b23db36f91b0bb41a6562d9503a9b9d",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:28:07Z"
+  },
+  {
+    "artifactId": 14221316787,
+    "name": "stacked-merged-build-base",
+    "bytes": 3742334,
+    "sha256": "516626aa1c3fb1c6efcfc6cc714b205e8b911235dfef6411d55097a2be75d270",
+    "githubDigest": "sha256:516626aa1c3fb1c6efcfc6cc714b205e8b911235dfef6411d55097a2be75d270",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:12:48Z"
+  },
+  {
+    "artifactId": 14221213283,
+    "name": "stacked-merged-e2e-5",
+    "bytes": 2077580,
+    "sha256": "51a486af11374484b779ae4f67875ca4c4a296db63c246c578f82822730dbf0f",
+    "githubDigest": "sha256:51a486af11374484b779ae4f67875ca4c4a296db63c246c578f82822730dbf0f",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:22:25Z"
+  },
+  {
+    "artifactId": 14221153160,
+    "name": "stacked-merged-render-results",
+    "bytes": 8854993,
+    "sha256": "78a79b69cd8b16cc1b73ac9120d0f6defcd7c885835a7d4641b2659b1e985d97",
+    "githubDigest": "sha256:78a79b69cd8b16cc1b73ac9120d0f6defcd7c885835a7d4641b2659b1e985d97",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:21:01Z"
+  },
+  {
+    "artifactId": 14220727142,
+    "name": "stacked-merged-build-head",
+    "bytes": 3745516,
+    "sha256": "cb656a76ace1caef3d92643b921f16ff78a4ad55425723a98a2d2d2bcf335643",
+    "githubDigest": "sha256:cb656a76ace1caef3d92643b921f16ff78a4ad55425723a98a2d2d2bcf335643",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:13:34Z"
+  },
+  {
+    "artifactId": 14220526947,
+    "name": "stacked-merged-quality",
+    "bytes": 3104,
+    "sha256": "c0d9f680028fe9b883485d6161f497765ab3822621cfee51d71f5314b172e961",
+    "githubDigest": "sha256:c0d9f680028fe9b883485d6161f497765ab3822621cfee51d71f5314b172e961",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:08:19Z"
+  },
+  {
+    "artifactId": 14220259236,
+    "name": "stacked-merged-cross-browser",
+    "bytes": 3021467,
+    "sha256": "c34a43073daf4015bc20db2dc55e18ea4663359236d54de6621c85dae5192096",
+    "githubDigest": "sha256:c34a43073daf4015bc20db2dc55e18ea4663359236d54de6621c85dae5192096",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:19:18Z"
+  },
+  {
+    "artifactId": 14219919936,
+    "name": "stacked-merged-upstream-baseline",
+    "bytes": 24246628,
+    "sha256": "1f9e5265f9a1373739699bd79c1bb09a998a06450f77330b6899bd75c5a9a35a",
+    "githubDigest": "sha256:1f9e5265f9a1373739699bd79c1bb09a998a06450f77330b6899bd75c5a9a35a",
+    "zipCrcVerified": true,
+    "originalExpiresAt": "2026-12-16T11:21:36Z"
+  },
+  {
+    "name": "run-logs.zip",
+    "bytes": 2457047,
+    "sha256": "90a7f037c5356705acef44df7b1874d876a7aa3efd0f0bc909d6a95665d56fd8",
+    "zipCrcVerified": true
+  }
+]
