@@ -1,11 +1,11 @@
 {
-  "upstreamLatest": "9ee57509a4141b2477b6c3220efac87e1010982a",
-  "sourceBefore": "52f45beae1fd50b3a23b678219f5d1b81ffea509",
-  "sourceAfter": "ae4e8907037ca9aec35f19d6898d3cfb8da84721",
-  "mergedTree": "757aa8f66a63ddcab10e42735eea39d3cd44dc88",
+  "upstreamLatest": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+  "sourceBefore": "ae4e8907037ca9aec35f19d6898d3cfb8da84721",
+  "sourceAfter": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+  "mergedTree": "6fb9460609781a08e2f479f224b5430edb1ee744",
   "contributionFullIndexPatchSha256": "bebc3a5995a2c9b66ee30e3275d2709af79ae500753486255173726a01faac26",
   "contributionFiles": 13,
   "contributionUnchanged": true,
   "conflicts": false,
-  "note": "Stable full-index binary diffs are byte-identical. Earlier short-index diff digest changed when fetched Git objects increased SHA abbreviation length, not source content."
+  "sourceBranch": "kirill/perf-stacked-series"
 }

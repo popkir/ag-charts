@@ -1,8 +1,8 @@
 {
-  "source": "ae4e8907037ca9aec35f19d6898d3cfb8da84721",
-  "tree": "757aa8f66a63ddcab10e42735eea39d3cd44dc88",
-  "upstream": "9ee57509a4141b2477b6c3220efac87e1010982a",
-  "upstreamTree": "0c08e2d9522976b3f2f5690b218f8bd3faf1a595",
+  "source": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87",
+  "tree": "6fb9460609781a08e2f479f224b5430edb1ee744",
+  "upstream": "d78787368dc6b5ff88d6dbe144df639d8dd012cf",
+  "upstreamTree": "eb2f3909d23d2829d424a1ca590e73b559194be1",
   "contributionFiles": [
     "packages/ag-charts-community/src/chart/chart.ts",
     "packages/ag-charts-community/src/chart/data/aggregateFunctions.test.ts",

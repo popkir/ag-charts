@@ -28,7 +28,7 @@ jobs:
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
-        ref: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        ref: 64f85dea3b32382b6ef4169c0f684ee4a21e4e87
         fetch-depth: 24
         persist-credentials: false
     - uses: ./.github/actions/setup-nx
@@ -46,10 +46,10 @@ jobs:
         import json,subprocess,pathlib
         sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
         tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
-        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        assert sha=='64f85dea3b32382b6ef4169c0f684ee4a21e4e87' and tree=='6fb9460609781a08e2f479f224b5430edb1ee744',(sha,tree)
         subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
         p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
-        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'d78787368dc6b5ff88d6dbe144df639d8dd012cf'},indent=2)+'\n')
         print('Exact source verified',sha,tree)
         PYGUARD
     - name: Official formatter and check
@@ -62,10 +62,10 @@ jobs:
         import json,subprocess,pathlib
         sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
         tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
-        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        assert sha=='64f85dea3b32382b6ef4169c0f684ee4a21e4e87' and tree=='6fb9460609781a08e2f479f224b5430edb1ee744',(sha,tree)
         subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
         p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
-        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'d78787368dc6b5ff88d6dbe144df639d8dd012cf'},indent=2)+'\n')
         print('Exact source verified',sha,tree)
         PYGUARD
     - name: Community types
@@ -77,7 +77,7 @@ jobs:
     - name: Enterprise lint
       run: yarn nx lint ag-charts-enterprise
     - name: Hot path analysis
-      run: node tools/hot-paths/detect.js --range 9ee57509a4141b2477b6c3220efac87e1010982a...ae4e8907037ca9aec35f19d6898d3cfb8da84721
+      run: node tools/hot-paths/detect.js --range d78787368dc6b5ff88d6dbe144df639d8dd012cf...64f85dea3b32382b6ef4169c0f684ee4a21e4e87
         > tmp/stacked-merged-proofs/hot-paths.json
     - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
       if: always()
@@ -93,7 +93,7 @@ jobs:
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
-        ref: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        ref: 64f85dea3b32382b6ef4169c0f684ee4a21e4e87
         fetch-depth: 24
         persist-credentials: false
     - uses: ./.github/actions/setup-nx
@@ -111,10 +111,10 @@ jobs:
         import json,subprocess,pathlib
         sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
         tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
-        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        assert sha=='64f85dea3b32382b6ef4169c0f684ee4a21e4e87' and tree=='6fb9460609781a08e2f479f224b5430edb1ee744',(sha,tree)
         subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
         p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
-        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'d78787368dc6b5ff88d6dbe144df639d8dd012cf'},indent=2)+'\n')
         print('Exact source verified',sha,tree)
         PYGUARD
     - name: Complete Community unit suite
@@ -152,11 +152,11 @@ jobs:
       AG_FORCE_ALL_TESTS: '1'
       AG_E2E_FRAMEWORKS: vanilla,typescript,reactFunctional,reactFunctionalTs,angular,vue3
       AG_SCENE_SNAPSHOTS: diff
-      NX_BASE: 9ee57509a4141b2477b6c3220efac87e1010982a
+      NX_BASE: d78787368dc6b5ff88d6dbe144df639d8dd012cf
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
-        ref: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        ref: 64f85dea3b32382b6ef4169c0f684ee4a21e4e87
         fetch-depth: 24
         persist-credentials: false
     - uses: ./.github/actions/setup-nx
@@ -174,10 +174,10 @@ jobs:
         import json,subprocess,pathlib
         sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
         tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
-        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        assert sha=='64f85dea3b32382b6ef4169c0f684ee4a21e4e87' and tree=='6fb9460609781a08e2f479f224b5430edb1ee744',(sha,tree)
         subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
         p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
-        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'d78787368dc6b5ff88d6dbe144df639d8dd012cf'},indent=2)+'\n')
         print('Exact source verified',sha,tree)
         PYGUARD
     - name: Generate official API reference prerequisite
@@ -207,11 +207,11 @@ jobs:
       AG_FORCE_ALL_TESTS: '1'
       AG_SCENE_SNAPSHOTS: diff
       AG_E2E_REPORT_JSON: ./reports/ag-charts-website-e2e-cross-browser.json
-      NX_BASE: 9ee57509a4141b2477b6c3220efac87e1010982a
+      NX_BASE: d78787368dc6b5ff88d6dbe144df639d8dd012cf
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
-        ref: ae4e8907037ca9aec35f19d6898d3cfb8da84721
+        ref: 64f85dea3b32382b6ef4169c0f684ee4a21e4e87
         fetch-depth: 24
         persist-credentials: false
     - uses: ./.github/actions/setup-nx
@@ -229,10 +229,10 @@ jobs:
         import json,subprocess,pathlib
         sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
         tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
-        assert sha=='ae4e8907037ca9aec35f19d6898d3cfb8da84721' and tree=='757aa8f66a63ddcab10e42735eea39d3cd44dc88',(sha,tree)
+        assert sha=='64f85dea3b32382b6ef4169c0f684ee4a21e4e87' and tree=='6fb9460609781a08e2f479f224b5430edb1ee744',(sha,tree)
         subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
         p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
-        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'d78787368dc6b5ff88d6dbe144df639d8dd012cf'},indent=2)+'\n')
         print('Exact source verified',sha,tree)
         PYGUARD
     - name: Generate official API reference prerequisite
@@ -262,11 +262,11 @@ jobs:
       AG_FORCE_ALL_TESTS: '1'
       AG_E2E_FRAMEWORKS: vanilla,typescript,reactFunctional,reactFunctionalTs,angular,vue3
       AG_SCENE_SNAPSHOTS: diff
-      NX_BASE: 9ee57509a4141b2477b6c3220efac87e1010982a
+      NX_BASE: d78787368dc6b5ff88d6dbe144df639d8dd012cf
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
-        ref: 9ee57509a4141b2477b6c3220efac87e1010982a
+        ref: d78787368dc6b5ff88d6dbe144df639d8dd012cf
         fetch-depth: 24
         persist-credentials: false
     - uses: ./.github/actions/setup-nx
@@ -284,10 +284,10 @@ jobs:
         import json,subprocess,pathlib
         sha=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
         tree=subprocess.check_output(['git','rev-parse','HEAD^{tree}'],text=True).strip()
-        assert sha=='9ee57509a4141b2477b6c3220efac87e1010982a' and tree=='0c08e2d9522976b3f2f5690b218f8bd3faf1a595',(sha,tree)
+        assert sha=='d78787368dc6b5ff88d6dbe144df639d8dd012cf' and tree=='eb2f3909d23d2829d424a1ca590e73b559194be1',(sha,tree)
         subprocess.run(['git','diff','--exit-code','HEAD','--','packages','yarn.lock','nx.json','esbuild.config.cjs'],check=True)
         p=pathlib.Path('tmp/stacked-merged-proofs');p.mkdir(parents=True,exist_ok=True)
-        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'9ee57509a4141b2477b6c3220efac87e1010982a'},indent=2)+'\n')
+        (p/'source.json').write_text(json.dumps({'head':sha,'tree':tree,'upstreamLatest':'d78787368dc6b5ff88d6dbe144df639d8dd012cf'},indent=2)+'\n')
         print('Exact source verified',sha,tree)
         PYGUARD
     - name: Generate official API reference prerequisite
@@ -317,11 +317,11 @@ jobs:
       matrix:
         include:
         - role: base
-          source: 9ee57509a4141b2477b6c3220efac87e1010982a
-          tree: 0c08e2d9522976b3f2f5690b218f8bd3faf1a595
+          source: d78787368dc6b5ff88d6dbe144df639d8dd012cf
+          tree: eb2f3909d23d2829d424a1ca590e73b559194be1
         - role: head
-          source: ae4e8907037ca9aec35f19d6898d3cfb8da84721
-          tree: 757aa8f66a63ddcab10e42735eea39d3cd44dc88
+          source: 64f85dea3b32382b6ef4169c0f684ee4a21e4e87
+          tree: 6fb9460609781a08e2f479f224b5430edb1ee744
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:

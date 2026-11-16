@@ -89,7 +89,7 @@ def prepare(role):
         raise RuntimeError("Runtime bundle changed while installing fixture")
     build_root = Path("tmp/stacked-total-render/builds") / role
     runtime_build = json.loads((build_root / "build.json").read_text())
-    pinned = {"base": "9ee57509a4141b2477b6c3220efac87e1010982a", "head": "ae4e8907037ca9aec35f19d6898d3cfb8da84721"}
+    pinned = {"base": "d78787368dc6b5ff88d6dbe144df639d8dd012cf", "head": "64f85dea3b32382b6ef4169c0f684ee4a21e4e87"}
     assert runtime_build["source"] == pinned[role]
     actual_bundle = (build_root / "ag-charts-enterprise.js").read_bytes()
     assert sha256(actual_bundle) == runtime_build["bundleSha256"]

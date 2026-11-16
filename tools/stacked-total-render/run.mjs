@@ -14,8 +14,8 @@ const pixelmatch = require(path.resolve('tmp/stacked-total-render/browser-tools/
 const output = path.resolve('tmp/stacked-total-render/results');
 fs.mkdirSync(output, { recursive: true });
 const sources = {
-    base: '9ee57509a4141b2477b6c3220efac87e1010982a',
-    head: 'ae4e8907037ca9aec35f19d6898d3cfb8da84721',
+    base: 'd78787368dc6b5ff88d6dbe144df639d8dd012cf',
+    head: '64f85dea3b32382b6ef4169c0f684ee4a21e4e87',
 };
 const sha = (value) => createHash('sha256').update(value).digest('hex');
 const save = (name, value) => fs.writeFileSync(path.join(output, name), JSON.stringify(value, null, 2) + '\n');
